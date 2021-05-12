@@ -1,2 +1,2 @@
-# Web-X
-The EDI Website Project
+# web-x
+The EDI Website Project X
