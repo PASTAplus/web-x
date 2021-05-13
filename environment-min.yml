@@ -1,0 +1,12 @@
+name: web-x
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - fastapi
+  - uvicorn
+  - httpx
+  - aiofiles
+  - chameleon
+prefix: /home/servilla/anaconda3/envs/web-x
