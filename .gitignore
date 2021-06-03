@@ -110,11 +110,11 @@ ENV/
 env.bak/
 venv.bak/
 
-# Spyder project settings
+# Spyder home settings
 .spyderproject
 .spyproject
 
-# Rope project settings
+# Rope home settings
 .ropeproject
 
 # mkdocs documentation
@@ -130,3 +130,4 @@ dmypy.json
 
 # Project content
 .idea
+ignore

@@ -5,17 +5,17 @@ channels:
 dependencies:
   - _libgcc_mutex=0.1
   - _openmp_mutex=4.5
-  - aiofiles=0.6.0
-  - ca-certificates=2020.12.5
-  - certifi=2020.12.5
+  - aiofiles=0.7.0
+  - asgiref=3.3.4
+  - ca-certificates=2021.5.30
+  - certifi=2021.5.30
   - chameleon=3.6.2
-  - click=7.1.2
-  - fastapi=0.65.0
+  - click=8.0.1
+  - fastapi=0.65.1
   - h11=0.12.0
   - h2=4.0.0
   - hpack=4.0.0
   - httpcore=0.13.3
-  - httptools=0.1.1
   - httpx=0.18.1
   - hyperframe=6.0.1
   - idna=2.10
@@ -24,15 +24,12 @@ dependencies:
   - libgcc-ng=9.3.0
   - libgomp=9.3.0
   - libstdcxx-ng=9.3.0
-  - libuv=1.41.0
   - ncurses=6.2
   - openssl=1.1.1k
-  - pip=21.1.1
+  - pip=21.1.2
   - pydantic=1.8.2
   - python=3.9.4
-  - python-dotenv=0.17.1
   - python_abi=3.9
-  - pyyaml=5.4.1
   - readline=8.1
   - rfc3986=1.5.0
   - setuptools=49.6.0
@@ -43,13 +40,9 @@ dependencies:
   - typing-extensions=3.7.4.3
   - typing_extensions=3.7.4.3
   - tzdata=2021a
-  - uvicorn=0.13.4
-  - uvloop=0.15.2
-  - watchgod=0.6
-  - websockets=8.1
+  - uvicorn=0.14.0
   - wheel=0.36.2
   - xz=5.2.5
-  - yaml=0.2.5
   - zlib=1.2.11
   - pip:
     - fastapi-chameleon==0.1.7
