@@ -91,7 +91,13 @@ footer {
     text-align: center;
     color: white;
     background-color: #676c6e;
-
+}
+.affiliation {
+    padding-top: 20px;
+}
+.affiliation img {
+    height: auto;
+    padding: 10px;
 }
 
 footer a {
