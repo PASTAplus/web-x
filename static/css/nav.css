@@ -81,3 +81,10 @@ nav > a {
 #navbarSupportedContent {
     background-color: white;
 }
+
+hr {
+    color: #676c6e;
+    height: 1px;
+    opacity: 100%;
+    margin: auto;
+}

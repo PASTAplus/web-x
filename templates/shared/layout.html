@@ -33,7 +33,7 @@
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                        data-bs-toggle="dropdown" aria-expanded="false">About</a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Vision and Mission</a></li>
+                        <li><a class="dropdown-item" href="/about/vision-mission">Vision and Mission</a></li>
                         <li><a class="dropdown-item" href="#">Team</a></li>
                         <li><a class="dropdown-item" href="#">FAQ</a></li>
                         <li><a class="dropdown-item" href="#">Partners</a></li>
@@ -78,12 +78,13 @@
     </div>
 </nav>
 
+<hr>
 
 <div class="main_content">
     <div metal:define-slot="content" tal:omit-tag="True">No content</div>
 </div>
 
-<footer>
+<footer class="page-footer">
     <div>
         Copyright 2021 <a href="/">Environmental Data Initiative</a>. This
         material is based upon work supported by the National Science Foundation under grants #1931143 and #1931174.
@@ -96,13 +97,13 @@
     </div>
     <div class="affiliation">
         The Environmental Data Initiative is proud to be affiliated with the following organizations:<br>
-        <img style="width: 12%;" src="static/images/datacite-logo.png" alt="DataCite logo">
-        <img style="width: 12%;" src="static/images/dataone-logo.png" alt="DataONE logo">
-        <img style="width: 7%;" src="static/images/esa-logo.png" alt="ESA logo">
-        <img style="width: 7%;" src="static/images/esip-logo.png" alt="ESIP logo">
-        <img style="width: 12%;" src="static/images/lter-logo.svg" alt="LTER Network logo">
-        <img style="width: 5%;" src="static/images/neon-logo.png" alt="NEON logo">
-        <img style="width: 5%;" src="static/images/sdatarec-badge.jpg" alt="Scientific Data logo">
+        <img style="width: 12%;" src="/static/images/datacite-logo.png" alt="DataCite logo">
+        <img style="width: 12%;" src="/static/images/dataone-logo.png" alt="DataONE logo">
+        <img style="width: 7%;" src="/static/images/esa-logo.png" alt="ESA logo">
+        <img style="width: 7%;" src="/static/images/esip-logo.png" alt="ESIP logo">
+        <img style="width: 12%;" src="/static/images/lter-logo.svg" alt="LTER Network logo">
+        <img style="width: 5%;" src="/static/images/neon-logo.png" alt="NEON logo">
+        <img style="width: 5%;" src="/static/images/sdatarec-badge.jpg" alt="Scientific Data logo">
     </div>
 </footer>
 

@@ -10,19 +10,19 @@
     servilla
 
 :Created:
-    5/25/21
+    6/3/21
 """
 import fastapi
 from fastapi_chameleon import template
 from starlette.requests import Request
 
-from viewmodels.indexviewmodel import IndexViewModel
+from viewmodels.shared.viewmodel import ViewModelBase
 
 router = fastapi.APIRouter()
 
 
-@router.get('/')
-@template("index.html")
-def index(request: Request):
-    vm = IndexViewModel(request)
+@router.get('/about/vision-mission')
+@template("about/vision-mission.html")
+def about(request: Request):
+    vm = ViewModelBase(request)
     return vm.to_dict()
