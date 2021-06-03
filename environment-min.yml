@@ -12,6 +12,6 @@ dependencies:
   - uvloop
   - gunicorn
   - httptools
-pip:
-  - git+https://github.com/mikeckennedy/fastapi-chameleon
+  - pip:
+    - git+https://github.com/mikeckennedy/fastapi-chameleon
 prefix: /home/servilla/anaconda3/envs/web-x
