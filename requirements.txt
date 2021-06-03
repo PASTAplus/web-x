@@ -5,10 +5,12 @@ Chameleon==3.6.2
 click==8.0.1
 fastapi==0.65.1
 fastapi-chameleon==0.1.7
+gunicorn==20.1.0
 h11==0.12.0
 h2==4.0.0
 hpack==4.0.0
 httpcore==0.13.3
+httptools==0.2.0
 httpx==0.18.1
 hyperframe==6.0.1
 idna==2.10
@@ -20,4 +22,5 @@ sniffio==1.2.0
 starlette==0.14.2
 typing-extensions==3.7.4.3
 uvicorn==0.14.0
+uvloop==0.15.2
 wheel==0.36.2

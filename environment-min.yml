@@ -9,4 +9,7 @@ dependencies:
   - httpx
   - aiofiles
   - chameleon
+  - uvloop
+  - gunicorn
+  - httptools
 prefix: /home/servilla/anaconda3/envs/web-x
