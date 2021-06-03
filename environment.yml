@@ -49,5 +49,5 @@ dependencies:
   - xz=5.2.5
   - zlib=1.2.11
   - pip:
-    - fastapi-chameleon==0.1.7
+    - git+https://github.com/mikeckennedy/fastapi-chameleon
 prefix: /home/servilla/anaconda3/envs/web-x
