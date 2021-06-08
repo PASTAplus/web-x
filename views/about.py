@@ -26,3 +26,16 @@ router = fastapi.APIRouter()
 def about(request: Request):
     vm = ViewModelBase(request)
     return vm.to_dict()
+
+
+@router.get('/about/team')
+@template("about/team.html")
+def about(request: Request):
+    vm = ViewModelBase(request)
+    return vm.to_dict()
+
+@router.get('/about/team/mark')
+@template("about/team/mark.html")
+def about(request: Request):
+    vm = ViewModelBase(request)
+    return vm.to_dict()
