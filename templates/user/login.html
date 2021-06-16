@@ -1,0 +1,22 @@
+<div metal:use-macro="load: ../shared/layout.html">
+    <div metal:fill-slot="content" tal:omit-tag="True">
+        <div class="form-container">
+            <form action="" method="POST" class="user-form">
+                <h3>Login to EDI</h3>
+
+                <input name="user_id" type="text" placeholder=" User Name" class="form-control"
+                       value="${ user_id }" required>
+                <input name="password" type="password" placeholder=" Password" class="form-control"
+                       value="${ password }" required>
+                <button type="submit" class="btn btn-dark">Log In</button>
+                <div style="clear: both;"></div>
+
+                <div class="error-msg" tal:condition="error">${ error }</div>
+            </form>
+        </div>
+    </div>
+
+    <div metal:fill-slot="additional_css" tal:omit-tag="True">
+    <link rel="stylesheet" href="/static/css/user.css">
+    </div>
+</div>
