@@ -13,7 +13,9 @@ dependencies:
   - gunicorn
   - httptools
   - python-multipart
-  - pip
+  - aiohttp
+  - daiquiri
+  - aiohttp
   - pip:
     - git+https://github.com/mikeckennedy/fastapi-chameleon
 prefix: /home/servilla/anaconda3/envs/web-x
