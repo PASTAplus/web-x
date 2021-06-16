@@ -23,19 +23,20 @@ router = fastapi.APIRouter()
 
 @router.get('/about/vision-mission')
 @template("about/vision-mission.html")
-def about(request: Request):
+def vision_mission(request: Request):
     vm = ViewModelBase(request)
     return vm.to_dict()
 
 
 @router.get('/about/team')
 @template("about/team.html")
-def about(request: Request):
+def team(request: Request):
     vm = ViewModelBase(request)
     return vm.to_dict()
 
-@router.get('/about/team/mark')
-@template("about/team/mark.html")
-def about(request: Request):
+
+@router.get('/about/team/mark-servilla')
+@template("about/team/mark-servilla.html")
+def mark_servilla(request: Request):
     vm = ViewModelBase(request)
     return vm.to_dict()
