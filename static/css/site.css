@@ -6,11 +6,6 @@ body {
     font-size: 17px;
 }
 
-.right {
-    text-align: right;
-    padding-right: 50px;
-}
-
 .index {
     background-image: linear-gradient(to bottom, transparent, white), url("../images/aspens.jpg");
     min-height: 100%;
@@ -112,4 +107,10 @@ footer a {
 
 .page-core {
     padding: 20px;
+}
+
+subheader {
+    margin: 0 -9999rem;
+    padding: 0.25rem 9999rem ;
+    background: rgba(0, 0, 0, 0.15)
 }

@@ -82,7 +82,7 @@ nav > a {
     background-color: white;
 }
 
-hr {
+.nav hr {
     color: #676c6e;
     height: 1px;
     opacity: 100%;

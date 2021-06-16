@@ -78,9 +78,13 @@
     </div>
 </nav>
 
-<p tal:condition="is_logged_in" class="right">Welcome back ${common_name}!</p>
+<subheader tal:condition="is_logged_in">
+    <span style="padding-left: 20px">You are logged in as: &nbsp;<em>${common_name}</em></span>
+</subheader>
 
-<hr>
+<subheader tal:condition="not is_logged_in">
+    <span style="padding-left: 20px"></span>
+</subheader>
 
 <div class="main_content">
     <div metal:define-slot="content" tal:omit-tag="True">No content</div>
