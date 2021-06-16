@@ -1,0 +1,30 @@
+
+.form-container {
+    padding: 50px;
+}
+
+form.user-form > * {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+form.user-form h1, h2, h3 {
+    text-align: center;
+}
+form.user-form button {
+    float: right;
+}
+
+form.user-form {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 450px;
+    background-color: #c9c9c9;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.error-msg {
+    text-align: center;
+}
