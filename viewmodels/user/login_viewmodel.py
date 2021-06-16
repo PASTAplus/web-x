@@ -30,6 +30,6 @@ class LoginViewModel(ViewModelBase):
         self.password = form.get('password', '').strip()
 
         if not self.user_id or not self.user_id.strip():
-            self.error = 'You must specify a user id.'
+            self.error = 'You must specify a user id'
         elif not self.password:
-            self.error = 'You must specify a password.'
+            self.error = 'You must specify a password'

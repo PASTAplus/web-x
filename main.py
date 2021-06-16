@@ -12,6 +12,10 @@
 :Created:
     5/14/21
 """
+import logging
+import os
+
+import daiquiri
 import fastapi
 import fastapi_chameleon
 import uvicorn
@@ -21,6 +25,14 @@ from views import about
 from views import data
 from views import home
 from views import user
+
+
+cwd = os.path.dirname(os.path.realpath(__file__))
+logfile = cwd + "/web-x.log"
+daiquiri.setup(level=logging.INFO,
+               outputs=(daiquiri.output.File(logfile), "stdout",))
+logger = daiquiri.getLogger(__name__)
+
 
 app = fastapi.FastAPI()
 

@@ -16,7 +16,7 @@
 
 class User:
 
-    def __init__(self, common_name, user_id, password):
+    def __init__(self, user_id, common_name, auth_token):
         self.user_id: str = user_id
         self.common_name: str = common_name
-        self.password: str = password
+        self.auth_token: str = auth_token
