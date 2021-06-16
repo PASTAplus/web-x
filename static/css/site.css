@@ -6,14 +6,12 @@ body {
     font-size: 17px;
 }
 
-.main_content {
-    background: #fff;
-    margin: 0px;
-    padding: 0px 0px 50px;
+.right {
+    text-align: right;
+    padding-right: 50px;
 }
 
-
-.hero {
+.index {
     background-image: linear-gradient(to bottom, transparent, white), url("../images/aspens.jpg");
     min-height: 100%;
     background-size: cover;
@@ -33,6 +31,12 @@ body {
     margin: auto;
 }
 
+.main_content {
+    background: #fff;
+    margin: 0px;
+    padding: 0px 0px 50px;
+}
+
 .vision {
     color: black;
     margin: auto;
@@ -45,28 +49,28 @@ body {
     text-align: center;
 }
 
-.hero-inner {
+.index-inner {
     max-width: 60%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
 }
 
-.hero-inner h1 {
+.index-inner h1 {
     font-size: 50px;
     font-weight: bolder;
     margin-top: 35px;
     margin-bottom: 30px;
 }
 
-.hero-inner .by-line {
+.index-inner .by-line {
     font-size: 25px;
     font-weight: bold;
     margin-top: 35px;
     margin-bottom: 30px;
 }
 
-.hero a {
+.index a {
     color: white;
     text-decoration: underline;
 }
