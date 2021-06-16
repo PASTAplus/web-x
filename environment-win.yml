@@ -9,6 +9,7 @@ dependencies:
   - httpx
   - aiofiles
   - chameleon
+  - python-multipart
   - pip
   - pip:
     - git+https://github.com/mikeckennedy/fastapi-chameleon
