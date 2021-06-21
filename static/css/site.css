@@ -1,7 +1,17 @@
+:root {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
 body {
     color: #222;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
     font-size: 17px;
 }
@@ -109,8 +119,11 @@ footer a {
     padding: 20px;
 }
 
-subheader {
-    margin: 0 -9999rem;
-    padding: 0.25rem 9999rem ;
-    background: rgba(0, 0, 0, 0.15)
+.logged-in {
+    font-size: 1rem;
+    color: white;
+    background-color: #676c6e;
+    padding-left: 0.35em;
+    max-height: 1.5em;
+    min-height: 1.5em;
 }

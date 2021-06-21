@@ -11,80 +11,81 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link rel="stylesheet" href="/static/css/site.css"/>
     <link rel="stylesheet" href="/static/css/nav.css"/>
+    <link rel="stylesheet" href="/static/css/site.css"/>
 
     <div metal:define-slot="additional-css"  tal:omit-tag="True"></div>
 </head>
 <body>
-<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse navbar-expand-md">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="/"><img src="/static/images/EDI-logo.png"/></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/">Home</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                       data-bs-toggle="dropdown" aria-expanded="false">About</a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="/about/vision-mission">Vision and Mission</a></li>
-                        <li><a class="dropdown-item" href="/about/team">Team</a></li>
-                        <li><a class="dropdown-item" href="#">FAQ</a></li>
-                        <li><a class="dropdown-item" href="#">Partners</a></li>
+    <header>
+        <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse navbar-expand-md">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/"><img src="/static/images/EDI-logo.png"/></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                               data-bs-toggle="dropdown" aria-expanded="false">About</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="/about/vision-mission">Vision and Mission</a></li>
+                                <li><a class="dropdown-item" href="/about/team">Team</a></li>
+                                <li><a class="dropdown-item" href="#">FAQ</a></li>
+                                <li><a class="dropdown-item" href="#">Partners</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                               data-bs-toggle="dropdown" aria-expanded="false">Data</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="/data/discover">Discover</a></li>
+                                <li><a class="dropdown-item" href="#">Publish</a></li>
+                                <li><a class="dropdown-item" href="#">Rate</a></li>
+                                <li><a class="dropdown-item" href="#">Policy</a></li>
+                                <li><a class="dropdown-item" href="#">Help</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                               data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Data Curation</a></li>
+                                <li><a class="dropdown-item" href="#">Public Office Hours</a></li>
+                                <li><a class="dropdown-item" href="#">Summer Fellowships</a></li>
+                                <li><a class="dropdown-item" href="#">Training</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://ezeml.edirepository.org">ezEML</a>
+                        </li>
+                        <li tal:condition="not is_logged_in" class="nav-item">
+                            <a class="nav-link" href="/user/login">Login</a>
+                        </li>
+                        <li tal:condition="is_logged_in" class="nav-item">
+                            <a class="nav-link" href="/user/logout">Logout</a>
+                        </li>
                     </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                       data-bs-toggle="dropdown" aria-expanded="false">Data</a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="/data/discover">Discover</a></li>
-                        <li><a class="dropdown-item" href="#">Publish</a></li>
-                        <li><a class="dropdown-item" href="#">Rate</a></li>
-                        <li><a class="dropdown-item" href="#">Policy</a></li>
-                        <li><a class="dropdown-item" href="#">Help</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                       data-bs-toggle="dropdown" aria-expanded="false">Services</a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Data Curation</a></li>
-                        <li><a class="dropdown-item" href="#">Public Office Hours</a></li>
-                        <li><a class="dropdown-item" href="#">Summer Fellowships</a></li>
-                        <li><a class="dropdown-item" href="#">Training</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://ezeml.edirepository.org">ezEML</a>
-                </li>
-                <li tal:condition="not is_logged_in" class="nav-item">
-                    <a class="nav-link" href="/user/login">Login</a>
-                </li>
-                <li tal:condition="is_logged_in" class="nav-item">
-                    <a class="nav-link" href="/user/logout">Logout</a>
-                </li>
-            </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-dark" type="submit">Search</button>
-            </form>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-dark" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <div class="logged-in" tal:condition="is_logged_in">
+            <em>${common_name}</em>
         </div>
-    </div>
-</nav>
 
-<subheader tal:condition="is_logged_in">
-    <span style="padding-left: 20px">You are logged in as: &nbsp;<em>${common_name}</em></span>
-</subheader>
-
-<subheader tal:condition="not is_logged_in">
-    <span style="padding-left: 20px"></span>
-</subheader>
+        <div class="logged-in not-logged-in" tal:condition="not is_logged_in">
+        </div>
+    </header>
 
 <div class="main_content">
     <div metal:define-slot="content" tal:omit-tag="True">No content</div>
