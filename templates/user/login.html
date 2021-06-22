@@ -2,7 +2,7 @@
     <div metal:fill-slot="content" tal:omit-tag="True">
         <div class="form-container">
             <form action="" method="POST" class="user-form">
-                <h3>Login to EDI</h3>
+                <h3>Login to your EDI account to publish data</h3>
 
                 <input name="user_id" type="text" placeholder=" User Name" class="form-control"
                        value="${ user_id }" required>
@@ -14,6 +14,17 @@
                 <div class="error-msg" tal:condition="error">${ error }</div>
             </form>
         </div>
+        <p style="text-align: center">Or use an alternate identity provider to access data requiring user authentication:</p>
+        <p  style="text-align: center">
+            <a href="https://auth-d.edirepository.org/auth/login/google?target=web-x.edirepository.org"><img src="/static/images/btn_google_signin_light_normal_web.png"/></a>&nbsp;&nbsp;
+			<a href="https://auth-d.edirepository.org/auth/login/github?target=web-x.edirepository.org"><img src="/static/images/btn_github_signin_light_normal_web.png"/></a>&nbsp;&nbsp;
+			<a href="https://auth-d.edirepository.org/auth/login/orcid?target=web-x.edirepository.org"><img src="/static/images/btn_orcid_signin_light_normal_web.png"/></a>
+        </p>
+        <p  style="text-align: center; padding-top: 4em">
+            Please read our
+            <a href="https://environmentaldatainitiative.org/environmental-data-initiative-privacy-policy">privacy policy</a>
+			to know what information we collect about you and to understand your privacy rights.
+        </p>
     </div>
 
     <div metal:fill-slot="additional_css" tal:omit-tag="True">
