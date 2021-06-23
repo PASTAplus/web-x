@@ -23,7 +23,7 @@ body {
     background-position: center center;
     color: black;
     font-size: 18px;
-    padding: 50px 0px;
+    padding: 50px 0;
     text-align: center;
 }
 
@@ -39,8 +39,8 @@ body {
     position: relative;
     min-height: 100vh;
     background: #fff;
-    margin: 0px;
-    padding: 0px 0px 50px;
+    margin: 0;
+    padding: 0 0 50px;
 }
 
 #content-wrap {
