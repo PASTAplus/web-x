@@ -60,7 +60,7 @@ async def login(request: Request):
         cookie_auth.set_auth(resp, user.user_id, user.common_name)
     elif s == status.HTTP_418_IM_A_TEAPOT:
         dn = f"uid={vm.user_id},o=EDI,dc=edirepository,dc=org"
-        url = f"https://auth-d.edirepository.org/auth/accept?uid={dn}&target=web-x.edirepository.org/user/login"
+        url = f"https://auth-d.edirepository.org/auth/accept?uid={dn}&target=web-x.edirepository.org"
         resp = fastapi.responses.RedirectResponse(url=url, status_code=status.HTTP_302_FOUND)
     else:
         vm.error = "The account does not exist or the password is wrong."

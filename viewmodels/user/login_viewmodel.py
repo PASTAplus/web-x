@@ -26,7 +26,7 @@ class LoginViewModel(ViewModelBase):
 
     async def load(self):
         form = await self.request.form()
-        self.user_id = form.get('user_id', '').lower().strip()
+        self.user_id = form.get('user_id', '').strip()
         self.password = form.get('password', '').strip()
 
         if not self.user_id or not self.user_id.strip():
