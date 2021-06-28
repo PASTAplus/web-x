@@ -10,6 +10,8 @@ dependencies:
   - aiofiles
   - chameleon
   - python-multipart
+  - daiquiri
+  - aiohttp
   - pip
   - pip:
     - git+https://github.com/mikeckennedy/fastapi-chameleon
