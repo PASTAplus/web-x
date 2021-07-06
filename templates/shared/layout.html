@@ -71,8 +71,15 @@
                             <li tal:condition="not is_logged_in" class="nav-item">
                                 <a class="nav-link" href="/user/login">Login</a>
                             </li>
-                            <li tal:condition="is_logged_in" class="nav-item">
-                                <a class="nav-link" href="/user/logout">Logout</a>
+                           <li tal:condition="is_logged_in" class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                   data-bs-toggle="dropdown" aria-expanded="false">User</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                                    <li><a class="dropdown-item" href="#">Data Cart</a></li>
+                                    <li><a class="dropdown-item" href="#">Saved Searches</a></li>
+                                    <li><a class="dropdown-item" href="/user/logout">Logout</a></li>
+                                </ul>
                             </li>
                         </ul>
                         <form class="d-flex" style="margin-bottom:0">
