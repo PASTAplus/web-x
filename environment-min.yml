@@ -9,14 +9,12 @@ dependencies:
   - httpx
   - aiofiles
   - chameleon
-  - python-multipart
-  - daiquiri
-  - aiohttp
-  # Linux specific packages
   - uvloop
   - gunicorn
   - httptools
-  ###
+  - python-multipart
+  - aiohttp
+  - daiquiri
   - pip
   - pip:
     - git+https://github.com/mikeckennedy/fastapi-chameleon

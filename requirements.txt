@@ -1,7 +1,7 @@
 aiofiles==0.7.0
 aiohttp==3.7.4
 anyio==3.2.1
-asgiref==3.4.0
+asgiref==3.4.1
 async-timeout==3.0.1
 attrs==21.2.0
 certifi==2021.5.30
@@ -9,8 +9,8 @@ Chameleon==3.6.2
 chardet==4.0.0
 click==8.0.1
 daiquiri==3.0.0
-fastapi==0.65.2
-fastapi-chameleon==0.1.7
+fastapi==0.66.0
+git+https://github.com/mikeckennedy/fastapi-chameleon
 gunicorn==20.1.0
 h11==0.12.0
 h2==4.0.0
@@ -27,6 +27,7 @@ python-json-logger==2.0.1
 python-multipart==0.0.5
 rfc3986==1.5.0
 setuptools==49.6.0
+six==1.16.0
 sniffio==1.2.0
 starlette==0.14.2
 typing-extensions==3.10.0.0
