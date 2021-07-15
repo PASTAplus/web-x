@@ -30,29 +30,28 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/">Home</a>
+                            </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                    data-bs-toggle="dropdown" aria-expanded="false">Data</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="/data/discover">Discover Data</a></li>
-                                    <li><a class="dropdown-item" href="/data/publish">Publish Data</a></li>
+                                    <li><a class="dropdown-item" href="/data/discover">Discover</a></li>
+                                    <li><a class="dropdown-item" href="#">Publish</a></li>
+                                    <li><a class="dropdown-item" href="#">Rate</a></li>
+                                    <li><a class="dropdown-item" href="#">Policy</a></li>
+                                    <li><a class="dropdown-item" href="#">Help</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                   data-bs-toggle="dropdown" aria-expanded="false">Resources</a>
+                                   data-bs-toggle="dropdown" aria-expanded="false">Services</a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="/resources/authors">For Data Authors</a></li>
-                                    <li><a class="dropdown-item" href="/resources/users">For Data Users</a></li>
-                                    <li><a class="dropdown-item" href="/resources/data_managers">For Data Managers</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                   data-bs-toggle="dropdown" aria-expanded="false">Help & Support</a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="/support/help">One-on-One Support</a></li>
-                                    <li><a class="dropdown-item" href="/support/faq">FAQ</a></li>
+                                    <li><a class="dropdown-item" href="#">Data Curation</a></li>
+                                    <li><a class="dropdown-item" href="#">Public Office Hours</a></li>
+                                    <li><a class="dropdown-item" href="#">Summer Fellowships</a></li>
+                                    <li><a class="dropdown-item" href="#">Training</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
@@ -61,9 +60,12 @@
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item" href="/about/edi">EDI</a></li>
                                     <li><a class="dropdown-item" href="/about/policies">Policies</a></li>
-                                    <li><a class="dropdown-item" href="/about/partners">Partners</a></li>
+                                    <li><a class="dropdown-item" href="#">Partners</a></li>
                                 </ul>
                             </li>
+#                            <li class="nav-item">
+#                                <a class="nav-link" href="https://ezeml.edirepository.org">ezEML</a>
+#                            </li>
                             <li tal:condition="not is_logged_in" class="nav-item">
                                 <a class="nav-link" href="/user/login">Login</a>
                             </li>
