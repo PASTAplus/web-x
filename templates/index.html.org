@@ -7,9 +7,12 @@
                     <div class="by-line">
                         ~ Create . Package . Archive . Discover . Reuse ~
                     </div>
-                        <div style="max-height: 2rem; min-height: 2rem">
-			    <button type="button" class="btn btn-dark"><a href="https://web-x.edirepository.org/data/publish" style="text-decoration: none" >Publish Data</a></button>
-			    <button type="button" class="btn btn-dark"><a href="https://web-x.edirepository.org/data/discover" style="text-decoration: none">Discover Data</a></button>
+                    <div tal:condition="is_logged_in"  style="max-height: 4rem; min-height: 4rem"></div>
+                    <div tal:condition="not is_logged_in" style="max-height: 2rem; min-height: 2rem">
+                        Want to find or publish data?
+                    </div>
+                    <div tal:condition="not is_logged_in" style="max-height: 2rem; min-height: 2rem">
+                        <button type="button" class="btn btn-dark">Request User Account</button>
                     </div>
                 </div>
             </div>

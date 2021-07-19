@@ -22,6 +22,8 @@ import uvicorn
 from starlette.staticfiles import StaticFiles
 
 from views import about
+from views import resources
+from views import support
 from views import data
 from views import home
 from views import user
@@ -49,7 +51,9 @@ def configure_templates(dev_mode: bool):
 def configure_routes():
     app.mount('/static', StaticFiles(directory='static'), name='static')
     app.include_router(about.router)
+    app.include_router(resources.router)
     app.include_router(data.router)
+    app.include_router(support.router)
     app.include_router(home.router)
     app.include_router(user.router)
 

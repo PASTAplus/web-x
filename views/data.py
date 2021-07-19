@@ -26,3 +26,9 @@ router = fastapi.APIRouter()
 def discover(request: Request):
     vm = ViewModelBase(request)
     return vm.to_dict()
+
+@router.get('/data/publish')
+@template("data/publish.html")
+def publish(request: Request):
+    vm = ViewModelBase(request)
+    return vm.to_dict()

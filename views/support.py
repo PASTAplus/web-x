@@ -21,20 +21,15 @@ from viewmodels.shared.viewmodel import ViewModelBase
 router = fastapi.APIRouter()
 
 
-@router.get('/about/edi')
-@template("about/edi.html")
-def edi(request: Request):
+@router.get('/support/help')
+@template("support/support.html")
+def supprt(request: Request):
     vm = ViewModelBase(request)
     return vm.to_dict()
 
-@router.get('/about/policies')
-@template("about/policies.html")
-def policies(request: Request):
+@router.get('/support/faq')
+@template("support/faq.html")
+def faq(request: Request):
     vm = ViewModelBase(request)
     return vm.to_dict()
 
-@router.get('/about/edi/mark-servilla')
-@template("about/edi/mark-servilla.html")
-def mark_servilla(request: Request):
-    vm = ViewModelBase(request)
-    return vm.to_dict()
