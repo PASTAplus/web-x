@@ -68,7 +68,6 @@ footer a {
 .affiliation img {
     height: auto;
     padding: 10px;
-    width: 100%;
 }
 
 .vision {
@@ -76,18 +75,6 @@ footer a {
     margin: auto;
     padding-top: 10px;
     text-align: center;
-}
-
-.publish {
-    color: black;
-    margin: auto;
-    padding-top: 10px;
-    text-align: center;
-}
-
-.center {
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .vision p {

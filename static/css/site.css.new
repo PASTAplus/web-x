@@ -68,7 +68,6 @@ footer a {
 .affiliation img {
     height: auto;
     padding: 10px;
-    width: 100%;
 }
 
 .vision {
