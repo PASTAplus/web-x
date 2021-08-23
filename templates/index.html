@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <div metal:use-macro="load: shared/layout.html">
     <div metal:fill-slot="content" tal:omit-tag="True">
             <div class="index">
@@ -51,13 +52,14 @@
 	     </div>
 	    <hr style="width: 50%; margin-top: 15px; margin-bottom: 15px">
                    <table class="center" width=40%; text-align="center">
-                       <tr style="text-align:center;" >
+                       <tr style="text-align:center;" 
+			       >
 			       <th><h2><b>Featured Data</b></h2></th>
 			       <th><h2><b>Reused Data</b></h2></th>
                        </tr>
                        <tr style="text-align:center;" >
-                               <th style="padding:10px;"><img src="../static/images/saline_2008.jpg" alt="login" style="width:350px;height:250px;"></th>
-                               <th style="padding:10px;"><img src="../static/images/black-throated_warbler_npr.jpg" alt="describe" style="width:350px;height:250px;"></th>
+                               <th style="padding:10px;"><img src="../static/images/saline_2008.jpg" alt="featured_data_img" style="width:350px;height:250px;"></th>
+                               <th style="padding:10px;"><img src="../static/images/black-throated_warbler_npr.jpg" alt="reused_data_img" style="width:350px;height:250px;"></th>
                        </tr>
                        <tr style="text-align:center;" >
                                <td style="padding:10px;"><a href="https://environmentaldatainitiative.org/nutrient-enrichment-grasslands/" style="text-decoration: none">Effects of nutrient enrichment on grassland biomass and plant diversity across the globe</a></td>
