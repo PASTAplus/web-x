@@ -78,6 +78,11 @@ footer a {
     text-align: center;
 }
 
+.vision p {
+    color: black;
+    text-align: center;
+}
+
 .publish {
     color: black;
     margin: auto;
@@ -90,9 +95,13 @@ footer a {
   margin-right: auto;
 }
 
-.vision p {
-    color: black;
-    text-align: center;
+div.container{
+  display: block;
+  text-align: center;
+}
+
+ul{
+  list-style: none;
 }
 
 .index-inner {
