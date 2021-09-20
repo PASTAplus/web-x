@@ -1,0 +1,2459 @@
+2021-07-14 15:16:54,812 [21496] INFO     uvicorn.error: Started server process [21496]
+2021-07-14 15:16:54,832 [21496] INFO     uvicorn.error: Waiting for application startup.
+2021-07-14 15:16:54,872 [21496] INFO     uvicorn.error: Application startup complete.
+2021-07-14 15:16:54,872 [21496] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-07-14 15:17:43,862 [21496] INFO     uvicorn.error: Shutting down
+2021-07-14 15:17:43,982 [21496] INFO     uvicorn.error: Waiting for application shutdown.
+2021-07-14 15:17:43,982 [21496] INFO     uvicorn.error: Application shutdown complete.
+2021-07-14 15:17:43,982 [21496] INFO     uvicorn.error: Finished server process [21496]
+2021-07-14 15:23:07,532 [14248] INFO     uvicorn.error: Started server process [14248]
+2021-07-14 15:23:07,542 [14248] INFO     uvicorn.error: Waiting for application startup.
+2021-07-14 15:23:07,542 [14248] INFO     uvicorn.error: Application startup complete.
+2021-07-14 15:23:07,542 [14248] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-07-14 16:10:03,210 [14248] INFO     uvicorn.error: Shutting down
+2021-07-14 16:10:03,330 [14248] INFO     uvicorn.error: Waiting for application shutdown.
+2021-07-14 16:10:03,330 [14248] INFO     uvicorn.error: Application shutdown complete.
+2021-07-14 16:10:03,330 [14248] INFO     uvicorn.error: Finished server process [14248]
+2021-07-14 16:10:09,870 [18972] INFO     uvicorn.error: Started server process [18972]
+2021-07-14 16:10:09,870 [18972] INFO     uvicorn.error: Waiting for application startup.
+2021-07-14 16:10:09,870 [18972] INFO     uvicorn.error: Application startup complete.
+2021-07-14 16:10:09,870 [18972] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-07-14 16:43:42,729 [18972] INFO     uvicorn.error: Shutting down
+2021-07-14 16:43:42,844 [18972] INFO     uvicorn.error: Waiting for application shutdown.
+2021-07-14 16:43:42,844 [18972] INFO     uvicorn.error: Application shutdown complete.
+2021-07-14 16:43:42,853 [18972] INFO     uvicorn.error: Finished server process [18972]
+2021-07-14 16:43:48,918 [16324] INFO     uvicorn.error: Started server process [16324]
+2021-07-14 16:43:48,918 [16324] INFO     uvicorn.error: Waiting for application startup.
+2021-07-14 16:43:48,933 [16324] INFO     uvicorn.error: Application startup complete.
+2021-07-14 16:43:48,933 [16324] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-07-14 16:49:14,118 [16324] INFO     uvicorn.error: Shutting down
+2021-07-14 16:49:14,238 [16324] INFO     uvicorn.error: Waiting for application shutdown.
+2021-07-14 16:49:14,243 [16324] INFO     uvicorn.error: Application shutdown complete.
+2021-07-14 16:49:14,248 [16324] INFO     uvicorn.error: Finished server process [16324]
+2021-07-14 16:49:17,068 [16888] INFO     uvicorn.error: Started server process [16888]
+2021-07-14 16:49:17,078 [16888] INFO     uvicorn.error: Waiting for application startup.
+2021-07-14 16:49:17,078 [16888] INFO     uvicorn.error: Application startup complete.
+2021-07-14 16:49:17,088 [16888] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-07-14 16:49:32,818 [16888] ERROR    uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 96, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 93, in __call__
+    await self.app(scope, receive, inner_send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\concurrency.py", line 40, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 88, in sync_view_method
+    return __render_response(template_file, response_val, mimetype)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 114, in __render_response
+    html = render(template_file, **model)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 43, in render
+    page: PageTemplate = __templates[template_file]
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\loader.py", line 28, in load
+    return super(TemplateLoader, self).load(filename, cls)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\loader.py", line 45, in load
+    self.registry[args] = template = func(self, *args, **kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\loader.py", line 108, in load
+    raise ValueError("Template not found: %s." % spec)
+ValueError: Template not found: resources/managers.html.
+2021-07-14 16:49:38,948 [16888] ERROR    uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 96, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 93, in __call__
+    await self.app(scope, receive, inner_send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\concurrency.py", line 40, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 88, in sync_view_method
+    return __render_response(template_file, response_val, mimetype)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 114, in __render_response
+    html = render(template_file, **model)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 43, in render
+    page: PageTemplate = __templates[template_file]
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\loader.py", line 28, in load
+    return super(TemplateLoader, self).load(filename, cls)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\loader.py", line 45, in load
+    self.registry[args] = template = func(self, *args, **kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\loader.py", line 108, in load
+    raise ValueError("Template not found: %s." % spec)
+ValueError: Template not found: resources/managers.html.
+2021-07-14 16:50:55,214 [16888] ERROR    uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 96, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 93, in __call__
+    await self.app(scope, receive, inner_send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\concurrency.py", line 40, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 88, in sync_view_method
+    return __render_response(template_file, response_val, mimetype)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 114, in __render_response
+    html = render(template_file, **model)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 43, in render
+    page: PageTemplate = __templates[template_file]
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\loader.py", line 28, in load
+    return super(TemplateLoader, self).load(filename, cls)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\loader.py", line 45, in load
+    self.registry[args] = template = func(self, *args, **kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\loader.py", line 108, in load
+    raise ValueError("Template not found: %s." % spec)
+ValueError: Template not found: resources/managers.html.
+2021-07-14 16:51:55,378 [16888] INFO     uvicorn.error: Shutting down
+2021-07-14 16:51:55,478 [16888] INFO     uvicorn.error: Waiting for application shutdown.
+2021-07-14 16:51:55,478 [16888] INFO     uvicorn.error: Application shutdown complete.
+2021-07-14 16:51:55,488 [16888] INFO     uvicorn.error: Finished server process [16888]
+2021-07-14 16:51:57,908 [20516] INFO     uvicorn.error: Started server process [20516]
+2021-07-14 16:51:57,918 [20516] INFO     uvicorn.error: Waiting for application startup.
+2021-07-14 16:51:57,918 [20516] INFO     uvicorn.error: Application startup complete.
+2021-07-14 16:51:57,928 [20516] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-07-14 17:00:04,348 [20516] INFO     uvicorn.error: Shutting down
+2021-07-14 17:00:04,468 [20516] INFO     uvicorn.error: Waiting for application shutdown.
+2021-07-14 17:00:04,468 [20516] INFO     uvicorn.error: Application shutdown complete.
+2021-07-14 17:00:04,478 [20516] INFO     uvicorn.error: Finished server process [20516]
+2021-07-14 17:00:06,658 [18572] CRITICAL root: Traceback (most recent call last):
+  File "C:\Users\user\web-x\web-x\main.py", line 61, in <module>
+    configure(dev_mode=True)
+  File "C:\Users\user\web-x\web-x\main.py", line 43, in configure
+    configure_routes()
+  File "C:\Users\user\web-x\web-x\main.py", line 55, in configure_routes
+    app.include_router(support.router)
+NameError: name 'support' is not defined
+
+2021-07-14 17:01:43,768 [22484] INFO     uvicorn.error: Started server process [22484]
+2021-07-14 17:01:43,778 [22484] INFO     uvicorn.error: Waiting for application startup.
+2021-07-14 17:01:43,792 [22484] INFO     uvicorn.error: Application startup complete.
+2021-07-14 17:01:43,808 [22484] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-07-14 17:02:13,038 [22484] INFO     uvicorn.error: Shutting down
+2021-07-14 17:02:13,158 [22484] INFO     uvicorn.error: Waiting for application shutdown.
+2021-07-14 17:02:13,163 [22484] INFO     uvicorn.error: Application shutdown complete.
+2021-07-14 17:02:13,178 [22484] INFO     uvicorn.error: Finished server process [22484]
+2021-07-15 11:28:50,065 [10648] INFO     uvicorn.error: Started server process [10648]
+2021-07-15 11:28:50,075 [10648] INFO     uvicorn.error: Waiting for application startup.
+2021-07-15 11:28:50,086 [10648] INFO     uvicorn.error: Application startup complete.
+2021-07-15 11:28:50,086 [10648] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-07-15 13:10:24,472 [10648] INFO     uvicorn.error: Shutting down
+2021-07-15 13:10:24,608 [10648] INFO     uvicorn.error: Waiting for application shutdown.
+2021-07-15 13:10:24,614 [10648] INFO     uvicorn.error: Application shutdown complete.
+2021-07-15 13:10:24,615 [10648] INFO     uvicorn.error: Finished server process [10648]
+2021-07-19 09:41:09,039 [8768] INFO     uvicorn.error: Started server process [8768]
+2021-07-19 09:41:09,063 [8768] INFO     uvicorn.error: Waiting for application startup.
+2021-07-19 09:41:09,063 [8768] INFO     uvicorn.error: Application startup complete.
+2021-07-19 09:41:09,063 [8768] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-07-19 15:03:03,641 [8768] INFO     uvicorn.error: Shutting down
+2021-07-19 15:03:03,820 [8768] INFO     uvicorn.error: Waiting for application shutdown.
+2021-07-19 15:03:03,830 [8768] INFO     uvicorn.error: Application shutdown complete.
+2021-07-19 15:03:03,835 [8768] INFO     uvicorn.error: Finished server process [8768]
+2021-08-13 11:22:23,004 [18124] INFO     uvicorn.error: Started server process [18124]
+2021-08-13 11:22:23,064 [18124] INFO     uvicorn.error: Waiting for application startup.
+2021-08-13 11:22:23,074 [18124] INFO     uvicorn.error: Application startup complete.
+2021-08-13 11:22:23,074 [18124] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-08-13 11:24:38,424 [18124] INFO     uvicorn.error: Shutting down
+2021-08-13 11:24:38,544 [18124] INFO     uvicorn.error: Finished server process [18124]
+2021-08-13 11:24:38,564 [18124] ERROR    asyncio: Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<LifespanOn.main() running at C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\lifespan\on.py:84> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x000001E07CEB2AF0>()]>>
+2021-08-13 11:24:38,564 [18124] INFO     uvicorn.error: ASGI 'lifespan' protocol appears unsupported.
+2021-08-13 12:20:14,435 [3268] INFO     uvicorn.error: Started server process [3268]
+2021-08-13 12:20:14,444 [3268] INFO     uvicorn.error: Waiting for application startup.
+2021-08-13 12:20:14,444 [3268] INFO     uvicorn.error: Application startup complete.
+2021-08-13 12:20:14,444 [3268] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-08-13 12:51:11,731 [3268] ERROR    uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 96, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 93, in __call__
+    await self.app(scope, receive, inner_send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\concurrency.py", line 40, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 88, in sync_view_method
+    return __render_response(template_file, response_val, mimetype)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 114, in __render_response
+    html = render(template_file, **model)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 44, in render
+    return page.render(encoding='utf-8', **template_data)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 306, in render
+    return super(PageTemplate, self).render(**_kw)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 184, in render
+    self.cook_check()
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 317, in cook_check
+    self.cook(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 162, in cook
+    program = self._cook(body, digest, names)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 237, in _cook
+    source = self._compile(body, builtins)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 269, in _compile
+    program = self.parse(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 232, in parse
+    return MacroProgram(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\program.py", line 169, in __init__
+    super(MacroProgram, self).__init__(*args, **kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\program.py", line 34, in __init__
+    for kind, args in parser:
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 196, in __iter__
+    item = self.parse(token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 204, in parse
+    return visitor(kind, token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 248, in visit_end_tag
+    raise ParseError("Unexpected end tag.", token)
+chameleon.exc.ParseError: Unexpected end tag.
+
+ - String:     "</table>"
+ - Filename:   C:\Users\user\web-x\web-x\templates\index.html
+ - Location:   (line 32: col 2)
+ - Source:     </table>
+               ^^^^^^^^
+2021-08-13 12:53:46,186 [3268] ERROR    uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 96, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 93, in __call__
+    await self.app(scope, receive, inner_send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\concurrency.py", line 40, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 88, in sync_view_method
+    return __render_response(template_file, response_val, mimetype)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 114, in __render_response
+    html = render(template_file, **model)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 44, in render
+    return page.render(encoding='utf-8', **template_data)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 306, in render
+    return super(PageTemplate, self).render(**_kw)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 184, in render
+    self.cook_check()
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 317, in cook_check
+    self.cook(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 162, in cook
+    program = self._cook(body, digest, names)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 237, in _cook
+    source = self._compile(body, builtins)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 269, in _compile
+    program = self.parse(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 232, in parse
+    return MacroProgram(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\program.py", line 169, in __init__
+    super(MacroProgram, self).__init__(*args, **kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\program.py", line 34, in __init__
+    for kind, args in parser:
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 196, in __iter__
+    item = self.parse(token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 204, in parse
+    return visitor(kind, token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 248, in visit_end_tag
+    raise ParseError("Unexpected end tag.", token)
+chameleon.exc.ParseError: Unexpected end tag.
+
+ - String:     "</table>"
+ - Filename:   C:\Users\user\web-x\web-x\templates\index.html
+ - Location:   (line 32: col 2)
+ - Source:     </table>
+               ^^^^^^^^
+2021-08-13 12:54:02,841 [3268] INFO     uvicorn.error: Shutting down
+2021-08-13 12:54:02,961 [3268] INFO     uvicorn.error: Waiting for application shutdown.
+2021-08-13 12:54:02,961 [3268] INFO     uvicorn.error: Application shutdown complete.
+2021-08-13 12:54:02,961 [3268] INFO     uvicorn.error: Finished server process [3268]
+2021-08-13 12:54:21,021 [23612] INFO     uvicorn.error: Started server process [23612]
+2021-08-13 12:54:21,021 [23612] INFO     uvicorn.error: Waiting for application startup.
+2021-08-13 12:54:21,021 [23612] INFO     uvicorn.error: Application startup complete.
+2021-08-13 12:54:21,021 [23612] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-08-13 12:54:26,171 [23612] ERROR    uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 96, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 93, in __call__
+    await self.app(scope, receive, inner_send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\concurrency.py", line 40, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 88, in sync_view_method
+    return __render_response(template_file, response_val, mimetype)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 114, in __render_response
+    html = render(template_file, **model)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 44, in render
+    return page.render(encoding='utf-8', **template_data)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 306, in render
+    return super(PageTemplate, self).render(**_kw)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 184, in render
+    self.cook_check()
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 317, in cook_check
+    self.cook(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 162, in cook
+    program = self._cook(body, digest, names)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 237, in _cook
+    source = self._compile(body, builtins)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 269, in _compile
+    program = self.parse(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 232, in parse
+    return MacroProgram(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\program.py", line 169, in __init__
+    super(MacroProgram, self).__init__(*args, **kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\program.py", line 34, in __init__
+    for kind, args in parser:
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 196, in __iter__
+    item = self.parse(token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 204, in parse
+    return visitor(kind, token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 248, in visit_end_tag
+    raise ParseError("Unexpected end tag.", token)
+chameleon.exc.ParseError: Unexpected end tag.
+
+ - String:     "</table>"
+ - Filename:   C:\Users\user\web-x\web-x\templates\index.html
+ - Location:   (line 32: col 2)
+ - Source:     </table>
+               ^^^^^^^^
+2021-08-13 12:55:44,621 [23612] INFO     uvicorn.error: Shutting down
+2021-08-13 12:55:44,721 [23612] INFO     uvicorn.error: Waiting for application shutdown.
+2021-08-13 12:55:44,721 [23612] INFO     uvicorn.error: Application shutdown complete.
+2021-08-13 12:55:44,721 [23612] INFO     uvicorn.error: Finished server process [23612]
+2021-08-13 12:55:55,270 [26056] INFO     uvicorn.error: Started server process [26056]
+2021-08-13 12:55:55,270 [26056] INFO     uvicorn.error: Waiting for application startup.
+2021-08-13 12:55:55,270 [26056] INFO     uvicorn.error: Application startup complete.
+2021-08-13 12:55:55,281 [26056] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-08-13 13:03:23,290 [26056] ERROR    uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 96, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 93, in __call__
+    await self.app(scope, receive, inner_send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\concurrency.py", line 40, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 88, in sync_view_method
+    return __render_response(template_file, response_val, mimetype)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 114, in __render_response
+    html = render(template_file, **model)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 44, in render
+    return page.render(encoding='utf-8', **template_data)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 306, in render
+    return super(PageTemplate, self).render(**_kw)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 184, in render
+    self.cook_check()
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 317, in cook_check
+    self.cook(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 162, in cook
+    program = self._cook(body, digest, names)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 237, in _cook
+    source = self._compile(body, builtins)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 269, in _compile
+    program = self.parse(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 232, in parse
+    return MacroProgram(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\program.py", line 169, in __init__
+    super(MacroProgram, self).__init__(*args, **kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\program.py", line 34, in __init__
+    for kind, args in parser:
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 196, in __iter__
+    item = self.parse(token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 204, in parse
+    return visitor(kind, token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 248, in visit_end_tag
+    raise ParseError("Unexpected end tag.", token)
+chameleon.exc.ParseError: Unexpected end tag.
+
+ - String:     "</table>"
+ - Filename:   C:\Users\user\web-x\web-x\templates\index.html
+ - Location:   (line 32: col 2)
+ - Source:     </table>
+               ^^^^^^^^
+2021-08-13 13:08:34,920 [26056] ERROR    uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 96, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 93, in __call__
+    await self.app(scope, receive, inner_send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\concurrency.py", line 40, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 88, in sync_view_method
+    return __render_response(template_file, response_val, mimetype)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 114, in __render_response
+    html = render(template_file, **model)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 44, in render
+    return page.render(encoding='utf-8', **template_data)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 306, in render
+    return super(PageTemplate, self).render(**_kw)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 184, in render
+    self.cook_check()
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 317, in cook_check
+    self.cook(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 162, in cook
+    program = self._cook(body, digest, names)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 237, in _cook
+    source = self._compile(body, builtins)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 269, in _compile
+    program = self.parse(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 232, in parse
+    return MacroProgram(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\program.py", line 169, in __init__
+    super(MacroProgram, self).__init__(*args, **kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\program.py", line 34, in __init__
+    for kind, args in parser:
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 196, in __iter__
+    item = self.parse(token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 204, in parse
+    return visitor(kind, token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 248, in visit_end_tag
+    raise ParseError("Unexpected end tag.", token)
+chameleon.exc.ParseError: Unexpected end tag.
+
+ - String:     "</table>"
+ - Filename:   C:\Users\user\web-x\web-x\templates\index.html
+ - Location:   (line 32: col 2)
+ - Source:     </table>
+               ^^^^^^^^
+2021-08-13 13:12:06,199 [26056] INFO     uvicorn.error: Shutting down
+2021-08-13 13:12:06,299 [26056] INFO     uvicorn.error: Waiting for application shutdown.
+2021-08-13 13:12:06,299 [26056] INFO     uvicorn.error: Application shutdown complete.
+2021-08-13 13:12:06,299 [26056] INFO     uvicorn.error: Finished server process [26056]
+2021-08-13 13:12:15,649 [17840] INFO     uvicorn.error: Started server process [17840]
+2021-08-13 13:12:15,659 [17840] INFO     uvicorn.error: Waiting for application startup.
+2021-08-13 13:12:15,659 [17840] INFO     uvicorn.error: Application startup complete.
+2021-08-13 13:12:15,662 [17840] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-08-13 13:25:36,690 [17840] INFO     uvicorn.error: Shutting down
+2021-08-13 13:25:36,800 [17840] INFO     uvicorn.error: Finished server process [17840]
+2021-08-13 13:25:36,863 [17840] ERROR    asyncio: Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<LifespanOn.main() running at C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\lifespan\on.py:84> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x0000020FE472A790>()]>>
+2021-08-13 13:25:36,867 [17840] INFO     uvicorn.error: ASGI 'lifespan' protocol appears unsupported.
+2021-08-13 14:49:57,962 [10128] INFO     uvicorn.error: Started server process [10128]
+2021-08-13 14:49:57,962 [10128] INFO     uvicorn.error: Waiting for application startup.
+2021-08-13 14:49:57,962 [10128] INFO     uvicorn.error: Application startup complete.
+2021-08-13 14:49:57,966 [10128] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-08-13 15:01:18,483 [10128] ERROR    uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 96, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 93, in __call__
+    await self.app(scope, receive, inner_send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\concurrency.py", line 40, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 88, in sync_view_method
+    return __render_response(template_file, response_val, mimetype)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 114, in __render_response
+    html = render(template_file, **model)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 44, in render
+    return page.render(encoding='utf-8', **template_data)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 306, in render
+    return super(PageTemplate, self).render(**_kw)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 184, in render
+    self.cook_check()
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 317, in cook_check
+    self.cook(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 162, in cook
+    program = self._cook(body, digest, names)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 237, in _cook
+    source = self._compile(body, builtins)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 269, in _compile
+    program = self.parse(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 232, in parse
+    return MacroProgram(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\program.py", line 169, in __init__
+    super(MacroProgram, self).__init__(*args, **kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\program.py", line 34, in __init__
+    for kind, args in parser:
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 196, in __iter__
+    item = self.parse(token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 204, in parse
+    return visitor(kind, token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 248, in visit_end_tag
+    raise ParseError("Unexpected end tag.", token)
+chameleon.exc.ParseError: Unexpected end tag.
+
+ - String:     "</table>"
+ - Filename:   C:\Users\user\web-x\web-x\templates\index.html
+ - Location:   (line 33: col 2)
+ - Source:     </table>
+               ^^^^^^^^
+2021-08-13 15:24:08,795 [10128] ERROR    uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 96, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 93, in __call__
+    await self.app(scope, receive, inner_send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\concurrency.py", line 40, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 88, in sync_view_method
+    return __render_response(template_file, response_val, mimetype)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 114, in __render_response
+    html = render(template_file, **model)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 44, in render
+    return page.render(encoding='utf-8', **template_data)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 306, in render
+    return super(PageTemplate, self).render(**_kw)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 184, in render
+    self.cook_check()
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 317, in cook_check
+    self.cook(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 162, in cook
+    program = self._cook(body, digest, names)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 237, in _cook
+    source = self._compile(body, builtins)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 269, in _compile
+    program = self.parse(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 232, in parse
+    return MacroProgram(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\program.py", line 169, in __init__
+    super(MacroProgram, self).__init__(*args, **kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\program.py", line 34, in __init__
+    for kind, args in parser:
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 196, in __iter__
+    item = self.parse(token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 204, in parse
+    return visitor(kind, token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 248, in visit_end_tag
+    raise ParseError("Unexpected end tag.", token)
+chameleon.exc.ParseError: Unexpected end tag.
+
+ - String:     "</tr>"
+ - Filename:   C:\Users\user\web-x\web-x\templates\index.html
+ - Location:   (line 26: col 3)
+ - Source:     </tr>
+               ^^^^^
+2021-08-13 16:04:15,033 [10128] INFO     uvicorn.error: Shutting down
+2021-08-13 16:04:15,140 [10128] INFO     uvicorn.error: Finished server process [10128]
+2021-08-13 16:04:15,177 [10128] ERROR    asyncio: Task was destroyed but it is pending!
+task: <Task pending name='Task-2' coro=<LifespanOn.main() running at C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\lifespan\on.py:84> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x000001AFFF29A790>()]>>
+2021-08-13 16:04:15,180 [10128] INFO     uvicorn.error: ASGI 'lifespan' protocol appears unsupported.
+2021-08-16 15:29:29,513 [18800] INFO     uvicorn.error: Started server process [18800]
+2021-08-16 15:29:29,535 [18800] INFO     uvicorn.error: Waiting for application startup.
+2021-08-16 15:29:29,536 [18800] INFO     uvicorn.error: Application startup complete.
+2021-08-16 15:29:29,537 [18800] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-08-16 15:47:16,475 [18800] ERROR    uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 96, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 93, in __call__
+    await self.app(scope, receive, inner_send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\concurrency.py", line 40, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 88, in sync_view_method
+    return __render_response(template_file, response_val, mimetype)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 114, in __render_response
+    html = render(template_file, **model)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 44, in render
+    return page.render(encoding='utf-8', **template_data)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 306, in render
+    return super(PageTemplate, self).render(**_kw)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 184, in render
+    self.cook_check()
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 317, in cook_check
+    self.cook(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 162, in cook
+    program = self._cook(body, digest, names)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 237, in _cook
+    source = self._compile(body, builtins)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 269, in _compile
+    program = self.parse(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 232, in parse
+    return MacroProgram(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\program.py", line 169, in __init__
+    super(MacroProgram, self).__init__(*args, **kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\program.py", line 35, in __init__
+    node = self.visit(kind, args)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\program.py", line 41, in visit
+    return visitor(*args)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\program.py", line 548, in visit_element
+    raise LanguageError(
+chameleon.exc.LanguageError: Cannot use metal:fill-slot without metal:use-macro.
+
+ - String:     "content"
+ - Filename:   C:\Users\user\web-x\web-x\templates\index.html
+ - Location:   (line 2: col 26)
+ - Source:     <div metal:fill-slot="content" tal:omit-tag="True">
+                                     ^^^^^^^
+2021-08-16 16:03:05,095 [18800] INFO     uvicorn.error: Shutting down
+2021-08-16 16:03:05,204 [18800] INFO     uvicorn.error: Waiting for application shutdown.
+2021-08-16 16:03:05,207 [18800] INFO     uvicorn.error: Application shutdown complete.
+2021-08-16 16:03:05,208 [18800] INFO     uvicorn.error: Finished server process [18800]
+2021-08-17 11:35:49,676 [12600] INFO     uvicorn.error: Started server process [12600]
+2021-08-17 11:35:49,703 [12600] INFO     uvicorn.error: Waiting for application startup.
+2021-08-17 11:35:49,704 [12600] INFO     uvicorn.error: Application startup complete.
+2021-08-17 11:35:49,707 [12600] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-08-17 11:59:18,694 [12600] ERROR    uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 96, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 93, in __call__
+    await self.app(scope, receive, inner_send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\concurrency.py", line 40, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 88, in sync_view_method
+    return __render_response(template_file, response_val, mimetype)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 114, in __render_response
+    html = render(template_file, **model)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 44, in render
+    return page.render(encoding='utf-8', **template_data)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 306, in render
+    return super(PageTemplate, self).render(**_kw)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 184, in render
+    self.cook_check()
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 317, in cook_check
+    self.cook(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 162, in cook
+    program = self._cook(body, digest, names)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 237, in _cook
+    source = self._compile(body, builtins)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 269, in _compile
+    program = self.parse(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 232, in parse
+    return MacroProgram(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\program.py", line 169, in __init__
+    super(MacroProgram, self).__init__(*args, **kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\program.py", line 34, in __init__
+    for kind, args in parser:
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 196, in __iter__
+    item = self.parse(token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 204, in parse
+    return visitor(kind, token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 248, in visit_end_tag
+    raise ParseError("Unexpected end tag.", token)
+chameleon.exc.ParseError: Unexpected end tag.
+
+ - String:     "</ul>"
+ - Filename:   C:\Users\user\web-x\web-x\templates\index.html
+ - Location:   (line 49: col 9)
+ - Source:     </ul>
+               ^^^^^
+2021-08-17 12:20:28,574 [12600] ERROR    uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 96, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 93, in __call__
+    await self.app(scope, receive, inner_send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\concurrency.py", line 40, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 88, in sync_view_method
+    return __render_response(template_file, response_val, mimetype)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 114, in __render_response
+    html = render(template_file, **model)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 44, in render
+    return page.render(encoding='utf-8', **template_data)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 306, in render
+    return super(PageTemplate, self).render(**_kw)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 184, in render
+    self.cook_check()
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 317, in cook_check
+    self.cook(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 162, in cook
+    program = self._cook(body, digest, names)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 237, in _cook
+    source = self._compile(body, builtins)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 269, in _compile
+    program = self.parse(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 232, in parse
+    return MacroProgram(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\program.py", line 169, in __init__
+    super(MacroProgram, self).__init__(*args, **kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\program.py", line 34, in __init__
+    for kind, args in parser:
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 196, in __iter__
+    item = self.parse(token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 204, in parse
+    return visitor(kind, token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 248, in visit_end_tag
+    raise ParseError("Unexpected end tag.", token)
+chameleon.exc.ParseError: Unexpected end tag.
+
+ - String:     "</div>"
+ - Filename:   C:\Users\user\web-x\web-x\templates\index.html
+ - Location:   (line 71: col 0)
+2021-08-17 13:15:20,795 [12600] INFO     uvicorn.error: Shutting down
+2021-08-17 13:15:20,908 [12600] INFO     uvicorn.error: Waiting for application shutdown.
+2021-08-17 13:15:20,908 [12600] INFO     uvicorn.error: Application shutdown complete.
+2021-08-17 13:15:20,912 [12600] INFO     uvicorn.error: Finished server process [12600]
+2021-08-18 14:35:50,870 [10356] INFO     uvicorn.error: Started server process [10356]
+2021-08-18 14:35:50,893 [10356] INFO     uvicorn.error: Waiting for application startup.
+2021-08-18 14:35:50,893 [10356] INFO     uvicorn.error: Application startup complete.
+2021-08-18 14:35:50,893 [10356] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-08-18 14:54:11,383 [10356] ERROR    uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 96, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 93, in __call__
+    await self.app(scope, receive, inner_send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\concurrency.py", line 40, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 88, in sync_view_method
+    return __render_response(template_file, response_val, mimetype)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 114, in __render_response
+    html = render(template_file, **model)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 44, in render
+    return page.render(encoding='utf-8', **template_data)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 306, in render
+    return super(PageTemplate, self).render(**_kw)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 184, in render
+    self.cook_check()
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 317, in cook_check
+    self.cook(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 162, in cook
+    program = self._cook(body, digest, names)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 237, in _cook
+    source = self._compile(body, builtins)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 269, in _compile
+    program = self.parse(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 232, in parse
+    return MacroProgram(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\program.py", line 169, in __init__
+    super(MacroProgram, self).__init__(*args, **kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\program.py", line 34, in __init__
+    for kind, args in parser:
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 196, in __iter__
+    item = self.parse(token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 204, in parse
+    return visitor(kind, token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 248, in visit_end_tag
+    raise ParseError("Unexpected end tag.", token)
+chameleon.exc.ParseError: Unexpected end tag.
+
+ - String:     "</b>"
+ - Filename:   C:\Users\user\web-x\web-x\templates\index.html
+ - Location:   (line 56: col 18)
+ - Source:     <th><h2></b>Reused Data</b></h2></th>
+                       ^^^^
+2021-08-18 16:09:19,796 [10356] ERROR    uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 96, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 93, in __call__
+    await self.app(scope, receive, inner_send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\concurrency.py", line 40, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 88, in sync_view_method
+    return __render_response(template_file, response_val, mimetype)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 114, in __render_response
+    html = render(template_file, **model)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 44, in render
+    return page.render(encoding='utf-8', **template_data)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 306, in render
+    return super(PageTemplate, self).render(**_kw)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 184, in render
+    self.cook_check()
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 317, in cook_check
+    self.cook(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 162, in cook
+    program = self._cook(body, digest, names)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 237, in _cook
+    source = self._compile(body, builtins)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 269, in _compile
+    program = self.parse(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 232, in parse
+    return MacroProgram(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\program.py", line 169, in __init__
+    super(MacroProgram, self).__init__(*args, **kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\program.py", line 34, in __init__
+    for kind, args in parser:
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 196, in __iter__
+    item = self.parse(token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 204, in parse
+    return visitor(kind, token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 248, in visit_end_tag
+    raise ParseError("Unexpected end tag.", token)
+chameleon.exc.ParseError: Unexpected end tag.
+
+ - String:     "</td>"
+ - Filename:   C:\Users\user\web-x\web-x\templates\index.html
+ - Location:   (line 67: col 142)
+ - Source:     ... tion: none">Recent activity</a></td>
+                                                  ^^^^^
+2021-08-18 16:23:07,123 [10356] ERROR    uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 96, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 93, in __call__
+    await self.app(scope, receive, inner_send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\concurrency.py", line 40, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 88, in sync_view_method
+    return __render_response(template_file, response_val, mimetype)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 114, in __render_response
+    html = render(template_file, **model)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 44, in render
+    return page.render(encoding='utf-8', **template_data)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 306, in render
+    return super(PageTemplate, self).render(**_kw)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 209, in render
+    raise_with_traceback(exc, tb)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\utils.py", line 75, in raise_with_traceback
+    raise exc
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 187, in render
+    self._render(stream, econtext, rcontext)
+  File "index_b3f09112b3dc0a536895a9e086879a7f.py", line 1275, in render
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 309, in include
+    self.cook_check()
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 317, in cook_check
+    self.cook(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 162, in cook
+    program = self._cook(body, digest, names)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 237, in _cook
+    source = self._compile(body, builtins)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 269, in _compile
+    program = self.parse(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 232, in parse
+    return MacroProgram(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\program.py", line 169, in __init__
+    super(MacroProgram, self).__init__(*args, **kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\program.py", line 34, in __init__
+    for kind, args in parser:
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 196, in __iter__
+    item = self.parse(token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 204, in parse
+    return visitor(kind, token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 248, in visit_end_tag
+    raise ParseError("Unexpected end tag.", token)
+chameleon.exc.ParseError: <unprintable ParseError object>
+2021-08-18 16:24:09,546 [10356] ERROR    uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 96, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 93, in __call__
+    await self.app(scope, receive, inner_send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\concurrency.py", line 40, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 88, in sync_view_method
+    return __render_response(template_file, response_val, mimetype)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 114, in __render_response
+    html = render(template_file, **model)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 44, in render
+    return page.render(encoding='utf-8', **template_data)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 306, in render
+    return super(PageTemplate, self).render(**_kw)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 209, in render
+    raise_with_traceback(exc, tb)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\utils.py", line 75, in raise_with_traceback
+    raise exc
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 187, in render
+    self._render(stream, econtext, rcontext)
+  File "index_b3f09112b3dc0a536895a9e086879a7f.py", line 1275, in render
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 309, in include
+    self.cook_check()
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 317, in cook_check
+    self.cook(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 162, in cook
+    program = self._cook(body, digest, names)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 237, in _cook
+    source = self._compile(body, builtins)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 269, in _compile
+    program = self.parse(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 232, in parse
+    return MacroProgram(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\program.py", line 169, in __init__
+    super(MacroProgram, self).__init__(*args, **kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\program.py", line 34, in __init__
+    for kind, args in parser:
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 196, in __iter__
+    item = self.parse(token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 204, in parse
+    return visitor(kind, token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 248, in visit_end_tag
+    raise ParseError("Unexpected end tag.", token)
+chameleon.exc.ParseError: <unprintable ParseError object>
+2021-08-18 16:24:12,233 [10356] ERROR    uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 96, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 93, in __call__
+    await self.app(scope, receive, inner_send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\concurrency.py", line 40, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 88, in sync_view_method
+    return __render_response(template_file, response_val, mimetype)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 114, in __render_response
+    html = render(template_file, **model)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 44, in render
+    return page.render(encoding='utf-8', **template_data)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 306, in render
+    return super(PageTemplate, self).render(**_kw)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 209, in render
+    raise_with_traceback(exc, tb)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\utils.py", line 75, in raise_with_traceback
+    raise exc
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 187, in render
+    self._render(stream, econtext, rcontext)
+  File "index_b3f09112b3dc0a536895a9e086879a7f.py", line 1275, in render
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 309, in include
+    self.cook_check()
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 317, in cook_check
+    self.cook(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 162, in cook
+    program = self._cook(body, digest, names)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 237, in _cook
+    source = self._compile(body, builtins)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 269, in _compile
+    program = self.parse(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 232, in parse
+    return MacroProgram(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\program.py", line 169, in __init__
+    super(MacroProgram, self).__init__(*args, **kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\program.py", line 34, in __init__
+    for kind, args in parser:
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 196, in __iter__
+    item = self.parse(token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 204, in parse
+    return visitor(kind, token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 248, in visit_end_tag
+    raise ParseError("Unexpected end tag.", token)
+chameleon.exc.ParseError: <unprintable ParseError object>
+2021-08-18 17:23:43,333 [10356] INFO     uvicorn.error: Shutting down
+2021-08-18 17:23:43,475 [10356] INFO     uvicorn.error: Waiting for application shutdown.
+2021-08-18 17:23:43,475 [10356] INFO     uvicorn.error: Application shutdown complete.
+2021-08-18 17:23:43,475 [10356] INFO     uvicorn.error: Finished server process [10356]
+2021-08-19 08:49:12,635 [36168] INFO     uvicorn.error: Started server process [36168]
+2021-08-19 08:49:12,665 [36168] INFO     uvicorn.error: Waiting for application startup.
+2021-08-19 08:49:12,670 [36168] INFO     uvicorn.error: Application startup complete.
+2021-08-19 08:49:12,670 [36168] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-08-19 09:10:21,291 [36168] ERROR    uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 96, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 93, in __call__
+    await self.app(scope, receive, inner_send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\concurrency.py", line 40, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 88, in sync_view_method
+    return __render_response(template_file, response_val, mimetype)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 114, in __render_response
+    html = render(template_file, **model)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 44, in render
+    return page.render(encoding='utf-8', **template_data)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 306, in render
+    return super(PageTemplate, self).render(**_kw)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 209, in render
+    raise_with_traceback(exc, tb)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\utils.py", line 75, in raise_with_traceback
+    raise exc
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 187, in render
+    self._render(stream, econtext, rcontext)
+  File "index_b3f09112b3dc0a536895a9e086879a7f.py", line 1275, in render
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 309, in include
+    self.cook_check()
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 317, in cook_check
+    self.cook(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 162, in cook
+    program = self._cook(body, digest, names)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 237, in _cook
+    source = self._compile(body, builtins)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 269, in _compile
+    program = self.parse(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 232, in parse
+    return MacroProgram(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\program.py", line 169, in __init__
+    super(MacroProgram, self).__init__(*args, **kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\program.py", line 34, in __init__
+    for kind, args in parser:
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 196, in __iter__
+    item = self.parse(token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 204, in parse
+    return visitor(kind, token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 248, in visit_end_tag
+    raise ParseError("Unexpected end tag.", token)
+chameleon.exc.ParseError: <unprintable ParseError object>
+2021-08-19 09:10:47,816 [36168] ERROR    uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 96, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 93, in __call__
+    await self.app(scope, receive, inner_send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\concurrency.py", line 40, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 88, in sync_view_method
+    return __render_response(template_file, response_val, mimetype)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 114, in __render_response
+    html = render(template_file, **model)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 44, in render
+    return page.render(encoding='utf-8', **template_data)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 306, in render
+    return super(PageTemplate, self).render(**_kw)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 209, in render
+    raise_with_traceback(exc, tb)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\utils.py", line 75, in raise_with_traceback
+    raise exc
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 187, in render
+    self._render(stream, econtext, rcontext)
+  File "index_b3f09112b3dc0a536895a9e086879a7f.py", line 1275, in render
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 309, in include
+    self.cook_check()
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 317, in cook_check
+    self.cook(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 162, in cook
+    program = self._cook(body, digest, names)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 237, in _cook
+    source = self._compile(body, builtins)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 269, in _compile
+    program = self.parse(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 232, in parse
+    return MacroProgram(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\program.py", line 169, in __init__
+    super(MacroProgram, self).__init__(*args, **kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\program.py", line 34, in __init__
+    for kind, args in parser:
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 196, in __iter__
+    item = self.parse(token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 204, in parse
+    return visitor(kind, token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 248, in visit_end_tag
+    raise ParseError("Unexpected end tag.", token)
+chameleon.exc.ParseError: <unprintable ParseError object>
+2021-08-19 09:10:50,686 [36168] ERROR    uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 96, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 93, in __call__
+    await self.app(scope, receive, inner_send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\concurrency.py", line 40, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 88, in sync_view_method
+    return __render_response(template_file, response_val, mimetype)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 114, in __render_response
+    html = render(template_file, **model)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 44, in render
+    return page.render(encoding='utf-8', **template_data)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 306, in render
+    return super(PageTemplate, self).render(**_kw)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 209, in render
+    raise_with_traceback(exc, tb)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\utils.py", line 75, in raise_with_traceback
+    raise exc
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 187, in render
+    self._render(stream, econtext, rcontext)
+  File "index_b3f09112b3dc0a536895a9e086879a7f.py", line 1275, in render
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 309, in include
+    self.cook_check()
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 317, in cook_check
+    self.cook(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 162, in cook
+    program = self._cook(body, digest, names)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 237, in _cook
+    source = self._compile(body, builtins)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 269, in _compile
+    program = self.parse(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 232, in parse
+    return MacroProgram(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\program.py", line 169, in __init__
+    super(MacroProgram, self).__init__(*args, **kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\program.py", line 34, in __init__
+    for kind, args in parser:
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 196, in __iter__
+    item = self.parse(token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 204, in parse
+    return visitor(kind, token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 248, in visit_end_tag
+    raise ParseError("Unexpected end tag.", token)
+chameleon.exc.ParseError: <unprintable ParseError object>
+2021-08-19 15:26:05,941 [36168] INFO     uvicorn.error: Shutting down
+2021-08-19 15:26:06,180 [36168] INFO     uvicorn.error: Waiting for application shutdown.
+2021-08-19 15:26:06,270 [36168] INFO     uvicorn.error: Application shutdown complete.
+2021-08-19 15:26:06,270 [36168] INFO     uvicorn.error: Finished server process [36168]
+2021-08-20 09:49:31,952 [8292] INFO     uvicorn.error: Started server process [8292]
+2021-08-20 09:49:32,008 [8292] INFO     uvicorn.error: Waiting for application startup.
+2021-08-20 09:49:32,022 [8292] INFO     uvicorn.error: Application startup complete.
+2021-08-20 09:49:32,022 [8292] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-08-20 10:29:08,356 [8292] ERROR    uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 96, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 93, in __call__
+    await self.app(scope, receive, inner_send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\concurrency.py", line 40, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 88, in sync_view_method
+    return __render_response(template_file, response_val, mimetype)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 114, in __render_response
+    html = render(template_file, **model)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 44, in render
+    return page.render(encoding='utf-8', **template_data)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 306, in render
+    return super(PageTemplate, self).render(**_kw)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 209, in render
+    raise_with_traceback(exc, tb)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\utils.py", line 75, in raise_with_traceback
+    raise exc
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 187, in render
+    self._render(stream, econtext, rcontext)
+  File "index_7028ec853fe3d2056ab7c4b3ad9d2753.py", line 1279, in render
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 309, in include
+    self.cook_check()
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 317, in cook_check
+    self.cook(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 162, in cook
+    program = self._cook(body, digest, names)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 237, in _cook
+    source = self._compile(body, builtins)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 269, in _compile
+    program = self.parse(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 232, in parse
+    return MacroProgram(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\program.py", line 169, in __init__
+    super(MacroProgram, self).__init__(*args, **kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\program.py", line 34, in __init__
+    for kind, args in parser:
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 196, in __iter__
+    item = self.parse(token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 204, in parse
+    return visitor(kind, token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 248, in visit_end_tag
+    raise ParseError("Unexpected end tag.", token)
+chameleon.exc.ParseError: <unprintable ParseError object>
+2021-08-20 10:31:24,583 [8292] INFO     uvicorn.error: Shutting down
+2021-08-20 10:31:24,691 [8292] INFO     uvicorn.error: Waiting for application shutdown.
+2021-08-20 10:31:24,708 [8292] INFO     uvicorn.error: Application shutdown complete.
+2021-08-20 10:31:24,712 [8292] INFO     uvicorn.error: Finished server process [8292]
+2021-08-20 10:31:35,236 [23864] INFO     uvicorn.error: Started server process [23864]
+2021-08-20 10:31:35,240 [23864] INFO     uvicorn.error: Waiting for application startup.
+2021-08-20 10:31:35,240 [23864] INFO     uvicorn.error: Application startup complete.
+2021-08-20 10:31:35,244 [23864] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-08-20 10:32:08,273 [23864] INFO     uvicorn.error: Shutting down
+2021-08-20 10:32:08,384 [23864] INFO     uvicorn.error: Waiting for application shutdown.
+2021-08-20 10:32:08,388 [23864] INFO     uvicorn.error: Application shutdown complete.
+2021-08-20 10:32:08,392 [23864] INFO     uvicorn.error: Finished server process [23864]
+2021-08-20 10:32:10,596 [21700] INFO     uvicorn.error: Started server process [21700]
+2021-08-20 10:32:10,600 [21700] INFO     uvicorn.error: Waiting for application startup.
+2021-08-20 10:32:10,602 [21700] INFO     uvicorn.error: Application startup complete.
+2021-08-20 10:32:10,603 [21700] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-08-20 12:07:06,961 [21700] ERROR    uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 96, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 93, in __call__
+    await self.app(scope, receive, inner_send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\concurrency.py", line 40, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 88, in sync_view_method
+    return __render_response(template_file, response_val, mimetype)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 114, in __render_response
+    html = render(template_file, **model)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 44, in render
+    return page.render(encoding='utf-8', **template_data)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 306, in render
+    return super(PageTemplate, self).render(**_kw)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 209, in render
+    raise_with_traceback(exc, tb)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\utils.py", line 75, in raise_with_traceback
+    raise exc
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 187, in render
+    self._render(stream, econtext, rcontext)
+  File "index_7028ec853fe3d2056ab7c4b3ad9d2753.py", line 1279, in render
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 309, in include
+    self.cook_check()
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 317, in cook_check
+    self.cook(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 162, in cook
+    program = self._cook(body, digest, names)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 237, in _cook
+    source = self._compile(body, builtins)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 269, in _compile
+    program = self.parse(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 232, in parse
+    return MacroProgram(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\program.py", line 169, in __init__
+    super(MacroProgram, self).__init__(*args, **kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\program.py", line 34, in __init__
+    for kind, args in parser:
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 196, in __iter__
+    item = self.parse(token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 204, in parse
+    return visitor(kind, token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 248, in visit_end_tag
+    raise ParseError("Unexpected end tag.", token)
+chameleon.exc.ParseError: <unprintable ParseError object>
+2021-08-20 14:05:01,149 [21700] INFO     uvicorn.error: Shutting down
+2021-08-20 14:05:01,265 [21700] INFO     uvicorn.error: Waiting for application shutdown.
+2021-08-20 14:05:01,316 [21700] INFO     uvicorn.error: Application shutdown complete.
+2021-08-20 14:05:01,318 [21700] INFO     uvicorn.error: Finished server process [21700]
+2021-08-24 15:07:34,148 [3260] INFO     uvicorn.error: Started server process [3260]
+2021-08-24 15:07:34,179 [3260] INFO     uvicorn.error: Waiting for application startup.
+2021-08-24 15:07:34,179 [3260] INFO     uvicorn.error: Application startup complete.
+2021-08-24 15:07:34,179 [3260] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-08-24 15:08:04,085 [3260] ERROR    uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 96, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 93, in __call__
+    await self.app(scope, receive, inner_send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\concurrency.py", line 40, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 88, in sync_view_method
+    return __render_response(template_file, response_val, mimetype)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 114, in __render_response
+    html = render(template_file, **model)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 44, in render
+    return page.render(encoding='utf-8', **template_data)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 306, in render
+    return super(PageTemplate, self).render(**_kw)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 184, in render
+    self.cook_check()
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 317, in cook_check
+    self.cook(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 162, in cook
+    program = self._cook(body, digest, names)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 237, in _cook
+    source = self._compile(body, builtins)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 269, in _compile
+    program = self.parse(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 232, in parse
+    return MacroProgram(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\program.py", line 169, in __init__
+    super(MacroProgram, self).__init__(*args, **kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\program.py", line 34, in __init__
+    for kind, args in parser:
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 196, in __iter__
+    item = self.parse(token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 204, in parse
+    return visitor(kind, token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 248, in visit_end_tag
+    raise ParseError("Unexpected end tag.", token)
+chameleon.exc.ParseError: Unexpected end tag.
+
+ - String:     "</ul>"
+ - Filename:   C:\Users\user\web-x\web-x\templates\index.html
+ - Location:   (line 50: col 9)
+ - Source:     </ul>
+               ^^^^^
+2021-08-24 17:35:29,983 [3260] INFO     uvicorn.error: Shutting down
+2021-08-24 17:35:30,123 [3260] INFO     uvicorn.error: Waiting for application shutdown.
+2021-08-24 17:35:30,148 [3260] INFO     uvicorn.error: Application shutdown complete.
+2021-08-24 17:35:30,148 [3260] INFO     uvicorn.error: Finished server process [3260]
+2021-09-14 14:32:11,502 [18100] INFO     uvicorn.error: Started server process [18100]
+2021-09-14 14:32:11,518 [18100] INFO     uvicorn.error: Waiting for application startup.
+2021-09-14 14:32:11,526 [18100] INFO     uvicorn.error: Application startup complete.
+2021-09-14 14:32:11,530 [18100] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-09-14 14:43:33,572 [18100] INFO     uvicorn.error: Shutting down
+2021-09-14 14:43:33,678 [18100] INFO     uvicorn.error: Waiting for application shutdown.
+2021-09-14 14:43:33,686 [18100] INFO     uvicorn.error: Application shutdown complete.
+2021-09-14 14:43:33,692 [18100] INFO     uvicorn.error: Finished server process [18100]
+2021-09-14 14:43:37,832 [8476] INFO     uvicorn.error: Started server process [8476]
+2021-09-14 14:43:37,842 [8476] INFO     uvicorn.error: Waiting for application startup.
+2021-09-14 14:43:37,842 [8476] INFO     uvicorn.error: Application startup complete.
+2021-09-14 14:43:37,842 [8476] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-09-14 14:49:47,052 [8476] INFO     uvicorn.error: Shutting down
+2021-09-14 14:49:47,172 [8476] INFO     uvicorn.error: Waiting for application shutdown.
+2021-09-14 14:49:47,182 [8476] INFO     uvicorn.error: Application shutdown complete.
+2021-09-14 14:49:47,182 [8476] INFO     uvicorn.error: Finished server process [8476]
+2021-09-14 14:49:49,337 [10004] INFO     uvicorn.error: Started server process [10004]
+2021-09-14 14:49:49,337 [10004] INFO     uvicorn.error: Waiting for application startup.
+2021-09-14 14:49:49,343 [10004] INFO     uvicorn.error: Application startup complete.
+2021-09-14 14:49:49,343 [10004] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-09-14 14:51:58,975 [10004] INFO     uvicorn.error: Shutting down
+2021-09-14 14:51:59,090 [10004] INFO     uvicorn.error: Waiting for application shutdown.
+2021-09-14 14:51:59,096 [10004] INFO     uvicorn.error: Application shutdown complete.
+2021-09-14 14:51:59,108 [10004] INFO     uvicorn.error: Finished server process [10004]
+2021-09-14 14:52:04,224 [10228] INFO     uvicorn.error: Started server process [10228]
+2021-09-14 14:52:04,228 [10228] INFO     uvicorn.error: Waiting for application startup.
+2021-09-14 14:52:04,237 [10228] INFO     uvicorn.error: Application startup complete.
+2021-09-14 14:52:04,241 [10228] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-09-14 14:54:32,509 [10228] INFO     uvicorn.error: Shutting down
+2021-09-14 14:54:32,618 [10228] INFO     uvicorn.error: Waiting for application shutdown.
+2021-09-14 14:54:32,622 [10228] INFO     uvicorn.error: Application shutdown complete.
+2021-09-14 14:54:32,631 [10228] INFO     uvicorn.error: Finished server process [10228]
+2021-09-14 14:54:35,251 [12072] INFO     uvicorn.error: Started server process [12072]
+2021-09-14 14:54:35,254 [12072] INFO     uvicorn.error: Waiting for application startup.
+2021-09-14 14:54:35,263 [12072] INFO     uvicorn.error: Application startup complete.
+2021-09-14 14:54:35,266 [12072] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-09-14 14:57:24,077 [12072] INFO     uvicorn.error: Shutting down
+2021-09-14 14:57:24,182 [12072] INFO     uvicorn.error: Waiting for application shutdown.
+2021-09-14 14:57:24,195 [12072] INFO     uvicorn.error: Application shutdown complete.
+2021-09-14 14:57:24,201 [12072] INFO     uvicorn.error: Finished server process [12072]
+2021-09-14 14:57:26,565 [9836] INFO     uvicorn.error: Started server process [9836]
+2021-09-14 14:57:26,572 [9836] INFO     uvicorn.error: Waiting for application startup.
+2021-09-14 14:57:26,582 [9836] INFO     uvicorn.error: Application startup complete.
+2021-09-14 14:57:26,582 [9836] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-09-14 15:01:24,806 [9836] INFO     uvicorn.error: Shutting down
+2021-09-14 15:01:24,916 [9836] INFO     uvicorn.error: Waiting for application shutdown.
+2021-09-14 15:01:24,920 [9836] INFO     uvicorn.error: Application shutdown complete.
+2021-09-14 15:01:24,927 [9836] INFO     uvicorn.error: Finished server process [9836]
+2021-09-14 15:01:27,532 [11320] INFO     uvicorn.error: Started server process [11320]
+2021-09-14 15:01:27,541 [11320] INFO     uvicorn.error: Waiting for application startup.
+2021-09-14 15:01:27,552 [11320] INFO     uvicorn.error: Application startup complete.
+2021-09-14 15:01:27,562 [11320] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-09-14 15:03:13,757 [11320] INFO     uvicorn.error: Shutting down
+2021-09-14 15:03:13,858 [11320] INFO     uvicorn.error: Waiting for application shutdown.
+2021-09-14 15:03:13,862 [11320] INFO     uvicorn.error: Application shutdown complete.
+2021-09-14 15:03:13,862 [11320] INFO     uvicorn.error: Finished server process [11320]
+2021-09-14 15:03:16,552 [8476] INFO     uvicorn.error: Started server process [8476]
+2021-09-14 15:03:16,552 [8476] INFO     uvicorn.error: Waiting for application startup.
+2021-09-14 15:03:16,561 [8476] INFO     uvicorn.error: Application startup complete.
+2021-09-14 15:03:16,565 [8476] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-09-14 15:07:44,652 [8476] INFO     uvicorn.error: Shutting down
+2021-09-14 15:07:44,759 [8476] INFO     uvicorn.error: Waiting for application shutdown.
+2021-09-14 15:07:44,771 [8476] INFO     uvicorn.error: Application shutdown complete.
+2021-09-14 15:07:44,774 [8476] INFO     uvicorn.error: Finished server process [8476]
+2021-09-14 15:07:46,970 [14668] INFO     uvicorn.error: Started server process [14668]
+2021-09-14 15:07:46,973 [14668] INFO     uvicorn.error: Waiting for application startup.
+2021-09-14 15:07:46,981 [14668] INFO     uvicorn.error: Application startup complete.
+2021-09-14 15:07:46,988 [14668] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-09-14 15:27:39,800 [14668] INFO     uvicorn.error: Shutting down
+2021-09-14 15:27:39,909 [14668] INFO     uvicorn.error: Waiting for application shutdown.
+2021-09-14 15:27:39,912 [14668] INFO     uvicorn.error: Application shutdown complete.
+2021-09-14 15:27:39,913 [14668] INFO     uvicorn.error: Finished server process [14668]
+2021-09-14 15:27:42,800 [14876] INFO     uvicorn.error: Started server process [14876]
+2021-09-14 15:27:42,801 [14876] INFO     uvicorn.error: Waiting for application startup.
+2021-09-14 15:27:42,802 [14876] INFO     uvicorn.error: Application startup complete.
+2021-09-14 15:27:42,803 [14876] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-09-14 15:47:41,482 [14876] INFO     uvicorn.error: Shutting down
+2021-09-14 15:47:41,589 [14876] INFO     uvicorn.error: Waiting for application shutdown.
+2021-09-14 15:47:41,597 [14876] INFO     uvicorn.error: Application shutdown complete.
+2021-09-14 15:47:41,600 [14876] INFO     uvicorn.error: Finished server process [14876]
+2021-09-14 15:47:44,699 [13896] INFO     uvicorn.error: Started server process [13896]
+2021-09-14 15:47:44,701 [13896] INFO     uvicorn.error: Waiting for application startup.
+2021-09-14 15:47:44,706 [13896] INFO     uvicorn.error: Application startup complete.
+2021-09-14 15:47:44,711 [13896] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-09-14 16:08:47,298 [13896] INFO     uvicorn.error: Shutting down
+2021-09-14 16:08:47,418 [13896] INFO     uvicorn.error: Waiting for application shutdown.
+2021-09-14 16:08:47,422 [13896] INFO     uvicorn.error: Application shutdown complete.
+2021-09-14 16:08:47,427 [13896] INFO     uvicorn.error: Finished server process [13896]
+2021-09-14 16:08:50,087 [7060] INFO     uvicorn.error: Started server process [7060]
+2021-09-14 16:08:50,087 [7060] INFO     uvicorn.error: Waiting for application startup.
+2021-09-14 16:08:50,087 [7060] INFO     uvicorn.error: Application startup complete.
+2021-09-14 16:08:50,087 [7060] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-09-14 16:09:37,269 [7060] INFO     uvicorn.error: Shutting down
+2021-09-14 16:09:37,377 [7060] INFO     uvicorn.error: Waiting for application shutdown.
+2021-09-14 16:09:37,384 [7060] INFO     uvicorn.error: Application shutdown complete.
+2021-09-14 16:09:37,390 [7060] INFO     uvicorn.error: Finished server process [7060]
+2021-09-14 16:09:39,639 [19276] INFO     uvicorn.error: Started server process [19276]
+2021-09-14 16:09:39,641 [19276] INFO     uvicorn.error: Waiting for application startup.
+2021-09-14 16:09:39,648 [19276] INFO     uvicorn.error: Application startup complete.
+2021-09-14 16:09:39,650 [19276] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-09-14 16:21:04,743 [19276] INFO     uvicorn.error: Shutting down
+2021-09-14 16:21:04,853 [19276] INFO     uvicorn.error: Waiting for application shutdown.
+2021-09-14 16:21:04,859 [19276] INFO     uvicorn.error: Application shutdown complete.
+2021-09-14 16:21:04,866 [19276] INFO     uvicorn.error: Finished server process [19276]
+2021-09-14 16:21:07,768 [16232] INFO     uvicorn.error: Started server process [16232]
+2021-09-14 16:21:07,771 [16232] INFO     uvicorn.error: Waiting for application startup.
+2021-09-14 16:21:07,776 [16232] INFO     uvicorn.error: Application startup complete.
+2021-09-14 16:21:07,781 [16232] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-09-14 16:23:52,728 [16232] INFO     uvicorn.error: Shutting down
+2021-09-14 16:23:52,841 [16232] INFO     uvicorn.error: Waiting for application shutdown.
+2021-09-14 16:23:52,843 [16232] INFO     uvicorn.error: Application shutdown complete.
+2021-09-14 16:23:52,848 [16232] INFO     uvicorn.error: Finished server process [16232]
+2021-09-14 16:23:55,804 [15080] INFO     uvicorn.error: Started server process [15080]
+2021-09-14 16:23:55,808 [15080] INFO     uvicorn.error: Waiting for application startup.
+2021-09-14 16:23:55,813 [15080] INFO     uvicorn.error: Application startup complete.
+2021-09-14 16:23:55,813 [15080] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-09-14 16:28:27,575 [15080] INFO     uvicorn.error: Shutting down
+2021-09-14 16:28:28,041 [15080] INFO     uvicorn.error: Waiting for application shutdown.
+2021-09-14 16:28:28,049 [15080] INFO     uvicorn.error: Application shutdown complete.
+2021-09-14 16:28:28,053 [15080] INFO     uvicorn.error: Finished server process [15080]
+2021-09-14 16:28:30,785 [12156] INFO     uvicorn.error: Started server process [12156]
+2021-09-14 16:28:30,785 [12156] INFO     uvicorn.error: Waiting for application startup.
+2021-09-14 16:28:30,793 [12156] INFO     uvicorn.error: Application startup complete.
+2021-09-14 16:28:30,793 [12156] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-09-14 16:33:25,450 [12156] ERROR    uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 96, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 93, in __call__
+    await self.app(scope, receive, inner_send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\concurrency.py", line 40, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 88, in sync_view_method
+    return __render_response(template_file, response_val, mimetype)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 114, in __render_response
+    html = render(template_file, **model)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 44, in render
+    return page.render(encoding='utf-8', **template_data)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 306, in render
+    return super(PageTemplate, self).render(**_kw)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 184, in render
+    self.cook_check()
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 317, in cook_check
+    self.cook(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 162, in cook
+    program = self._cook(body, digest, names)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 237, in _cook
+    source = self._compile(body, builtins)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 269, in _compile
+    program = self.parse(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 232, in parse
+    return MacroProgram(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\program.py", line 169, in __init__
+    super(MacroProgram, self).__init__(*args, **kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\program.py", line 35, in __init__
+    node = self.visit(kind, args)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\program.py", line 41, in visit
+    return visitor(*args)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\program.py", line 548, in visit_element
+    raise LanguageError(
+chameleon.exc.LanguageError: Cannot use metal:fill-slot without metal:use-macro.
+
+ - String:     "content"
+ - Filename:   C:\Users\user\web-x\web-x\templates\about\edi\team.html
+ - Location:   (line 2: col 26)
+ - Source:     <div metal:fill-slot="content" tal:omit-tag="True">
+                                     ^^^^^^^
+2021-09-14 16:48:09,335 [12156] INFO     uvicorn.error: Shutting down
+2021-09-14 16:48:09,442 [12156] INFO     uvicorn.error: Waiting for application shutdown.
+2021-09-14 16:48:09,442 [12156] INFO     uvicorn.error: Application shutdown complete.
+2021-09-14 16:48:09,446 [12156] INFO     uvicorn.error: Finished server process [12156]
+2021-09-15 21:21:24,095 [16760] INFO     uvicorn.error: Started server process [16760]
+2021-09-15 21:21:24,170 [16760] INFO     uvicorn.error: Waiting for application startup.
+2021-09-15 21:21:24,173 [16760] INFO     uvicorn.error: Application startup complete.
+2021-09-15 21:21:24,174 [16760] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-09-15 21:31:07,007 [16760] INFO     uvicorn.error: Shutting down
+2021-09-15 21:31:07,122 [16760] INFO     uvicorn.error: Waiting for application shutdown.
+2021-09-15 21:31:07,130 [16760] INFO     uvicorn.error: Application shutdown complete.
+2021-09-15 21:31:07,130 [16760] INFO     uvicorn.error: Finished server process [16760]
+2021-09-15 21:31:41,411 [17712] INFO     uvicorn.error: Started server process [17712]
+2021-09-15 21:31:41,411 [17712] INFO     uvicorn.error: Waiting for application startup.
+2021-09-15 21:31:41,411 [17712] INFO     uvicorn.error: Application startup complete.
+2021-09-15 21:31:41,415 [17712] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-09-15 21:31:58,139 [17712] INFO     uvicorn.error: Shutting down
+2021-09-15 21:31:58,248 [17712] INFO     uvicorn.error: Waiting for application shutdown.
+2021-09-15 21:31:58,249 [17712] INFO     uvicorn.error: Application shutdown complete.
+2021-09-15 21:31:58,250 [17712] INFO     uvicorn.error: Finished server process [17712]
+2021-09-15 21:34:36,585 [14392] INFO     uvicorn.error: Started server process [14392]
+2021-09-15 21:34:36,587 [14392] INFO     uvicorn.error: Waiting for application startup.
+2021-09-15 21:34:36,588 [14392] INFO     uvicorn.error: Application startup complete.
+2021-09-15 21:34:36,589 [14392] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-09-15 21:45:36,600 [14392] INFO     uvicorn.error: Shutting down
+2021-09-15 21:45:36,708 [14392] INFO     uvicorn.error: Waiting for application shutdown.
+2021-09-15 21:45:36,720 [14392] INFO     uvicorn.error: Application shutdown complete.
+2021-09-15 21:45:36,720 [14392] INFO     uvicorn.error: Finished server process [14392]
+2021-09-15 21:45:46,315 [13272] INFO     uvicorn.error: Started server process [13272]
+2021-09-15 21:45:46,319 [13272] INFO     uvicorn.error: Waiting for application startup.
+2021-09-15 21:45:46,319 [13272] INFO     uvicorn.error: Application startup complete.
+2021-09-15 21:45:46,323 [13272] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-09-15 21:45:56,353 [13272] INFO     uvicorn.error: Shutting down
+2021-09-15 21:45:56,460 [13272] INFO     uvicorn.error: Waiting for application shutdown.
+2021-09-15 21:45:56,463 [13272] INFO     uvicorn.error: Application shutdown complete.
+2021-09-15 21:45:56,463 [13272] INFO     uvicorn.error: Finished server process [13272]
+2021-09-15 21:46:43,760 [17776] INFO     uvicorn.error: Started server process [17776]
+2021-09-15 21:46:43,765 [17776] INFO     uvicorn.error: Waiting for application startup.
+2021-09-15 21:46:43,765 [17776] INFO     uvicorn.error: Application startup complete.
+2021-09-15 21:46:43,765 [17776] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-09-15 22:05:59,930 [17776] INFO     uvicorn.error: Shutting down
+2021-09-15 22:06:00,030 [17776] INFO     uvicorn.error: Waiting for application shutdown.
+2021-09-15 22:06:00,030 [17776] INFO     uvicorn.error: Application shutdown complete.
+2021-09-15 22:06:00,030 [17776] INFO     uvicorn.error: Finished server process [17776]
+2021-09-16 08:55:40,568 [17516] INFO     uvicorn.error: Started server process [17516]
+2021-09-16 08:55:40,571 [17516] INFO     uvicorn.error: Waiting for application startup.
+2021-09-16 08:55:40,588 [17516] INFO     uvicorn.error: Application startup complete.
+2021-09-16 08:55:40,589 [17516] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-09-16 11:25:50,440 [17516] ERROR    uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 96, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 93, in __call__
+    await self.app(scope, receive, inner_send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\concurrency.py", line 40, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 88, in sync_view_method
+    return __render_response(template_file, response_val, mimetype)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 114, in __render_response
+    html = render(template_file, **model)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 44, in render
+    return page.render(encoding='utf-8', **template_data)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 306, in render
+    return super(PageTemplate, self).render(**_kw)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 184, in render
+    self.cook_check()
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 317, in cook_check
+    self.cook(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 162, in cook
+    program = self._cook(body, digest, names)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 237, in _cook
+    source = self._compile(body, builtins)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 269, in _compile
+    program = self.parse(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 232, in parse
+    return MacroProgram(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\program.py", line 169, in __init__
+    super(MacroProgram, self).__init__(*args, **kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\program.py", line 34, in __init__
+    for kind, args in parser:
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 196, in __iter__
+    item = self.parse(token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 204, in parse
+    return visitor(kind, token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 248, in visit_end_tag
+    raise ParseError("Unexpected end tag.", token)
+chameleon.exc.ParseError: Unexpected end tag.
+
+ - String:     "</div>"
+ - Filename:   C:\Users\user\web-x\web-x\templates\index.html
+ - Location:   (line 94: col 0)
+2021-09-16 11:46:44,354 [17516] ERROR    uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 96, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 93, in __call__
+    await self.app(scope, receive, inner_send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\concurrency.py", line 40, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 88, in sync_view_method
+    return __render_response(template_file, response_val, mimetype)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 114, in __render_response
+    html = render(template_file, **model)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 44, in render
+    return page.render(encoding='utf-8', **template_data)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 306, in render
+    return super(PageTemplate, self).render(**_kw)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 184, in render
+    self.cook_check()
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 317, in cook_check
+    self.cook(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 162, in cook
+    program = self._cook(body, digest, names)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 237, in _cook
+    source = self._compile(body, builtins)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 269, in _compile
+    program = self.parse(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 232, in parse
+    return MacroProgram(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\program.py", line 169, in __init__
+    super(MacroProgram, self).__init__(*args, **kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\program.py", line 34, in __init__
+    for kind, args in parser:
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 196, in __iter__
+    item = self.parse(token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 204, in parse
+    return visitor(kind, token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 248, in visit_end_tag
+    raise ParseError("Unexpected end tag.", token)
+chameleon.exc.ParseError: Unexpected end tag.
+
+ - String:     "</div>"
+ - Filename:   C:\Users\user\web-x\web-x\templates\index.html
+ - Location:   (line 97: col 0)
+2021-09-16 11:49:46,714 [17516] ERROR    uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 96, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 93, in __call__
+    await self.app(scope, receive, inner_send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\concurrency.py", line 40, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 88, in sync_view_method
+    return __render_response(template_file, response_val, mimetype)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 114, in __render_response
+    html = render(template_file, **model)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 44, in render
+    return page.render(encoding='utf-8', **template_data)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 306, in render
+    return super(PageTemplate, self).render(**_kw)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 184, in render
+    self.cook_check()
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 317, in cook_check
+    self.cook(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 162, in cook
+    program = self._cook(body, digest, names)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 237, in _cook
+    source = self._compile(body, builtins)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 269, in _compile
+    program = self.parse(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 232, in parse
+    return MacroProgram(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\program.py", line 169, in __init__
+    super(MacroProgram, self).__init__(*args, **kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\program.py", line 34, in __init__
+    for kind, args in parser:
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 196, in __iter__
+    item = self.parse(token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 204, in parse
+    return visitor(kind, token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 248, in visit_end_tag
+    raise ParseError("Unexpected end tag.", token)
+chameleon.exc.ParseError: Unexpected end tag.
+
+ - String:     "</div>"
+ - Filename:   C:\Users\user\web-x\web-x\templates\index.html
+ - Location:   (line 95: col 0)
+2021-09-16 11:50:43,470 [17516] ERROR    uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 369, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 59, in __call__
+    return await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 96, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\uvicorn\middleware\debug.py", line 93, in __call__
+    await self.app(scope, receive, inner_send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\applications.py", line 199, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 181, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\middleware\errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    raise exc from None
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 580, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 241, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\routing.py", line 52, in app
+    response = await func(request)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 201, in app
+    raw_response = await run_endpoint_function(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi\routing.py", line 150, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\starlette\concurrency.py", line 40, in run_in_threadpool
+    return await loop.run_in_executor(None, func, *args)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\concurrent\futures\thread.py", line 52, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 88, in sync_view_method
+    return __render_response(template_file, response_val, mimetype)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 114, in __render_response
+    html = render(template_file, **model)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\fastapi_chameleon\engine.py", line 44, in render
+    return page.render(encoding='utf-8', **template_data)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 306, in render
+    return super(PageTemplate, self).render(**_kw)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 184, in render
+    self.cook_check()
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 317, in cook_check
+    self.cook(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 162, in cook
+    program = self._cook(body, digest, names)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 237, in _cook
+    source = self._compile(body, builtins)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\template.py", line 269, in _compile
+    program = self.parse(body)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\template.py", line 232, in parse
+    return MacroProgram(
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\zpt\program.py", line 169, in __init__
+    super(MacroProgram, self).__init__(*args, **kwargs)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\program.py", line 34, in __init__
+    for kind, args in parser:
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 196, in __iter__
+    item = self.parse(token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 204, in parse
+    return visitor(kind, token)
+  File "C:\Users\user\anaconda3\envs\web-x\lib\site-packages\chameleon\parser.py", line 248, in visit_end_tag
+    raise ParseError("Unexpected end tag.", token)
+chameleon.exc.ParseError: Unexpected end tag.
+
+ - String:     "</div>"
+ - Filename:   C:\Users\user\web-x\web-x\templates\index.html
+ - Location:   (line 95: col 0)
+2021-09-16 13:15:42,568 [17516] INFO     uvicorn.error: Shutting down
+2021-09-16 13:15:42,678 [17516] INFO     uvicorn.error: Waiting for application shutdown.
+2021-09-16 13:15:42,688 [17516] INFO     uvicorn.error: Application shutdown complete.
+2021-09-16 13:15:42,689 [17516] INFO     uvicorn.error: Finished server process [17516]
+2021-09-16 14:58:51,091 [19100] INFO     uvicorn.error: Started server process [19100]
+2021-09-16 14:58:51,129 [19100] INFO     uvicorn.error: Waiting for application startup.
+2021-09-16 14:58:51,133 [19100] INFO     uvicorn.error: Application startup complete.
+2021-09-16 14:58:51,133 [19100] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-09-16 15:27:45,320 [19100] INFO     uvicorn.error: Shutting down
+2021-09-16 15:27:45,435 [19100] INFO     uvicorn.error: Waiting for application shutdown.
+2021-09-16 15:27:45,441 [19100] INFO     uvicorn.error: Application shutdown complete.
+2021-09-16 15:27:45,442 [19100] INFO     uvicorn.error: Finished server process [19100]
+2021-09-17 14:26:55,636 [2856] INFO     uvicorn.error: Started server process [2856]
+2021-09-17 14:26:55,650 [2856] INFO     uvicorn.error: Waiting for application startup.
+2021-09-17 14:26:55,650 [2856] INFO     uvicorn.error: Application startup complete.
+2021-09-17 14:26:55,650 [2856] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-09-17 19:12:28,838 [2856] INFO     uvicorn.error: Shutting down
+2021-09-17 19:12:28,954 [2856] INFO     uvicorn.error: Waiting for application shutdown.
+2021-09-17 19:12:28,954 [2856] INFO     uvicorn.error: Application shutdown complete.
+2021-09-17 19:12:28,954 [2856] INFO     uvicorn.error: Finished server process [2856]
+2021-09-19 21:45:50,230 [22092] INFO     uvicorn.error: Started server process [22092]
+2021-09-19 21:45:50,258 [22092] INFO     uvicorn.error: Waiting for application startup.
+2021-09-19 21:45:50,271 [22092] INFO     uvicorn.error: Application startup complete.
+2021-09-19 21:45:50,271 [22092] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-09-19 22:04:19,897 [22092] INFO     uvicorn.error: Shutting down
+2021-09-19 22:04:20,011 [22092] INFO     uvicorn.error: Waiting for application shutdown.
+2021-09-19 22:04:20,011 [22092] INFO     uvicorn.error: Application shutdown complete.
+2021-09-19 22:04:20,011 [22092] INFO     uvicorn.error: Finished server process [22092]
+2021-09-20 09:01:19,923 [13784] INFO     uvicorn.error: Started server process [13784]
+2021-09-20 09:01:19,951 [13784] INFO     uvicorn.error: Waiting for application startup.
+2021-09-20 09:01:19,967 [13784] INFO     uvicorn.error: Application startup complete.
+2021-09-20 09:01:19,970 [13784] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-09-20 09:03:20,862 [13784] INFO     uvicorn.error: Shutting down
+2021-09-20 09:03:20,963 [13784] INFO     uvicorn.error: Waiting for application shutdown.
+2021-09-20 09:03:20,963 [13784] INFO     uvicorn.error: Application shutdown complete.
+2021-09-20 09:03:20,963 [13784] INFO     uvicorn.error: Finished server process [13784]
+2021-09-20 09:03:24,501 [1096] INFO     uvicorn.error: Started server process [1096]
+2021-09-20 09:03:24,501 [1096] INFO     uvicorn.error: Waiting for application startup.
+2021-09-20 09:03:24,501 [1096] INFO     uvicorn.error: Application startup complete.
+2021-09-20 09:03:24,501 [1096] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-09-20 09:12:31,047 [1096] INFO     uvicorn.error: Shutting down
+2021-09-20 09:12:31,157 [1096] INFO     uvicorn.error: Waiting for application shutdown.
+2021-09-20 09:12:31,157 [1096] INFO     uvicorn.error: Application shutdown complete.
+2021-09-20 09:12:31,161 [1096] INFO     uvicorn.error: Finished server process [1096]
+2021-09-20 09:12:59,964 [2216] INFO     uvicorn.error: Started server process [2216]
+2021-09-20 09:12:59,968 [2216] INFO     uvicorn.error: Waiting for application startup.
+2021-09-20 09:12:59,972 [2216] INFO     uvicorn.error: Application startup complete.
+2021-09-20 09:12:59,976 [2216] INFO     uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2021-09-20 11:30:05,553 [2216] INFO     uvicorn.error: Shutting down
+2021-09-20 11:30:05,669 [2216] INFO     uvicorn.error: Waiting for application shutdown.
+2021-09-20 11:30:05,672 [2216] INFO     uvicorn.error: Application shutdown complete.
+2021-09-20 11:30:05,673 [2216] INFO     uvicorn.error: Finished server process [2216]
