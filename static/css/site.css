@@ -57,25 +57,14 @@ body {
 }
 
 #footer {
-/* footer needs some work. deleted position: absolute; changed height from 16 to 24rem */ 
+    position: absolute;
     bottom: 0;
     width: 100%;
-    height: 24rem;
+    height: 16rem;
     padding: 1.2rem;
     text-align: center;
     color: white;
     background-color: #676c6e;
-}
-
-footer table {
-  margin-left: auto;
-  margin-right: auto;
-  vertical-align: top;
-  width: 70%;
-  color: white;
-}
-footer td {
-  vertical-align: top;
 }
 
 footer a {
