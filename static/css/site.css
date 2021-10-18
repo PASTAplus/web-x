@@ -16,17 +16,6 @@ body {
     font-size: 17px;
 }
 
-.index {
-    background-image: linear-gradient(to bottom, transparent, white), url("../images/aspens.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    color: black;
-    font-size: 18px;
-    padding: 50px 0;
-    text-align: center;
-}
-
 .main_content hr {
     color: #676c6e;
     size: 10px;
@@ -81,58 +70,6 @@ footer a {
     height: auto;
     padding: 10px;
     width: 100%;
-}
-
-.index-publish {
-  color: black;
-  margin: auto;
-  padding-top: 10px;
-  text-align: center;
-  text-decoration: none;
-}
-.index-publish table {
-  width: 40%;
-  margin-left: auto;
-  margin-right: auto;
-}	
-.index-publish th, td {
-  padding: 10px;
-}
-.index-publish img {
-	width: 80%
-}
-
-.index-publish-table {
-  width: 50%;
-  text-align: left;
-  margin-left: auto;
-  margin-right: auto;
-}  
-
-.index-inner {
-    max-width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-}
-
-.index-inner h1 {
-    font-size: 50px;
-    font-weight: bolder;
-    margin-top: 35px;
-    margin-bottom: 30px;
-}
-
-.index-inner .by-line {
-    font-size: 25px;
-    font-weight: bold;
-    margin-top: 35px;
-    margin-bottom: 30px;
-}
-
-.index a {
-    color: white;
-    text-decoration: underline;
 }
 
 .form-control {
