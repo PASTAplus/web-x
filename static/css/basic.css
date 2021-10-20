@@ -1,0 +1,18 @@
+.basic-inner {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    color: black;
+    font-size: 18px;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.basic-inner h1 {
+    font-size: 50px;
+    font-weight: bolder;
+    margin-top: 35px;
+    margin-bottom: 30px;
+    text-align: center;
+}
