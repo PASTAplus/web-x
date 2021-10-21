@@ -1,0 +1,34 @@
+/* style sheet for pages with a sidebar */
+
+.container {
+	display: flex;
+}
+
+.sidebar {
+	width: 30%;
+	background-color: #D3D3D3;
+	border-radius: .5em;
+	padding: 1.5em;
+}	
+
+.main-tutorial {
+	width: 70%;
+	padding: 1.5em;
+	margin-left: 1.5em;
+        border-radius: 0.5em;
+}
+
+.sidebar-inner {
+    max-width: 80%;
+    margin-bottom: 30px;
+    color: black;
+    font-size: 18px;
+    padding: 1.5em 0;
+    text-align: center;
+}
+
+.sidebar-inner h1 {
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: center;
+}
