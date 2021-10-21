@@ -1,23 +1,25 @@
+/* style sheet for grid pages */
+
 .grid-inner {
     max-width: 60%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 30px;
+    margin-bottom: 2em;
     text-align: center;
 }
 
 .grid-inner h1 {
-    font-size: 50px;
+    font-size: 3em;
     font-weight: bolder;
-    margin-top: 35px;
-    margin-bottom: 30px;
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
 }
 .featured {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(100px, auto);
+  grid-auto-rows: minmax(7em, auto);
   color: #202020;
-  gap: 24px;
+  gap: 1.5em;
   grid-template-rows: auto;
   box-sizing: border-box;
   width: 40%;
@@ -27,18 +29,20 @@
 
 .featured-item {
   box-sizing: border-box;
-  height: 360px;
-  border: 2px gray;
-  border-radius: 12px;
-  box-shadow: 1px 2px 6px 2px rgba(0, 0, 0, 0.5);
+/*  height: 360px; */
+  height: 25em;
+  border: 0.1em gray;
+  border-radius: 0.8em;
+  box-shadow: 0.05em 0.1em 0.3em 0.1em rgba(0, 0, 0, 0.5);
+  overflow: auto;
 }
 
 .featured-item > div img {
   max-width: 100%;
-  border-radius: 12px 12px 0px 0px;
-  padding: 0px;
+  border-radius: 0.8em 0.8em 0em 0em;
+  padding: 0em;
 }
 .featured-item p {
-  padding: 10px;
+  padding: 0.5em;
 }
 
