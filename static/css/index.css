@@ -1,3 +1,5 @@
+/* Style sheet for home page */
+
 .index {
     background-image: linear-gradient(to bottom, transparent, white), url("../images/aspens.jpg");
     background-size: cover;
