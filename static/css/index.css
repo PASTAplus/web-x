@@ -40,28 +40,127 @@
 .index-publish {
   color: black;
   margin: auto;
-  padding-top: 10px;
+  padding-top: 1em;
   text-align: center;
   text-decoration: none;
 }
 
-.index-publish table {
-  width: 40%;
-  margin-left: auto;
-  margin-right: auto;
-}	
-
-.index-publish th, td {
-  padding: 10px;
+.index-column {
+ flex: 1;
+ display: flex;
+ flex-direction: column;
+ flex-wrap: nowrap;
+ justify-content: center;
 }
 
-.index-publish img {
-	width: 80%
+.index-column > h2 {
+  font-size: 2em;
 }
 
-.index-publish-table {
-  width: 50%;
+.publish-tile {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.publish-tile > div {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  width: 0;
+  margin: 0.25em;
+  padding: 0em;
+  max-width: 10%;
+}
+
+.publish-tile > div > h3 {
+  text-align: center;
+  font-size: 1.75em;
+  padding-top: 1em;
+}
+
+.publish-tile > div > img {
+  width: 75%;
+  padding-top: 1em;
+}
+.publish-tile > div > p {
+  text-align: center;
+  font-size: 1.0em;
+  padding-top: 1em;
+}
+
+.list-tile > ul {
+  list-style: none;
+  font-size: 1.0em;
+  padding-top: 1em;
+  padding-bottom: 2em;
+}
+
+.featured-tile {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.featured-tile > div {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  width: 0;
+  margin: 0.25em;
+  padding: 2em;
+  max-width: 20%;
+}
+
+.featured-tile > div > img {
+  width: 100%;
+}
+
+.webinar-tile {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.webinar-item1 {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  width: 0;
+  margin: 0.25em;
+  padding: 0em;
+  max-width: 25%;
   text-align: left;
-  margin-left: auto;
-  margin-right: auto;
-}  
+}
+
+.webinar-item2 {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  width: 0;
+  margin: 0.25em;
+  padding: 0em;
+  max-width: 15%;
+}
+
+.webinar-item2 > img {
+  width: 100%;
+}
+
+.blog-tile {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+.blog-tile > div {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  width: 0;
+  margin: 0.25em;
+  padding: 1em;
+  max-width: 40%;
+}
