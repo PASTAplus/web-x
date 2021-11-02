@@ -40,9 +40,15 @@
 .index-publish {
   color: black;
   margin: auto;
-  padding-top: 1em;
+  padding-top: 1.5em;
   text-align: center;
   text-decoration: none;
+
+}
+.index-publish > h2 {
+  font-size: 2em;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
 }
 
 .index-column {
@@ -51,10 +57,6 @@
  flex-direction: column;
  flex-wrap: nowrap;
  justify-content: center;
-}
-
-.index-column > h2 {
-  font-size: 2em;
 }
 
 .publish-tile {
@@ -118,6 +120,11 @@
   width: 100%;
 }
 
+.featured-tile > div > h2 {
+  font-size: 2em;
+  padding-bottom: 1em;
+}
+
 .webinar-tile {
   display: flex;
   flex-wrap: nowrap;
@@ -163,4 +170,8 @@
   margin: 0.25em;
   padding: 1em;
   max-width: 40%;
+}
+
+.blog-tile > div > h3 {
+  padding-top: 0.75em;
 }
