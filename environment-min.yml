@@ -15,4 +15,7 @@ dependencies:
   - python-multipart
   - aiohttp
   - daiquiri
+  - pip
+  - pip:
+    - fastapi-chameleon==0.1.12
 prefix: /home/servilla/anaconda3/envs/web-x
