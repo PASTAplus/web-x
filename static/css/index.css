@@ -9,27 +9,37 @@
     font-size: 18px;
     padding: 50px 0;
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .index-inner {
     max-width: 60%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 30px;
+    margin-bottom: 1em;
 }
 
 .index-inner h1 {
-    font-size: 50px;
+    font-size: 3.75em; 
     font-weight: bolder;
-    margin-top: 35px;
-    margin-bottom: 30px;
+    margin-top: 0.75em;
+    margin-bottom: 0.1em;
 }
 
 .index-inner .by-line {
-    font-size: 25px;
+    font-size: 1.5em;
     font-weight: bold;
-    margin-top: 35px;
-    margin-bottom: 30px;
+    margin-top: 0.75em;
+    margin-bottom: 1em;
+}
+
+.index-inner .btn {
+    padding: 0.25em 1.5em 0.25em 1.5em;
+    font-size: 1.5em;
+    text-decoration: none;
+    border-radius: 0.5em;
+    margin: 1em;
+    margin-bottom: 0em;
 }
 
 .index a {
@@ -57,6 +67,12 @@
  flex-direction: column;
  flex-wrap: nowrap;
  justify-content: center;
+ font-family: Arial, Helvetica, sans-serif;
+}
+
+.index-column > h2 {
+  font-size: 2.25em;
+  padding-top: 0.25em;
 }
 
 .publish-tile {
@@ -71,7 +87,7 @@
   flex-shrink: 1;
   flex-basis: 0;
   width: 0;
-  margin: 0.25em;
+  margin: 2.5em;
   padding: 0em;
   max-width: 10%;
 }
@@ -92,11 +108,29 @@
   padding-top: 1em;
 }
 
+.list-tile {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.list-tile > div {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  width: 0;
+  margin: 2.5em;
+  padding: 0em;
+  max-width: 25%;
+}
+
 .list-tile > ul {
   list-style: none;
-  font-size: 1.0em;
+  font-size: 1.5em;
   padding-top: 1em;
-  padding-bottom: 2em;
+  padding-bottom: 1em;
+  text-align: left;
 }
 
 .featured-tile {
@@ -118,6 +152,7 @@
 
 .featured-tile > div > img {
   width: 100%;
+  padding-bottom: 1em;
 }
 
 .featured-tile > div > h2 {
@@ -138,7 +173,8 @@
   width: 0;
   margin: 0.25em;
   padding: 0em;
-  max-width: 25%;
+  padding-top: 2em;
+  max-width: 20%;
   text-align: left;
 }
 
@@ -148,12 +184,14 @@
   flex-basis: 0;
   width: 0;
   margin: 0.25em;
+  margin-right: 1em;
   padding: 0em;
+  padding-top: 2em;
   max-width: 15%;
 }
 
 .webinar-item2 > img {
-  width: 100%;
+  width: 90%;
 }
 
 .blog-tile {
@@ -169,9 +207,15 @@
   width: 0;
   margin: 0.25em;
   padding: 1em;
-  max-width: 40%;
+  max-width: 38%;
 }
 
 .blog-tile > div > h3 {
   padding-top: 0.75em;
+  text-align: left;
+}
+
+.blog-tile > div > p {
+  font-size: 1.0em;
+  text-align: left;
 }
