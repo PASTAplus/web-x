@@ -14,5 +14,5 @@ dependencies:
   - aiohttp
   - pip
   - pip:
-    - git+https://github.com/mikeckennedy/fastapi-chameleon
+    - fastapi-chameleon==0.1.12
 prefix: /home/servilla/anaconda3/envs/web-x
