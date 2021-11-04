@@ -42,7 +42,7 @@ body {
 }
 
 #content-wrap {
-  padding-bottom: 15rem;    /* Footer height */
+  padding-bottom: 20rem;    /* Footer height */
 }
 
 #footer {
@@ -53,10 +53,6 @@ body {
     text-align: center;
     color: white;
     background-color: #676c6e;
-}
-
-footer a {
-    color: #215093;
 }
 
 .footer-affiliation {
@@ -74,6 +70,10 @@ footer a {
 
 .footer-table td {
     text-align: left;
+    color: white;
+}
+
+.footer-table a {
     color: white;
 }
 
