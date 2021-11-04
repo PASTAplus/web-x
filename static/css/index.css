@@ -20,14 +20,14 @@
 }
 
 .index-inner h1 {
-    font-size: 3.75em; 
+    font-size: 2.5em;
     font-weight: bolder;
     margin-top: 0.75em;
     margin-bottom: 0.1em;
 }
 
 .index-inner .by-line {
-    font-size: 1.5em;
+    font-size: 1.25em;
     font-weight: bold;
     margin-top: 0.75em;
     margin-bottom: 1em;
@@ -35,7 +35,7 @@
 
 .index-inner .btn {
     padding: 0.25em 1.5em 0.25em 1.5em;
-    font-size: 1.5em;
+    font-size: 1em;
     text-decoration: none;
     border-radius: 0.5em;
     margin: 1em;
@@ -50,7 +50,7 @@
 .index-publish {
   color: black;
   margin: auto;
-  padding-top: 1.5em;
+  padding-top: 1em;
   text-align: center;
   text-decoration: none;
 
@@ -71,7 +71,7 @@
 }
 
 .index-column > h2 {
-  font-size: 2.25em;
+  font-size: 1.75em;
   padding-top: 0.25em;
 }
 
@@ -94,7 +94,7 @@
 
 .publish-tile > div > h3 {
   text-align: center;
-  font-size: 1.75em;
+  font-size: 1.25em;
   padding-top: 1em;
 }
 
@@ -127,7 +127,7 @@
 
 .list-tile > ul {
   list-style: none;
-  font-size: 1.5em;
+  font-size: 1.25em;
   padding-top: 1em;
   padding-bottom: 1em;
   text-align: left;
