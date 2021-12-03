@@ -9,7 +9,7 @@
 }
 
 .grid-inner h1 {
-    font-size: 3em;
+    font-size: 3rem;
     font-weight: bolder;
     margin-top: 1.2em;
     margin-bottom: 1.2em;
@@ -42,7 +42,21 @@
   border-radius: 0.8em 0.8em 0em 0em;
   padding: 0em;
 }
+
 .featured-item p {
   padding: 0.5em;
+  margin-bottom: 0em;
 }
-
+#date {
+  font-size: 0.9rem;
+  color: gray;
+}
+#topic {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding-bottom: 0em;
+    line-height: 1.2em;
+}
+#exerpt {
+  font-size: 1rem;
+}
