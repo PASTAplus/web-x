@@ -5,11 +5,11 @@
 }
 
 .sidebar {
-	width: 30%;
-	background-color: #D3D3D3;
-	border-radius: .5em;
-	padding: 1.5em;
-}	
+    width: 30%;
+    background-color: #D3D3D3;
+    border-radius: .5em;
+    padding: 1.5em;
+}
 
 .main-tutorial {
 	width: 70%;
@@ -20,15 +20,15 @@
 
 .sidebar-inner {
     max-width: 80%;
-    margin-bottom: 30px;
+    margin-bottom: 2em;
     color: black;
-    font-size: 18px;
+    font-size: 1.0rem;
     padding: 1.5em 0;
     text-align: left;
 }
 
 .sidebar-inner h1 {
-    font-size: 50px;
+    font-size: 3rem;
     font-weight: bolder;
     text-align: left;
 }
