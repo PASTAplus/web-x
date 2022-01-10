@@ -67,18 +67,7 @@ footer img {
 }
 
 .footer-bottom {
-/*  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; */
   background: #a8b3b8;
-/*  align-items: baseline; */
-}
-
-.footer-bottom img {
-/*  flex: 1 1 0; */
-  min-width: 0;
-  max-height: 5vh;
-  margin: 2em;
 }
 
 .form-control {
