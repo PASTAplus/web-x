@@ -38,3 +38,9 @@ def policies(request: Request):
 def mark_servilla(request: Request):
     vm = ViewModelBase(request)
     return vm.to_dict()
+
+@router.get('/about/services')
+@template("about/services.html")
+def mark_servilla(request: Request):
+    vm = ViewModelBase(request)
+    return vm.to_dict()
