@@ -33,8 +33,8 @@ def policies(request: Request):
     vm = ViewModelBase(request)
     return vm.to_dict()
 
-@router.get('/about/edi/team')
-@template("about/edi/team.html")
+@router.get('/about/partners')
+@template("about/partners.html")
 def mark_servilla(request: Request):
     vm = ViewModelBase(request)
     return vm.to_dict()
