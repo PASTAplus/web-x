@@ -38,3 +38,9 @@ def publish(request: Request):
 def featured(request: Request):
     vm = ViewModelBase(request)
     return vm.to_dict()
+
+@router.get('/data/example')
+@template("data/example.html")
+def featured(request: Request):
+    vm = ViewModelBase(request)
+    return vm.to_dict()
