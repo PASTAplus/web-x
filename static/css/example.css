@@ -28,13 +28,13 @@ body {
     line-height: 24px;
     margin-bottom: 16px;
     margin-top: 0px;
+    color: rgb(40,40,40);
 }
 
 .example-content h1 {
     text-align: left;
     font-weight: 600;
     font-size: 32px;
-    color: rgb(40,40,40);
     padding-bottom: .3em;
     margin-bottom: 16px;
     border-bottom: 1px solid;
@@ -45,18 +45,18 @@ body {
     text-align: left;
     font-weight: 600;
     font-size: 24px;
-    color: rgb(40,40,40);
     line-height: 28.8px;
     padding-bottom: 7.2px;
     margin-bottom: 8px;
     margin-top: 8px;
+    border-bottom: 1px solid;
+    border-bottom-color: rgb(210, 205, 205);
 }    
 
 .example-content h3 {
     text-align: left;
     font-weight: 600;
     font-size: 20px;
-    color: rgb(40,40,40);
     line-height: 25 px;
     padding-bottom: 7.2px;
     margin-bottom: 16px;
@@ -67,7 +67,6 @@ body {
     text-align: left;
     font-weight: 600;
     font-size: 16px;
-    color: rgb(40,40,40);
     line-height: 20 px;
     padding-bottom: 7.2px;
     margin-bottom: 16px;
@@ -78,7 +77,6 @@ body {
     text-align: left;
     font-weight: 600;
     font-size: 14px;
-    color: rgb(40,40,40);
     line-height: 17.5 px;
     margin-bottom: 16px;
     margin-top: 24px;
@@ -88,7 +86,6 @@ body {
     text-align: left;
     font-weight: 600;
     font-size: 13.6px;
-    color: rgb(40,40,40);
     line-height: 17 px;
     margin-bottom: 16px;
     margin-top: 24px;
@@ -130,4 +127,73 @@ body {
     line-height: 24px;
     margin-bottom: 16px;
     margin-top: 0px;
+    color: rgb(36, 41, 47);
 }
+
+
+.example-content table {
+    display: block;
+    width: 100%;
+    width: max-content;
+    max-width: 100%;
+    overflow: auto;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 16px;
+    margin-top: 0px;
+    max-width: 100%;
+/*    overflow-wrap: break-word;*/
+    overflow-x: auto;
+    overflow-y: auto;
+    width: 650.367px;    
+    border-collapse: collapse;
+    border-spacing: 0px 0px;
+    box-sizing: border-box;
+    color: rgb(36, 41, 47);
+    color-scheme: light;
+}
+.example-content thead {
+    word-wrap: break-word;
+}
+
+.example-content th {
+    border: 1px solid;
+    border-color: #cfd7de;
+    padding-bottom: 6px;
+    padding-left: 13px;
+    padding-right: 13px;
+    padding-top: 6px;
+    font-weight: 600;
+    color: rgb(36, 41, 47);
+}
+
+.example-content td {
+    border: 1px solid;
+    border-color: #cfd7de;
+    padding-bottom: 6px;
+    padding-left: 13px;
+    padding-right: 13px;
+    padding-top: 6px
+}
+
+.example-content tr {
+    background-color: rgb(255, 255, 255)	
+}
+
+.example-content code {
+    padding: .2em .4em;
+    margin: 0;
+    font-size: 85%;
+    color: rgb(36, 41, 47);
+    background-color: #F5F5F5;
+    border-radius: 6px;
+}
+
+.example-content pre {
+    padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #F5F5F5;
+    border-radius: 6px;    
+}	
