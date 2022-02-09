@@ -28,7 +28,7 @@ body {
     line-height: 24px;
     margin-bottom: 16px;
     margin-top: 0px;
-    color: rgb(40,40,40);
+/*    color: rgb(40,40,40);*/
 }
 
 .example-content h1 {
@@ -142,10 +142,10 @@ body {
     margin-bottom: 16px;
     margin-top: 0px;
     max-width: 100%;
-/*    overflow-wrap: break-word;*/
+    overflow-wrap: break-word;
     overflow-x: auto;
     overflow-y: auto;
-    width: 650.367px;    
+    width: 700px;    
     border-collapse: collapse;
     border-spacing: 0px 0px;
     box-sizing: border-box;
@@ -185,15 +185,97 @@ body {
     margin: 0;
     font-size: 85%;
     color: rgb(36, 41, 47);
-    background-color: #F5F5F5;
+    background-color: rgba(175, 184, 193, 0.2);
     border-radius: 6px;
 }
+
+
+.highlight {
+    margin-bottom: 16px;	
+}	
 
 .example-content pre {
     padding: 16px;
     overflow: auto;
     font-size: 85%;
     line-height: 1.45;
-    background-color: #F5F5F5;
+    background-color: rgba(175, 184, 193, 0.2);
     border-radius: 6px;    
+}
+
+.pl-k {
+    color: rgb(207, 34, 46);
+}
+
+.pl-en {
+    color: rgb(130, 80, 223);
+}
+
+.pl-c1 {
+    color: rgb(5, 80, 174);
+}
+
+.pl-smi {
+    color: rgb(36, 41, 47);
+}
+
+.pl-s {
+    color: rgb(10, 48, 105);
+}
+
+/*.highlight .zeroclipboard-container .snippet-clipboard-content .zeroclipboard-container { */
+
+.highlight .zeroclipboard-container {
+  display: none;
+  animation: fade-out 200ms both;
+  animation-name: fade-out;
+  animation-duration: 200ms;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: both;
+  animation-play-state: running;
+  animation-timeline: ;  
 }	
+.highlight .zeroclipboard-container {
+  animation-delay: 0s;
+  animation-direction: normal;
+  animation-duration: 0.2s;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+  animation-name: fade-in;
+  animation-play-state: running;
+  animation-timing-function: ease; 
+}  
+.right-0 {
+  right: 0;
+}
+.top-0 {
+  top: 0;
+}
+.p-0 {
+  padding: 0;
+}
+.m-2 {
+  margin: 8px;
+}
+.position-absolute {
+    position: absolute;
+}
+
+.ClipboardButton {
+    position: relative;
+}
+
+.btn .octicon {
+    color: rgb(87, 96, 106);
+    vertical-align: text-bottom;
+}
+
+.octicon {
+    display: inline-block;
+    overflow: visible;
+    fill: rgb(87, 96, 106);
+}
+
