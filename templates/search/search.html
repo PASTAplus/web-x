@@ -1,0 +1,18 @@
+<div metal:use-macro="load: ../shared/layout.html">
+    <div metal:fill-slot="content" tal:omit-tag="True">
+        <h1>Website Search</h1>
+        <p>Search term(s): ${ terms }</p>
+        <div tal:condition="not pages">
+            No search results found
+        </div>
+        <div tal:condition="pages">
+            Results found
+            <div tal:repeat="p pages">
+                ${ p.url } - ${ p.path}
+            </div>
+        </div>
+    </div>
+    <div metal:fill-slot="additional_css" tal:omit-tag="True">
+    <link rel="stylesheet" href="/static/css/user.css">
+    </div>
+</div>
