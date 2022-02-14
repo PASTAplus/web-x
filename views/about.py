@@ -27,17 +27,20 @@ def edi(request: Request):
     vm = ViewModelBase(request)
     return vm.to_dict()
 
+
 @router.get('/about/policies')
 @template("about/policies.html")
 def policies(request: Request):
     vm = ViewModelBase(request)
     return vm.to_dict()
 
+
 @router.get('/about/partners')
 @template("about/partners.html")
 def mark_servilla(request: Request):
     vm = ViewModelBase(request)
     return vm.to_dict()
+
 
 @router.get('/about/services')
 @template("about/services.html")
