@@ -1,14 +1,18 @@
 <div metal:use-macro="load: ../shared/layout.html">
     <div metal:fill-slot="content" tal:omit-tag="True">
-        <h1>Website Search</h1>
-        <p>Search term(s): ${ terms }</p>
-        <div tal:condition="not pages">
-            No search results found
-        </div>
-        <div tal:condition="pages">
-            Results found
-            <div tal:repeat="p pages">
-                ${ p.url } - ${ p.path}
+        <div class="basic-inner" style="max-width: 80%; text-align: left; padding-top: 0.1em; padding-bottom: 0.1em">
+            <h1>Website Search</h1>
+            <h4>Search term(s): <b>${ terms }</b></h4>
+            <div tal:condition="not pages">
+                No search results found
+            </div>
+            <div tal:condition="pages">
+                Results found
+                <ol>
+                    <div tal:repeat="p pages">
+                        <li><a href="${ p.url }">${ p.path}</a></li>
+                    </div>
+                </ol>
             </div>
         </div>
     </div>
