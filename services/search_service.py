@@ -23,12 +23,15 @@ from bugle.index.index import Index
 from bugle.index.webpage import WebPage
 
 
+from config import Config
+
+
 logger = daiquiri.getLogger(__name__)
 
 
 def search_on_terms(terms: str) -> list:
     pages = []
-    index: Index = load.load_content("/home/servilla/git/web-x/cache/content.json")
+    index: Index = load.load_content(Config.CONTENT_JSON)
     hits = index.search(terms, rank=True)
     term_list = terms.split()
     for hit in hits:
