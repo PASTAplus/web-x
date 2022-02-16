@@ -12,6 +12,7 @@
 :Created:
     2/13/22
 """
+import pickle
 from urllib.parse import urlparse
 
 import aiohttp
@@ -31,7 +32,10 @@ logger = daiquiri.getLogger(__name__)
 
 def search_on_terms(terms: str) -> list:
     pages = []
-    index: Index = load.load_content(Config.CONTENT_JSON)
+
+    with open(f"{Config.CACHE}/index.pkl", "rb") as f:
+        index = pickle.load(f)
+
     hits = index.search(terms, rank=True)
     term_list = terms.split()
     for hit in hits:
