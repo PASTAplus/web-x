@@ -2,9 +2,9 @@
     <div metal:fill-slot="content" tal:omit-tag="True">
         <div class="basic-inner" style="max-width: 80%; text-align: left; padding-top: 0.1em; padding-bottom: 0.1em">
             <h1>Website Search</h1>
-            <h4>Search term(s): <b>${ terms }</b></h4>
+            <h4>Search term(s)<sup>*</sup>: <b>${ terms }</b></h4>
             <div tal:condition="not pages">
-                No search results found
+                <p>No search results found</p>
             </div>
             <div tal:condition="pages">
                 Results found
@@ -13,6 +13,9 @@
                         <li><a href="${ p.url }">${ p.path}</a></li>
                     </div>
                 </ol>
+            </div>
+            <div style="position: relative; bottom: 0;">
+                * Stop terms and punctuation do not return results.
             </div>
         </div>
     </div>
