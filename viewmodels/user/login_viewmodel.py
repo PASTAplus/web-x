@@ -18,8 +18,8 @@ from viewmodels.shared.viewmodel import ViewModelBase
 
 
 class LoginViewModel(ViewModelBase):
-    def __init__(self, request: Request):
-        super().__init__(request)
+    def __init__(self, request: Request, title: str = "Environmental Data Initiative"):
+        super().__init__(request, title)
 
         self.user_id = ''
         self.password = ''
