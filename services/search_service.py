@@ -43,9 +43,11 @@ def search_on_terms(terms: str) -> list:
         parse = urlparse(webpage.url)
         pages.append(
             {
+                "title": webpage.title,
                 "url": webpage.url,
                 "path": parse.path,
-                "terms": ",".join([_ for _ in term_list if _ in webpage.fulltext.lower()])
+                "terms": ",".join([_ for _ in term_list if _.lower() in webpage.fulltext.lower()]),
+                "tfrag": "&".join([f"text={_}" for _ in term_list if _.lower() in webpage.fulltext.lower()])
             }
         )
     return pages
