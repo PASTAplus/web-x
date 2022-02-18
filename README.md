@@ -24,6 +24,8 @@ following sequence:
    installing from the Conda environment files (i.e., environment-min.yml or
    environment-win.yml), Conda will install `fastapi-chameleon` from GitHub for
    you.
+ - Update (October 2021): `fastapi-chameleon` is now available through [PyPi](https://pypi.org/project/fastapi-chameleon/)
+   and is now declared as such in the "environment" yaml files.
 
 ### Performing an Upgrade
 
