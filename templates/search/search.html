@@ -7,15 +7,16 @@
                 <p>No search results found</p>
             </div>
             <div tal:condition="pages">
-                Results found
+                Results found in...
                 <ol>
                     <div tal:repeat="p pages">
-                        <li><a href="${ p.url }">${ p.path}</a></li>
+<!--?                        <li><a href="${ p.url }#:~:${ p.tfrag }">${ p.title }</a></li>-->
+                        <li><a href="${ p.url }">${ p.title }</a></li>
                     </div>
                 </ol>
             </div>
             <div style="position: relative; bottom: 0;">
-                * Stop terms and punctuation do not return results.
+                * Common terms and punctuation do not return results.
             </div>
         </div>
     </div>
