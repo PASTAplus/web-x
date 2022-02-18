@@ -28,7 +28,7 @@ router = fastapi.APIRouter()
 @router.get('/user/login')
 @template("user/login.html")
 def login(request: Request, token: Optional[str] = None, cname: Optional[str] = None):
-    vm = LoginViewModel(request)
+    vm = LoginViewModel(request, "User Login")
     if token is None and cname is None:
         return vm.to_dict()
     elif token is None or cname is None:

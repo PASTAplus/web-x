@@ -29,7 +29,7 @@ router = fastapi.APIRouter()
 @template('search/search.html')
 async def search(request: Request):
 
-    vm = SearchViewModel(request)
+    vm = SearchViewModel(request, "Website Search")
     await vm.load()
 
     if vm.error:
