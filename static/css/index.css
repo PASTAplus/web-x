@@ -9,7 +9,7 @@
     font-size: 1.2rem;
     padding: 3em 0;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+/*    font-family: Arial, Helvetica, sans-serif; */
 }
 
 .index-inner {
@@ -24,6 +24,7 @@
     font-weight: bolder;
     margin-top: 0.75em;
     margin-bottom: 0.1em;
+    border-bottom: none;
 }
 
 .index-inner .by-line {
@@ -59,6 +60,7 @@
   font-size: 2rem;
   padding-top: 0.25em;
   padding-bottom: 0.25em;
+  border-bottom: none;
 }
 
 .index-column {
@@ -73,6 +75,7 @@
 .index-column > h2 {
   font-size: 2rem;
   padding-top: 0.25em;
+  border-bottom: none;
 }
 
 .publish-tile {
@@ -104,7 +107,6 @@
 }
 .publish-tile > div > p {
   text-align: center;
-  font-size: 1.0rem;
   padding-top: 1em;
 }
 
@@ -127,7 +129,7 @@
 
 .list-tile > ul {
   list-style: none;
-  font-size: 1.25em;
+  font-size: 1.25rem;
   padding-top: 1em;
   padding-bottom: 1em;
   text-align: left;
@@ -158,6 +160,7 @@
 .featured-tile > div > h2 {
   font-size: 2rem;
   padding-bottom: 1em;
+  border-bottom: none;
 }
 
 .webinar-tile {
@@ -200,6 +203,7 @@
   flex-wrap: nowrap;
   justify-content: center;
 }
+
 .blog-tile > div {
   flex-grow: 1;
   flex-shrink: 1;
@@ -216,6 +220,5 @@
 }
 
 .blog-tile > div > p {
-  font-size: 1.0rem;
   text-align: left;
 }

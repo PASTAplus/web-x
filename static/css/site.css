@@ -1,6 +1,7 @@
 :root {
   box-sizing: border-box;
     font-family: Arial, Source Sans Pro, Helvetica, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     font-size: 1em;
 }
 
@@ -22,6 +23,7 @@ body {
     background: #fff;
     margin: 0em;
     padding: 0 0 3em;
+    line-height: 1.5;
 }
 
 .main_content hr {
@@ -33,11 +35,69 @@ body {
     margin-top: 1em;
     margin-bottom: 1em;
 }
-.main_content h2 {
-    font-weight: bold;
+
+.main_content h1,h2,h3,h4,h5,h6 {
+    font-weight: 600;
+    color: rgb(36, 41, 47);
+}	
+
+.main_content h1 {
+    font-size: 2rem;
+    padding-bottom: 0.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-bottom: 0.05rem solid;
+    border-bottom-color: rgb(210, 205, 205);
 }
+
+.main_content h2 {
+    font-size: 1.5rem;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+    margin-top: 0.5;
+    border-bottom: 0.05rem solid;
+    border-bottom-color: rgb(210, 205, 205);
+}    
+
 .main_content h3 {
-    font-weight: bold;
+    font-size: 1.25rem;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+    margin-top: 0.5;
+}    
+
+.main_content h4 {
+    font-size: 1rem;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+    margin-top: 0.5;
+}
+
+.main_content h5 {
+    font-size: 0.875rem;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+    margin-top: 0.5;
+}
+
+.main_content h6 {
+    font-size: 0.85rem;
+    color: rgb(87, 96, 106);
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+    margin-top: 0.5;
+}
+
+.main_content p {
+    color: rgb(36, 41, 47);
+}
+
+.main_content a {
+    text-decoration: none;
+}
+
+.main_content ul, ol {
+    padding-left: 2em;
 }
 
 #content-wrap {
@@ -56,8 +116,15 @@ footer {
     padding-left: 0em;
 }
 
-footer h5 {
+footer h3 {
     margin-top: 1.5em;
+    color: white;
+    padding-bottom: 0em;
+    margin-bottom: 0em;
+}
+
+footer >col-2 p {
+    color: white;
 }
 
 footer img {

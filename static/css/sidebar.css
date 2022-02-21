@@ -9,6 +9,7 @@
     background-color: #D3D3D3;
     border-radius: .5em;
     padding: 1.5em;
+/*    padding-top: 9em;*/
 }
 
 .main-tutorial {
@@ -22,13 +23,10 @@
     max-width: 80%;
     margin-bottom: 2em;
     color: black;
-    font-size: 1.0rem;
     padding: 1.5em 0;
     text-align: left;
 }
 
 .sidebar-inner h1 {
-    font-size: 3rem;
-    font-weight: bolder;
     text-align: left;
 }

@@ -9,8 +9,8 @@
 }
 
 .grid-inner h1 {
-    font-size: 3rem;
-    font-weight: bolder;
+/*    font-size: 3rem;
+    font-weight: bolder; */
     margin-top: 1.2em;
     margin-bottom: 1.2em;
 }
@@ -57,6 +57,6 @@
     padding-bottom: 0em;
     line-height: 1.2em;
 }
-#exerpt {
+/*#exerpt {
   font-size: 1rem;
-}
+}*/
