@@ -23,13 +23,14 @@ router = fastapi.APIRouter()
 
 @router.get('/support/help')
 @template("support/support.html")
-def supprt(request: Request):
-    vm = ViewModelBase(request)
+def support(request: Request):
+    vm = ViewModelBase(request, "Support")
     return vm.to_dict()
+
 
 @router.get('/support/faq')
 @template("support/faq.html")
 def faq(request: Request):
-    vm = ViewModelBase(request)
+    vm = ViewModelBase(request, "Frequently Asked Questions")
     return vm.to_dict()
 

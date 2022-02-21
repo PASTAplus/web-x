@@ -24,23 +24,26 @@ router = fastapi.APIRouter()
 @router.get('/about/edi')
 @template("about/edi.html")
 def edi(request: Request):
-    vm = ViewModelBase(request)
+    vm = ViewModelBase(request, "About EDI")
     return vm.to_dict()
+
 
 @router.get('/about/policies')
 @template("about/policies.html")
 def policies(request: Request):
-    vm = ViewModelBase(request)
+    vm = ViewModelBase(request, "About Policies")
     return vm.to_dict()
+
 
 @router.get('/about/partners')
 @template("about/partners.html")
-def mark_servilla(request: Request):
-    vm = ViewModelBase(request)
+def partners(request: Request):
+    vm = ViewModelBase(request, "About Partners")
     return vm.to_dict()
+
 
 @router.get('/about/services')
 @template("about/services.html")
-def mark_servilla(request: Request):
-    vm = ViewModelBase(request)
+def services(request: Request):
+    vm = ViewModelBase(request, "About Services")
     return vm.to_dict()

@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="robots" content="noindex">
-    <title>Environmental Data Initiative</title>
+    <title>${ title }</title>
 
     <link rel="icon" type="image/png" href="/static/images/favicon.png"/>
 
@@ -84,8 +84,8 @@
                                 </ul>
                             </li>
                         </ul>
-                        <form class="d-flex" style="margin-bottom:0">
-                            <input class="form-control me-2" type="search" placeholder="Search website on text"
+                        <form action="/search" method="POST" class="d-flex" style="margin-bottom:0">
+                            <input name="terms" class="form-control me-2" type="search" placeholder="Search website on text"
                                    aria-label="Search">
                             <button class="btn btn-dark" type="submit">Search</button>
                         </form>
@@ -156,15 +156,15 @@
 	    <div style="margin-top: 1.5em;">
 	    <p>The Environmental Data Initiative is proud to be affiliated with the following organizations:</p>
 	    </div>
-      <div class=footer-bottom style="margin-bottom: 1.5em;">
-    		        <a href="https://datacite.org/"><img style="min-heigt: 0; max-height: 5vh; margin-right= 5em;" src="/static/images/datacite-logo.png" alt="DataCite logo"></a>
-			<a href="https://www.dataone.org/"><img style="min-heigt: 0; max-height: 5vh; margin-right= 5em;" src="/static/images/dataone-logo.png" alt="DataONE logo"></a>
-			<a href="https://www.esa.org/"><img style="min-heigt: 0; max-height: 5vh; margin-right= 5em;" src="/static/images/esa-logo.png" alt="ESA logo"></a>
-			<a href="https://www.esipfed.org/"><img style="min-heigt: 0; max-height: 5vh; margin= 2em;" src="/static/images/esip-logo.png" alt="ESIP logo"></a>
-			<a href="https://lternet.edu/"><img style="min-heigt: 0; max-height: 5vh; margin= 2em;" src="/static/images/lter-logo.svg" alt="LTER Network logo"></a>
-                        <a href="https://www.neonscience.org/"><img style="min-heigt: 0; max-height: 5vh; margin= 2em;" src="/static/images/neon-logo.png" alt="NEON logo"></a>
-      </div>
-      </div>
+          <div class=footer-bottom style="margin-bottom: 1.5em;">
+            <a href="https://datacite.org/"><img style="min-height: 0; max-height: 5vh; margin-right: 1em;" src="/static/images/datacite-logo.png" alt="DataCite logo"></a>
+            <a href="https://www.dataone.org/"><img style="min-height: 0; max-height: 5vh; margin-right: 1em;" src="/static/images/dataone-logo.png" alt="DataONE logo"></a>
+            <a href="https://www.esa.org/"><img style="min-height: 0; max-height: 5vh; margin-right: 1em;" src="/static/images/esa-logo.png" alt="ESA logo"></a>
+            <a href="https://www.esipfed.org/"><img style="min-height: 0; max-height: 5vh; margin: 1em;" src="/static/images/esip-logo.png" alt="ESIP logo"></a>
+            <a href="https://lternet.edu/"><img style="min-height: 0; max-height: 5vh; margin: 1em;" src="/static/images/lter-logo.svg" alt="LTER Network logo"></a>
+            <a href="https://www.neonscience.org/"><img style="min-height: 0; max-height: 5vh; margin: 1em;" src="/static/images/neon-logo.png" alt="NEON logo"></a>
+          </div>
+        </div>
 
 <!--      <ul class="list-unstyled d-flex">
         <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"></svg></a></li>

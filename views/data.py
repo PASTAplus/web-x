@@ -24,23 +24,26 @@ router = fastapi.APIRouter()
 @router.get('/data/discover')
 @template("data/discover.html")
 def discover(request: Request):
-    vm = ViewModelBase(request)
+    vm = ViewModelBase(request, "Discover Data")
     return vm.to_dict()
+
 
 @router.get('/data/publish')
 @template("data/publish.html")
 def publish(request: Request):
-    vm = ViewModelBase(request)
+    vm = ViewModelBase(request, "Publish Data")
     return vm.to_dict()
+
 
 @router.get('/data/featured')
 @template("data/featured.html")
 def featured(request: Request):
-    vm = ViewModelBase(request)
+    vm = ViewModelBase(request, "Featured Data")
     return vm.to_dict()
+
 
 @router.get('/data/example')
 @template("data/example.html")
-def featured(request: Request):
-    vm = ViewModelBase(request)
+def example(request: Request):
+    vm = ViewModelBase(request, "Example Data")
     return vm.to_dict()

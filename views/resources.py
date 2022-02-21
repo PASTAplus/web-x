@@ -24,17 +24,19 @@ router = fastapi.APIRouter()
 @router.get('/resources/authors')
 @template("resources/authors.html")
 def authors(request: Request):
-    vm = ViewModelBase(request)
+    vm = ViewModelBase(request, "Resources for Authors")
     return vm.to_dict()
+
 
 @router.get('/resources/users')
 @template("resources/users.html")
 def users(request: Request):
-    vm = ViewModelBase(request)
+    vm = ViewModelBase(request, "Resources for Users")
     return vm.to_dict()
+
 
 @router.get('/resources/data_managers')
 @template("resources/data_managers.html")
 def managers(request: Request):
-    vm = ViewModelBase(request)
+    vm = ViewModelBase(request, "Resources for Data Managers")
     return vm.to_dict()

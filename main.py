@@ -27,6 +27,7 @@ from views import support
 from views import data
 from views import home
 from views import user
+from views import search
 
 
 cwd = os.path.dirname(os.path.realpath(__file__))
@@ -56,6 +57,7 @@ def configure_routes():
     app.include_router(support.router)
     app.include_router(home.router)
     app.include_router(user.router)
+    app.include_router(search.router)
 
 
 if __name__ == "__main__":

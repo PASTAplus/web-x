@@ -21,10 +21,11 @@ from services import cookie_auth
 
 class ViewModelBase:
 
-    def __init__(self, request: Request):
+    def __init__(self, request: Request, title: str = "Environmental Data Initiative"):
         self.request: Request = request
         self.error: Optional[str] = None
         self.user_id: Optional[str] = None
+        self.title: str = title
 
         self.is_logged_in, self.common_name = cookie_auth.get_user_via_auth_cookie(self.request)
 
