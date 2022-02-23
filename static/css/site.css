@@ -105,25 +105,53 @@ body {
 }
 
 footer {
-/*    position: absolute;
-    bottom: 0;
-    height: 15em; */ 
     width: 100%;
-    text-align: center;
-    color: white;
-    margin-top: 1.5em;
+/*    margin-top: 1.5em;
     padding-right: 0em;
-    padding-left: 0em;
+    padding-left: 0em; */
 }
 
-footer img {
+.footer-top h3 {
+  margin-top: 1.5em;
+  color: white;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom:0;
+}
+
+.footer-top-logo img {
+  float:right;
   min-width: 0;
   max-height: 5vh;
-  margin: 0.15em;
+  min-height: 0;
+  margin-top: 3em;
+  margin-right: 1em;
+} 
+
+.footer-top-partners img {
+  width: 20%;
+}
+
+.footer-top-partners h3 {
+  margin-top: 1.5em;
+  color: white;
 }
 
 .footer-bottom {
   background: #a8b3b8;
+  margin-bottom: 2em;
+}
+
+.footer-bottom img {
+  min-width: 0;
+  max-height: 5vh;
+  min-height: 0;
+  margin-right: 1em;
+}
+
+.footer-bottom p {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 .form-control {
