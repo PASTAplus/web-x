@@ -141,12 +141,11 @@ footer {
   margin-bottom: 2em;
 }
 
-.footer-bottom img {
-  min-width: 0;
+.footer-bottom-img {
   max-height: 5vmin;
   min-height: 0;
   margin-right: 1em;
-  max-width: 15%;
+/*  max-width: 15%; */
 }
 
 .footer-bottom p {
