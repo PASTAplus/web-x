@@ -17,6 +17,10 @@ body {
     padding: 0;
 }
 
+/* #content-wrap {
+    padding-bottom: 0em;
+} */
+
 .main_content {
     position: relative;
     min-height: 100vh;
@@ -100,12 +104,9 @@ body {
     padding-left: 2em;
 }
 
-#content-wrap {
-  padding-bottom: 30em;
-}
-
 footer {
     width: 100%;
+/*    font-size: calc(0.5rem + 0.5vw); */
     font-size: 1rem;
 }
 
@@ -121,7 +122,11 @@ footer {
 }
 
 .footer-top img {
-  width: 20%;
+  min-width: 0;
+  max-width: 100%;
+  max-height: 4vh;
+  height: auto;
+/*  width: 20%; */
 }
 
 .footer-top-logo img {
@@ -131,7 +136,9 @@ footer {
   min-height: 0;
   margin-top: 3em;
   margin-right: 1em;
-  width: 30%;
+  max-width: 100%;
+  height: auto;
+/*  width: 30%; */
 } 
 
 .footer-bottom {
@@ -143,6 +150,8 @@ footer {
   max-height: 5vh;
   min-height: 0;
   margin-right: 1em;
+  max-width: 100%;
+  height: auto;
 }
 
 .footer-bottom p {
