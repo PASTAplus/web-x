@@ -15,7 +15,14 @@ dependencies:
   - python-multipart
   - aiohttp
   - daiquiri
+  - markdown
   - pip
   - pip:
+    - beautifulsoup4==4.10.0
     - fastapi-chameleon==0.1.12
+    - lxml==4.7.1
+    - requests==2.27.1
+    - snowballstemmer==2.2.0
+    - soupsieve==2.3.1
+    - urllib3==1.26.8
 prefix: /home/servilla/anaconda3/envs/web-x

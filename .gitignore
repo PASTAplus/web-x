@@ -133,3 +133,4 @@ dmypy.json
 ignore
 cache
 config.py
+docmap.json
