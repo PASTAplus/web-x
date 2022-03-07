@@ -75,10 +75,22 @@ def main(docmap: str):
             html = template(inner_html)
             soup = BeautifulSoup(html, "lxml")
             div_toc_tag = soup.find("div", attrs={"class": "toc"}).extract()
-            div_toc_tag.name = "aside"
-            div_toc_tag["class"] = "sidebar"
+            div_toc_tag.name = "div"
+            div_toc_tag["class"] = "sticky-xl-top"
+            div_sticky_lg_top = soup.new_tag("div")
+            div_sticky_lg_top["class"] = "sticky-lg-top"
+            div_sticky_lg_top.insert(0, div_toc_tag)
+            div_sticky_md_top = soup.new_tag("div")
+            div_sticky_md_top["class"] = "sticky-md-top"
+            div_sticky_md_top.insert(0, div_sticky_lg_top)
+            div_sticky_sm_top = soup.new_tag("div")
+            div_sticky_sm_top["class"] = "sticky-sm-top"
+            div_sticky_sm_top.insert(0, div_sticky_md_top)
+            aside = soup.new_tag("aside")
+            aside["class"] = "sidebar"
+            aside.insert(0, div_sticky_sm_top)
             main_tag = soup.find("main")
-            main_tag.insert_before(div_toc_tag)
+            main_tag.insert_before(aside)
             lines = soup.prettify().split("\n")
             doc = lines[2:-2]
             with open(maps[map], "w") as f:
