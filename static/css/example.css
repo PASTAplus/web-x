@@ -230,7 +230,7 @@ body {
   animation-direction: normal;
   animation-fill-mode: both;
   animation-play-state: running;
-  animation-timeline: ;  
+  /*animation-timeline: ;  */
 }	
 .highlight .zeroclipboard-container {
   animation-delay: 0s;
