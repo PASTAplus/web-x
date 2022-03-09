@@ -146,13 +146,13 @@ footer {
 }
 
 .footer-bottom img {
-    max-height: 5vmin;
+    max-height: 3.5vmin;
     min-height: 0;
-    margin-right: 1em;
+    margin-right: 1.5em;
 }
 
 .footer-bottom p {
-    margin-bottom: 1.5em;
+    margin-bottom: 0;
 }
 
 .form-control {
