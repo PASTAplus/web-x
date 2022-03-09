@@ -9,7 +9,7 @@
     font-size: 1.2rem;
     padding: 3em 0;
     text-align: center;
-/*    font-family: Arial, Helvetica, sans-serif; */
+    /*    font-family: Arial, Helvetica, sans-serif; */
 }
 
 .index-inner {
@@ -49,176 +49,179 @@
 }
 
 .index-publish {
-  color: black;
-  margin: auto;
-  padding-top: 1em;
-  text-align: center;
-  text-decoration: none;
+    color: black;
+    margin: auto;
+    padding-top: 1em;
+    text-align: center;
+    text-decoration: none;
 
 }
+
 .index-publish > h2 {
-  font-size: 2rem;
-  padding-top: 0.25em;
-  padding-bottom: 0.25em;
-  border-bottom: none;
+    font-size: 2rem;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    border-bottom: none;
 }
 
 .index-column {
- flex: 1;
- display: flex;
- flex-direction: column;
- flex-wrap: nowrap;
- justify-content: center;
- font-family: Arial, Helvetica, sans-serif;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .index-column > h2 {
-  font-size: 2rem;
-  padding-top: 0.25em;
-  border-bottom: none;
+    font-size: 2rem;
+    padding-top: 0.25em;
+    border-bottom: none;
 }
 
 .publish-tile {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
 }
 
 .publish-tile > div {
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 0;
-  width: 0;
-  margin: 2.5em;
-  padding: 0em;
-  max-width: 10%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    width: 0;
+    margin: 0.5em 2.5em;
+    padding: 0em;
+    max-width: 10%;
 }
 
 .publish-tile > div > h3 {
-  text-align: center;
-  font-size: 1.25rem;
-  padding-top: 1em;
+    text-align: center;
+    font-size: 1.25rem;
+    padding-top: 1em;
 }
 
 .publish-tile > div > img {
-  width: 75%;
-  padding-top: 1em;
+    width: 75%;
+    padding-top: 1em;
 }
+
 .publish-tile > div > p {
-  text-align: center;
-  padding-top: 1em;
+    text-align: center;
+    padding-top: 1em;
 }
 
 .list-tile {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
 }
 
 .list-tile > div {
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 0;
-  width: 0;
-  margin: 2.5em;
-  padding: 0em;
-  max-width: 25%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    width: 0;
+    margin: 2.5em;
+    padding: 0em;
+    max-width: 25%;
 }
 
 .list-tile > ul {
-  list-style: none;
-  font-size: 1.25rem;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  text-align: left;
+    list-style: none;
+    font-size: 1.25rem;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: left;
 }
 
 .featured-tile {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
 }
 
 .featured-tile > div {
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 0;
-  width: 0;
-  margin: 0.25em;
-  padding: 2em;
-  max-width: 20%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    width: 0;
+    margin: 0.25em;
+    padding: 0.5em 2em;
+    max-width: 20%;
 }
 
 .featured-tile > div > img {
-  width: 100%;
-  padding-bottom: 1em;
+    width: 100%;
+    padding-bottom: 1em;
 }
 
 .featured-tile > div > h2 {
-  font-size: 2rem;
-  padding-bottom: 1em;
-  border-bottom: none;
+    font-size: 2rem;
+    padding-bottom: 1em;
+    border-bottom: none;
 }
 
 .webinar-tile {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
 }
 
 .webinar-item1 {
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 0;
-  width: 0;
-  margin: 0.25em;
-  padding: 0em;
-  padding-top: 2em;
-  max-width: 20%;
-  text-align: left;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    width: 0;
+    margin: 0.25em;
+    padding: 0em;
+    padding-top: 2em;
+    max-width: 20%;
+    text-align: left;
 }
 
 .webinar-item2 {
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 0;
-  width: 0;
-  margin: 0.25em;
-  margin-right: 1em;
-  padding: 0em;
-  padding-top: 2em;
-  max-width: 15%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    width: 0;
+    margin: 0.25em;
+    margin-right: 1em;
+    padding: 0em;
+    padding-top: 2em;
+    max-width: 15%;
 }
 
 .webinar-item2 > img {
-  width: 90%;
+    width: 90%;
 }
 
 .blog-tile {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
 }
 
 .blog-tile > div {
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 0;
-  width: 0;
-  margin: 0.25em;
-  padding: 1em;
-  max-width: 38%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    width: 0;
+    margin: 0.25em;
+    max-width: 38%;
 }
 
 .blog-tile > div > h3 {
-  padding-top: 0.75em;
-  text-align: left;
+    padding-top: 0.75em;
+    padding-bottom: 0.25em;
+    margin-bottom: 0;
+    text-align: left;
 }
 
 .blog-tile > div > p {
-  text-align: left;
+    text-align: left;
 }
