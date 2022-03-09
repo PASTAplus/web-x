@@ -100,10 +100,6 @@ body {
     text-decoration: none;
 }
 
-.main_content ul, ol {
-    padding-left: 2em;
-}
-
 footer {
     width: 100%;
     /*    font-size: calc(0.5rem + 0.5vw); */
