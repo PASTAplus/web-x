@@ -46,16 +46,69 @@ def template(inner_html: str) -> str:
 </div>
 </div>
 """
-
     return open + inner_html + close
 
 
+def md2html(md_file: str, html_file: str, verbose: int, dryrun: bool):
+    try:
+        if verbose > 0:
+            print(f"Reading: {md_file}")
+        with open(md_file, "r") as f:
+            md = f.read()
+        inner_html = markdown.markdown(md, extensions=[TocExtension(marker='[TOC]', toc_depth='2-6')])
+        html = template(inner_html)
+        soup = BeautifulSoup(html, "lxml")
+        div_toc_tag = soup.find("div", attrs={"class": "toc"}).extract()
+        div_toc_tag.name = "div"
+        div_toc_tag["class"] = "sticky-xl-top"
+        div_sticky_lg_top = soup.new_tag("div")
+        div_sticky_lg_top["class"] = "sticky-lg-top"
+        div_sticky_lg_top.insert(0, div_toc_tag)
+        div_sticky_md_top = soup.new_tag("div")
+        div_sticky_md_top["class"] = "sticky-md-top"
+        div_sticky_md_top.insert(0, div_sticky_lg_top)
+        div_sticky_sm_top = soup.new_tag("div")
+        div_sticky_sm_top["class"] = "sticky-sm-top"
+        div_sticky_sm_top.insert(0, div_sticky_md_top)
+        aside = soup.new_tag("aside")
+        aside["class"] = "sidebar"
+        aside.insert(0, div_sticky_sm_top)
+        main_tag = soup.find("main")
+        main_tag.insert_before(aside)
+        lines = soup.prettify().split("\n")
+        doc = ""
+        for line in lines[2:-2]:
+            doc += line[2:] + "\n"
+        if verbose > 0:
+            print(f"Writing: {html_file}")
+        if verbose == 2:
+            print(doc)
+        if not dryrun:
+            with open(html_file, "w") as f:
+                f.write(doc.strip())
+    except IOError as ex:
+        logger.error(ex)
+
+
 CONTEXT_SETTINGS = dict(help_option_names=["-h", "--help"])
+help_lines = (
+                 "Line number (0-based) of mapping to execute - may repeat (e.g., -l 1 -l 3)."
+                 " Must be used with a DOCMAP file."
+)
+help_md = "Full path to markdown file. Must be used with --html."
+help_html = "Full path to html file. Must be used with --markdown."
+help_verbose = "Send output to standard out (-v or -vv for increasing output)."
+help_dryrun = "Dry-run only, no output written."
 
 
 @click.command(context_settings=CONTEXT_SETTINGS)
-@click.argument("docmap", nargs=1, required=True)
-def main(docmap: str):
+@click.argument("docmap", nargs=1, required=False)
+@click.option("-l", "--lines", type=int, multiple=True, help=help_lines)
+@click.option("--md", default=None, help=help_md)
+@click.option("--html", default=None, help=help_html)
+@click.option("-v", "--verbose", count=True, help=help_verbose)
+@click.option("-d", "--dryrun", is_flag=True, default=False, help=help_dryrun)
+def main(docmap: str, lines: tuple, md: str, html: str, verbose: int, dryrun: bool):
     """
         Build (and deploy) HTML from MD
 
@@ -64,40 +117,21 @@ def main(docmap: str):
                     corresponding target HTML files.
     """
 
-    with open(docmap, "r") as f:
-        maps = json.loads(f.read())
-
-    for map in maps:
+    if docmap is not None:
         try:
-            with open(map, "r") as f:
-                md = f.read()
-            inner_html = markdown.markdown(md, extensions=[TocExtension(marker='[TOC]', toc_depth='2-6')])
-            html = template(inner_html)
-            soup = BeautifulSoup(html, "lxml")
-            div_toc_tag = soup.find("div", attrs={"class": "toc"}).extract()
-            div_toc_tag.name = "div"
-            div_toc_tag["class"] = "sticky-xl-top"
-            div_sticky_lg_top = soup.new_tag("div")
-            div_sticky_lg_top["class"] = "sticky-lg-top"
-            div_sticky_lg_top.insert(0, div_toc_tag)
-            div_sticky_md_top = soup.new_tag("div")
-            div_sticky_md_top["class"] = "sticky-md-top"
-            div_sticky_md_top.insert(0, div_sticky_lg_top)
-            div_sticky_sm_top = soup.new_tag("div")
-            div_sticky_sm_top["class"] = "sticky-sm-top"
-            div_sticky_sm_top.insert(0, div_sticky_md_top)
-            aside = soup.new_tag("aside")
-            aside["class"] = "sidebar"
-            aside.insert(0, div_sticky_sm_top)
-            main_tag = soup.find("main")
-            main_tag.insert_before(aside)
-            lines = soup.prettify().split("\n")
-            doc = lines[2:-2]
-            with open(maps[map], "w") as f:
-                for line in doc:
-                    f.write(line[2:] + "\n")
-        except IOError as ex:
+            with open(docmap, "r") as f:
+                maps = json.loads(f.read())
+            for i, map in enumerate(maps):
+                if len(lines) == 0:
+                    md2html(map, maps[map], verbose, dryrun)
+                elif i in lines:
+                    md2html(map, maps[map], verbose, dryrun)
+        except (FileNotFoundError, IOError) as ex:
             logger.error(ex)
+    elif md is not None and html is not None:
+        md2html(md, html, verbose, dryrun)
+    else:
+        print("No DOCMAP or markdown file to process, try -h or --help for help - bye!")
 
     return 0
 
