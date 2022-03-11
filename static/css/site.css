@@ -174,3 +174,17 @@ footer {
     max-height: 1.5em;
     min-height: 1.5em;
 }
+
+.person_row {
+    display: flex;
+    padding-bottom: 2.5em;
+}
+
+.person_col {
+    padding: 5px;
+}
+
+.person_col img {
+    max-height: 20vmin;
+    min-height: 0;
+}

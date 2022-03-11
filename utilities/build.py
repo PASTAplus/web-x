@@ -87,7 +87,9 @@ def md2html(md_file: str, html_file: str, verbose: int, dryrun: bool):
             with open(html_file, "w") as f:
                 f.write(doc.strip())
     except IOError as ex:
-        logger.error(ex)
+        logger.error(f"{ex} - {md_file}")
+    except AttributeError as ex:
+        logger.error(f"{ex} - {md_file}")
 
 
 CONTEXT_SETTINGS = dict(help_option_names=["-h", "--help"])
