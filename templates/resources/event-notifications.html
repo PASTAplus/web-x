@@ -1,0 +1,330 @@
+<div metal:use-macro="load: ../shared/layout.html">
+ <div metal:fill-slot="content" tal:omit-tag="True">
+  <div class="sidebar-inner">
+   <div class="container">
+    <aside class="sidebar">
+     <div class="sticky-sm-top">
+      <div class="sticky-md-top">
+       <div class="sticky-lg-top">
+        <div class="sticky-xl-top">
+         <ul>
+          <li>
+           <a href="#requirements">
+            Requirements
+           </a>
+          </li>
+          <li>
+           <a href="#components">
+            Components
+           </a>
+           <ul>
+            <li>
+             <a href="#the-subscription">
+              The subscription
+             </a>
+             <ul>
+              <li>
+               <a href="#create-a-subscription">
+                Create a subscription
+               </a>
+              </li>
+              <li>
+               <a href="#test-a-subscription">
+                Test a subscription
+               </a>
+              </li>
+              <li>
+               <a href="#delete-a-subscription">
+                Delete a Subscription
+               </a>
+              </li>
+             </ul>
+            </li>
+            <li>
+             <a href="#the-notification">
+              The notification
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li>
+           <a href="#considerations">
+            Considerations
+           </a>
+          </li>
+          <li>
+           <a href="#tools">
+            Tools
+           </a>
+          </li>
+          <li>
+           <a href="#examples">
+            Examples
+           </a>
+          </li>
+         </ul>
+        </div>
+       </div>
+      </div>
+     </div>
+    </aside>
+    <main class="main-tutorial">
+     <h1 id="event-notifications">
+      Event Notifications
+     </h1>
+     <p>
+      The EDI Event Notification Service allows data users to stay on top of changes in the EDI Repository. For example, users can receive notification when a new data package is uploaded or when an existing data package is updated. Such information helps researchers using data from the EDI Repository keep their science up-to-date.
+     </p>
+     <h2 id="requirements">
+      Requirements
+     </h2>
+     <ul>
+      <li>
+       Event notifications are only accessible to EDI account holders. Authentication with Google, ORCID, or GitHub does not grant access to this service.
+      </li>
+      <li>
+       Event notifications are sent as HTTP POST requests, thus requiring the user to have access to a web server capable of receiving the request and then parsing the notification and executing a subsequent process (e.g. workflow).
+      </li>
+     </ul>
+     <h2 id="components">
+      Components
+     </h2>
+     <p>
+      Event notifications have two parts: a subscription and a corresponding notification.
+     </p>
+     <h3 id="the-subscription">
+      The subscription
+     </h3>
+     <p>
+      The subscription defines what events to follow and where to send the notification when the event occurs. The create, test, and delete subscription processes outlined below can be performed programmatically using the
+      <a href="https://ediorg.github.io/EDIutils/">
+       EDIutils
+      </a>
+      R Package or similarly the
+      <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/about">
+       REST API
+      </a>
+      .
+     </p>
+     <h4 id="create-a-subscription">
+      Create a subscription
+     </h4>
+     <p>
+      To create a subscription:
+     </p>
+     <ol>
+      <li>
+       Login to the EDI Data Portal
+      </li>
+     </ol>
+     <p>
+      <img alt="" src="/static/images/login-portal.png"/>
+     </p>
+     <ol>
+      <li>
+       Select TOOLS &gt; Event Subscriptions from the menu.
+      </li>
+     </ol>
+     <p>
+      <img alt="" src="/static/images/event-sub-dropdown.png"/>
+     </p>
+     <ol>
+      <li>
+       Complete the subscription form
+      </li>
+     </ol>
+     <p>
+      <img alt="" src="/static/images/event-sub-form.png"/>
+     </p>
+     <ol>
+      <li>
+       In the
+       <strong>
+        Package Id
+       </strong>
+       field add the scope under which new data package uploads should trigger a notification (e.g. knb-lter-cap) or add the data package scope and identifier for which new revisions should trigger a notification (e.g. knb-lter-cap.10).
+      </li>
+      <li>
+       In the
+       <strong>
+        Target URL
+       </strong>
+       field add the web server URL that will receive and process the event notification.
+      </li>
+      <li>
+       Click
+       <strong>
+        Subscribe
+       </strong>
+      </li>
+     </ol>
+     <p>
+      The new subscription will be added to a table at the bottom of the page listing all event subscriptions for this user.
+     </p>
+     <p>
+      <img alt="" src="/static/images/event-subs.png"/>
+     </p>
+     <h4 id="test-a-subscription">
+      Test a subscription
+     </h4>
+     <p>
+      To test a subscription (i.e. send a notification to the
+      <strong>
+       Target URL
+      </strong>
+      ):
+     </p>
+     <p>
+      <img alt="" src="/static/images/event-sub-test.png"/>
+     </p>
+     <ol>
+      <li>
+       Select the
+       <strong>
+        Subscription Id
+       </strong>
+      </li>
+      <li>
+       Click
+       <strong>
+        Test
+       </strong>
+      </li>
+     </ol>
+     <h4 id="delete-a-subscription">
+      Delete a Subscription
+     </h4>
+     <p>
+      To delete a subscription:
+     </p>
+     <p>
+      <img alt="" src="/static/images/event-sub-delete.png"/>
+     </p>
+     <ol>
+      <li>
+       Select the
+       <strong>
+        Subscription Id
+       </strong>
+       to delete
+      </li>
+      <li>
+       Click
+       <strong>
+        Delete
+       </strong>
+      </li>
+     </ol>
+     <p>
+      The deleted subscription will be removed from the table at the bottom of the page. A deleted subscription can be recreated by re-entering the
+      <strong>
+       Package Id
+      </strong>
+      and
+      <strong>
+       Target URL
+      </strong>
+      information, but the
+      <strong>
+       Subscription Id
+      </strong>
+      will be different.
+     </p>
+     <h3 id="the-notification">
+      The notification
+     </h3>
+     <p>
+      An event notification is sent as an HTTP POST request to the Target URL and carries a payload containing the
+      <a href="/resources/the-data-package#data-package-identifier">
+       data package identifier
+      </a>
+      in the body of the request, and the source URL in the header indicating which
+      <a href="/resources/repository-environments">
+       repository environment
+      </a>
+      the event occurred within. Base of source URLs and their corresponding environment:
+     </p>
+     <ul>
+      <li>
+       portal.edirepository.org = production
+      </li>
+      <li>
+       portal-s.edirepository.org = staging
+      </li>
+      <li>
+       portal-d.edirepository.org = development
+      </li>
+     </ul>
+     <h2 id="considerations">
+      Considerations
+     </h2>
+     <p>
+      Some other helpful information about event notifications and lessons learned from using them:
+     </p>
+     <ul>
+      <li>
+       Notifications are only sent once, so listen carefully! If there's a chance a notification was missed, use the
+       <strong>
+        Test
+       </strong>
+       <strong>
+        Subscription Id
+       </strong>
+       feature to manually resend the notification (see above).
+      </li>
+      <li>
+       Beware of processing order when related events occur at the same time. One solution is to manage notifications within a queue to facilitate sequential processing.
+      </li>
+      <li>
+       Log messages for diagnostics. Adding process messages to a log file expedites problem solving when issues arise.
+      </li>
+      <li>
+       Identify changes in source data packages when the event corresponds to an update. Minor updates to metadata may not merit a full reprocessing of the corresponding source data package.
+      </li>
+      <li>
+       Wrap critical processes with error handling and on exit clean up to ensure run completion.
+      </li>
+      <li>
+       Email the processing log to project personnel to catch errors and broken runs when they happen.
+      </li>
+     </ul>
+     <h2 id="tools">
+      Tools
+     </h2>
+     <ul>
+      <li>
+       <a href="https://github.com/EDIorg/ecocomDP-listener">
+        listener
+       </a>
+       - This web application listens for EDI Event Notifications and places each incoming notification into a queue. The queue is an SQLite database containing attributes of the notification and are marked with a "processed"/"unprocessed" tag.
+      </li>
+      <li>
+       <a href="https://github.com/clnsmth/maintainer">
+        maintainer
+       </a>
+       - This web application builds on the event notification listener by including a workflow manager and static website for research projects. This application maps event notifications to workflows and posts updates in real time to a project website.
+      </li>
+     </ul>
+     <h2 id="examples">
+      Examples
+     </h2>
+     <ul>
+      <li>
+       ecocomDP-maintainer - Updates
+       <a href="/resources/thematic-standardization#ecocomdp">
+        ecocomDP
+       </a>
+       data packages when their corresponding source data package updates.
+      </li>
+      <li>
+       <a href="https://github.com/EDIorg/pasta-upload-tweeter">
+        PASTA Upload Tweeter
+       </a>
+       - Tweets when a new data package is uploaded to the EDI Data Repository.
+      </li>
+     </ul>
+    </main>
+   </div>
+  </div>
+ </div>
+</div>

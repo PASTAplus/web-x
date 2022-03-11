@@ -1,0 +1,107 @@
+<div metal:use-macro="load: ../shared/layout.html">
+ <div metal:fill-slot="content" tal:omit-tag="True">
+  <div class="sidebar-inner">
+   <div class="container">
+    <aside class="sidebar">
+     <div class="sticky-sm-top">
+      <div class="sticky-md-top">
+       <div class="sticky-lg-top">
+        <div class="sticky-xl-top">
+         <ul>
+          <li>
+           <a href="#edi-package-tracker">
+            EDI Package Tracker
+           </a>
+          </li>
+          <li>
+           <a href="#data-package-summary-page">
+            Data package summary page
+           </a>
+          </li>
+          <li>
+           <a href="#ediutils">
+            EDIutils
+           </a>
+          </li>
+         </ul>
+        </div>
+       </div>
+      </div>
+     </div>
+    </aside>
+    <main class="main-tutorial">
+     <h1 id="tracking-data-package-use">
+      Tracking Data Package Use
+     </h1>
+     <p>
+      Metrics of activity surrounding a data package are commonly used when publicizing a data publication or reporting to funders.
+     </p>
+     <h2 id="edi-package-tracker">
+      EDI Package Tracker
+     </h2>
+     <p>
+      <a href="https://dashboard.edirepository.org/dashboard/reports/package_tracker">
+       The Package Tracker
+      </a>
+      , a feature of the EDI Dashboard, is a convenient tool for viewing the resources and downloads of a given data package. For more information see
+      <a href="/resources/the-edi-dashboard">
+       the EDI Dashboard
+      </a>
+      .
+     </p>
+     <h2 id="data-package-summary-page">
+      Data package summary page
+     </h2>
+     <p>
+      Each data package
+      <a href="/resources/data-package-pages">
+       landing page
+      </a>
+      provides activity information in multiple places. The
+      <strong>
+       Resources
+      </strong>
+      section has the number of views the metadata has received, and the number of downloads for each resource. The
+      <strong>
+       Provenance
+      </strong>
+      and
+      <strong>
+       Journal Citations
+      </strong>
+      sections, as well as the
+      <strong>
+       DataCite
+      </strong>
+      Badge at the bottom of the summary page, all provide information on where a data package has been used or cited.
+     </p>
+     <h2 id="ediutils">
+      EDIutils
+     </h2>
+     <p>
+      Using the functions provided by the
+      <a href="https://ediorg.github.io/EDIutils/">
+       EDIutils
+      </a>
+      R Package, it is possible to easily retrieve download and citation metrics for a data package. These processes have been detailed in
+      <a href="https://ediorg.github.io/EDIutils/articles/retrieve_downloads">
+       Retrieve Download Metrics
+      </a>
+      and
+      <a href="https://ediorg.github.io/EDIutils/articles/retrieve_citations">
+       Retrieve Citation Metrics
+      </a>
+      vignettes that accompany the package.
+     </p>
+     <p>
+      For a language agnostic solution follow a similar process using the
+      <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/about">
+       REST API
+      </a>
+      documentation.
+     </p>
+    </main>
+   </div>
+  </div>
+ </div>
+</div>

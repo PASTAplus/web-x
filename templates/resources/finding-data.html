@@ -1,0 +1,335 @@
+<div metal:use-macro="load: ../shared/layout.html">
+ <div metal:fill-slot="content" tal:omit-tag="True">
+  <div class="sidebar-inner">
+   <div class="container">
+    <aside class="sidebar">
+     <div class="sticky-sm-top">
+      <div class="sticky-md-top">
+       <div class="sticky-lg-top">
+        <div class="sticky-xl-top">
+         <ul>
+          <li>
+           <a href="#edi-search-engine">
+            EDI Search Engine
+           </a>
+           <ul>
+            <li>
+             <a href="#edi-data-portal">
+              EDI Data Portal
+             </a>
+             <ul>
+              <li>
+               <a href="#advanced-search">
+                Advanced search
+               </a>
+               <ul>
+                <li>
+                 <a href="#spatial-place-name">
+                  Spatial / Place Name
+                 </a>
+                </li>
+                <li>
+                 <a href="#sites">
+                  Sites
+                 </a>
+                </li>
+                <li>
+                 <a href="#subject">
+                  Subject
+                 </a>
+                </li>
+                <li>
+                 <a href="#creator-organization">
+                  Creator / Organization
+                 </a>
+                </li>
+                <li>
+                 <a href="#temporal">
+                  Temporal
+                 </a>
+                </li>
+                <li>
+                 <a href="#taxonomic">
+                  Taxonomic
+                 </a>
+                </li>
+                <li>
+                 <a href="#project">
+                  Project
+                 </a>
+                </li>
+                <li>
+                 <a href="#identifier">
+                  Identifier
+                 </a>
+                </li>
+               </ul>
+              </li>
+             </ul>
+            </li>
+            <li>
+             <a href="#ediutils">
+              EDIutils
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li>
+           <a href="#dataone-search-engine">
+            DataONE Search Engine
+           </a>
+          </li>
+          <li>
+           <a href="#google-dataset-search-engine">
+            Google Dataset Search Engine
+           </a>
+          </li>
+         </ul>
+        </div>
+       </div>
+      </div>
+     </div>
+    </aside>
+    <main class="main-tutorial">
+     <h1 id="finding-data-search-engines">
+      Finding Data (Search Engines)
+     </h1>
+     <p>
+      Finding data of interest is an important first step in data reuse. Recognizing this, EDI takes extra effort to expand data discovery beyond the EDI Search Engine to also include the DataONE and Google Dataset Search Engines.
+     </p>
+     <h2 id="edi-search-engine">
+      EDI Search Engine
+     </h2>
+     <p>
+      Searchable components of data package metadata are indexed by the EDI Search Engine. The
+      <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/pasta_api/data_package_manager_api#searchable-fields">
+       full set of searchable fields
+      </a>
+      are listed in tabs of the EDI Data Portal
+      <a href="https://portal.edirepository.org/nis/advancedSearch.jsp">
+       Advanced Search Interface
+      </a>
+      .
+     </p>
+     <h3 id="edi-data-portal">
+      EDI Data Portal
+     </h3>
+     <p>
+      Simple text search and the advanced search interface are accessible from the
+      <a href="https://portal.edirepository.org/nis/home.jsp">
+       EDI Data Portal home page
+      </a>
+      .
+     </p>
+     <p>
+      <img alt="" src="/static/images/search1.png"/>
+     </p>
+     <h4 id="advanced-search">
+      Advanced search
+     </h4>
+     <p>
+      The advanced search interface consists of eight feature tabs, each representing a different search parameter. These search parameters can be used individually or in tandem with the others to create a query with which to search for datasets. When using the advanced search interface, any selected parameters will be saved until the
+      <strong>
+       Submit
+      </strong>
+      button is pressed. After pressing submit, use the web browser back button to refine search parameters. To reset all parameters, click the
+      <strong>
+       Clear All
+      </strong>
+      button.
+     </p>
+     <h5 id="spatial-place-name">
+      Spatial / Place Name
+     </h5>
+     <p>
+      Search by the name of a location or set geographic boundaries from the
+      <strong>
+       Spatial / Place Name
+      </strong>
+      tab. Geographic boundaries can be set by zooming in on a map or by entering coordinates and selecting
+      <strong>
+       Dataset is Contained within Boundaries
+      </strong>
+      .
+     </p>
+     <p>
+      <img alt="" src="/static/images/as-spatial.png"/>
+     </p>
+     <h5 id="sites">
+      Sites
+     </h5>
+     <p>
+      Find data from a subset of LTER sites from the
+      <strong>
+       Sites
+      </strong>
+      tab. Hold the shift button to highlight consecutive site names, or the control/command button to select multiple disparate sites.
+     </p>
+     <p>
+      <img alt="" src="/static/images/as-sites.png"/>
+     </p>
+     <h5 id="subject">
+      Subject
+     </h5>
+     <p>
+      Add a text search to your query from the
+      <strong>
+       Subject
+      </strong>
+      tab. Text search can be applied specifically to the metadata title, abstract, or keywords (or all three) using the radio buttons. The search can be expanded by allowing the query to return results that include more specific terms (a search for "aquatic" would include "lakes"), related terms (a search for "lakes" would include "ponds"), or both. Expand the search even further by including the 15403 data packages from the
+      <a href="https://lternet.edu/the-ecotrends-project/">
+       EcoTrends
+      </a>
+      and 10492 data packages from the
+      <a href="https://lternet.edu/lter-remote-sensing-and-geographic-information-system-data/">
+       LTER Landsat
+      </a>
+      projects in the results.
+     </p>
+     <p>
+      <img alt="" src="/static/images/as-subject.png"/>
+     </p>
+     <h5 id="creator-organization">
+      Creator / Organization
+     </h5>
+     <p>
+      To limit search results to a specific creator or organization, select names from the dropdown lists under the
+      <strong>
+       Creator / Organization
+      </strong>
+      tab.
+     </p>
+     <p>
+      <img alt="" src="/static/images/as-creator.png"/>
+     </p>
+     <h5 id="temporal">
+      Temporal
+     </h5>
+     <p>
+      From the
+      <strong>
+       Temporal
+      </strong>
+      tab, narrow the query to specific dates of data collection or publication with the
+      <strong>
+       Start Date
+      </strong>
+      and
+      <strong>
+       End Date
+      </strong>
+      . Search for studies that cover specific durations with
+      <strong>
+       Min Duration
+      </strong>
+      and
+      <strong>
+       Max Duration
+      </strong>
+      . Narrow results to specific time periods with
+      <strong>
+       Named Time-Scale
+      </strong>
+      .
+     </p>
+     <p>
+      <img alt="" src="/static/images/as-temporal.png"/>
+     </p>
+     <h5 id="taxonomic">
+      Taxonomic
+     </h5>
+     <p>
+      Filter on a specific taxon in the
+      <strong>
+       Taxonomic
+      </strong>
+      search tab.
+     </p>
+     <p>
+      <img alt="" src="/static/images/as-taxonomic.png"/>
+     </p>
+     <h5 id="project">
+      Project
+     </h5>
+     <p>
+      Use a project title or a funding ID to narrow results from the
+      <strong>
+       Project
+      </strong>
+      tab.
+     </p>
+     <p>
+      <img alt="" src="/static/images/as-project.png"/>
+     </p>
+     <h5 id="identifier">
+      Identifier
+     </h5>
+     <p>
+      Search for a specific package identifier from the
+      <strong>
+       Identifier
+      </strong>
+      tab.
+     </p>
+     <p>
+      <img alt="" src="/static/images/as-identifier.png"/>
+     </p>
+     <h3 id="ediutils">
+      EDIutils
+     </h3>
+     <p>
+      The
+      <a href="https://ediorg.github.io/EDIutils/reference/search_data_packages">
+       <code>
+        search_data_packages()
+       </code>
+      </a>
+      function allows programmatic search across the EDI Data Repository using
+      <a href="https://cwiki.apache.org/confluence/display/solr/">
+       Apache Solr queries
+      </a>
+      . See the
+      <a href="https://ediorg.github.io/EDIutils/articles/search_and_access">
+       Search and Access vignette
+      </a>
+      for an example of searching and accessing data using EDIutils.
+     </p>
+     <p>
+      For a language-agnostic solution, see the REST API documentation for
+      <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/pasta_api/data_package_manager_api#search-data-packages">
+       Search Data Packages
+      </a>
+      .
+     </p>
+     <h2 id="dataone-search-engine">
+      DataONE Search Engine
+     </h2>
+     <p>
+      The
+      <a href="https://search.dataone.org/data">
+       DataONE Search Engine
+      </a>
+      allows data users to search for EDI data packages alongside other member repositories specializing in Ecological, Earth, and Environmental research. Along with some search parameters similar to those offered by EDI, users can search across a subset of
+      <strong>
+       Member Nodes
+      </strong>
+      (i.e. data repositories), and filter datasets that contain specific data attribute types (i.e. measurement variables) or by embedded keyword tags.
+     </p>
+     <p>
+      <img alt="" src="/static/images/dataone-search.png"/>
+     </p>
+     <h2 id="google-dataset-search-engine">
+      Google Dataset Search Engine
+     </h2>
+     <p>
+      The
+      <a href="https://datasetsearch.research.google.com/">
+       Google Dataset Search Engine
+      </a>
+      facilitates discovery of EDI data among all datasets on the internet. Currently, the search accepts queries in a free text form and search results can be filtered by last updated, download format, usage rights, and topic.
+     </p>
+    </main>
+   </div>
+  </div>
+ </div>
+</div>

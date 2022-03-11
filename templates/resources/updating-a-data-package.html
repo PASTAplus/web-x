@@ -1,0 +1,307 @@
+<div metal:use-macro="load: ../shared/layout.html">
+ <div metal:fill-slot="content" tal:omit-tag="True">
+  <div class="sidebar-inner">
+   <div class="container">
+    <aside class="sidebar">
+     <div class="sticky-sm-top">
+      <div class="sticky-md-top">
+       <div class="sticky-lg-top">
+        <div class="sticky-xl-top">
+         <ul>
+          <li>
+           <a href="#metadata-to-include">
+            Metadata to include
+           </a>
+          </li>
+          <li>
+           <a href="#editing-data-and-metadata">
+            Editing data and metadata
+           </a>
+           <ul>
+            <li>
+             <a href="#ezeml">
+              ezEML
+             </a>
+            </li>
+            <li>
+             <a href="#emlassemblyline">
+              EMLassemblyline
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li>
+           <a href="#publishing-edited-data-and-metadata">
+            Publishing edited data and metadata
+           </a>
+           <ul>
+            <li>
+             <a href="#edi-data-portal">
+              EDI Data Portal
+             </a>
+            </li>
+            <li>
+             <a href="#ediutils">
+              EDIutils
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li>
+           <a href="#submit-via-email">
+            Submit via email
+           </a>
+          </li>
+         </ul>
+        </div>
+       </div>
+      </div>
+     </div>
+    </aside>
+    <main class="main-tutorial">
+     <h1 id="updating-a-data-package">
+      Updating a Data Package
+     </h1>
+     <p>
+      Perform a data package update whenever data or metadata need to be changed or added to a published data package. Updates may be performed routinely or sporadically and will result in a new "revision". A revision of a data package has the same identifier, but receives a new
+      <a href="/resources/the-data-package#data-package-identifier">
+       version number
+      </a>
+      and is assigned a new DOI. All revisions of a data package are linked in the EDI Data Repository. Users who end up on the landing page of an older revision will be notified that a newer version is available.
+     </p>
+     <p>
+      <img alt="" src="/static/images/data-package-versioning.png"/>
+     </p>
+     <blockquote>
+      <p>
+       Note to Information Managers: Be aware of the EML &lt;access&gt; element. Only credentials already specified in an existing version of a data package can be used to publish an update (i.e. to publish edi.10.2, credentials must be specified in edi.10.1). If you are unable to publish a revision for this reason, contact the EDI Curation Team.
+      </p>
+     </blockquote>
+     <h2 id="metadata-to-include">
+      Metadata to include
+     </h2>
+     <p>
+      It is important to communicate changes and significance in the metadata of an updated data package so users can understand what has changed and why. This information is included in the
+      <a href="https://ediorg.github.io/data-package-best-practices/EMLmetadata/maintenance">
+       maintenance
+      </a>
+      section of EML metadata. Guidance on adding this information is provided below.
+     </p>
+     <h2 id="editing-data-and-metadata">
+      Editing data and metadata
+     </h2>
+     <h3 id="ezeml">
+      ezEML
+     </h3>
+     <p>
+      Edit data and metadata using
+      <a href="https://ezeml.edirepository.org/eml/">
+       ezEML
+      </a>
+      :
+     </p>
+     <ol>
+      <li>
+       Open the EML document for the original data package. If this doesn't exist, request it by sending the EDI Curation Team an email with a link to the original data package in the EDI Repository.
+      </li>
+      <li>
+       Describe the changes in the new revision. From the
+       <strong>
+        Maintenance
+       </strong>
+       tab, add a new paragraph to the
+       <strong>
+        Description
+       </strong>
+       text.
+      </li>
+     </ol>
+     <p>
+      <img alt="" src="/static/images/ezeml-maint.png"/>
+     </p>
+     <ol>
+      <li>
+       Submit to EDI - Click
+       <strong>
+        Send to EDI
+       </strong>
+       and add a note mentioning that this is an update to an existing data package (e.g. "This submission is a revision to package edi.101.1").
+      </li>
+     </ol>
+     <p>
+      <img alt="" src="/static/images/ezeml-send-revision.png"/>
+     </p>
+     <ol>
+      <li>
+       The EDI curation team will receive the submission and iterate through the
+       <a href="/resources/the-review-process">
+        review process
+       </a>
+       before the update is published.
+      </li>
+     </ol>
+     <blockquote>
+      <p>
+       EML created with ezEML can be downloaded directly and published to the EDI Repository. If opting to publish your own updates, remember to enter an incremented version number in the
+       <strong>
+        Data Package ID
+       </strong>
+       tab of ezEML.
+      </p>
+     </blockquote>
+     <h3 id="emlassemblyline">
+      EMLassemblyline
+     </h3>
+     <p>
+      Edit data and metadata using
+      <a href="https://ediorg.github.io/EMLassemblyline/index">
+       EMLassemblyline
+      </a>
+      :
+     </p>
+     <ol>
+      <li>
+       Get the metadata templates and
+       <a href="https://ediorg.github.io/EMLassemblyline/reference/make_eml">
+        <code>
+         make_eml()
+        </code>
+       </a>
+       function call for the original data package. If these don't exist, use the
+       <a href="https://ediorg.github.io/EMLassemblyline/reference/eml2eal">
+        <code>
+         eml2eal()
+        </code>
+       </a>
+       and
+       <a href="https://ediorg.github.io/EMLassemblyline/reference/eml2eal_losses">
+        <code>
+         eml2eal_losses()
+        </code>
+       </a>
+       functions to create them.
+      </li>
+      <li>
+       Update the metadata templates and
+       <a href="https://ediorg.github.io/EMLassemblyline/reference/make_eml">
+        <code>
+         make_eml()
+        </code>
+       </a>
+       function arguments to reflect the changes. Describe the changes made between revisions using the
+       <code>
+        maintenance.description
+       </code>
+       parameter of
+       <a href="https://ediorg.github.io/EMLassemblyline/reference/make_eml">
+        <code>
+         make_eml()
+        </code>
+       </a>
+       .
+      </li>
+      <li>
+       Increment the data package version number in the
+       <code>
+        package.id
+       </code>
+       parameter of
+       <a href="https://ediorg.github.io/EMLassemblyline/reference/make_eml">
+        <code>
+         make_eml()
+        </code>
+       </a>
+       .
+      </li>
+      <li>
+       Run
+       <a href="https://ediorg.github.io/EMLassemblyline/reference/make_eml">
+        <code>
+         make_eml()
+        </code>
+       </a>
+       .
+      </li>
+     </ol>
+     <h2 id="publishing-edited-data-and-metadata">
+      Publishing edited data and metadata
+     </h2>
+     <h3 id="edi-data-portal">
+      EDI Data Portal
+     </h3>
+     <p>
+      An updated data package can be uploaded via the EDI Data Portal similarly to a
+      <a href="/resources/publishing-a-data-package">
+       new data package
+      </a>
+      , but with one key difference:
+     </p>
+     <p>
+      Use the
+      <strong>
+       Allow PASTA+ to skip…
+      </strong>
+      option if any of the data files are unchanged between versions. This allows the EDI Data Repository (a.k.a. PASTA) to forgo reuploading replicate data and can save time and repository space.
+      <em>
+       Caution: take care to ensure that the metadata-documented checksum values of each data file are accurate and up to date.
+      </em>
+     </p>
+     <p>
+      For more information on this option, watch
+      <a href="https://youtu.be/AS6-m17I6pk">
+       this video
+      </a>
+      .
+     </p>
+     <h3 id="ediutils">
+      EDIutils
+     </h3>
+     <p>
+      An updated data package can be uploaded via the
+      <a href="https://ediorg.github.io/EDIutils/">
+       EDIutils
+      </a>
+      R package using the
+      <a href="https://ediorg.github.io/EDIutils/reference/update_data_package">
+       <code>
+        update_data_package()
+       </code>
+      </a>
+      function. For updating with this function, all data files must be web-hosted and be associated with
+      <a href="/resources/uploading-with-static-data-links">
+       static data links
+      </a>
+      . When using this function, the
+      <code>
+       useChecksum
+      </code>
+      option can be selected.
+     </p>
+     <p>
+      Set the
+      <code>
+       useChecksum
+      </code>
+      argument to TRUE if any of the data objects are unchanged between versions. This allows the EDI Data Repository to forgo reuploading replicate data and can save time and repository space.
+      <em>
+       Caution: take care to ensure that metadata-documented checksum values are accurate and up to date.
+      </em>
+     </p>
+     <p>
+      For a language-agnostic solution, see the REST API documentation for
+      <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/pasta_api/data_package_manager_api#update-data-package">
+       Updating a Data Package
+      </a>
+      .
+     </p>
+     <h2 id="submit-via-email">
+      Submit via email
+     </h2>
+     <p>
+      Submit desired changes or the new and/or updated data along with the updated EML file to the EDI Curation Team via email. Make sure to mention the data package identifier that is being updated. The EDI Curation Team will create a proof for review before the update is published.
+     </p>
+    </main>
+   </div>
+  </div>
+ </div>
+</div>

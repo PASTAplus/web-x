@@ -1,0 +1,258 @@
+<div metal:use-macro="load: ../shared/layout.html">
+ <div metal:fill-slot="content" tal:omit-tag="True">
+  <div class="sidebar-inner">
+   <div class="container">
+    <aside class="sidebar">
+     <div class="sticky-sm-top">
+      <div class="sticky-md-top">
+       <div class="sticky-lg-top">
+        <div class="sticky-xl-top">
+         <ul>
+          <li>
+           <a href="#creating-provenance-metadata">
+            Creating provenance metadata
+           </a>
+           <ul>
+            <li>
+             <a href="#ezeml">
+              ezEML
+             </a>
+            </li>
+            <li>
+             <a href="#emlassemblyline">
+              EMLassemblyline
+             </a>
+            </li>
+            <li>
+             <a href="#edi-data-portal">
+              EDI Data Portal
+             </a>
+            </li>
+            <li>
+             <a href="#ediutils">
+              EDIutils
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li>
+           <a href="#resources">
+            Resources
+           </a>
+          </li>
+         </ul>
+        </div>
+       </div>
+      </div>
+     </div>
+    </aside>
+    <main class="main-tutorial">
+     <h1 id="provenance-metadata">
+      Provenance Metadata
+     </h1>
+     <p>
+      Provenance is the origin or history of data and is an important piece of metadata to make research transparent and reproducible. Several elements in metadata are involved in documenting data provenance. First and foremost is a detailed description of the methods by which the data were collected and created. Data processing scripts (R, Python, etc.) provide very detailed provenance information and can be published in a data package. For the special case of a derived dataset, i.e. data that is compiled from one or more other 'original' datasets, a detailed list of those original datasets should be included. Listing such datasets will give the original data creator proper credit, even when more datasets are used than can reasonably be cited in a resulting paper.
+     </p>
+     <p>
+      <img alt="" src="/static/images/provenance.png"/>
+     </p>
+     <h2 id="creating-provenance-metadata">
+      Creating provenance metadata
+     </h2>
+     <p>
+      Provenance metadata for data sources both internal and external to the EDI Data Repository can be created using ezEML and EMLassemblyline. The EDI Data Portal and EDIutils only support the creation of metadata only internal to the EDI Repository.
+     </p>
+     <h3 id="ezeml">
+      ezEML
+     </h3>
+     <p>
+      To create provenance metadata using
+      <a href="https://ezeml.edirepository.org/eml/">
+       ezEML
+      </a>
+      :
+     </p>
+     <ol>
+      <li>
+       From the
+       <strong>
+        Methods
+       </strong>
+       tab, click the
+       <strong>
+        Add Method Step
+       </strong>
+       button.
+      </li>
+      <li>
+       In the
+       <strong>
+        Data Sources
+       </strong>
+       textbox, enter as much information about the source dataset(s) as possible. At minimum, provide the DOI or a URL linking to the data source. The name and email for the data creator and contact are valuable information that should be provided, if available.
+      </li>
+      <li>
+       Click
+       <strong>
+        Save and Continue
+       </strong>
+      </li>
+     </ol>
+     <blockquote>
+      <p>
+       Provenance metadata submitted via ezEML is converted by data curators to the EML formatted provenance &lt;methodStep&gt; before publishing in the EDI Data Repository. Data curators processing an ezEML submission should see the EDI Data Portal section below for an example of the EML provenance format.
+      </p>
+     </blockquote>
+     <h3 id="emlassemblyline">
+      EMLassemblyline
+     </h3>
+     <p>
+      To create provenance metadata using
+      <a href="https://ediorg.github.io/EMLassemblyline/">
+       EMLassemblyline
+      </a>
+      :
+     </p>
+     <ol>
+      <li>
+       Run the
+       <a href="https://ediorg.github.io/EMLassemblyline/reference/template_provenance">
+        <code>
+         template_provenance()
+        </code>
+       </a>
+       function to create an empty provenance template.
+      </li>
+      <li>
+       For data sources originating from the EDI Data Repository, populate the template
+       <strong>
+        dataPackageID
+       </strong>
+       field with the EDI
+       <a href="the-data-package#data-package-identifier">
+        data package identifier
+       </a>
+       and specify "EDI" in the
+       <strong>
+        systemID
+       </strong>
+       field. Use the other fields of this template when creating provenance for data sources external to EDI Repository.
+      </li>
+      <li>
+       Run the
+       <a href="https://ediorg.github.io/EMLassemblyline/reference/make_eml">
+        <code>
+         make_eml()
+        </code>
+       </a>
+       function to add the provenance metadata to the EML for the derived data.
+      </li>
+     </ol>
+     <h3 id="edi-data-portal">
+      EDI Data Portal
+     </h3>
+     <p>
+      To create provenance metadata from the
+      <a href="https://portal.edirepository.org/nis/home.jsp">
+       EDI Data Portal
+      </a>
+      :
+     </p>
+     <ol>
+      <li>
+       Navigate to the
+       <strong>
+        Provenance
+       </strong>
+       section at the bottom of a data package
+       <a href="/resources/data-package-pages">
+        landing page
+       </a>
+       . This section displays provenance information and includes a link to generate provenance metadata for the data package.
+      </li>
+     </ol>
+     <p>
+      <img alt="" src="/static/images/provenance-portal2.png"/>
+     </p>
+     <ol>
+      <li>
+       This links to the
+       <strong>
+        Provenance Generator
+       </strong>
+       . The
+       <strong>
+        Provenance Metadata XML
+       </strong>
+       tab contains text for the &lt;methodStep&gt; element. Copy the entire &lt;methodStep&gt; element.
+      </li>
+     </ol>
+     <p>
+      <img alt="" src="/static/images/provenance-generator.png"/>
+     </p>
+     <ol>
+      <li>
+       Open the EML for the derived data package in an XML editor and navigate to the &lt;methods&gt; element.
+      </li>
+      <li>
+       Paste the copied provenance &lt;methodStep&gt; element at the end of the list of &lt;methodSteps&gt;. Repeat for all data sources.
+      </li>
+     </ol>
+     <p>
+      See
+      <a href="https://docs.google.com/document/d/12sdLhID6SwaKAjU1aT5PAXA-9q1zaq31eNBmPRvYBC0/edit#heading=h.j5rijoovspu3">
+       Editing EML
+      </a>
+      for more on XML editors.
+     </p>
+     <h3 id="ediutils">
+      EDIutils
+     </h3>
+     <p>
+      To create provenance metadata from the
+      <a href="https://ediorg.github.io/EDIutils/">
+       EDIutils
+      </a>
+      R Package:
+     </p>
+     <ol>
+      <li>
+       Run the
+       <a href="https://ediorg.github.io/EDIutils/reference/get_provenance_metadata">
+        <code>
+         get_provenance_metadata()
+        </code>
+       </a>
+       function with the corresponding source
+       <a href="/resources/the-data-package#data-package-identifier">
+        data package identifier
+       </a>
+       .
+      </li>
+      <li>
+       Add the returned &lt;methodStep&gt; element into an EML R object of a derived data package or write it to file for other use cases.
+      </li>
+     </ol>
+     <p>
+      For a language-agnostic solution, see the REST API documentation for
+      <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/pasta_api/data_package_manager_api#get-provenance-metadata">
+       Get Provenance Metadata
+      </a>
+      .
+     </p>
+     <h2 id="resources">
+      Resources
+     </h2>
+     <ul>
+      <li>
+       <a href="https://github.com/End-to-end-provenance/End-to-end-provenance.github.io/blob/master/README">
+        End-to-End Provenance
+       </a>
+       - Software tools to collect and use provenance information.
+      </li>
+     </ul>
+    </main>
+   </div>
+  </div>
+ </div>
+</div>

@@ -1,0 +1,610 @@
+<div metal:use-macro="load: ../shared/layout.html">
+ <div metal:fill-slot="content" tal:omit-tag="True">
+  <div class="sidebar-inner">
+   <div class="container">
+    <aside class="sidebar">
+     <div class="sticky-sm-top">
+      <div class="sticky-md-top">
+       <div class="sticky-lg-top">
+        <div class="sticky-xl-top">
+         <ul>
+          <li>
+           <a href="#edi-data-portal">
+            EDI Data Portal
+           </a>
+           <ul>
+            <li>
+             <a href="#login">
+              Login
+             </a>
+            </li>
+            <li>
+             <a href="#evaluating-the-data-package">
+              Evaluating the data package
+             </a>
+            </li>
+            <li>
+             <a href="#viewing-the-evaluation-report-summary">
+              Viewing the evaluation report summary
+             </a>
+            </li>
+            <li>
+             <a href="#viewing-the-evaluation-report">
+              Viewing the evaluation report
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li>
+           <a href="#ediutils">
+            EDIutils
+           </a>
+           <ul>
+            <li>
+             <a href="#login_1">
+              Login
+             </a>
+            </li>
+            <li>
+             <a href="#evaluating-the-data-package_1">
+              Evaluating the data package
+             </a>
+            </li>
+            <li>
+             <a href="#viewing-the-evaluation-report-summary_1">
+              Viewing the evaluation report summary
+             </a>
+            </li>
+            <li>
+             <a href="#viewing-the-evaluation-report_1">
+              Viewing the evaluation report
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li>
+           <a href="#handling-warnings-and-errors">
+            Handling warnings and errors
+           </a>
+          </li>
+          <li>
+           <a href="#interpreting-the-evaluation-report-summary">
+            Interpreting the evaluation report summary
+           </a>
+           <ul>
+            <li>
+             <a href="#purpose">
+              Purpose
+             </a>
+            </li>
+           </ul>
+          </li>
+          <li>
+           <a href="#interpreting-the-evaluation-report">
+            Interpreting the evaluation report
+           </a>
+           <ul>
+            <li>
+             <a href="#structure">
+              Structure
+             </a>
+            </li>
+            <li>
+             <a href="#interpretation">
+              Interpretation
+             </a>
+            </li>
+           </ul>
+          </li>
+         </ul>
+        </div>
+       </div>
+      </div>
+     </div>
+    </aside>
+    <main class="main-tutorial">
+     <h1 id="evaluating-a-data-package">
+      Evaluating a Data Package
+     </h1>
+     <p>
+      Evaluating a data package is key to ensuring that it contains a valid, well-formed EML file that accurately describes the data. Evaluations can be performed manually via the EDI Data Portal, or programmatically using the EDIutils R package or the REST API.
+     </p>
+     <p>
+      Evaluating a data package requires an
+      <a href="/resources/information-manager-quickstart#sign-up-for-an-edi-account">
+       EDI account
+      </a>
+      . Other methods of authentication (e.g. Google, ORCID, GitHub) do not allow evaluation.
+     </p>
+     <p>
+      To learn more about evaluation and to request new checks, see the
+      <a href="https://github.com/EDIorg/ECC">
+       EML Congruence Checker GitHub
+      </a>
+      .
+     </p>
+     <h2 id="edi-data-portal">
+      EDI Data Portal
+     </h2>
+     <p>
+      To evaluate a data package via the
+      <a href="https://portal.edirepository.org/nis/home.jsp">
+       EDI Data Portal
+      </a>
+      :
+     </p>
+     <h3 id="login">
+      Login
+     </h3>
+     <p>
+      From the Data Portal, click the
+      <strong>
+       Login
+      </strong>
+      button and enter EDI account credentials.
+     </p>
+     <p>
+      <img alt="" src="/static/images/login-portal.png"/>
+     </p>
+     <h3 id="evaluating-the-data-package">
+      Evaluating the data package
+     </h3>
+     <p>
+      Navigate to the
+      <strong>
+       Evaluate/Upload Data Packages
+      </strong>
+      page:
+     </p>
+     <p>
+      <img alt="" src="/static/images/eval-upload-dropdown-portal.png"/>
+     </p>
+     <ol>
+      <li>
+       <strong>
+        Choose File
+       </strong>
+       - Browse and select the EML file to be evaluated
+      </li>
+      <li>
+       Unless every data object in the EML file is associated with
+       <a href="/resources/uploading-with-static-data-links">
+        static data links
+       </a>
+       , select the checkbox next to
+       <strong>
+        Manually upload data…
+       </strong>
+       to allow manual upload.
+      </li>
+     </ol>
+     <p>
+      <img alt="" src="/static/images/evaluate-manual-upload.png"/>
+     </p>
+     <ol>
+      <li>
+       From the manual uploads page, choose the files to upload for the data package and click the
+       <strong>
+        Evaluate
+       </strong>
+       button.
+      </li>
+     </ol>
+     <p>
+      <img alt="" src="/static/images/evaluate-manual-upload-page.png"/>
+     </p>
+     <blockquote>
+      <p>
+       Be aware that the length of the evaluation process increases with the size of the data being evaluated. Once the process has begun, the browser window can be closed without interrupting the evaluation. Use the EDI Dashboard
+       <a href="https://dashboard.edirepository.org/dashboard/pasta/render_working_on">
+        PASTA is Working On
+       </a>
+       feature to see when evaluation has completed. The evaluation report summary and full report can be viewed from the
+       <strong>
+        View Evaluate/Upload Results
+       </strong>
+       page.
+      </p>
+     </blockquote>
+     <h3 id="viewing-the-evaluation-report-summary">
+      Viewing the evaluation report summary
+     </h3>
+     <p>
+      After the evaluation runs, the
+      <strong>
+       View Evaluate/Upload Results
+      </strong>
+      page will be displayed. This page provides the
+      <strong>
+       Evaluation Report Summary
+      </strong>
+      , the first view of the data package quality.
+     </p>
+     <p>
+      <img alt="" src="/static/images/eval-summary-table.png"/>
+     </p>
+     <h3 id="viewing-the-evaluation-report">
+      Viewing the evaluation report
+     </h3>
+     <p>
+      This summary table also provides a link to the full
+      <strong>
+       Evaluation Report
+      </strong>
+      , which documents the outcome of each evaluation test performed, including the specific areas for improvement noted by
+      <strong>
+       Warn
+      </strong>
+      and
+      <strong>
+       Error
+      </strong>
+      labels.
+     </p>
+     <p>
+      <img alt="" src="/static/images/eval-report.png"/>
+     </p>
+     <h2 id="ediutils">
+      EDIutils
+     </h2>
+     <p>
+      To evaluate a data package using the
+      <a href="https://ediorg.github.io/EDIutils/">
+       EDIutils
+      </a>
+      R package:
+     </p>
+     <h3 id="login_1">
+      Login
+     </h3>
+     <p>
+      Use the
+      <a href="https://ediorg.github.io/EDIutils/reference/login">
+       <code>
+        login()
+       </code>
+      </a>
+      function with EDI account credentials.
+     </p>
+     <h3 id="evaluating-the-data-package_1">
+      Evaluating the data package
+     </h3>
+     <p>
+      Use the
+      <a href="https://ediorg.github.io/EDIutils/reference/evaluate_data_package">
+       <code>
+        evaluate_data_package()
+       </code>
+      </a>
+      function to begin the evaluation process and provide the full path to the EML file and the
+      <a href="/resources/repository-environments">
+       repository environment
+      </a>
+      to evaluate in.
+     </p>
+     <p>
+      This function returns a "transaction identifier" that is used to reference the evaluation in subsequent function calls. After the evaluation process has begun, pass the transaction identifier to the
+      <a href="https://ediorg.github.io/EDIutils/reference/check_status_evaluate">
+       <code>
+        check_status_evaluate()
+       </code>
+      </a>
+      function to determine if evaluation has completed.
+     </p>
+     <h3 id="viewing-the-evaluation-report-summary_1">
+      Viewing the evaluation report summary
+     </h3>
+     <p>
+      Pass the transaction identifier to the
+      <a href="https://ediorg.github.io/EDIutils/reference/read_evaluate_report_summary">
+       <code>
+        read_evaluate_report_summary()
+       </code>
+      </a>
+      function to view the evaluation report summary as plain text.
+     </p>
+     <h3 id="viewing-the-evaluation-report_1">
+      Viewing the evaluation report
+     </h3>
+     <p>
+      Pass the transaction identifier to the
+      <a href="https://ediorg.github.io/EDIutils/reference/read_evaluate_report">
+       <code>
+        read_evaluate_report()
+       </code>
+      </a>
+      function, which returns raw XML by default, but will return HTML or text by specifying the
+      <code>
+       as
+      </code>
+      parameter.
+     </p>
+     <p>
+      For a language-agnostic solution, see the REST API documentation for
+      <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/pasta_api/data_package_manager_api#evaluate-data-package">
+       Evaluate Data Package
+      </a>
+      ,
+      <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/pasta_api/data_package_manager_api#read-data-package-error">
+       Read Data Package Error
+      </a>
+      , and
+      <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/pasta_api/data_package_manager_api#read-evaluate-report-1">
+       Read Evaluate Report
+      </a>
+      .
+     </p>
+     <h2 id="handling-warnings-and-errors">
+      Handling warnings and errors
+     </h2>
+     <p>
+      Any evaluation check that results in a warning or error status should be resolved before moving ahead (note that errors must be corrected). Resolve problems with the data and metadata and repeat the evaluation process until all errors (and preferably all warnings) are resolved.
+     </p>
+     <h2 id="interpreting-the-evaluation-report-summary">
+      Interpreting the evaluation report summary
+     </h2>
+     <p>
+      The evaluation report summary is displayed as part of the evaluation process via the EDI Data Portal or can be generated from the EDIutils
+      <a href="https://ediorg.github.io/EDIutils/reference/read_evaluate_report_summary">
+       <code>
+        read_evaluate_report_summary()
+       </code>
+      </a>
+      function.
+     </p>
+     <h3 id="purpose">
+      Purpose
+     </h3>
+     <p>
+      Provide a quick look at the data package evaluation results. Specifically, the total number of checks run and how many of these checks resulted in statuses of
+      <strong>
+       valid
+      </strong>
+      ,
+      <strong>
+       info
+      </strong>
+      ,
+      <strong>
+       warn
+      </strong>
+      , or
+      <strong>
+       error
+      </strong>
+      . The meaning of these status messages is as follows:
+     </p>
+     <table>
+      <tr>
+       <td>
+        <strong>
+         Status
+        </strong>
+       </td>
+       <td>
+        <strong>
+         Explanation
+        </strong>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        Valid
+       </td>
+       <td>
+        The result of the quality check matches the expectation. Success!
+       </td>
+      </tr>
+      <tr>
+       <td>
+        Info
+       </td>
+       <td>
+        The result of the quality check may or may not match the expectation, but since the expectation is not required, information is returned instead of a Warn or Error.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        Warn
+       </td>
+       <td>
+        The result of the quality check does not match the expectation. A match is not explicitly required to publish the data package, but strongly recommended.
+       </td>
+      </tr>
+      <tr>
+       <td>
+        Error
+       </td>
+       <td>
+        The result of the quality check does not match the expectation. A match is required before the data package can be published.
+       </td>
+      </tr>
+     </table>
+     <h2 id="interpreting-the-evaluation-report">
+      Interpreting the evaluation report
+     </h2>
+     <p>
+      A
+      <strong>
+       Data Package Quality Report
+      </strong>
+      , otherwise known as an
+      <strong>
+       Evaluation Report
+      </strong>
+      , is generated whenever a data package is evaluated or published.
+     </p>
+     <h3 id="structure">
+      Structure
+     </h3>
+     <p>
+      The Evaluation Report is typically broken into multiple parts, always starting with the
+      <strong>
+       Dataset Report
+      </strong>
+      , and followed by an entity report for each data object included in the data package.These are differentiated by header lines with the
+      <strong>
+       Entity Name
+      </strong>
+      and
+      <strong>
+       Identifier
+      </strong>
+      .
+     </p>
+     <p>
+      The Dataset and Entity Reports share the same layout:
+     </p>
+     <table>
+      <tr>
+       <td>
+        <strong>
+         Report Column Name
+        </strong>
+       </td>
+       <td>
+        <strong>
+         Explanation
+        </strong>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        #
+       </td>
+       <td>
+        The number of the quality check
+       </td>
+      </tr>
+      <tr>
+       <td>
+        Identifier
+       </td>
+       <td>
+        The identifier of the quality check
+       </td>
+      </tr>
+      <tr>
+       <td>
+        Status
+       </td>
+       <td>
+        The status of the result of the quality check
+       </td>
+      </tr>
+      <tr>
+       <td>
+        Quality Check
+       </td>
+       <td>
+        Describes the type of the quality check (data, metadata, or congruency), the system (knb, lter), and the status that results on failure
+       </td>
+      </tr>
+      <tr>
+       <td>
+        Name
+       </td>
+       <td>
+        The name of the quality check
+       </td>
+      </tr>
+      <tr>
+       <td>
+        Description
+       </td>
+       <td>
+        Brief description of the quality check
+       </td>
+      </tr>
+      <tr>
+       <td>
+        Expected
+       </td>
+       <td>
+        The result that the quality check is expecting
+       </td>
+      </tr>
+      <tr>
+       <td>
+        Found
+       </td>
+       <td>
+        The actual result of the quality check
+       </td>
+      </tr>
+      <tr>
+       <td>
+        Explanation
+       </td>
+       <td>
+        Additional information describing the rationale of the quality check
+       </td>
+      </tr>
+      <tr>
+       <td>
+        Suggestion
+       </td>
+       <td>
+        Potential data package improvements to implement to pass the quality check
+       </td>
+      </tr>
+      <tr>
+       <td>
+        Reference
+       </td>
+       <td>
+        Source of the rationale for the quality check or where to find more information
+       </td>
+      </tr>
+     </table>
+     <h3 id="interpretation">
+      Interpretation
+     </h3>
+     <p>
+      Parse through the document and address any errors or warnings (denoted by the
+      <strong>
+       Error
+      </strong>
+      and
+      <strong>
+       Warn
+      </strong>
+      labels). To understand why a quality check failed, first read the
+      <strong>
+       Name
+      </strong>
+      and
+      <strong>
+       Description
+      </strong>
+      of the quality check to determine what was being tested and how the test was being conducted. Then, compare the
+      <strong>
+       Expected
+      </strong>
+      result to what was
+      <strong>
+       Found
+      </strong>
+      . If it is still not clear what caused the failure, try to gain additional insight from the
+      <strong>
+       Explanation
+      </strong>
+      ,
+      <strong>
+       Suggestion
+      </strong>
+      , and
+      <strong>
+       Reference
+      </strong>
+      fields, or
+      <a href="/support/contact-us">
+       contact EDI
+      </a>
+      for clarification.
+     </p>
+    </main>
+   </div>
+  </div>
+ </div>
+</div>

@@ -1,0 +1,148 @@
+<div metal:use-macro="load: ../shared/layout.html">
+ <div metal:fill-slot="content" tal:omit-tag="True">
+  <div class="sidebar-inner">
+   <div class="container">
+    <aside class="sidebar">
+     <div class="sticky-sm-top">
+      <div class="sticky-md-top">
+       <div class="sticky-lg-top">
+        <div class="sticky-xl-top">
+         <ul>
+          <li>
+           <a href="#examples-of-quality-assurance">
+            Examples of Quality Assurance
+           </a>
+          </li>
+          <li>
+           <a href="#applying-quality-assurance">
+            Applying Quality Assurance
+           </a>
+          </li>
+          <li>
+           <a href="#metadata">
+            Metadata
+           </a>
+          </li>
+         </ul>
+        </div>
+       </div>
+      </div>
+     </div>
+    </aside>
+    <main class="main-tutorial">
+     <h1 id="quality-assurance">
+      Quality Assurance
+     </h1>
+     <p>
+      Quality Assurance (QA) is the set of processes or steps taken to ensure data collection is developed and adhered to in a way that minimizes inaccuracies in the resultant data. The purpose of QA is to produce high-quality data while minimizing the need for corrective measures later. Related to QA is the documentation of noteworthy events that may affect interpretation of the data and be important to include with the metadata when the data are published.
+     </p>
+     <h2 id="examples-of-quality-assurance">
+      Examples of Quality Assurance
+     </h2>
+     <p>
+      Some examples of QA measures:
+     </p>
+     <ul>
+      <li>
+       <strong>
+        Calibration
+       </strong>
+       - Is the instrument operating within specification?
+      </li>
+      <li>
+       <strong>
+        Operational conditions
+       </strong>
+       - Is the instrument operating within conditions for which it wasn't designed? (e.g. excessive heat)
+      </li>
+      <li>
+       <strong>
+        Replication and redundancy
+       </strong>
+       - Facilitates estimation of error and can reduce data gaps (e.g. sample and hardware replication)
+      </li>
+      <li>
+       <strong>
+        Anti-fouling
+       </strong>
+       - Minimize data drift (e.g. wipers, manual cleaning)
+      </li>
+      <li>
+       <strong>
+        Real-time checks
+       </strong>
+       - Receive alerts when incoming data are out of bounds so adjustments can be made.
+      </li>
+      <li>
+       <strong>
+        Schedule and field log
+       </strong>
+       - Remember key events
+      </li>
+     </ul>
+     <h2 id="applying-quality-assurance">
+      Applying Quality Assurance
+     </h2>
+     <p>
+      Consider the parts of the data collection scheme where valuable data are collected and where there is a higher than acceptable likelihood for collection to fail. These fragile parts of the collection scheme could be identified and reinforced to ensure continuous collection of high quality data. Integrating QA into a data collection scheme is facilitated by a process:
+     </p>
+     <ol>
+      <li>
+       <strong>
+        Analyze
+       </strong>
+       the data collection scheme and identify important nodes and processes where quality assurance measures can be applied.
+      </li>
+      <li>
+       <strong>
+        Inventory
+       </strong>
+       available resources for allocation (e.g. materials end person hours).
+      </li>
+      <li>
+       <strong>
+        Prioritize
+       </strong>
+       essential components and processes and down weight others.
+      </li>
+      <li>
+       <strong>
+        Allocate
+       </strong>
+       resources according to priorities and formalize operational protocols.
+      </li>
+     </ol>
+     <p>
+      <img alt="" src="/static/images/quality-assurance.png"/>
+     </p>
+     <p>
+      Figure: A data collection scheme in which QA measures have been applied (components in orange). QA in this diagram consists of redundant power sources to instrumentation and telemetry, replicate instrumentation and human observers, as well as database backup and value checking.
+     </p>
+     <h2 id="metadata">
+      Metadata
+     </h2>
+     <p>
+      Some examples of metadata to record during data collection:
+     </p>
+     <ul>
+      <li>
+       Sampling methodology. List Standardized protocols while noting any potential variation.
+      </li>
+      <li>
+       Overview of data collection infrastructure. Only the parts that may affect data values need to be recorded.
+      </li>
+      <li>
+       Instrumentation make, mode, accuracy, precision.
+      </li>
+      <li>
+       Quality assurance measures implemented and perhaps rationale.
+      </li>
+      <li>
+       Deviations from collection protocols and plans.
+      </li>
+     </ul>
+    </main>
+   </div>
+  </div>
+ </div>
+</div>
