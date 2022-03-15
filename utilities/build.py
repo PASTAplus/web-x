@@ -30,7 +30,7 @@ daiquiri.setup(level=logging.INFO,
 logger = daiquiri.getLogger(__name__)
 
 
-def template(inner_html: str) -> str:
+def template_sidebar(inner_html: str) -> str:
     open = """
 <div metal:use-macro="load: ../shared/layout.html">
 <div metal:fill-slot="content" tal:omit-tag="True">
@@ -49,33 +49,67 @@ def template(inner_html: str) -> str:
     return open + inner_html + close
 
 
+def sidebar(md: str) -> list:
+    inner_html = markdown.markdown(md, extensions=[TocExtension(marker='[TOC]', toc_depth='2-6')])
+    html = template_sidebar(inner_html)
+    soup = BeautifulSoup(html, "lxml")
+    div_toc_tag = soup.find("div", attrs={"class": "toc"}).extract()
+    div_toc_tag.name = "div"
+    div_toc_tag["class"] = "sticky-xl-top"
+    div_sticky_lg_top = soup.new_tag("div")
+    div_sticky_lg_top["class"] = "sticky-lg-top"
+    div_sticky_lg_top.insert(0, div_toc_tag)
+    div_sticky_md_top = soup.new_tag("div")
+    div_sticky_md_top["class"] = "sticky-md-top"
+    div_sticky_md_top.insert(0, div_sticky_lg_top)
+    div_sticky_sm_top = soup.new_tag("div")
+    div_sticky_sm_top["class"] = "sticky-sm-top"
+    div_sticky_sm_top.insert(0, div_sticky_md_top)
+    aside = soup.new_tag("aside")
+    aside["class"] = "sidebar"
+    aside.insert(0, div_sticky_sm_top)
+    main_tag = soup.find("main")
+    main_tag.insert_before(aside)
+    lines = soup.prettify().split("\n")
+    return lines
+
+
+def template_basic(inner_html: str) -> str:
+    open = """
+<div metal:use-macro="load: ../shared/layout.html">
+<div metal:fill-slot="content" tal:omit-tag="True">
+<main class="main-tutorial">
+"""
+
+    close = """
+</main>
+</div>
+</div>
+"""
+    return open + inner_html + close
+
+
+def basic(md: str) -> list:
+    inner_html = markdown.markdown(md)
+    html = template_basic(inner_html)
+    soup = BeautifulSoup(html, "lxml")
+    main_tag = soup.find("main")
+    lines = soup.prettify().split("\n")
+    return lines
+
+
 def md2html(md_file: str, html_file: str, verbose: int, dryrun: bool):
     try:
         if verbose > 0:
             print(f"Reading: {md_file}")
         with open(md_file, "r") as f:
             md = f.read()
-        inner_html = markdown.markdown(md, extensions=[TocExtension(marker='[TOC]', toc_depth='2-6')])
-        html = template(inner_html)
-        soup = BeautifulSoup(html, "lxml")
-        div_toc_tag = soup.find("div", attrs={"class": "toc"}).extract()
-        div_toc_tag.name = "div"
-        div_toc_tag["class"] = "sticky-xl-top"
-        div_sticky_lg_top = soup.new_tag("div")
-        div_sticky_lg_top["class"] = "sticky-lg-top"
-        div_sticky_lg_top.insert(0, div_toc_tag)
-        div_sticky_md_top = soup.new_tag("div")
-        div_sticky_md_top["class"] = "sticky-md-top"
-        div_sticky_md_top.insert(0, div_sticky_lg_top)
-        div_sticky_sm_top = soup.new_tag("div")
-        div_sticky_sm_top["class"] = "sticky-sm-top"
-        div_sticky_sm_top.insert(0, div_sticky_md_top)
-        aside = soup.new_tag("aside")
-        aside["class"] = "sidebar"
-        aside.insert(0, div_sticky_sm_top)
-        main_tag = soup.find("main")
-        main_tag.insert_before(aside)
-        lines = soup.prettify().split("\n")
+            md = md.replace(".md", "")
+            md = md.replace("/templates/", "/")
+        if '[TOC]' in md:
+            lines = sidebar(md)
+        else:
+            lines = basic(md)
         doc = ""
         for line in lines[2:-2]:
             doc += line[2:] + "\n"
