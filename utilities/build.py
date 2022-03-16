@@ -49,7 +49,7 @@ def template_sidebar(inner_html: str) -> str:
     return open + inner_html + close
 
 
-def sidebar(md: str) -> list:
+def sidebar_html(md: str) -> BeautifulSoup:
     inner_html = markdown.markdown(md, extensions=[TocExtension(marker='[TOC]', toc_depth='2-6')])
     html = template_sidebar(inner_html)
     soup = BeautifulSoup(html, "lxml")
@@ -70,8 +70,7 @@ def sidebar(md: str) -> list:
     aside.insert(0, div_sticky_sm_top)
     main_tag = soup.find("main")
     main_tag.insert_before(aside)
-    lines = soup.prettify().split("\n")
-    return lines
+    return soup
 
 
 def template_basic(inner_html: str) -> str:
@@ -89,13 +88,11 @@ def template_basic(inner_html: str) -> str:
     return open + inner_html + close
 
 
-def basic(md: str) -> list:
+def basic_html(md: str) -> BeautifulSoup:
     inner_html = markdown.markdown(md)
     html = template_basic(inner_html)
     soup = BeautifulSoup(html, "lxml")
-    main_tag = soup.find("main")
-    lines = soup.prettify().split("\n")
-    return lines
+    return soup
 
 
 def md2html(md_file: str, html_file: str, verbose: int, dryrun: bool):
@@ -107,19 +104,17 @@ def md2html(md_file: str, html_file: str, verbose: int, dryrun: bool):
             md = md.replace(".md", "")
             md = md.replace("/templates/", "/")
         if '[TOC]' in md:
-            lines = sidebar(md)
+            _ = str(sidebar_html(md))
         else:
-            lines = basic(md)
-        doc = ""
-        for line in lines[2:-2]:
-            doc += line[2:] + "\n"
+            _ = str(basic_html(md))
+        html = _.replace("<html><body>", "").replace("</body></html>", "").strip()
         if verbose > 0:
             print(f"Writing: {html_file}")
         if verbose == 2:
-            print(doc)
+            print(html)
         if not dryrun:
             with open(html_file, "w") as f:
-                f.write(doc.strip())
+                f.write(html.strip())
     except IOError as ex:
         logger.error(f"{ex} - {md_file}")
     except AttributeError as ex:
