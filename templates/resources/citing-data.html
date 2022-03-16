@@ -1,146 +1,39 @@
 <div metal:use-macro="load: ../shared/layout.html">
- <div metal:fill-slot="content" tal:omit-tag="True">
-  <div class="sidebar-inner">
-   <div class="container">
-    <aside class="sidebar">
-     <div class="sticky-sm-top">
-      <div class="sticky-md-top">
-       <div class="sticky-lg-top">
-        <div class="sticky-xl-top">
-         <ul>
-          <li>
-           <a href="#citing-in-an-article">
-            Citing in an article
-           </a>
-           <ul>
-            <li>
-             <a href="#copy-the-citation-from-a-data-package-landing-page">
-              Copy the citation from a data package landing page
-             </a>
-            </li>
-            <li>
-             <a href="#browser-plugins">
-              Browser plugins
-             </a>
-            </li>
-            <li>
-             <a href="#programmatically-create-data-package-citations">
-              Programmatically create data package citations
-             </a>
-            </li>
-           </ul>
-          </li>
-          <li>
-           <a href="#citing-in-a-derived-data-package">
-            Citing in a derived data package
-           </a>
-          </li>
-          <li>
-           <a href="#references">
-            References
-           </a>
-          </li>
-         </ul>
-        </div>
-       </div>
-      </div>
-     </div>
-    </aside>
-    <main class="main-tutorial">
-     <h1 id="citing-a-data-package">
-      Citing a Data Package
-     </h1>
-     <p>
-      Along with ensuring proper attribution is paid to the original data author, citing data in publications and other published data increases findability, encourages data reuse, and enables reliable tracking of data citation metrics.
-      <sup>
-       [1]
-      </sup>
-     </p>
-     <p>
-      <img src="/static/images/data-citation.png" width="75%"/>
-     </p>
-     <p>
-      Components of a data citation: (1) Data Author or Creator, (2) Public Release Date, (3) Title, (4) Version, (5) Repository, (6) Persistent Identifier (DOI), (7) Access Date.
-     </p>
-     <h2 id="citing-in-an-article">
-      Citing in an article
-     </h2>
-     <h3 id="copy-the-citation-from-a-data-package-landing-page">
-      Copy the citation from a data package landing page
-     </h3>
-     <p>
-      Every data package
-      <a href="/resources/data-package-pages">
-       landing page
-      </a>
-      provides a citation, formatted to
-      <a href="https://doi.org/10.6084/m9.figshare.8441816">
-       community adopted practices
-      </a>
-      , that can be easily copied into a document.
-     </p>
-     <p>
-      <img src="/static/images/copy-citation.png" width="85%"/>
-     </p>
-     <h3 id="browser-plugins">
-      Browser plugins
-     </h3>
-     <p>
-      The data package citation can be automatically imported from the data package landing page into a reference manager application using web browser plugins (e.g.
-      <a href="https://www.zotero.org/download/connectors">
-       Zotero Connector
-      </a>
-      and
-      <a href="https://www.mendeley.com/reference-management/web-importer">
-       Mendeley Web Importer
-      </a>
-      ). Once in the reference manager, the citation can be exported to a bibliography.
-     </p>
-     <h3 id="programmatically-create-data-package-citations">
-      Programmatically create data package citations
-     </h3>
-     <p>
-      Use the EDI
-      <a href="https://github.com/PASTAplus/cite">
-       Cite web service
-      </a>
-      to generate data package citations formatted for different communities of practice.
-     </p>
-     <p>
-      Watch a
-      <a href="https://www.youtube.com/watch?v=7GppJUxCJIU">
-       video walkthrough
-      </a>
-      demonstrating the use of Cite.
-     </p>
-     <h2 id="citing-in-a-derived-data-package">
-      Citing in a derived data package
-     </h2>
-     <p>
-      For citing data in a data package derived from one or more source data packages, see the page on
-      <a href="/resources/provenance-metadata">
-       provenance metadata
-      </a>
-      .
-     </p>
-     <h2 id="references">
-      References
-     </h2>
-     <p>
-      <sup>
-       [1]
-      </sup>
-      Renée F Brown, The Importance of Data Citation,
-      <em>
-       BioScience
-      </em>
-      , Volume 71, Issue 3, March 2021, Page 211,
-      <a href="https://doi.org/10.1093/biosci/biab012">
-       https://doi.org/10.1093/biosci/biab012
-      </a>
-     </p>
-    </main>
-   </div>
-  </div>
- </div>
+<div metal:fill-slot="content" tal:omit-tag="True">
+<div class="sidebar-inner">
+<div class="container">
+<aside class="sidebar"><div class="sticky-sm-top"><div class="sticky-md-top"><div class="sticky-lg-top"><div class="sticky-xl-top">
+<ul>
+<li><a href="#citing-in-an-article">Citing in an article</a><ul>
+<li><a href="#copy-the-citation-from-a-data-package-landing-page">Copy the citation from a data package landing page</a></li>
+<li><a href="#browser-plugins">Browser plugins</a></li>
+<li><a href="#programmatically-create-data-package-citations">Programmatically create data package citations</a></li>
+</ul>
+</li>
+<li><a href="#citing-in-a-derived-data-package">Citing in a derived data package</a></li>
+<li><a href="#references">References</a></li>
+</ul>
+</div></div></div></div></aside><main class="main-tutorial">
+<h1 id="citing-a-data-package">Citing a Data Package</h1>
+<p>Along with ensuring proper attribution is paid to the original data author, citing data in publications and other published data increases findability, encourages data reuse, and enables reliable tracking of data citation metrics.<sup>[1]</sup></p>
+<p><img src="/static/images/data-citation.png" width="75%"/></p>
+<p>Components of a data citation: (1) Data Author or Creator, (2) Public Release Date, (3) Title, (4) Version, (5) Repository, (6) Persistent Identifier (DOI), (7) Access Date.</p>
+
+<h2 id="citing-in-an-article">Citing in an article</h2>
+<h3 id="copy-the-citation-from-a-data-package-landing-page">Copy the citation from a data package landing page</h3>
+<p>Every data package <a href="/resources/data-package-pages">landing page</a> provides a citation, formatted to <a href="https://doi.org/10.6084/m9.figshare.8441816">community adopted practices</a>, that can be easily copied into a document.</p>
+<p><img src="/static/images/copy-citation.png" width="85%"/></p>
+<h3 id="browser-plugins">Browser plugins</h3>
+<p>The data package citation can be automatically imported from the data package landing page into a reference manager application using web browser plugins (e.g. <a href="https://www.zotero.org/download/connectors">Zotero Connector</a> and <a href="https://www.mendeley.com/reference-management/web-importer">Mendeley Web Importer</a>). Once in the reference manager, the citation can be exported to a bibliography.</p>
+<h3 id="programmatically-create-data-package-citations">Programmatically create data package citations</h3>
+<p>Use the EDI <a href="https://github.com/PASTAplus/cite">Cite web service</a> to generate data package citations formatted for different communities of practice.</p>
+<p>Watch a <a href="https://www.youtube.com/watch?v=7GppJUxCJIU">video walkthrough</a> demonstrating the use of Cite.</p>
+<h2 id="citing-in-a-derived-data-package">Citing in a derived data package</h2>
+<p>For citing data in a data package derived from one or more source data packages, see the page on <a href="/resources/provenance-metadata">provenance metadata</a>.</p>
+<h2 id="references">References</h2>
+<p><sup>[1]</sup>Renée F Brown, The Importance of Data Citation, <em>BioScience</em>, Volume 71, Issue 3, March 2021, Page 211,<a href="https://doi.org/10.1093/biosci/biab012"> https://doi.org/10.1093/biosci/biab012</a></p>
+</main>
+</div>
+</div>
+</div>
 </div>

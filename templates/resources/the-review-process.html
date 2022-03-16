@@ -1,130 +1,42 @@
 <div metal:use-macro="load: ../shared/layout.html">
- <div metal:fill-slot="content" tal:omit-tag="True">
-  <div class="sidebar-inner">
-   <div class="container">
-    <aside class="sidebar">
-     <div class="sticky-sm-top">
-      <div class="sticky-md-top">
-       <div class="sticky-lg-top">
-        <div class="sticky-xl-top">
-         <ul>
-          <li>
-           <a href="#acknowledgement-of-submission">
-            Acknowledgement of submission
-           </a>
-          </li>
-          <li>
-           <a href="#metadata-evaluation">
-            Metadata evaluation
-           </a>
-          </li>
-          <li>
-           <a href="#page-proofs">
-            Page proofs
-           </a>
-          </li>
-          <li>
-           <a href="#revise">
-            Revise
-           </a>
-          </li>
-          <li>
-           <a href="#re-submit">
-            Re-Submit
-           </a>
-          </li>
-          <li>
-           <a href="#publish">
-            Publish
-           </a>
-          </li>
-         </ul>
-        </div>
-       </div>
-      </div>
-     </div>
-    </aside>
-    <main class="main-tutorial">
-     <h1 id="the-review-process">
-      The Review Process
-     </h1>
-     <p>
-      The review of data and metadata by the EDI Curation Team is an integral part of publishing to the EDI Data Repository as it provides the data author an opportunity to access specific insights on data publishing best practices. Through the review process, EDI curators seek to help finalize a data package submission so that it will be as discoverable, understandable, and reusable as possible.
-     </p>
-     <p>
-      The review process starts after a data package is submitted to EDI for publication, and is complete when the data author is satisfied with the proof of their publication and the data are uploaded to the EDI Repository.
-     </p>
-     <p>
-      <img src="/static/images/review-process.png" width="20%"/>
-     </p>
-     <h2 id="acknowledgement-of-submission">
-      Acknowledgement of submission
-     </h2>
-     <p>
-      Acknowledgment of submission will be sent once it has been assigned to an EDI Data Curator. The curator may have some questions regarding the urgency of the publication and if there are any missing components.
-     </p>
-     <h2 id="metadata-evaluation">
-      Metadata evaluation
-     </h2>
-     <p>
-      The
-      <a href="/resources/evaluating-a-data-package">
-       metadata evaluation
-      </a>
-      ensures the data are accurately described. The data curator will perform this analysis and report back issues along with potential solutions, and may offer general suggestions for improving the quality of the data submission.
-     </p>
-     <h2 id="page-proofs">
-      Page proofs
-     </h2>
-     <p>
-      A proof of the data submission will be provided along with the quality check report. Review the contents thoroughly and share the proof with co-authors if necessary. For a detailed walk through of the proof, see
-      <a href="/resources/data-package-pages">
-       here
-      </a>
-      .
-     </p>
-     <blockquote>
-      <p>
-       Tip: Use the
-       <a href="/resources/data-exploration#data-explorer-dex">
-        EDI Data Explorer (DeX)
-       </a>
-       to identify potential issues in data values before publishing. A link to DeX is provided next to data tables listed in the resources section of the
-       <a href="/resources/data-package-pages">
-        data package landing page
-       </a>
-       .
-      </p>
-     </blockquote>
-     <h2 id="revise">
-      Revise
-     </h2>
-     <p>
-      Work with the EDI curator to implement requested changes, suggested improvements, and any other addition or change to a data submission.
-     </p>
-     <h2 id="re-submit">
-      Re-Submit
-     </h2>
-     <p>
-      Submit the revision. The data curator will rerun the metadata evaluation check, update the page proofs, and send back for consideration. This process may repeat.
-     </p>
-     <h2 id="publish">
-      Publish
-     </h2>
-     <p>
-      When happy with the proof, let the curator know that the data submission is ready to be published. The curator will assign a DOI and publish the data package.
-     </p>
-     <blockquote>
-      <p>
-       To facilitate citation and reproducible research, any future changes to a published data package will be archived as a revision and assigned a new DOI. For more information see
-       <a href="/resources/updating-a-data-package">
-        Updating a Data Package
-       </a>
-       .
-      </p>
-     </blockquote>
-    </main>
-   </div>
-  </div>
- </div>
+<div metal:fill-slot="content" tal:omit-tag="True">
+<div class="sidebar-inner">
+<div class="container">
+<aside class="sidebar"><div class="sticky-sm-top"><div class="sticky-md-top"><div class="sticky-lg-top"><div class="sticky-xl-top">
+<ul>
+<li><a href="#acknowledgement-of-submission">Acknowledgement of submission</a></li>
+<li><a href="#metadata-evaluation">Metadata evaluation</a></li>
+<li><a href="#page-proofs">Page proofs</a></li>
+<li><a href="#revise">Revise</a></li>
+<li><a href="#re-submit">Re-Submit</a></li>
+<li><a href="#publish">Publish</a></li>
+</ul>
+</div></div></div></div></aside><main class="main-tutorial">
+<h1 id="the-review-process">The Review Process</h1>
+<p>The review of data and metadata by the EDI Curation Team is an integral part of publishing to the EDI Data Repository as it provides the data author an opportunity to access specific insights on data publishing best practices. Through the review process, EDI curators seek to help finalize a data package submission so that it will be as discoverable, understandable, and reusable as possible.</p>
+<p>The review process starts after a data package is submitted to EDI for publication, and is complete when the data author is satisfied with the proof of their publication and the data are uploaded to the EDI Repository.</p>
+<p><img src="/static/images/review-process.png" width="20%"/></p>
+
+<h2 id="acknowledgement-of-submission">Acknowledgement of submission</h2>
+<p>Acknowledgment of submission will be sent once it has been assigned to an EDI Data Curator. The curator may have some questions regarding the urgency of the publication and if there are any missing components.</p>
+<h2 id="metadata-evaluation">Metadata evaluation</h2>
+<p>The <a href="/resources/evaluating-a-data-package">metadata evaluation</a> ensures the data are accurately described. The data curator will perform this analysis and report back issues along with potential solutions, and may offer general suggestions for improving the quality of the data submission.</p>
+<h2 id="page-proofs">Page proofs</h2>
+<p>A proof of the data submission will be provided along with the quality check report. Review the contents thoroughly and share the proof with co-authors if necessary. For a detailed walk through of the proof, see <a href="/resources/data-package-pages">here</a>.</p>
+<blockquote>
+<p>Tip: Use the <a href="/resources/data-exploration#data-explorer-dex">EDI Data Explorer (DeX)</a> to identify potential issues in data values before publishing. A link to DeX is provided next to data tables listed in the resources section of the <a href="/resources/data-package-pages">data package landing page</a>.</p>
+</blockquote>
+<h2 id="revise">Revise</h2>
+<p>Work with the EDI curator to implement requested changes, suggested improvements, and any other addition or change to a data submission.</p>
+<h2 id="re-submit">Re-Submit</h2>
+<p>Submit the revision. The data curator will rerun the metadata evaluation check, update the page proofs, and send back for consideration. This process may repeat.</p>
+<h2 id="publish">Publish</h2>
+<p>When happy with the proof, let the curator know that the data submission is ready to be published. The curator will assign a DOI and publish the data package.</p>
+<blockquote>
+<p>To facilitate citation and reproducible research, any future changes to a published data package will be archived as a revision and assigned a new DOI. For more information see <a href="/resources/updating-a-data-package">Updating a Data Package</a>.</p>
+</blockquote>
+</main>
+</div>
+</div>
+</div>
 </div>

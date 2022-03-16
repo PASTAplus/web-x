@@ -1,139 +1,39 @@
 <div metal:use-macro="load: ../shared/layout.html">
- <div metal:fill-slot="content" tal:omit-tag="True">
-  <div class="sidebar-inner">
-   <div class="container">
-    <aside class="sidebar">
-     <div class="sticky-sm-top">
-      <div class="sticky-md-top">
-       <div class="sticky-lg-top">
-        <div class="sticky-xl-top">
-         <ul>
-          <li>
-           <a href="#ecocomdp">
-            ecocomDP
-           </a>
-          </li>
-          <li>
-           <a href="#hymetdp">
-            hymetDP
-           </a>
-          </li>
-          <li>
-           <a href="#discovering-thematic-standardization-data">
-            Discovering thematic standardization data
-           </a>
-           <ul>
-            <li>
-             <a href="#edi-data-portal">
-              EDI Data Portal
-             </a>
-            </li>
-            <li>
-             <a href="#r-packages">
-              R Packages
-             </a>
-            </li>
-           </ul>
-          </li>
-         </ul>
-        </div>
-       </div>
-      </div>
-     </div>
-    </aside>
-    <main class="main-tutorial">
-     <h1 id="thematic-standardization">
-      Thematic Standardization
-     </h1>
-     <p>
-      Data in the EDI Repository are thematically and structurally diverse. Converting them into standardized formats, according to theme, facilitates interoperability and reuse.
-     </p>
-     <p>
-      Thematic standardization is a cooperative effort to develop and support a design pattern which serves as a standardized intermediary between raw "Level-0" data and synthesis research "Level-2" data. Collaborative effort to build tools that support the creation and use of the intermediate "Level-1" datasets, helps to incentivize the extra effort of reformatting and increase the likelihood of data reuse.
-     </p>
-     <p>
-      <img src="/static/images/thematic-standardization-workflow.png" width="65%"/>
-     </p>
-     <p>
-      EDI currently has two thematic standardization projects: ecocomDP and hymetDP.
-     </p>
-     <h2 id="ecocomdp">
-      ecocomDP
-     </h2>
-     <p>
-      ecocomDP is a dataset design pattern and R package for ecological community data. The motivation and effort that led to its creation is documented in
-      <a href="https://doi.org/10.1016/j.ecoinf.2021.101374">
-       O'Brien et al. 2021
-      </a>
-      . Details on creating and using ecocomDP datasets can be found on the
-      <a href="https://ediorg.github.io/ecocomDP/">
-       ecocomDP R package webpage
-      </a>
-      . EDI is also creating a L2 data product from L1 ecocomDP data: a Darwin Core Archive suitable for contribution to GBIF.
-     </p>
-     <h2 id="hymetdp">
-      hymetDP
-     </h2>
-     <p>
-      hymetDP is a dataset design pattern and R package for hydrological and meteorological data. The design pattern is based on the CUAHSI Community Observations Data Model Version 1.1
-      <a href="https://his.cuahsi.org/documents/odm1.1designspecifications.pdf">
-       design specifications
-      </a>
-      . The R package, which is
-      <a href="https://github.com/kzollove/hymetDP">
-       under development
-      </a>
-      , is largely based off of the framework laid out by the ecocomDP project.
-     </p>
-     <h2 id="discovering-thematic-standardization-data">
-      Discovering thematic standardization data
-     </h2>
-     <h3 id="edi-data-portal">
-      EDI Data Portal
-     </h3>
-     <p>
-      Data packages from thematic standardization projects can be discovered from the EDI Data Portal Search Engine through the
-      <a href="https://portal.edirepository.org/nis/advancedSearch.jsp">
-       Advanced Search
-      </a>
-      interface. From the
-      <strong>
-       Subject
-      </strong>
-      tab, select the
-      <strong>
-       Keywords only
-      </strong>
-      radio button, and search for the name of the data pattern (i.e. "ecocomDP", "hymetDP"). Thematic Standardization data packages will always have the name of their design pattern as a keyword, which allows this type of searching.
-     </p>
-     <p>
-      <img src="/static/images/keyword-search.png" width="90%"/>
-     </p>
-     <blockquote>
-      <p>
-       A similar keyword search can be used to discover Darwin Core versions of the ecocomDP data packages. Instead of the name of the data pattern, search for "Darwin Core Archive (DwC-A) Event Core" (including the double quotes).
-      </p>
-     </blockquote>
-     <h3 id="r-packages">
-      R Packages
-     </h3>
-     <p>
-      The
-      <a href="https://cran.r-project.org/web/packages/ecocomDP/index.html">
-       ecocomDP
-      </a>
-      and
-      <a href="https://github.com/kzollove/hymetDP">
-       hymetDP
-      </a>
-      R packages have a built-in function,
-      <code>
-       search_data()
-      </code>
-      , to search across an index of existing standardized data packages from within an R environment.
-     </p>
-    </main>
-   </div>
-  </div>
- </div>
+<div metal:fill-slot="content" tal:omit-tag="True">
+<div class="sidebar-inner">
+<div class="container">
+<aside class="sidebar"><div class="sticky-sm-top"><div class="sticky-md-top"><div class="sticky-lg-top"><div class="sticky-xl-top">
+<ul>
+<li><a href="#ecocomdp">ecocomDP</a></li>
+<li><a href="#hymetdp">hymetDP</a></li>
+<li><a href="#discovering-thematic-standardization-data">Discovering thematic standardization data</a><ul>
+<li><a href="#edi-data-portal">EDI Data Portal</a></li>
+<li><a href="#r-packages">R Packages</a></li>
+</ul>
+</li>
+</ul>
+</div></div></div></div></aside><main class="main-tutorial">
+<h1 id="thematic-standardization">Thematic Standardization</h1>
+<p>Data in the EDI Repository are thematically and structurally diverse. Converting them into standardized formats, according to theme, facilitates interoperability and reuse. </p>
+<p>Thematic standardization is a cooperative effort to develop and support a design pattern which serves as a standardized intermediary between raw "Level-0" data and synthesis research "Level-2" data. Collaborative effort to build tools that support the creation and use of the intermediate "Level-1" datasets, helps to incentivize the extra effort of reformatting and increase the likelihood of data reuse.</p>
+<p><img src="/static/images/thematic-standardization-workflow.png" width="65%"/></p>
+<p>EDI currently has two thematic standardization projects: ecocomDP and hymetDP.</p>
+
+<h2 id="ecocomdp">ecocomDP</h2>
+<p>ecocomDP is a dataset design pattern and R package for ecological community data. The motivation and effort that led to its creation is documented in <a href="https://doi.org/10.1016/j.ecoinf.2021.101374">O'Brien et al. 2021</a>. Details on creating and using ecocomDP datasets can be found on the <a href="https://ediorg.github.io/ecocomDP/">ecocomDP R package webpage</a>. EDI is also creating a L2 data product from L1 ecocomDP data: a Darwin Core Archive suitable for contribution to GBIF.</p>
+<h2 id="hymetdp">hymetDP</h2>
+<p>hymetDP is a dataset design pattern and R package for hydrological and meteorological data. The design pattern is based on the CUAHSI Community Observations Data Model Version 1.1 <a href="https://his.cuahsi.org/documents/odm1.1designspecifications.pdf">design specifications</a>. The R package, which is <a href="https://github.com/kzollove/hymetDP">under development</a>, is largely based off of the framework laid out by the ecocomDP project.</p>
+<h2 id="discovering-thematic-standardization-data">Discovering thematic standardization data</h2>
+<h3 id="edi-data-portal">EDI Data Portal</h3>
+<p>Data packages from thematic standardization projects can be discovered from the EDI Data Portal Search Engine through the <a href="https://portal.edirepository.org/nis/advancedSearch.jsp">Advanced Search</a> interface. From the <strong>Subject</strong> tab, select the <strong>Keywords only</strong> radio button, and search for the name of the data pattern (i.e. "ecocomDP", "hymetDP"). Thematic Standardization data packages will always have the name of their design pattern as a keyword, which allows this type of searching.</p>
+<p><img src="/static/images/keyword-search.png" width="90%"/></p>
+<blockquote>
+<p>A similar keyword search can be used to discover Darwin Core versions of the ecocomDP data packages. Instead of the name of the data pattern, search for "Darwin Core Archive (DwC-A) Event Core" (including the double quotes).</p>
+</blockquote>
+<h3 id="r-packages">R Packages</h3>
+<p>The <a href="https://cran.r-project.org/web/packages/ecocomDP/index.html">ecocomDP</a> and <a href="https://github.com/kzollove/hymetDP">hymetDP</a> R packages have a built-in function, <code>search_data()</code>, to search across an index of existing standardized data packages from within an R environment.</p>
+</main>
+</div>
+</div>
+</div>
 </div>

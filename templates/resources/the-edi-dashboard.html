@@ -1,206 +1,63 @@
 <div metal:use-macro="load: ../shared/layout.html">
- <div metal:fill-slot="content" tal:omit-tag="True">
-  <div class="sidebar-inner">
-   <div class="container">
-    <aside class="sidebar">
-     <div class="sticky-sm-top">
-      <div class="sticky-md-top">
-       <div class="sticky-lg-top">
-        <div class="sticky-xl-top">
-         <ul>
-          <li>
-           <a href="#health">
-            Health
-           </a>
-          </li>
-          <li>
-           <a href="#reports">
-            Reports
-           </a>
-           <ul>
-            <li>
-             <a href="#no-public-access-admin">
-              No Public Access (admin)
-             </a>
-            </li>
-            <li>
-             <a href="#offline-data-admin">
-              Offline Data (admin)
-             </a>
-            </li>
-            <li>
-             <a href="#doi-report-admin">
-              DOI Report (admin)
-             </a>
-            </li>
-            <li>
-             <a href="#package-tracker">
-              Package Tracker
-             </a>
-            </li>
-            <li>
-             <a href="#recent-uploads">
-              Recent Uploads
-             </a>
-            </li>
-            <li>
-             <a href="#upload-report">
-              Upload Report
-             </a>
-            </li>
-            <li>
-             <a href="#site-report">
-              Site Report
-             </a>
-            </li>
-           </ul>
-          </li>
-          <li>
-           <a href="#pasta">
-            PASTA+
-           </a>
-           <ul>
-            <li>
-             <a href="#reservations">
-              Reservations
-             </a>
-            </li>
-            <li>
-             <a href="#working-on">
-              Working On
-             </a>
-            </li>
-            <li>
-             <a href="#embargo-management-admin">
-              Embargo Management (admin)
-             </a>
-            </li>
-           </ul>
-          </li>
-          <li>
-           <a href="#user-management">
-            User Management
-           </a>
-          </li>
-          <li>
-           <a href="#edi-portals">
-            EDI Portals
-           </a>
-          </li>
-         </ul>
-        </div>
-       </div>
-      </div>
-     </div>
-    </aside>
-    <main class="main-tutorial">
-     <h1 id="the-edi-dashboard">
-      The EDI Dashboard
-     </h1>
-     <p>
-      The EDI Dashboard gives users access to information and processes related to the functioning of the EDI Data Repository (a.k.a. PASTA). The dashboard provides useful tools for generating site- or package-specific reports, checking the status of data package evaluations and uploads, or for monitoring the health of EDI services and portals. Access is restricted to admin users for some dashboard features (noted in subheaders here and on the dashboard).
-     </p>
-     <h2 id="health">
-      Health
-     </h2>
-     <p>
-      <a href="https://dashboard.edirepository.org/dashboard/health/glance">
-       Health at a Glance
-      </a>
-      displays the statuses for PASTA+ Infrastructure and corresponding EDI Data Portals (see
-      <a href="/resources/repository-environments">
-       Repository Environments
-      </a>
-      for more on the differences), EDI and LTER Generic Member Nodes (used to expose data hosted on the EDI Data Repository to DataONE), and other related services from EDI.
-     </p>
-     <h2 id="reports">
-      Reports
-     </h2>
-     <h3 id="no-public-access-admin">
-      No Public Access (admin)
-     </h3>
-     <p>
-      Users with admin privileges can access the list of data packages with entities (data objects, metadata, or both) that are currently placed under embargo.
-     </p>
-     <h3 id="offline-data-admin">
-      Offline Data (admin)
-     </h3>
-     <p>
-      Users with admin privileges can access the list of data packages with entities that are only available for offline distribution.
-     </p>
-     <h3 id="doi-report-admin">
-      DOI Report (admin)
-     </h3>
-     <p>
-      Users with admin privileges can access the list of active and inactive data packages with DOIs that either fail to resolve or have no entry in PASTA.
-     </p>
-     <h3 id="package-tracker">
-      Package Tracker
-     </h3>
-     <p>
-      The package tracker is a useful way to view data package overview information (title, data package identifier, DOI) and download information for specific resources within the data package. A time series plot for downloads by resource can also be generated. To use the package tracker, enter the full
-      <a href="/resources/the-data-package#data-package-identifier">
-       data package identifier
-      </a>
-      for the data package of interest.
-     </p>
-     <h3 id="recent-uploads">
-      Recent Uploads
-     </h3>
-     <p>
-      These links provide access to a list and time series plot of data packages uploaded to the EDI Data Repository in the last 1, 7, or 30 day intervals.
-     </p>
-     <h3 id="upload-report">
-      Upload Report
-     </h3>
-     <p>
-      The upload report feature allows the user to access a list of packages uploaded to the EDI Data Repository during a specified interval and filtered on an LTER site (this feature will be expanded to all sites/projects in the future). The upload report is a table that consists of the data package id, DOI, title (optional), and upload date and time.
-     </p>
-     <h3 id="site-report">
-      Site Report
-     </h3>
-     <p>
-      The site report allows a user to view the entire list of data packages for an LTER site (this feature will be expanded to all sites/projects in the future). The site report is a table that consists of the data package id (latest revision), DOI, list of authors, title, date of publication, temporal coverage, keywords, and funding. The table can also be generated in “citation format” (data package id and citation).
-     </p>
-     <h2 id="pasta">
-      PASTA+
-     </h2>
-     <h3 id="reservations">
-      Reservations
-     </h3>
-     <p>
-      View the list of all active package identifier reservations, who holds the reservation, and when it was made. Reservations appear on this list until a data package is created using the identifier, or the reservation is deleted.
-     </p>
-     <h3 id="working-on">
-      Working On
-     </h3>
-     <p>
-      View the current status of data packages being processed across the three repository environments. This page may be useful when verifying that a data package evaluation or upload has successfully started or completed.
-     </p>
-     <h3 id="embargo-management-admin">
-      Embargo Management (admin)
-     </h3>
-     <p>
-      From this page, users with admin privileges are able to set or clear data package embargoes.
-     </p>
-     <h2 id="user-management">
-      User Management
-     </h2>
-     <p>
-      This dropdown contains options for managing users. Without admin privileges, users have the ability to change or reset a password and update accounts for which they have the password. Users with admin privilege have the ability to create and delete users as well as view the list of all users.
-     </p>
-     <h2 id="edi-portals">
-      EDI Portals
-     </h2>
-     <p>
-      The links underneath this dropdown bring users directly to the EDI Data Portal
-      <a href="/resources/repository-environments">
-       environment
-      </a>
-      listed (Production, Staging, Development).
-     </p>
-    </main>
-   </div>
-  </div>
- </div>
+<div metal:fill-slot="content" tal:omit-tag="True">
+<div class="sidebar-inner">
+<div class="container">
+<aside class="sidebar"><div class="sticky-sm-top"><div class="sticky-md-top"><div class="sticky-lg-top"><div class="sticky-xl-top">
+<ul>
+<li><a href="#health">Health</a></li>
+<li><a href="#reports">Reports</a><ul>
+<li><a href="#no-public-access-admin">No Public Access (admin)</a></li>
+<li><a href="#offline-data-admin">Offline Data (admin)</a></li>
+<li><a href="#doi-report-admin">DOI Report (admin)</a></li>
+<li><a href="#package-tracker">Package Tracker</a></li>
+<li><a href="#recent-uploads">Recent Uploads</a></li>
+<li><a href="#upload-report">Upload Report</a></li>
+<li><a href="#site-report">Site Report</a></li>
+</ul>
+</li>
+<li><a href="#pasta">PASTA+</a><ul>
+<li><a href="#reservations">Reservations</a></li>
+<li><a href="#working-on">Working On</a></li>
+<li><a href="#embargo-management-admin">Embargo Management (admin)</a></li>
+</ul>
+</li>
+<li><a href="#user-management">User Management</a></li>
+<li><a href="#edi-portals">EDI Portals</a></li>
+</ul>
+</div></div></div></div></aside><main class="main-tutorial">
+<h1 id="the-edi-dashboard">The EDI Dashboard</h1>
+<p>The EDI Dashboard gives users access to information and processes related to the functioning of the EDI Data Repository (a.k.a. PASTA). The dashboard provides useful tools for generating site- or package-specific reports, checking the status of data package evaluations and uploads, or for monitoring the health of EDI services and portals. Access is restricted to admin users for some dashboard features (noted in subheaders here and on the dashboard).</p>
+
+<h2 id="health">Health</h2>
+<p><a href="https://dashboard.edirepository.org/dashboard/health/glance">Health at a Glance</a> displays the statuses for PASTA+ Infrastructure and corresponding EDI Data Portals (see <a href="/resources/repository-environments">Repository Environments</a> for more on the differences), EDI and LTER Generic Member Nodes (used to expose data hosted on the EDI Data Repository to DataONE), and other related services from EDI.</p>
+<h2 id="reports">Reports</h2>
+<h3 id="no-public-access-admin">No Public Access (admin)</h3>
+<p>Users with admin privileges can access the list of data packages with entities (data objects, metadata, or both) that are currently placed under embargo.</p>
+<h3 id="offline-data-admin">Offline Data (admin)</h3>
+<p>Users with admin privileges can access the list of data packages with entities that are only available for offline distribution.</p>
+<h3 id="doi-report-admin">DOI Report (admin)</h3>
+<p>Users with admin privileges can access the list of active and inactive data packages with DOIs that either fail to resolve or have no entry in PASTA.</p>
+<h3 id="package-tracker">Package Tracker</h3>
+<p>The package tracker is a useful way to view data package overview information (title, data package identifier, DOI) and download information for specific resources within the data package. A time series plot for downloads by resource can also be generated. To use the package tracker, enter the full <a href="/resources/the-data-package#data-package-identifier">data package identifier</a> for the data package of interest.</p>
+<h3 id="recent-uploads">Recent Uploads</h3>
+<p>These links provide access to a list and time series plot of data packages uploaded to the EDI Data Repository in the last 1, 7, or 30 day intervals.</p>
+<h3 id="upload-report">Upload Report</h3>
+<p>The upload report feature allows the user to access a list of packages uploaded to the EDI Data Repository during a specified interval and filtered on an LTER site (this feature will be expanded to all sites/projects in the future). The upload report is a table that consists of the data package id, DOI, title (optional), and upload date and time. </p>
+<h3 id="site-report">Site Report</h3>
+<p>The site report allows a user to view the entire list of data packages for an LTER site (this feature will be expanded to all sites/projects in the future). The site report is a table that consists of the data package id (latest revision), DOI, list of authors, title, date of publication, temporal coverage, keywords, and funding. The table can also be generated in “citation format” (data package id and citation).</p>
+<h2 id="pasta">PASTA+</h2>
+<h3 id="reservations">Reservations</h3>
+<p>View the list of all active package identifier reservations, who holds the reservation, and when it was made. Reservations appear on this list until a data package is created using the identifier, or the reservation is deleted. </p>
+<h3 id="working-on">Working On</h3>
+<p>View the current status of data packages being processed across the three repository environments. This page may be useful when verifying that a data package evaluation or upload has successfully started or completed.</p>
+<h3 id="embargo-management-admin">Embargo Management (admin)</h3>
+<p>From this page, users with admin privileges are able to set or clear data package embargoes.</p>
+<h2 id="user-management">User Management</h2>
+<p>This dropdown contains options for managing users. Without admin privileges, users have the ability to change or reset a password and update accounts for which they have the password. Users with admin privilege have the ability to create and delete users as well as view the list of all users.</p>
+<h2 id="edi-portals">EDI Portals</h2>
+<p>The links underneath this dropdown bring users directly to the EDI Data Portal <a href="/resources/repository-environments">environment</a> listed (Production, Staging, Development).</p>
+</main>
+</div>
+</div>
+</div>
 </div>

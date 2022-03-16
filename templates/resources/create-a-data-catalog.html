@@ -1,184 +1,61 @@
 <div metal:use-macro="load: ../shared/layout.html">
- <div metal:fill-slot="content" tal:omit-tag="True">
-  <div class="sidebar-inner">
-   <div class="container">
-    <aside class="sidebar">
-     <div class="sticky-sm-top">
-      <div class="sticky-md-top">
-       <div class="sticky-lg-top">
-        <div class="sticky-xl-top">
-         <ul>
-          <li>
-           <a href="#ezcatalog">
-            ezCatalog
-           </a>
-          </li>
-          <li>
-           <a href="#catalogs-for-obfs-members">
-            Catalogs for OBFS members
-           </a>
-          </li>
-          <li>
-           <a href="#advanced-implementations">
-            Advanced implementations
-           </a>
-          </li>
-          <li>
-           <a href="#resources">
-            Resources
-           </a>
-          </li>
-         </ul>
-        </div>
-       </div>
-      </div>
-     </div>
-    </aside>
-    <main class="main-tutorial">
-     <h1 id="create-a-local-data-catalog-for-a-website">
-      Create a Local Data Catalog for a Website
-     </h1>
-     <p>
-      Local data catalogs allow researchers, projects, and organizations to present their data within the unique look and feel of their own website while providing access to the full metadata and other "data reuse" services offered in the EDI Data Portal.
-     </p>
-     <p>
-      EDI provides two prebuilt catalogs which can be easily embedded in an existing website. These catalogs are a searchable list of all the data packages belonging to a group and links back to the newest version of the data package in the EDI Data Portal. More advanced and customized catalogs can be implemented using the REST API.
-     </p>
-     <p>
-      <img alt="" src="/static/images/data-catalogs.png"/>
-     </p>
-     <h2 id="ezcatalog">
-      ezCatalog
-     </h2>
-     <p>
-      This catalog is hosted on GitHub Pages and is easily embedded within a website. The data packages in this catalog are populated from a unique search query matching all the metadata from the EDI Data Repository that is pertinent while filtering out everything else that isn't.
-     </p>
-     <p>
-      Websites using this approach:
+<div metal:fill-slot="content" tal:omit-tag="True">
+<div class="sidebar-inner">
+<div class="container">
+<aside class="sidebar"><div class="sticky-sm-top"><div class="sticky-md-top"><div class="sticky-lg-top"><div class="sticky-xl-top">
+<ul>
+<li><a href="#ezcatalog">ezCatalog</a></li>
+<li><a href="#catalogs-for-obfs-members">Catalogs for OBFS members</a></li>
+<li><a href="#advanced-implementations">Advanced implementations</a></li>
+<li><a href="#resources">Resources</a></li>
+</ul>
+</div></div></div></div></aside><main class="main-tutorial">
+<h1 id="create-a-local-data-catalog-for-a-website">Create a Local Data Catalog for a Website</h1>
+<p>Local data catalogs allow researchers, projects, and organizations to present their data within the unique look and feel of their own website while providing access to the full metadata and other "data reuse" services offered in the EDI Data Portal.</p>
+<p>EDI provides two prebuilt catalogs which can be easily embedded in an existing website. These catalogs are a searchable list of all the data packages belonging to a group and links back to the newest version of the data package in the EDI Data Portal. More advanced and customized catalogs can be implemented using the REST API.</p>
+<p><img alt="" src="/static/images/data-catalogs.png"/></p>
 
-      <a href="https://nwt.lternet.edu/data-catalog">
-       Niwot Ridge LTER
-      </a>
-      *
-      <a href="https://lter.jornada.nmsu.edu/data-catalog/">
-       Jornada Basin LTER
-      </a>
-      *
-      <a href="https://ble.lternet.edu/catalog">
-       Beaufort Lagoon LTER
-      </a>
-     </p>
-     <p>
-      To build this catalog, follow instructions in the
-      <a href="https://github.com/clnsmth/ezCatalog">
-       ezCatalog GitHub
-      </a>
-      and
-      <a href="../support/contact-us">
-       contact EDI
-      </a>
-      for assistance.
-     </p>
-     <h2 id="catalogs-for-obfs-members">
-      Catalogs for OBFS members
-     </h2>
-     <p>
-      <a href="https://vocab.lternet.edu/ezcatalog/OBFS/">
-       The OBFS Data Catalogs service
-      </a>
-      provides members of the Organization of Biological Field Station a way to create a searchable data catalog within minutes. The catalog includes data packages published to the EDI Data Repository and falling within a 10 km radius of the field station. The returned list of data packages can be modified by
-      <a href="/support/contact-us">
-       contacting EDI
-      </a>
-      .
-     </p>
-     <p>
-      To build this catalog:
-     </p>
-     <ol>
-      <li>
-       Go to
-       <a href="https://vocab.lternet.edu/ezcatalog/OBFS/">
-        OBFS Data Catalogs
-       </a>
-      </li>
-      <li>
-       Select a field station and click the
-       <strong>
-        Submit
-       </strong>
-       button to generate the catalog
-      </li>
-      <li>
-       Click the
-       <strong>
-        embed
-       </strong>
-       link at the top of the page to access options for adding the catalog to a web page
-      </li>
-      <li>
-       Select and copy an option
-      </li>
-      <li>
-       Paste the option into the body of a web page
-      </li>
-     </ol>
-     <p>
-      Example:
-     </p>
-     <p>
-      ```
-     </p>
-     <!DOCTYPE html>
-     <p>
-     </p>
-     <title>
-      Data Catalog
-     </title>
-     <h1>
-      Adirondack Ecological Center - Data
-     </h1>
-     <object data="https://vocab.lternet.edu/ezcatalog/datacat.php?searchString=*&amp;scope=*
-mp;constraint=%28coordinates%253A%2522IsWithin%28ENVELOPE%28-75%2C-73%2C45%2C43%29%29%2522%29%2B
-%2B%28*%3A*%2BAND%2Btitle%3A(ADIRONDACK)%29%2BOR%2B%28*%3A*%2BAND%2Bkeyword%3A(ADIRONDACK)%29
-mp;form=htmltablejssearch" height="100%" type="text/html" width="100%">
-     </object>
-     <p>
-      ```
-     </p>
-     <h2 id="advanced-implementations">
-      Advanced implementations
-     </h2>
-     <p>
-      A possible motivation for an advanced catalog may be to provide a highly customized search interface or some feature or behavior not found in the EDI Data Portal. To do this, a query will need to be constructed to match all the metadata from the EDI Repository that is pertinent while filtering out everything else that isn't. This information is returned in XML and needs to be parsed and returned to the user.
-     </p>
-     <p>
-      <a href="https://youtu.be/LwCI9TKi-Pg?t=361">
-       See this video
-      </a>
-      for more on constructing a query and implementing advanced data catalog features.
-     </p>
-     <h2 id="resources">
-      Resources
-     </h2>
-     <ul>
-      <li>
-       <strong>
-        Build a Static Website
-       </strong>
-       - Static websites are secure, low maintenance, free to host, fast, and easy to work with.
-       <a href="https://youtu.be/i4QczI3evGA">
-        See this video
-       </a>
-       and
-       <a href="https://github.com/BLE-LTER/LTER-website">
-        associated GitHub repository
-       </a>
-       to create a static website with a built-in data catalog.
-      </li>
-     </ul>
-    </main>
-   </div>
-  </div>
- </div>
+<h2 id="ezcatalog">ezCatalog</h2>
+<p>This catalog is hosted on GitHub Pages and is easily embedded within a website. The data packages in this catalog are populated from a unique search query matching all the metadata from the EDI Data Repository that is pertinent while filtering out everything else that isn't.</p>
+<p>Websites using this approach:
+* <a href="https://nwt.lternet.edu/data-catalog">Niwot Ridge LTER</a>
+* <a href="https://lter.jornada.nmsu.edu/data-catalog/">Jornada Basin LTER</a>
+* <a href="https://ble.lternet.edu/catalog">Beaufort Lagoon LTER</a></p>
+<p>To build this catalog, follow instructions in the <a href="https://github.com/clnsmth/ezCatalog">ezCatalog GitHub</a> and <a href="../support/contact-us">contact EDI</a> for assistance.</p>
+<h2 id="catalogs-for-obfs-members">Catalogs for OBFS members</h2>
+<p><a href="https://vocab.lternet.edu/ezcatalog/OBFS/">The OBFS Data Catalogs service</a> provides members of the Organization of Biological Field Station a way to create a searchable data catalog within minutes. The catalog includes data packages published to the EDI Data Repository and falling within a 10 km radius of the field station. The returned list of data packages can be modified by <a href="/support/contact-us">contacting EDI</a>.</p>
+<p>To build this catalog:</p>
+<ol>
+<li>Go to <a href="https://vocab.lternet.edu/ezcatalog/OBFS/">OBFS Data Catalogs</a></li>
+<li>Select a field station and click the <strong>Submit</strong> button to generate the catalog</li>
+<li>Click the <strong>embed</strong> link at the top of the page to access options for adding the catalog to a web page</li>
+<li>Select and copy an option</li>
+<li>Paste the option into the body of a web page</li>
+</ol>
+<p>Example:</p>
+<p>```</p>
+<!DOCTYPE html>
+
+<p>
+</p>
+<title>Data Catalog</title>
+<h1>Adirondack Ecological Center - Data</h1>
+<object data="https://vocab.lternet.edu/ezcatalog/datacat.php?searchString=*&amp;scope=*
+&amp;constraint=%28coordinates%253A%2522IsWithin%28ENVELOPE%28-75%2C-73%2C45%2C43%29%29%2522%29%2B
+OR%2B%28*%3A*%2BAND%2Btitle%3A(ADIRONDACK)%29%2BOR%2B%28*%3A*%2BAND%2Bkeyword%3A(ADIRONDACK)%29
+&amp;form=htmltablejssearch" height="100%" type="text/html" width="100%">
+</object>
+<p>
+```</p>
+<h2 id="advanced-implementations">Advanced implementations</h2>
+<p>A possible motivation for an advanced catalog may be to provide a highly customized search interface or some feature or behavior not found in the EDI Data Portal. To do this, a query will need to be constructed to match all the metadata from the EDI Repository that is pertinent while filtering out everything else that isn't. This information is returned in XML and needs to be parsed and returned to the user.</p>
+<p><a href="https://youtu.be/LwCI9TKi-Pg?t=361">See this video</a> for more on constructing a query and implementing advanced data catalog features.</p>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><strong>Build a Static Website</strong> - Static websites are secure, low maintenance, free to host, fast, and easy to work with. <a href="https://youtu.be/i4QczI3evGA">See this video</a> and <a href="https://github.com/BLE-LTER/LTER-website">associated GitHub repository</a> to create a static website with a built-in data catalog.</li>
+</ul>
+</main>
+</div>
+</div>
+</div>
 </div>

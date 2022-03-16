@@ -1,264 +1,62 @@
 <div metal:use-macro="load: ../shared/layout.html">
- <div metal:fill-slot="content" tal:omit-tag="True">
-  <div class="sidebar-inner">
-   <div class="container">
-    <aside class="sidebar">
-     <div class="sticky-sm-top">
-      <div class="sticky-md-top">
-       <div class="sticky-lg-top">
-        <div class="sticky-xl-top">
-         <ul>
-          <li>
-           <a href="#getting-started">
-            Getting started
-           </a>
-          </li>
-          <li>
-           <a href="#the-data-package">
-            The data package
-           </a>
-          </li>
-          <li>
-           <a href="#data-management-planning">
-            Data management planning
-           </a>
-          </li>
-          <li>
-           <a href="#quality-assurance">
-            Quality Assurance
-           </a>
-          </li>
-          <li>
-           <a href="#cleaning-data-and-quality-control">
-            Cleaning data and Quality Control
-           </a>
-          </li>
-          <li>
-           <a href="#designing-a-data-package">
-            Designing a data package
-           </a>
-          </li>
-          <li>
-           <a href="#creating-metadata-for-a-data-package">
-            Creating metadata for a data package
-           </a>
-          </li>
-          <li>
-           <a href="#evaluating-a-data-package">
-            Evaluating a data package
-           </a>
-          </li>
-          <li>
-           <a href="#publishing-a-data-package">
-            Publishing a data package
-           </a>
-          </li>
-          <li>
-           <a href="#updating-a-data-package">
-            Updating a data package
-           </a>
-          </li>
-          <li>
-           <a href="#adding-citations-to-a-data-package">
-            Adding citations to a data package
-           </a>
-          </li>
-          <li>
-           <a href="#the-edi-dashboard">
-            The EDI Dashboard
-           </a>
-          </li>
-          <li>
-           <a href="#creating-a-data-catalog">
-            Creating a data catalog
-           </a>
-          </li>
-          <li>
-           <a href="#thematic-standardization">
-            Thematic Standardization
-           </a>
-          </li>
-          <li>
-           <a href="#data-package-best-practices">
-            Data package best practices
-           </a>
-          </li>
-         </ul>
-        </div>
-       </div>
-      </div>
-     </div>
-    </aside>
-    <main class="main-tutorial">
-     <h1 id="resources-for-information-managers">
-      Resources for Information Managers
-     </h1>
-     <p>
-      Information managers typically work on behalf of a research group (e.g. lab or field station) to prepare data for publication, handle the evaluation and upload process, and utilize related EDI services to fulfill project requirements and research goals. The resources on this page support information management tasks occurring throughout the research life cycle and emphasize data curation best practices.
-     </p>
-     <p>
-      If you have data to publish and would like to work with an EDI Data Curator, then check out the
-      <a href="/resources/resources-for-data-authors">
-       resources for data authors
-      </a>
-      .
-     </p>
-     <h2 id="getting-started">
-      Getting started
-     </h2>
-     <p>
-      Register as a new information manager, get oriented to EDI projects, and become a part of the EDI community (
-      <a href="/resources/information-manager-quickstart">
-       Information Manager Quickstart
-      </a>
-      . Check out the
-      <a href="/resources/resources-for-data-authors">
-       resources for data authors
-      </a>
-      page for an example data curation approach to adopt or refine, and perspectives from the data author.
-     </p>
-     <h2 id="the-data-package">
-      The data package
-     </h2>
-     <p>
-      A data package is the unit of publication within the EDI Data Repository. Understanding the components and characteristics of a data package provides context to most information management processes related to the EDI Data Repository. For more information see
-      <a href="/resources/the-data-package">
-       The Data Package
-      </a>
-      .
-     </p>
-     <h2 id="data-management-planning">
-      Data management planning
-     </h2>
-     <p>
-      A data management plan helps organize the data collected throughout a research project and ensure its preservation for future use. For a data management planning tool and example text to include EDI in the data management planning section of a proposal, see
-      <a href="/resources/data-management-planning">
-       Data Management Planning
-      </a>
-      .
-     </p>
-     <h2 id="quality-assurance">
-      Quality Assurance
-     </h2>
-     <p>
-      Applying quality assurance measures and logging noteworthy events during data collection increases the likelihood of high-quality data and understanding the data during later use. For more information see
-      <a href="/resources/quality-assurance">
-       Quality Assurance
-      </a>
-      .
-     </p>
-     <h2 id="cleaning-data-and-quality-control">
-      Cleaning data and Quality Control
-     </h2>
-     <p>
-      Before publishing data, consider the data quality expectations of potential user communities. Doing so increases the chance of the data being reused and cited. Cleaning data may entail restructuring and reformatting a dataset, establishing consistency within the data, and checking the integrity of the data values. Improving data quality is an ongoing information management process in many organizations. For more information see
-      <a href="/resources/cleaning-data-and-quality-control">
-       Cleaning Data and Quality Control
-      </a>
-      .
-     </p>
-     <h2 id="designing-a-data-package">
-      Designing a data package
-     </h2>
-     <p>
-      When designing a data package it is important to consider multiple factors in order to satisfy local community research needs. Considerations such as whether data should be published as a single package or in a set of related packages must be made to ultimately create a data package that is optimized for discovery and reuse. For more information see
-      <a href="/resources/designing-a-data-package">
-       Designing a Data Package
-      </a>
-      .
-     </p>
-     <h2 id="creating-metadata-for-a-data-package">
-      Creating metadata for a data package
-     </h2>
-     <p>
-      Metadata are data that describe the structure and context of other data. They are vital to the discovery and reuse of a dataset, and are a required element of an EDI data package. The EDI Data Repository operates on the EML metadata standard, a widely adopted and actively maintained metadata specification. For more guidance on how to create EML metadata and associated best practices see
-      <a href="/resources/creating-metadata-for-publication">
-       Creating Metadata for Publication
-      </a>
-      .
-     </p>
-     <h2 id="evaluating-a-data-package">
-      Evaluating a data package
-     </h2>
-     <p>
-      Evaluating a data package is key to ensuring that it contains a valid, well-formed EML document that accurately describes the data, and to ensure that data entities are consistent with documentation. For more on how to run data package quality evaluations, interpret results, and resolve issues see
-      <a href="/resources/evaluating-a-data-package">
-       Evaluating a Data Package
-      </a>
-      .
-     </p>
-     <h2 id="publishing-a-data-package">
-      Publishing a data package
-     </h2>
-     <p>
-      When a data package has passed evaluation and the metadata render correctly in the staging environment, then the data package can be published to the EDI Data Repository production environment. This upload step can be done manually or programmatically. For more information see
-      <a href="/resources/publishing-a-data-package">
-       Publishing a Data Package
-      </a>
-      .
-     </p>
-     <h2 id="updating-a-data-package">
-      Updating a data package
-     </h2>
-     <p>
-      Perform a data package update whenever data or metadata need to be changed or added to an existing data package. Updates may be performed routinely or sporadically and will result in a new "revision". A revision of a data package has the same identifier, but receives a new version number and is assigned a new DOI. All revisions of a data package are linked in the EDI Data Repository. Users who end up on the landing page of an older revision will be notified that they are not viewing the most recent version of the data package. For more information see
-      <a href="/resources/updating-a-data-package">
-       Updating a Data Package
-      </a>
-      .
-     </p>
-     <h2 id="adding-citations-to-a-data-package">
-      Adding citations to a data package
-     </h2>
-     <p>
-      Adding citations to data packages allows authors to measure the impact that their data publications are making and allows potential users to see the context in which the data have been previously applied. For more information see
-      <a href="/resources/add-citation">
-       Adding Journal Citations to a Data Package
-      </a>
-      .
-     </p>
-     <h2 id="the-edi-dashboard">
-      The EDI Dashboard
-     </h2>
-     <p>
-      The EDI Dashboard displays information and processes related to the functioning of the EDI Data Repository. The dashboard provides useful tools for generating site- or package-specific reports, checking the status of data package uploads and evaluations, or for monitoring the health of EDI services and portals. For more information see the
-      <a href="/resources/the-edi-dashboard">
-       EDI Dashboard
-      </a>
-      .
-     </p>
-     <h2 id="creating-a-data-catalog">
-      Creating a data catalog
-     </h2>
-     <p>
-      Customized data catalogs can leverage the archived data and metadata in the EDI Data Repository to create a searchable index and display of data for a personal or project website. This approach eliminates overhead and facilitates customized branding. For more information see
-      <a href="/resources/create-a-data-catalog">
-       Create a Local Data Catalog for a Website
-      </a>
-      .
-     </p>
-     <h2 id="thematic-standardization">
-      Thematic Standardization
-     </h2>
-     <p>
-      Data in the EDI Repository are thematically and structurally diverse. Converting them into standardized formats, according to theme, facilitates interoperability and reuse. To learn more about EDI Thematic Standardization and how to create data in these formats see the page on
-      <a href="/resources/thematic-standardization">
-       Thematic Standardization
-      </a>
-      .
-     </p>
-     <h2 id="data-package-best-practices">
-      Data package best practices
-     </h2>
-     <p>
-      More "Best Practice" recommendations for ecological and environmental data packages are available
-      <a href="https://ediorg.github.io/data-package-best-practices/">
-       here
-      </a>
-      .
-     </p>
-    </main>
-   </div>
-  </div>
- </div>
+<div metal:fill-slot="content" tal:omit-tag="True">
+<div class="sidebar-inner">
+<div class="container">
+<aside class="sidebar"><div class="sticky-sm-top"><div class="sticky-md-top"><div class="sticky-lg-top"><div class="sticky-xl-top">
+<ul>
+<li><a href="#getting-started">Getting started</a></li>
+<li><a href="#the-data-package">The data package</a></li>
+<li><a href="#data-management-planning">Data management planning</a></li>
+<li><a href="#quality-assurance">Quality Assurance</a></li>
+<li><a href="#cleaning-data-and-quality-control">Cleaning data and Quality Control</a></li>
+<li><a href="#designing-a-data-package">Designing a data package</a></li>
+<li><a href="#creating-metadata-for-a-data-package">Creating metadata for a data package</a></li>
+<li><a href="#evaluating-a-data-package">Evaluating a data package</a></li>
+<li><a href="#publishing-a-data-package">Publishing a data package</a></li>
+<li><a href="#updating-a-data-package">Updating a data package</a></li>
+<li><a href="#adding-citations-to-a-data-package">Adding citations to a data package</a></li>
+<li><a href="#the-edi-dashboard">The EDI Dashboard</a></li>
+<li><a href="#creating-a-data-catalog">Creating a data catalog</a></li>
+<li><a href="#thematic-standardization">Thematic Standardization</a></li>
+<li><a href="#data-package-best-practices">Data package best practices</a></li>
+</ul>
+</div></div></div></div></aside><main class="main-tutorial">
+<h1 id="resources-for-information-managers">Resources for Information Managers</h1>
+<p>Information managers typically work on behalf of a research group (e.g. lab or field station) to prepare data for publication, handle the evaluation and upload process, and utilize related EDI services to fulfill project requirements and research goals. The resources on this page support information management tasks occurring throughout the research life cycle and emphasize data curation best practices.</p>
+<p>If you have data to publish and would like to work with an EDI Data Curator, then check out the <a href="/resources/resources-for-data-authors">resources for data authors</a>.</p>
+
+<h2 id="getting-started">Getting started</h2>
+<p>Register as a new information manager, get oriented to EDI projects, and become a part of the EDI community (<a href="/resources/information-manager-quickstart">Information Manager Quickstart</a>. Check out the <a href="/resources/resources-for-data-authors">resources for data authors</a> page for an example data curation approach to adopt or refine, and perspectives from the data author.</p>
+<h2 id="the-data-package">The data package</h2>
+<p>A data package is the unit of publication within the EDI Data Repository. Understanding the components and characteristics of a data package provides context to most information management processes related to the EDI Data Repository. For more information see <a href="/resources/the-data-package">The Data Package</a>.</p>
+<h2 id="data-management-planning">Data management planning</h2>
+<p>A data management plan helps organize the data collected throughout a research project and ensure its preservation for future use. For a data management planning tool and example text to include EDI in the data management planning section of a proposal, see <a href="/resources/data-management-planning">Data Management Planning</a>.</p>
+<h2 id="quality-assurance">Quality Assurance</h2>
+<p>Applying quality assurance measures and logging noteworthy events during data collection increases the likelihood of high-quality data and understanding the data during later use. For more information see <a href="/resources/quality-assurance">Quality Assurance</a>.</p>
+<h2 id="cleaning-data-and-quality-control">Cleaning data and Quality Control</h2>
+<p>Before publishing data, consider the data quality expectations of potential user communities. Doing so increases the chance of the data being reused and cited. Cleaning data may entail restructuring and reformatting a dataset, establishing consistency within the data, and checking the integrity of the data values. Improving data quality is an ongoing information management process in many organizations. For more information see <a href="/resources/cleaning-data-and-quality-control">Cleaning Data and Quality Control</a>.</p>
+<h2 id="designing-a-data-package">Designing a data package</h2>
+<p>When designing a data package it is important to consider multiple factors in order to satisfy local community research needs. Considerations such as whether data should be published as a single package or in a set of related packages must be made to ultimately create a data package that is optimized for discovery and reuse. For more information see <a href="/resources/designing-a-data-package">Designing a Data Package</a>.</p>
+<h2 id="creating-metadata-for-a-data-package">Creating metadata for a data package</h2>
+<p>Metadata are data that describe the structure and context of other data. They are vital to the discovery and reuse of a dataset, and are a required element of an EDI data package. The EDI Data Repository operates on the EML metadata standard, a widely adopted and actively maintained metadata specification. For more guidance on how to create EML metadata and associated best practices see <a href="/resources/creating-metadata-for-publication">Creating Metadata for Publication</a>.</p>
+<h2 id="evaluating-a-data-package">Evaluating a data package</h2>
+<p>Evaluating a data package is key to ensuring that it contains a valid, well-formed EML document that accurately describes the data, and to ensure that data entities are consistent with documentation. For more on how to run data package quality evaluations, interpret results, and resolve issues see <a href="/resources/evaluating-a-data-package">Evaluating a Data Package</a>.</p>
+<h2 id="publishing-a-data-package">Publishing a data package</h2>
+<p>When a data package has passed evaluation and the metadata render correctly in the staging environment, then the data package can be published to the EDI Data Repository production environment. This upload step can be done manually or programmatically. For more information see <a href="/resources/publishing-a-data-package">Publishing a Data Package</a>.</p>
+<h2 id="updating-a-data-package">Updating a data package</h2>
+<p>Perform a data package update whenever data or metadata need to be changed or added to an existing data package. Updates may be performed routinely or sporadically and will result in a new "revision". A revision of a data package has the same identifier, but receives a new version number and is assigned a new DOI. All revisions of a data package are linked in the EDI Data Repository. Users who end up on the landing page of an older revision will be notified that they are not viewing the most recent version of the data package. For more information see <a href="/resources/updating-a-data-package">Updating a Data Package</a>.</p>
+<h2 id="adding-citations-to-a-data-package">Adding citations to a data package</h2>
+<p>Adding citations to data packages allows authors to measure the impact that their data publications are making and allows potential users to see the context in which the data have been previously applied. For more information see <a href="/resources/add-citation">Adding Journal Citations to a Data Package</a>.</p>
+<h2 id="the-edi-dashboard">The EDI Dashboard</h2>
+<p>The EDI Dashboard displays information and processes related to the functioning of the EDI Data Repository. The dashboard provides useful tools for generating site- or package-specific reports, checking the status of data package uploads and evaluations, or for monitoring the health of EDI services and portals. For more information see the <a href="/resources/the-edi-dashboard">EDI Dashboard</a>.</p>
+<h2 id="creating-a-data-catalog">Creating a data catalog</h2>
+<p>Customized data catalogs can leverage the archived data and metadata in the EDI Data Repository to create a searchable index and display of data for a personal or project website. This approach eliminates overhead and facilitates customized branding. For more information see <a href="/resources/create-a-data-catalog">Create a Local Data Catalog for a Website</a>.</p>
+<h2 id="thematic-standardization">Thematic Standardization</h2>
+<p>Data in the EDI Repository are thematically and structurally diverse. Converting them into standardized formats, according to theme, facilitates interoperability and reuse. To learn more about EDI Thematic Standardization and how to create data in these formats see the page on <a href="/resources/thematic-standardization">Thematic Standardization</a>.</p>
+<h2 id="data-package-best-practices">Data package best practices</h2>
+<p>More "Best Practice" recommendations for ecological and environmental data packages are available <a href="https://ediorg.github.io/data-package-best-practices/">here</a>.</p>
+</main>
+</div>
+</div>
+</div>
 </div>

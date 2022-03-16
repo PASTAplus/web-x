@@ -1,344 +1,80 @@
 <div metal:use-macro="load: ../shared/layout.html">
- <div metal:fill-slot="content" tal:omit-tag="True">
-  <div class="sidebar-inner">
-   <div class="container">
-    <aside class="sidebar">
-     <div class="sticky-sm-top">
-      <div class="sticky-md-top">
-       <div class="sticky-lg-top">
-        <div class="sticky-xl-top">
-         <ul>
-          <li>
-           <a href="#data-explorer-dex">
-            Data eXplorer (DeX)
-           </a>
-           <ul>
-            <li>
-             <a href="#profile">
-              Profile
-             </a>
-             <ul>
-              <li>
-               <a href="#overview">
-                Overview
-               </a>
-              </li>
-              <li>
-               <a href="#sample">
-                Sample
-               </a>
-              </li>
-              <li>
-               <a href="#variables">
-                Variables
-               </a>
-              </li>
-             </ul>
-            </li>
-            <li>
-             <a href="#subset">
-              Subset
-             </a>
-             <ul>
-              <li>
-               <a href="#query">
-                Query
-               </a>
-              </li>
-              <li>
-               <a href="#time-period">
-                Time period
-               </a>
-              </li>
-              <li>
-               <a href="#row-index">
-                Row index
-               </a>
-              </li>
-              <li>
-               <a href="#category">
-                Category
-               </a>
-              </li>
-             </ul>
-            </li>
-            <li>
-             <a href="#plot">
-              Plot
-             </a>
-            </li>
-            <li>
-             <a href="#eml">
-              EML
-             </a>
-            </li>
-           </ul>
-          </li>
-          <li>
-           <a href="#data-import-scripts">
-            Data Import Scripts
-           </a>
-          </li>
-          <li>
-           <a href="#datapie">
-            datapie
-           </a>
-          </li>
-         </ul>
-        </div>
-       </div>
-      </div>
-     </div>
-    </aside>
-    <main class="main-tutorial">
-     <h1 id="data-exploration">
-      Data Exploration
-     </h1>
-     <p>
-      At the beginning of any data reuse or synthesis project, it is important to quickly gain a thorough understanding of the type and scope of data under consideration. Additionally, it is a good practice to scan data for issues before publishing.
-     </p>
-     <p>
-      While data package metadata, such as the
-      <a href="/resources/data-package-pages#data-entities">
-       Data Entities
-      </a>
-      section in the full metadata page, provide concise explanations of data attributes, summary and visualization tools can provide a quick and easy interactive view into the actual data values. EDI offers three options for data exploration: Data eXplorer, Data Import Scripts, and datapie.
-     </p>
-     <h2 id="data-explorer-dex">
-      Data eXplorer (DeX)
-     </h2>
-     <p>
-      The EDI
-      <a href="http://dex.edirepository.org">
-       Data Explorer (DeX)
-      </a>
-      is a web browser application offering summary information, subsetting, and plotting features for data packages containing tabular data files. DeX is a great tool for making a preliminary assessment about fitness for use. Click the
-      <strong>
-       Data Explorer
-      </strong>
-      link next to a data object from the
-      <strong>
-       Resources
-      </strong>
-      section of a data package landing page (currently only available in the
-      <a href="/resources/repository-environments#staging">
-       staging environment
-      </a>
-      of the Data Portal).
-     </p>
-     <p>
-      <img src="/static/images/dex-in-portal.png" width="80%"/>
-     </p>
-     <p>
-      Alternatively, open a table from a data package in DeX by providing the Data Entity URL (currently limited to tabular data).
-     </p>
-     <h3 id="profile">
-      Profile
-     </h3>
-     <p>
-      The
-      <strong>
-       Profile
-      </strong>
-      tab provides data table overview information, a sample of the first and last rows in the table, and summary information for every variable in the table.
-     </p>
-     <h4 id="overview">
-      Overview
-     </h4>
-     <p>
-      A breakdown of dataset statistics (size, missing value and duplicate row counts, etc.) and variable types (number of datetime, numerical, unique, and other variable types). This section also includes notes for individual variables and information about the profile report.
-     </p>
-     <h4 id="sample">
-      Sample
-     </h4>
-     <p>
-      This section displays the first and last ten rows of the data table, a row index, and column names.
-     </p>
-     <h4 id="variables">
-      Variables
-     </h4>
-     <p>
-      For every variable in the table, this section displays a miniature summary page complete with counts of missing and duplicate rows, minimum and maximum values, and a frequency plot for the variable.
-     </p>
-     <h3 id="subset">
-      Subset
-     </h3>
-     <p>
-      The Subset tab allows users to filter and download data by a query, time period, row index, category, or by simply selecting the columns of interest with checkboxes.
-     </p>
-     <h4 id="query">
-      Query
-     </h4>
-     <p>
-      Users can type a query to filter data. The query syntax is based on the Python Pandas' query method.
-     </p>
-     <p>
-      Rows can be filtered by values in character columns using the
-      <code>
-       ==
-      </code>
-      and
-      <code>
-       !=
-      </code>
-      operators:
-     </p>
-     <p>
-      <img src="/static/images/numexpr1.png" width="80%"/>
-     </p>
-     <p>
-      Rows can also be filtered by values in numeric columns using the
-      <code>
-       &gt;
-      </code>
-      ,
-      <code>
-       &lt;
-      </code>
-      ,
-      <code>
-       &gt;=
-      </code>
-      ,
-      <code>
-       &lt;=
-      </code>
-      ,
-      <code>
-       !=
-      </code>
-      and
-      <code>
-       ==
-      </code>
-      operators. Use backticks to select columns that have spaces or special characters in their name:
-     </p>
-     <p>
-      <img src="/static/images/numexpr2.png" width="80%"/>
-     </p>
-     <p>
-      Rows can be filtered using comparisons between different columns. Multiple logical queries can be combined with the
-      <code>
-       &amp;
-      </code>
-      and
-      <code>
-       |
-      </code>
-      symbols to create advanced logical queries:
-     </p>
-     <p>
-      <img src="/static/images/numexpr6.png" width="80%"/>
-     </p>
-     <p>
-      Individual rows can be selected by their index using square brackets:
-     </p>
-     <p>
-      <img src="/static/images/numexpr3.png" width="80%"/>
-     </p>
-     <p>
-      Rows where the values from two columns are equal (or not equal) may also be filtered by comparing the two columns:
-      <code>
-       col_1 == col_2
-      </code>
-      or
-      <code>
-       col_1 != col_2
-      </code>
-     </p>
-     <p>
-      <img src="/static/images/numexpr7.png" width="120%"/>
-     </p>
-     <p>
-      Rows where the values from one column are present (or not present) anywhere in another column may be filtered by using the "in" (or "not in") operator with the two columns:
-      <code>
-       col_1 in col_2
-      </code>
-      or
-      <code>
-       col_1 not in col_2
-      </code>
-     </p>
-     <p>
-      <img src="/static/images/numexpr8.png" width="120%"/>
-     </p>
-     <p>
-      For details, refer to the Pandas'
-      <a href="https://pandas.pydata.org/docs/user_guide/indexing.html#the-query-method">
-       general guide to querying data
-      </a>
-      and the
-      <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.query.html">
-       pandas.DataFrame.query
-      </a>
-      API documentation specifically.
-     </p>
-     <h4 id="time-period">
-      Time period
-     </h4>
-     <p>
-      Users can filter by time period by selecting a
-      <strong>
-       Date
-      </strong>
-      column and entering a start and end date.
-     </p>
-     <h4 id="row-index">
-      Row index
-     </h4>
-     <p>
-      Users can filter by entering the start and end row index.
-     </p>
-     <h4 id="category">
-      Category
-     </h4>
-     <p>
-      For tables with categorical data columns declared in the EML, users can filter by specific categories within a given column.
-     </p>
-     <h3 id="plot">
-      Plot
-     </h3>
-     <p>
-      The
-      <strong>
-       Plot
-      </strong>
-      tab allows users to create scatter plots for the table by selecting an independent and one or more dependent variables.
-     </p>
-     <h3 id="eml">
-      EML
-     </h3>
-     <p>
-      This tab takes you back to the data package landing page.
-     </p>
-     <h2 id="data-import-scripts">
-      Data Import Scripts
-     </h2>
-     <p>
-      <a href="/resources/accessing-data#data-import-scripts">
-       Data import scripts
-      </a>
-      , available in the
-      <strong>
-       Code Generation
-      </strong>
-      section of the data package landing page, read data directly from the EDI Repository into common programming language workspaces. This service provides full control over data manipulation and statistical exploration.
-     </p>
-     <h2 id="datapie">
-      datapie
-     </h2>
-     <p>
-      The Data Package Interface for Evaluation (
-      <a href="https://imcr-hackathon.github.io/datapie/">
-       datapie
-      </a>
-      ) R Package lets users explore data packages that are available through the DataONE Network via an R Shiny application.
-      <em>
-       This project is under development.
-      </em>
-     </p>
-    </main>
-   </div>
-  </div>
- </div>
+<div metal:fill-slot="content" tal:omit-tag="True">
+<div class="sidebar-inner">
+<div class="container">
+<aside class="sidebar"><div class="sticky-sm-top"><div class="sticky-md-top"><div class="sticky-lg-top"><div class="sticky-xl-top">
+<ul>
+<li><a href="#data-explorer-dex">Data eXplorer (DeX)</a><ul>
+<li><a href="#profile">Profile</a><ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#sample">Sample</a></li>
+<li><a href="#variables">Variables</a></li>
+</ul>
+</li>
+<li><a href="#subset">Subset</a><ul>
+<li><a href="#query">Query</a></li>
+<li><a href="#time-period">Time period</a></li>
+<li><a href="#row-index">Row index</a></li>
+<li><a href="#category">Category</a></li>
+</ul>
+</li>
+<li><a href="#plot">Plot</a></li>
+<li><a href="#eml">EML</a></li>
+</ul>
+</li>
+<li><a href="#data-import-scripts">Data Import Scripts</a></li>
+<li><a href="#datapie">datapie</a></li>
+</ul>
+</div></div></div></div></aside><main class="main-tutorial">
+<h1 id="data-exploration">Data Exploration</h1>
+<p>At the beginning of any data reuse or synthesis project, it is important to quickly gain a thorough understanding of the type and scope of data under consideration. Additionally, it is a good practice to scan data for issues before publishing.</p>
+<p>While data package metadata, such as the <a href="/resources/data-package-pages#data-entities">Data Entities</a> section in the full metadata page, provide concise explanations of data attributes, summary and visualization tools can provide a quick and easy interactive view into the actual data values. EDI offers three options for data exploration: Data eXplorer, Data Import Scripts, and datapie.</p>
+
+<h2 id="data-explorer-dex">Data eXplorer (DeX)</h2>
+<p>The EDI <a href="http://dex.edirepository.org">Data Explorer (DeX)</a> is a web browser application offering summary information, subsetting, and plotting features for data packages containing tabular data files. DeX is a great tool for making a preliminary assessment about fitness for use. Click the <strong>Data Explorer</strong> link next to a data object from the <strong>Resources</strong> section of a data package landing page (currently only available in the <a href="/resources/repository-environments#staging">staging environment</a> of the Data Portal).</p>
+<p><img src="/static/images/dex-in-portal.png" width="80%"/> </p>
+<p>Alternatively, open a table from a data package in DeX by providing the Data Entity URL (currently limited to tabular data). </p>
+<h3 id="profile">Profile</h3>
+<p>The <strong>Profile</strong> tab provides data table overview information, a sample of the first and last rows in the table, and summary information for every variable in the table.</p>
+<h4 id="overview">Overview</h4>
+<p>A breakdown of dataset statistics (size, missing value and duplicate row counts, etc.) and variable types (number of datetime, numerical, unique, and other variable types). This section also includes notes for individual variables and information about the profile report.</p>
+<h4 id="sample">Sample</h4>
+<p>This section displays the first and last ten rows of the data table, a row index, and column names.</p>
+<h4 id="variables">Variables</h4>
+<p>For every variable in the table, this section displays a miniature summary page complete with counts of missing and duplicate rows, minimum and maximum values, and a frequency plot for the variable.</p>
+<h3 id="subset">Subset</h3>
+<p>The Subset tab allows users to filter and download data by a query, time period, row index, category, or by simply selecting the columns of interest with checkboxes.</p>
+<h4 id="query">Query</h4>
+<p>Users can type a query to filter data. The query syntax is based on the Python Pandas' query method.</p>
+<p>Rows can be filtered by values in character columns using the <code>==</code> and <code>!=</code> operators:</p>
+<p><img src="/static/images/numexpr1.png" width="80%"/> </p>
+<p>Rows can also be filtered by values in numeric columns using the <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>, <code>!=</code> and <code>==</code> operators. Use backticks to select columns that have spaces or special characters in their name:</p>
+<p><img src="/static/images/numexpr2.png" width="80%"/> </p>
+<p>Rows can be filtered using comparisons between different columns. Multiple logical queries can be combined with the <code>&amp;</code> and <code>|</code> symbols to create advanced logical queries:</p>
+<p><img src="/static/images/numexpr6.png" width="80%"/> </p>
+<p>Individual rows can be selected by their index using square brackets:</p>
+<p><img src="/static/images/numexpr3.png" width="80%"/> </p>
+<p>Rows where the values from two columns are equal (or not equal) may also be filtered by comparing the two columns: <code>col_1 == col_2</code> or <code>col_1 != col_2</code></p>
+<p><img src="/static/images/numexpr7.png" width="120%"/> </p>
+<p>Rows where the values from one column are present (or not present) anywhere in another column may be filtered by using the "in" (or "not in") operator with the two columns: <code>col_1 in col_2</code> or <code>col_1 not in col_2</code></p>
+<p><img src="/static/images/numexpr8.png" width="120%"/> </p>
+<p>For details, refer to the Pandas' <a href="https://pandas.pydata.org/docs/user_guide/indexing.html#the-query-method">general guide to querying data</a> and the <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.query.html">pandas.DataFrame.query</a> API documentation specifically.</p>
+<h4 id="time-period">Time period</h4>
+<p>Users can filter by time period by selecting a <strong>Date</strong> column and entering a start and end date.</p>
+<h4 id="row-index">Row index</h4>
+<p>Users can filter by entering the start and end row index.</p>
+<h4 id="category">Category</h4>
+<p>For tables with categorical data columns declared in the EML, users can filter by specific categories within a given column.</p>
+<h3 id="plot">Plot</h3>
+<p>The <strong>Plot</strong> tab allows users to create scatter plots for the table by selecting an independent and one or more dependent variables.</p>
+<h3 id="eml">EML</h3>
+<p>This tab takes you back to the data package landing page.</p>
+<h2 id="data-import-scripts">Data Import Scripts</h2>
+<p><a href="/resources/accessing-data#data-import-scripts">Data import scripts</a>, available in the <strong>Code Generation</strong> section of the data package landing page, read data directly from the EDI Repository into common programming language workspaces. This service provides full control over data manipulation and statistical exploration.</p>
+<h2 id="datapie">datapie</h2>
+<p>The Data Package Interface for Evaluation (<a href="https://imcr-hackathon.github.io/datapie/">datapie</a>) R Package lets users explore data packages that are available through the DataONE Network via an R Shiny application. <em>This project is under development.</em></p>
+</main>
+</div>
+</div>
+</div>
 </div>

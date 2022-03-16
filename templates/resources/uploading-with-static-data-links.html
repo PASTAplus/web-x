@@ -1,344 +1,115 @@
 <div metal:use-macro="load: ../shared/layout.html">
- <div metal:fill-slot="content" tal:omit-tag="True">
-  <div class="sidebar-inner">
-   <div class="container">
-    <aside class="sidebar">
-     <div class="sticky-sm-top">
-      <div class="sticky-md-top">
-       <div class="sticky-lg-top">
-        <div class="sticky-xl-top">
-         <ul>
-          <li>
-           <a href="#using-box-cloud-storage">
-            Using Box Cloud Storage
-           </a>
-           <ul>
-            <li>
-             <a href="#creating-a-box-file-request">
-              Creating a Box File Request
-             </a>
-            </li>
-            <li>
-             <a href="#creating-a-static-download-link">
-              Creating a static download link
-             </a>
-            </li>
-           </ul>
-          </li>
-          <li>
-           <a href="#adding-download-links-to-eml-files">
-            Adding download links to EML files
-           </a>
-           <ul>
-            <li>
-             <a href="#ezeml">
-              ezEML
-             </a>
-            </li>
-            <li>
-             <a href="#emlassemblyline">
-              EMLassemblyline
-             </a>
-            </li>
-            <li>
-             <a href="#manually-editing-xml">
-              Manually editing XML
-             </a>
-            </li>
-           </ul>
-          </li>
-          <li>
-           <a href="#uploading-to-edi">
-            Uploading to EDI
-           </a>
-          </li>
-         </ul>
-        </div>
-       </div>
-      </div>
-     </div>
-    </aside>
-    <main class="main-tutorial">
-     <h1 id="uploading-with-static-data-links">
-      Uploading with Static Data Links
-     </h1>
-     <p>
-      A static URL resolving to a data file can be inserted into the physical/distribution element of an EML file and serve as a data source when uploading to the EDI Data Repository. This can be useful for bypassing the 500 MB size limit of manual uploads on the EDI Data Portal, for facilitating workflow automation, and for handling files that may be too large to transfer directly to a data curator.
-     </p>
-     <p>
-      <a href="https://www.box.com/">
-       Box Cloud Storage
-      </a>
-      is an example service that allows for generating links that do not offer any redirects and are static, two requirements of links that are used to upload to the EDI Data Portal.
-     </p>
-     <p>
-      <img src="/static/images/download-links.png" width="15%"/>
-     </p>
-     <h2 id="using-box-cloud-storage">
-      Using Box Cloud Storage
-     </h2>
-     <p>
-      Files stored on a Box Cloud Storage application can be directly downloaded via a static URL.
-     </p>
-     <blockquote>
-      <p>
-       A paid/premium Box account is required for generating direct download links or receiving files through a file request.
-      </p>
-     </blockquote>
-     <h3 id="creating-a-box-file-request">
-      Creating a Box File Request
-     </h3>
-     <p>
-      A File Request link allows anyone (with or without a Box account) to submit files to a directory in a Box account. They offer a good solution for collecting prohibitively large data from submitters that require static links. To create a request:
-     </p>
-     <ol>
-      <li>
-       Navigate to the directory (from within the Box web application while logged into a premium account) where data files should be submitted.
-      </li>
-      <li>
-       Click the
-       <strong>
-        File Request
-       </strong>
-       button on the right side of the screen which will open a pop-up.
-      </li>
-     </ol>
-     <p>
-      <img src="/static/images/file-request1.png" width="100%"/>
-     </p>
-     <ol>
-      <li>
-       On the pop-up screen, set the link to enabled. This selection should be reflected on the first
-       <strong>
-        File Request
-       </strong>
-       button pressed.
-      </li>
-     </ol>
-     <p>
-      <img src="/static/images/file-request2.png" width="100%"/>
-     </p>
-     <ol>
-      <li>
-       Copy the shareable link from the pop-up screen and try it in a web browser. This link should lead to a page that looks like the one below.
-      </li>
-     </ol>
-     <p>
-      <img src="/static/images/file-request3.png" width="65%"/>
-     </p>
-     <ol>
-      <li>
-       Share this link with a data submitter. They will not need to have a Box account to submit data to this directory.
-      </li>
-     </ol>
-     <h3 id="creating-a-static-download-link">
-      Creating a static download link
-     </h3>
-     <p>
-      A static download link will function as a data source for the EDI Data Repository. To create a static download link:
-     </p>
-     <ol>
-      <li>
-       Navigate to the directory that contains the data file for which to create a link. Click on the link icon which will open a pop-up window.
-      </li>
-     </ol>
-     <p>
-      <img src="/static/images/static-link1.png" width="100%"/>
-     </p>
-     <ol>
-      <li>
-       DO NOT use the Share Link from this window for direct download. Instead, click on the
-       <strong>
-        Link Settings
-       </strong>
-       button which will open another pop-up window.
-      </li>
-     </ol>
-     <p>
-      <img src="/static/images/static-link2.png" width="45%"/>
-     </p>
-     <ol>
-      <li>
-       In the shared link settings, at the bottom of the page, find and copy the direct link URL.
-      </li>
-     </ol>
-     <p>
-      <img src="/static/images/static-link3.png" width="45%"/>
-     </p>
-     <h2 id="adding-download-links-to-eml-files">
-      Adding download links to EML files
-     </h2>
-     <p>
-      Direct download links of any type, and static links generated from a Box account, can be inserted into an EML document to facilitate upload to the EDI Data Repository.
-     </p>
-     <h3 id="ezeml">
-      ezEML
-     </h3>
-     <p>
-      To insert a download link via
-      <a href="https://ezeml.edirepository.org/eml/">
-       ezEML
-      </a>
-      :
-     </p>
-     <ol>
-      <li>
-       Navigate to the
-       <strong>
-        Data Tables
-       </strong>
-       tab and click the
-       <strong>
-        Edit
-       </strong>
-       button next to the data table.
-      </li>
-     </ol>
-     <p>
-      <img src="/static/images/link-ezeml1.png" width="80%"/>
-     </p>
-     <ol>
-      <li>
-       Paste the link into the
-       <strong>
-        Online Distribution URL
-       </strong>
-       textbox. Remember to click
-       <strong>
-        Save and Continue
-       </strong>
-       before moving on.
-      </li>
-     </ol>
-     <p>
-      <img src="/static/images/link-ezeml2.png" width="70%"/>
-     </p>
-     <p>
-      The data table will now be associated with the provided download link. Submit to EDI via
-      <strong>
-       Send to EDI
-      </strong>
-      or download the XML document with the
-      <strong>
-       Download EML File
-      </strong>
-      button.
-     </p>
-     <blockquote>
-      <p>
-       This method can be replicated in the
-       <strong>
-        Other Entities
-       </strong>
-       tab as well.
-      </p>
-     </blockquote>
-     <h3 id="emlassemblyline">
-      EMLassemblyline
-     </h3>
-     <p>
-      To insert a download link via
-      <a href="https://ediorg.github.io/EMLassemblyline/index.html">
-       EMLassembylline
-      </a>
-      :
-     </p>
-     <ol>
-      <li>
-       Supply the link as a character string to the
-       <code>
-        data.table.url
-       </code>
-       or
-       <code>
-        other.entity.url
-       </code>
-       arguments in the
-       <a href="https://ediorg.github.io/EMLassemblyline/reference/make_eml.html">
-        <code>
-         make_eml()
-        </code>
-       </a>
-       function. To add multiple links, supply links as a vector of character strings.
-      </li>
-     </ol>
-     <p>
-      <img src="/static/images/link-eal1.png" width="70%"/>
-     </p>
-     <ol>
-      <li>
-       Run
-       <a href="https://ediorg.github.io/EMLassemblyline/reference/make_eml.html">
-        <code>
-         make_eml()
-        </code>
-       </a>
-       to associate the tables with the provided links and return an EML file.
-      </li>
-     </ol>
-     <p>
-      <img src="/static/images/link-eal2.png" width="70%"/>
-     </p>
-     <h3 id="manually-editing-xml">
-      Manually editing XML
-     </h3>
-     <p>
-      To insert download links manually:
-     </p>
-     <ol>
-      <li>
-       <p>
-        Open the XML file in a text editor. Within the &lt;dataTable&gt; (or &lt;otherEntity&gt;, &lt;spatialRaster&gt;, or &lt;spatialVector&gt;) element, add &lt;distribution&gt;, &lt;online&gt;, and &lt;url&gt; elements to the &lt;physical&gt; element.
-       </p>
-      </li>
-      <li>
-       <p>
-        Ensure that the elements are properly nested, and that the function attribute is set to "download".
-       </p>
-      </li>
-     </ol>
-     <h2 id="uploading-to-edi">
-      Uploading to EDI
-     </h2>
-     <blockquote>
-      <p>
-       If creating a data package with ezEML, the easiest way to upload to the EDI Repository is by using the
-       <strong>
-        Send to EDI
-       </strong>
-       tab.
-      </p>
-      <p>
-       If you've manually added download links to an EML file or have created a data package with EMLassemblyline, and don't have an EDI User Account, you can submit the EML document by emailing the EDI Curation Team and requesting that they upload it on your behalf. Make sure that every data file in the data package has a direct download link associated with it. There is no need to attach the data files in the email since the download links are listed.
-      </p>
-     </blockquote>
-     <p>
-      If publishing a data package via the EDI Data Portal note:
-     </p>
-     <ol>
-      <li>
-       In order to skip manual upload, all objects must have links (all or nothing).
-      </li>
-      <li>
-       Remember to
-       <strong>
-        NOT
-       </strong>
-       check the "Manually upload data" checkbox.
-      </li>
-      <li>
-       If some of the objects in the data package package are already in the EDI Repository, remember to check the
-       <strong>
-        Allow PASTA+ to skip …
-       </strong>
-       checkbox.
-      </li>
-     </ol>
-     <p>
-      <img src="/static/images/upload-link.png" width="60%"/>
-     </p>
-    </main>
-   </div>
-  </div>
- </div>
+<div metal:fill-slot="content" tal:omit-tag="True">
+<div class="sidebar-inner">
+<div class="container">
+<aside class="sidebar"><div class="sticky-sm-top"><div class="sticky-md-top"><div class="sticky-lg-top"><div class="sticky-xl-top">
+<ul>
+<li><a href="#using-box-cloud-storage">Using Box Cloud Storage</a><ul>
+<li><a href="#creating-a-box-file-request">Creating a Box File Request</a></li>
+<li><a href="#creating-a-static-download-link">Creating a static download link</a></li>
+</ul>
+</li>
+<li><a href="#adding-download-links-to-eml-files">Adding download links to EML files</a><ul>
+<li><a href="#ezeml">ezEML</a></li>
+<li><a href="#emlassemblyline">EMLassemblyline</a></li>
+<li><a href="#manually-editing-xml">Manually editing XML</a></li>
+</ul>
+</li>
+<li><a href="#uploading-to-edi">Uploading to EDI</a></li>
+</ul>
+</div></div></div></div></aside><main class="main-tutorial">
+<h1 id="uploading-with-static-data-links">Uploading with Static Data Links</h1>
+<p>A static URL resolving to a data file can be inserted into the physical/distribution element of an EML file and serve as a data source when uploading to the EDI Data Repository. This can be useful for bypassing the 500 MB size limit of manual uploads on the EDI Data Portal, for facilitating workflow automation, and for handling files that may be too large to transfer directly to a data curator.</p>
+<p><a href="https://www.box.com/">Box Cloud Storage</a> is an example service that allows for generating links that do not offer any redirects and are static, two requirements of links that are used to upload to the EDI Data Portal.</p>
+<p><img src="/static/images/download-links.png" width="15%"/></p>
+
+<h2 id="using-box-cloud-storage">Using Box Cloud Storage</h2>
+<p>Files stored on a Box Cloud Storage application can be directly downloaded via a static URL. </p>
+<blockquote>
+<p>A paid/premium Box account is required for generating direct download links or receiving files through a file request.</p>
+</blockquote>
+<h3 id="creating-a-box-file-request">Creating a Box File Request</h3>
+<p>A File Request link allows anyone (with or without a Box account) to submit files to a directory in a Box account. They offer a good solution for collecting prohibitively large data from submitters that require static links. To create a request:</p>
+<ol>
+<li>Navigate to the directory (from within the Box web application while logged into a premium account) where data files should be submitted.</li>
+<li>Click the <strong>File Request</strong> button on the right side of the screen which will open a pop-up.</li>
+</ol>
+<p><img src="/static/images/file-request1.png" width="100%"/></p>
+<ol>
+<li>On the pop-up screen, set the link to enabled. This selection should be reflected on the first <strong>File Request</strong> button pressed.</li>
+</ol>
+<p><img src="/static/images/file-request2.png" width="100%"/></p>
+<ol>
+<li>Copy the shareable link from the pop-up screen and try it in a web browser. This link should lead to a page that looks like the one below.</li>
+</ol>
+<p><img src="/static/images/file-request3.png" width="65%"/></p>
+<ol>
+<li>Share this link with a data submitter. They will not need to have a Box account to submit data to this directory.</li>
+</ol>
+<h3 id="creating-a-static-download-link">Creating a static download link</h3>
+<p>A static download link will function as a data source for the EDI Data Repository. To create a static download link:</p>
+<ol>
+<li>Navigate to the directory that contains the data file for which to create a link. Click on the link icon which will open a pop-up window.</li>
+</ol>
+<p><img src="/static/images/static-link1.png" width="100%"/></p>
+<ol>
+<li>DO NOT use the Share Link from this window for direct download. Instead, click on the <strong>Link Settings</strong> button which will open another pop-up window.</li>
+</ol>
+<p><img src="/static/images/static-link2.png" width="45%"/></p>
+<ol>
+<li>In the shared link settings, at the bottom of the page, find and copy the direct link URL. </li>
+</ol>
+<p><img src="/static/images/static-link3.png" width="45%"/></p>
+<h2 id="adding-download-links-to-eml-files">Adding download links to EML files</h2>
+<p>Direct download links of any type, and static links generated from a Box account, can be inserted into an EML document to facilitate upload to the EDI Data Repository.</p>
+<h3 id="ezeml">ezEML</h3>
+<p>To insert a download link via <a href="https://ezeml.edirepository.org/eml/">ezEML</a>:</p>
+<ol>
+<li>Navigate to the <strong>Data Tables</strong> tab and click the <strong>Edit</strong> button next to the data table.</li>
+</ol>
+<p><img src="/static/images/link-ezeml1.png" width="80%"/></p>
+<ol>
+<li>Paste the link into the <strong>Online Distribution URL</strong> textbox. Remember to click <strong>Save and Continue</strong> before moving on.</li>
+</ol>
+<p><img src="/static/images/link-ezeml2.png" width="70%"/></p>
+<p>The data table will now be associated with the provided download link. Submit to EDI via <strong>Send to EDI</strong> or download the XML document with the <strong>Download EML File</strong> button.</p>
+<blockquote>
+<p>This method can be replicated in the <strong>Other Entities</strong> tab as well. </p>
+</blockquote>
+<h3 id="emlassemblyline">EMLassemblyline</h3>
+<p>To insert a download link via <a href="https://ediorg.github.io/EMLassemblyline/index.html">EMLassembylline</a>:</p>
+<ol>
+<li>Supply the link as a character string to the <code>data.table.url</code> or <code>other.entity.url</code> arguments in the <a href="https://ediorg.github.io/EMLassemblyline/reference/make_eml.html"><code>make_eml()</code></a> function. To add multiple links, supply links as a vector of character strings.</li>
+</ol>
+<p><img src="/static/images/link-eal1.png" width="70%"/></p>
+<ol>
+<li>Run <a href="https://ediorg.github.io/EMLassemblyline/reference/make_eml.html"><code>make_eml()</code></a> to associate the tables with the provided links and return an EML file.</li>
+</ol>
+<p><img src="/static/images/link-eal2.png" width="70%"/></p>
+<h3 id="manually-editing-xml">Manually editing XML</h3>
+<p>To insert download links manually:</p>
+<ol>
+<li>
+<p>Open the XML file in a text editor. Within the &lt;dataTable&gt; (or &lt;otherEntity&gt;, &lt;spatialRaster&gt;, or &lt;spatialVector&gt;) element, add &lt;distribution&gt;, &lt;online&gt;, and &lt;url&gt; elements to the &lt;physical&gt; element.</p>
+</li>
+<li>
+<p>Ensure that the elements are properly nested, and that the function attribute is set to "download". </p>
+</li>
+</ol>
+<h2 id="uploading-to-edi">Uploading to EDI</h2>
+<blockquote>
+<p>If creating a data package with ezEML, the easiest way to upload to the EDI Repository is by using the <strong>Send to EDI</strong> tab.</p>
+<p>If you've manually added download links to an EML file or have created a data package with EMLassemblyline, and don't have an EDI User Account, you can submit the EML document by emailing the EDI Curation Team and requesting that they upload it on your behalf. Make sure that every data file in the data package has a direct download link associated with it. There is no need to attach the data files in the email since the download links are listed.</p>
+</blockquote>
+<p>If publishing a data package via the EDI Data Portal note:</p>
+<ol>
+<li>In order to skip manual upload, all objects must have links (all or nothing).</li>
+<li>Remember to <strong>NOT</strong> check the "Manually upload data" checkbox.</li>
+<li>If some of the objects in the data package package are already in the EDI Repository, remember to check the <strong>Allow PASTA+ to skip …</strong> checkbox.</li>
+</ol>
+<p><img src="/static/images/upload-link.png" width="60%"/></p>
+</main>
+</div>
+</div>
+</div>
 </div>

@@ -1,165 +1,40 @@
 <div metal:use-macro="load: ../shared/layout.html">
- <div metal:fill-slot="content" tal:omit-tag="True">
-  <div class="sidebar-inner">
-   <div class="container">
-    <aside class="sidebar">
-     <div class="sticky-sm-top">
-      <div class="sticky-md-top">
-       <div class="sticky-lg-top">
-        <div class="sticky-xl-top">
-         <ul>
-          <li>
-           <a href="#finding-data">
-            Finding data
-           </a>
-          </li>
-          <li>
-           <a href="#understanding-data">
-            Understanding data
-           </a>
-          </li>
-          <li>
-           <a href="#accessing-data">
-            Accessing data
-           </a>
-          </li>
-          <li>
-           <a href="#citing-a-data-package">
-            Citing a data package
-           </a>
-          </li>
-          <li>
-           <a href="#publishing-a-derived-data-package">
-            Publishing a derived data package
-           </a>
-          </li>
-          <li>
-           <a href="#reporting-issues">
-            Reporting issues
-           </a>
-          </li>
-          <li>
-           <a href="#event-notifications">
-            Event notifications
-           </a>
-          </li>
-         </ul>
-        </div>
-       </div>
-      </div>
-     </div>
-    </aside>
-    <main class="main-tutorial">
-     <h1 id="resources-for-data-users">
-      Resources for Data Users
-     </h1>
-     <p>
-      Data users search, access, integrate, and cite data from the EDI Repository to contextualize new research, synthesize data, ask new questions of old data, etc. Typically, the use of data from the EDI Repository results in the publication of a derived data package in which the data sources are referenced by provenance metadata.
-     </p>
-     <p>
-      The EDI Data Repository holds a thematically diverse collection of data with over 7000 unique
-      <a href="/resources/the-data-package">
-       data packages
-      </a>
-      ranging in temporal extent from days to decades and with a global spatial extent, though mostly concentrated in the United States. More than 99 percent of data packages are openly accessible and downloadable for reuse.
-     </p>
-     <h2 id="finding-data">
-      Finding data
-     </h2>
-     <p>
-      Data packages in the EDI Data Repository are findable by the EDI, DataONE, and Google Dataset Search Engines. The EDI Search Engine supports the most detailed queries, DataONE offers search across several Earth and environmental data repositories, and Google provides search across all disciplinary boundaries. For more information see
-      <a href="/resources/finding-data">
-       Finding Data
-      </a>
-      .
-     </p>
-     <p>
-      Analysis ready data, from EDI
-      <a href="/resources/thematic-standardization">
-       Thematic Standardization
-      </a>
-      projects, can be discovered in the EDI Search Engine and the supporting R packages.
-     </p>
-     <h2 id="understanding-data">
-      Understanding data
-     </h2>
-     <p>
-      <a href="/resources/data-package-pages">
-       Data package pages
-      </a>
-      provide information rich metadata on the original purpose, collection methods, measurement variables, and other important metadata. Data package pages also provide access to the EDI Data Explorer (DeX) and data import scripts which enable a quick interactive view into a dataset thereby deepening understanding beyond the metadata alone. For more information see
-      <a href="/resources/data-exploration">
-       Data Exploration
-      </a>
-      .
-     </p>
-     <p>
-      Together the data package metadata and exploration tools enable
-      <a href="/resources/assessing-fitness-for-use">
-       assessment of fitness for use
-      </a>
-      . If any questions arise, reach out to the data package contact for clarification. Resolving uncertainties leads to improved metadata and quality of data published in the EDI Repository as a whole.
-     </p>
-     <h2 id="accessing-data">
-      Accessing data
-     </h2>
-     <p>
-      Data packages and their contents can be accessed manually through the EDI Data Portal and programmatically via the REST API, thereby supporting both manual and automated scientific workflows. For more information see
-      <a href="/resources/accessing-data">
-       Accessing Data
-      </a>
-      .
-     </p>
-     <h2 id="citing-a-data-package">
-      Citing a data package
-     </h2>
-     <p>
-      Along with ensuring proper attribution is paid to the original data author, properly citing data in publications and other datasets increases findability, encourages data reuse, and enables reliable tracking of data citation metrics. For more information see
-      <a href="/resources/citing-data">
-       Citing a Data Package
-      </a>
-      .
-     </p>
-     <h2 id="publishing-a-derived-data-package">
-      Publishing a derived data package
-     </h2>
-     <p>
-      Derived data incorporate one or more published data sources, from EDI or elsewhere, and include the original values or a derived form of them. Creating and publishing a derived data package to the EDI Data Repository follows the same steps as publishing a new data package, but includes provenance metadata describing each data source thereby informing future users to its creation and providing a basis for attribution back to the source data author. For more information see the
-      <a href="/resources/resources-for-data-authors">
-       Resources for Data Authors
-      </a>
-      and
-      <a href="/resources/provenance-metadata">
-       Provenance Metadata
-      </a>
-      pages.
-     </p>
-     <h2 id="reporting-issues">
-      Reporting issues
-     </h2>
-     <p>
-      Reporting issues improves data quality for everyone. Report issues to the points of contact listed on the
-      <a href="/resources/data-package-pages">
-       data package pages
-      </a>
-      . If you cannot reach the listed contact then please
-      <a href="/support/contact-us">
-       contact EDI
-      </a>
-      to report the issue.
-     </p>
-     <h2 id="event-notifications">
-      Event notifications
-     </h2>
-     <p>
-      Event notifications allow users to subscribe to events in the EDI Repository and receive notification when the event occurs (e.g. the creation of a new data package). For more information see
-      <a href="/resources/event-notifications">
-       Event Notifications
-      </a>
-      .
-     </p>
-    </main>
-   </div>
-  </div>
- </div>
+<div metal:fill-slot="content" tal:omit-tag="True">
+<div class="sidebar-inner">
+<div class="container">
+<aside class="sidebar"><div class="sticky-sm-top"><div class="sticky-md-top"><div class="sticky-lg-top"><div class="sticky-xl-top">
+<ul>
+<li><a href="#finding-data">Finding data</a></li>
+<li><a href="#understanding-data">Understanding data</a></li>
+<li><a href="#accessing-data">Accessing data</a></li>
+<li><a href="#citing-a-data-package">Citing a data package</a></li>
+<li><a href="#publishing-a-derived-data-package">Publishing a derived data package</a></li>
+<li><a href="#reporting-issues">Reporting issues</a></li>
+<li><a href="#event-notifications">Event notifications</a></li>
+</ul>
+</div></div></div></div></aside><main class="main-tutorial">
+<h1 id="resources-for-data-users">Resources for Data Users</h1>
+<p>Data users search, access, integrate, and cite data from the EDI Repository to contextualize new research, synthesize data, ask new questions of old data, etc. Typically, the use of data from the EDI Repository results in the publication of a derived data package in which the data sources are referenced by provenance metadata.</p>
+<p>The EDI Data Repository holds a thematically diverse collection of data with over 7000 unique <a href="/resources/the-data-package">data packages</a> ranging in temporal extent from days to decades and with a global spatial extent, though mostly concentrated in the United States. More than 99 percent of data packages are openly accessible and downloadable for reuse.</p>
+
+<h2 id="finding-data">Finding data</h2>
+<p>Data packages in the EDI Data Repository are findable by the EDI, DataONE, and Google Dataset Search Engines. The EDI Search Engine supports the most detailed queries, DataONE offers search across several Earth and environmental data repositories, and Google provides search across all disciplinary boundaries. For more information see <a href="/resources/finding-data">Finding Data</a>.</p>
+<p>Analysis ready data, from EDI <a href="/resources/thematic-standardization">Thematic Standardization</a> projects, can be discovered in the EDI Search Engine and the supporting R packages.</p>
+<h2 id="understanding-data">Understanding data</h2>
+<p><a href="/resources/data-package-pages">Data package pages</a> provide information rich metadata on the original purpose, collection methods, measurement variables, and other important metadata. Data package pages also provide access to the EDI Data Explorer (DeX) and data import scripts which enable a quick interactive view into a dataset thereby deepening understanding beyond the metadata alone. For more information see <a href="/resources/data-exploration">Data Exploration</a>.</p>
+<p>Together the data package metadata and exploration tools enable <a href="/resources/assessing-fitness-for-use">assessment of fitness for use</a>. If any questions arise, reach out to the data package contact for clarification. Resolving uncertainties leads to improved metadata and quality of data published in the EDI Repository as a whole.</p>
+<h2 id="accessing-data">Accessing data</h2>
+<p>Data packages and their contents can be accessed manually through the EDI Data Portal and programmatically via the REST API, thereby supporting both manual and automated scientific workflows. For more information see <a href="/resources/accessing-data">Accessing Data</a>.</p>
+<h2 id="citing-a-data-package">Citing a data package</h2>
+<p>Along with ensuring proper attribution is paid to the original data author, properly citing data in publications and other datasets increases findability, encourages data reuse, and enables reliable tracking of data citation metrics. For more information see <a href="/resources/citing-data">Citing a Data Package</a>.</p>
+<h2 id="publishing-a-derived-data-package">Publishing a derived data package</h2>
+<p>Derived data incorporate one or more published data sources, from EDI or elsewhere, and include the original values or a derived form of them. Creating and publishing a derived data package to the EDI Data Repository follows the same steps as publishing a new data package, but includes provenance metadata describing each data source thereby informing future users to its creation and providing a basis for attribution back to the source data author. For more information see the <a href="/resources/resources-for-data-authors">Resources for Data Authors</a> and <a href="/resources/provenance-metadata">Provenance Metadata</a> pages.</p>
+<h2 id="reporting-issues">Reporting issues</h2>
+<p>Reporting issues improves data quality for everyone. Report issues to the points of contact listed on the <a href="/resources/data-package-pages">data package pages</a>. If you cannot reach the listed contact then please <a href="/support/contact-us">contact EDI</a> to report the issue.</p>
+<h2 id="event-notifications">Event notifications</h2>
+<p>Event notifications allow users to subscribe to events in the EDI Repository and receive notification when the event occurs (e.g. the creation of a new data package). For more information see <a href="/resources/event-notifications">Event Notifications</a>.</p>
+</main>
+</div>
+</div>
+</div>
 </div>

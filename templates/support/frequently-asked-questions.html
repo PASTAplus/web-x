@@ -1,177 +1,49 @@
 <div metal:use-macro="load: ../shared/layout.html">
- <div metal:fill-slot="content" tal:omit-tag="True">
-  <div class="sidebar-inner">
-   <div class="container">
-    <aside class="sidebar">
-     <div class="sticky-sm-top">
-      <div class="sticky-md-top">
-       <div class="sticky-lg-top">
-        <div class="sticky-xl-top">
-         <ul>
-          <li>
-           <a href="#why-publish-my-data">
-            Why publish my data?
-           </a>
-          </li>
-          <li>
-           <a href="#why-publish-my-data-in-edi">
-            Why publish my data in EDI?
-           </a>
-          </li>
-          <li>
-           <a href="#are-my-data-appropriate-for-edi">
-            Are my data appropriate for EDI?
-           </a>
-          </li>
-          <li>
-           <a href="#what-services-does-edi-offer">
-            What services does EDI offer?
-           </a>
-          </li>
-          <li>
-           <a href="#how-much-do-edi-services-cost">
-            How much do EDI services cost?
-           </a>
-          </li>
-          <li>
-           <a href="#is-there-a-limit-to-the-amount-of-data-i-may-archive">
-            Is there a limit to the amount of data I may archive?
-           </a>
-          </li>
-          <li>
-           <a href="#how-do-i-obtain-an-edi-user-account">
-            How do I obtain an EDI user account?
-           </a>
-          </li>
-          <li>
-           <a href="#what-will-happen-to-my-data-if-edi-loses-funding">
-            What will happen to my data if EDI loses funding?
-           </a>
-          </li>
-          <li>
-           <a href="#why-should-i-spend-the-time-creating-quality-metadata">
-            Why should I spend the time creating quality metadata?
-           </a>
-          </li>
-          <li>
-           <a href="#what-metadata-standards-does-the-edi-repository-accept">
-            What metadata standards does the EDI repository accept?
-           </a>
-          </li>
-          <li>
-           <a href="#is-there-an-api-for-the-edi-data-repository">
-            Is there an API for the EDI Data Repository?
-           </a>
-          </li>
-         </ul>
-        </div>
-       </div>
-      </div>
-     </div>
-    </aside>
-    <main class="main-tutorial">
-     <h1 id="frequently-asked-questions">
-      Frequently Asked Questions
-     </h1>
-     <h2 id="why-publish-my-data">
-      Why publish my data?
-     </h2>
-     <p>
-      Data are first class research objects, the publication of which provide immediate benefit to authors in terms of elevating their scholarly profile and longer-term benefits to the scientific institution in terms of more effective and trustworthy knowledge acquisition. For more see
-      <a href="/resources/why-publish-data">
-       Why Publish Data
-      </a>
-      .
-     </p>
-     <h2 id="why-publish-my-data-in-edi">
-      Why publish my data in EDI?
-     </h2>
-     <p>
-      The EDI Data Repository is a reliable, registered, and certified trustworthy data repository for ecological/environmental research data. For many more reasons why to publish in EDI see our list of
-      <a href="/resources/services">
-       services
-      </a>
-      .
-     </p>
-     <h2 id="are-my-data-appropriate-for-edi">
-      Are my data appropriate for EDI?
-     </h2>
-     <p>
-      The EDI Data Repository accepts ecological and environmental data. Data typically found in the repository include: observational data, experimental data, data used in a scientific article, synthesis data, and model outputs. For more information see the
-      <a href="/resources/types-of-contributions">
-       accepted types of contributions
-      </a>
-      .
-     </p>
-     <h2 id="what-services-does-edi-offer">
-      What services does EDI offer?
-     </h2>
-     <p>
-      A reliable, registered and certified trustworthy data repository, data curation assistance, data management consultation and training. See our list of
-      <a href="/resources/services">
-       services
-      </a>
-      for more.
-     </p>
-     <h2 id="how-much-do-edi-services-cost">
-      How much do EDI services cost?
-     </h2>
-     <p>
-      Both, the EDI Data Repository and our data curation services are currently free of cost for the submission of datasets. Caveats are large data volumes and extensive curatorial support. If you anticipate the need to archive large volumes of data, then we may have to negotiate some cost sharing agreement orif you would like to take advantage of skilled data management support for your project, please contact us for more information.
-     </p>
-     <h2 id="is-there-a-limit-to-the-amount-of-data-i-may-archive">
-      Is there a limit to the amount of data I may archive?
-     </h2>
-     <p>
-      No. However, large data volumes will require planning and may require some cost sharing between your project and EDI.
-     </p>
-     <h2 id="how-do-i-obtain-an-edi-user-account">
-      How do I obtain an EDI user account?
-     </h2>
-     <p>
-      EDI user accounts are for data managers providing curation services to a research group and uploading directly to the EDI Data Repository. Please contact us if you feel you are such a data manager.
-     </p>
-     <p>
-      An EDI user account is not required to submit data to the EDI Data Repository. Google, ORCID, and GitHub account credentials provide access to our online metadata editor
-      <a href="https://ezeml.edirepository.org/eml/">
-       ezEML
-      </a>
-      , which may be used to submit data to EDI. If you do not have any of these accounts then please contact us for guidance on how to proceed data submission.
-     </p>
-     <h2 id="what-will-happen-to-my-data-if-edi-loses-funding">
-      What will happen to my data if EDI loses funding?
-     </h2>
-     <p>
-      The Dryad Data Repository will provide preservation of all EDI data in the unlikely event our project loses funding.
-     </p>
-     <h2 id="why-should-i-spend-the-time-creating-quality-metadata">
-      Why should I spend the time creating quality metadata?
-     </h2>
-     <p>
-      A dataset has little value if it cannot be understood. The relatively high metadata standard expected by the EDI Data Repository ensures the data can be utilized by your future self and others for further research. Furthermore, by creating metadata in the standardized EML format, you ensure the data is discoverable and can be easily translated to other metadata standards if necessary. We realize that other repositories require less metadata, however, the more metadata the better the data can be reused appropriately. We offer user-friendly tools and one-on-one support to help you create quality metadata.
-     </p>
-     <h2 id="what-metadata-standards-does-the-edi-repository-accept">
-      What metadata standards does the EDI repository accept?
-     </h2>
-     <p>
-      The EDI Data Repository uses the
-      <a href="/resources/creating-metadata-for-publication#the-ecological-metadata-language-eml">
-       Ecological Metadata Language (EML)
-      </a>
-      standard. If your metadata are in a different standard, and you would like to convert to EML, please contact us. We have methods and tools to translate metadata of other standards to EML.
-     </p>
-     <h2 id="is-there-an-api-for-the-edi-data-repository">
-      Is there an API for the EDI Data Repository?
-     </h2>
-     <p>
-      Yes! Anything you can manually do in the repository can also be done via the EDI
-      <a href="/resources/rest-api">
-       REST API
-      </a>
-      .
-     </p>
-    </main>
-   </div>
-  </div>
- </div>
+<div metal:fill-slot="content" tal:omit-tag="True">
+<div class="sidebar-inner">
+<div class="container">
+<aside class="sidebar"><div class="sticky-sm-top"><div class="sticky-md-top"><div class="sticky-lg-top"><div class="sticky-xl-top">
+<ul>
+<li><a href="#why-publish-my-data">Why publish my data?</a></li>
+<li><a href="#why-publish-my-data-in-edi">Why publish my data in EDI?</a></li>
+<li><a href="#are-my-data-appropriate-for-edi">Are my data appropriate for EDI?</a></li>
+<li><a href="#what-services-does-edi-offer">What services does EDI offer?</a></li>
+<li><a href="#how-much-do-edi-services-cost">How much do EDI services cost?</a></li>
+<li><a href="#is-there-a-limit-to-the-amount-of-data-i-may-archive">Is there a limit to the amount of data I may archive?</a></li>
+<li><a href="#how-do-i-obtain-an-edi-user-account">How do I obtain an EDI user account?</a></li>
+<li><a href="#what-will-happen-to-my-data-if-edi-loses-funding">What will happen to my data if EDI loses funding?</a></li>
+<li><a href="#why-should-i-spend-the-time-creating-quality-metadata">Why should I spend the time creating quality metadata?</a></li>
+<li><a href="#what-metadata-standards-does-the-edi-repository-accept">What metadata standards does the EDI repository accept?</a></li>
+<li><a href="#is-there-an-api-for-the-edi-data-repository">Is there an API for the EDI Data Repository?</a></li>
+</ul>
+</div></div></div></div></aside><main class="main-tutorial">
+<h1 id="frequently-asked-questions">Frequently Asked Questions</h1>
+
+<h2 id="why-publish-my-data">Why publish my data?</h2>
+<p>Data are first class research objects, the publication of which provide immediate benefit to authors in terms of elevating their scholarly profile and longer-term benefits to the scientific institution in terms of more effective and trustworthy knowledge acquisition. For more see <a href="/resources/why-publish-data">Why Publish Data</a>.</p>
+<h2 id="why-publish-my-data-in-edi">Why publish my data in EDI?</h2>
+<p>The EDI Data Repository is a reliable, registered, and certified trustworthy data repository for ecological/environmental research data. For many more reasons why to publish in EDI see our list of <a href="/resources/services">services</a>.</p>
+<h2 id="are-my-data-appropriate-for-edi">Are my data appropriate for EDI?</h2>
+<p>The EDI Data Repository accepts ecological and environmental data. Data typically found in the repository include: observational data, experimental data, data used in a scientific article, synthesis data, and model outputs. For more information see the <a href="/resources/types-of-contributions">accepted types of contributions</a>.</p>
+<h2 id="what-services-does-edi-offer">What services does EDI offer?</h2>
+<p>A reliable, registered and certified trustworthy data repository, data curation assistance, data management consultation and training. See our list of <a href="/resources/services">services</a> for more.</p>
+<h2 id="how-much-do-edi-services-cost">How much do EDI services cost?</h2>
+<p>Both, the EDI Data Repository and our data curation services are currently free of cost for the submission of datasets. Caveats are large data volumes and extensive curatorial support. If you anticipate the need to archive large volumes of data, then we may have to negotiate some cost sharing agreement orif you would like to take advantage of skilled data management support for your project, please contact us for more information.</p>
+<h2 id="is-there-a-limit-to-the-amount-of-data-i-may-archive">Is there a limit to the amount of data I may archive?</h2>
+<p>No. However, large data volumes will require planning and may require some cost sharing between your project and EDI.</p>
+<h2 id="how-do-i-obtain-an-edi-user-account">How do I obtain an EDI user account?</h2>
+<p>EDI user accounts are for data managers providing curation services to a research group and uploading directly to the EDI Data Repository. Please contact us if you feel you are such a data manager. </p>
+<p>An EDI user account is not required to submit data to the EDI Data Repository. Google, ORCID, and GitHub account credentials provide access to our online metadata editor <a href="https://ezeml.edirepository.org/eml/">ezEML</a>, which may be used to submit data to EDI. If you do not have any of these accounts then please contact us for guidance on how to proceed data submission.</p>
+<h2 id="what-will-happen-to-my-data-if-edi-loses-funding">What will happen to my data if EDI loses funding?</h2>
+<p>The Dryad Data Repository will provide preservation of all EDI data in the unlikely event our project loses funding.</p>
+<h2 id="why-should-i-spend-the-time-creating-quality-metadata">Why should I spend the time creating quality metadata?</h2>
+<p>A dataset has little value if it cannot be understood. The relatively high metadata standard expected by the EDI Data Repository ensures the data can be utilized by your future self and others for further research. Furthermore, by creating metadata in the standardized EML format, you ensure the data is discoverable and can be easily translated to other metadata standards if necessary. We realize that other repositories require less metadata, however, the more metadata the better the data can be reused appropriately. We offer user-friendly tools and one-on-one support to help you create quality metadata.</p>
+<h2 id="what-metadata-standards-does-the-edi-repository-accept">What metadata standards does the EDI repository accept?</h2>
+<p>The EDI Data Repository uses the <a href="/resources/creating-metadata-for-publication#the-ecological-metadata-language-eml">Ecological Metadata Language (EML)</a> standard. If your metadata are in a different standard, and you would like to convert to EML, please contact us. We have methods and tools to translate metadata of other standards to EML.</p>
+<h2 id="is-there-an-api-for-the-edi-data-repository">Is there an API for the EDI Data Repository?</h2>
+<p>Yes! Anything you can manually do in the repository can also be done via the EDI <a href="/resources/rest-api">REST API</a>.</p>
+</main>
+</div>
+</div>
+</div>
 </div>

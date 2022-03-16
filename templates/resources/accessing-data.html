@@ -1,208 +1,52 @@
 <div metal:use-macro="load: ../shared/layout.html">
- <div metal:fill-slot="content" tal:omit-tag="True">
-  <div class="sidebar-inner">
-   <div class="container">
-    <aside class="sidebar">
-     <div class="sticky-sm-top">
-      <div class="sticky-md-top">
-       <div class="sticky-lg-top">
-        <div class="sticky-xl-top">
-         <ul>
-          <li>
-           <a href="#data-portal">
-            Data Portal
-           </a>
-           <ul>
-            <li>
-             <a href="#point-and-click">
-              Point and click
-             </a>
-            </li>
-            <li>
-             <a href="#data-import-scripts">
-              Data import scripts
-             </a>
-            </li>
-           </ul>
-          </li>
-          <li>
-           <a href="#ediutils">
-            EDIutils
-           </a>
-          </li>
-          <li>
-           <a href="#accessing-embargoed-data">
-            Accessing embargoed data
-           </a>
-          </li>
-         </ul>
-        </div>
-       </div>
-      </div>
-     </div>
-    </aside>
-    <main class="main-tutorial">
-     <h1 id="accessing-data">
-      Accessing Data
-     </h1>
-     <p>
-      Data packages and their contents can be accessed through the EDI Data Portal, EDIutils R Package, and the REST API. These options support scientific workflows driven by manual human effort and automated machine routines.
-     </p>
-     <p>
-      <img src="/static/images/access.png" width="30%"/>
-     </p>
-     <h2 id="data-portal">
-      Data Portal
-     </h2>
-     <p>
-      The
-      <a href="https://portal.edirepository.org/nis/home.jsp">
-       EDI Data Portal
-      </a>
-      provides data access through a user-friendly web browser interface.
-     </p>
-     <h3 id="point-and-click">
-      Point and click
-     </h3>
-     <p>
-      Single data objects or the entire data package can be downloaded as files:
-     </p>
-     <ol>
-      <li>
-       From a
-       <a href="/resources/data-package-pages">
-        data package landing page
-       </a>
-       , navigate to the
-       <strong>
-        Resources
-       </strong>
-       section:
-       <img src="/static/images/access-resources.png" width="65%"/>
-      </li>
-      <li>
-       Download individual resources by clicking the links under
-       <strong>
-        Download Data
-       </strong>
-       .
-      </li>
-      <li>
-       Use the
-       <strong>
-        Download Zip Archive
-       </strong>
-       button to download the entire data package.
-      </li>
-     </ol>
-     <h3 id="data-import-scripts">
-      Data import scripts
-     </h3>
-     <p>
-      Data import scripts, read data directly from the EDI Repository into common programming language workspaces. This option supports reproducible research by accessing the data directly and reducing the possibility of errors propagating through local files.
-     </p>
-     <ol>
-      <li>
-       Navigate to the
-       <strong>
-        Code Generation
-       </strong>
-       section of a data package landing page.
-      </li>
-      <li>
-       Select the language of interest (R, Python, MATLAB, etc).
-      </li>
-      <li>
-       Download the script that is generated as a file, or copy and paste the text into the development environment of the language (e.g. RStudio).
-      </li>
-     </ol>
-     <h2 id="ediutils">
-      EDIutils
-     </h2>
-     <p>
-      The
-      <a href="https://ediorg.github.io/EDIutils/">
-       EDIutils R package
-      </a>
-      allows data to be read directly from the EDI Repository into the R environment. This option serves a similar use case as the data import scripts but provides full access to the
-      <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/about.html">
-       REST API
-      </a>
-      , which is useful when constructing automated workflows.
-     </p>
-     <ol>
-      <li>
-       Download the metadata of a data package using the
-       <a href="https://ediorg.github.io/EDIutils/reference/read_metadata.html">
-        <code>
-         read_metadata()
-        </code>
-       </a>
-       function.
-      </li>
-      <li>
-       Download individual resources from a data package using the
-       <a href="https://ediorg.github.io/EDIutils/reference/read_data_entity.html">
-        <code>
-         read_data_entity()
-        </code>
-       </a>
-       function.
-      </li>
-      <li>
-       Download an entire data package as a zip archive using the
-       <a href="https://ediorg.github.io/EDIutils/reference/create_data_package_archive.html">
-        <code>
-         create_data_package_archive()
-        </code>
-       </a>
-       and
-       <a href="https://ediorg.github.io/EDIutils/reference/read_data_package_archive.html">
-        <code>
-         read_data_package_archive()
-        </code>
-       </a>
-       functions.
-      </li>
-     </ol>
-     <p>
-      See the
-      <a href="https://ediorg.github.io/EDIutils/articles/search_and_access.html">
-       Search and Access Data vignette
-      </a>
-      for examples.
-     </p>
-     <p>
-      For a language-agnostic solution, see the REST API documentation on
-      <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/pasta_api/data_package_manager_api.html#read-metadata">
-       Read Metadata
-      </a>
-      ,
-      <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/pasta_api/data_package_manager_api.html#read-data-entity">
-       Read Data Entity
-      </a>
-      ,
-      <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/pasta_api/data_package_manager_api.html#create-data-package-archive">
-       Create Data Package Archive
-      </a>
-      , and
-      <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/pasta_api/data_package_manager_api.html#read-data-package-archive-1">
-       Read Data Package Archive
-      </a>
-      .
-     </p>
-     <h2 id="accessing-embargoed-data">
-      Accessing embargoed data
-     </h2>
-     <p>
-      Embargoed data can be accessed by users who are authorized according to the &lt;access&gt; element of the EML file. Users should reach out directly to the contact listed on the data package for access to embargoed data. If the contact is unresponsive,
-      <a href="/support/contact-us">
-       contact EDI
-      </a>
-      for assistance.
-     </p>
-    </main>
-   </div>
-  </div>
- </div>
+<div metal:fill-slot="content" tal:omit-tag="True">
+<div class="sidebar-inner">
+<div class="container">
+<aside class="sidebar"><div class="sticky-sm-top"><div class="sticky-md-top"><div class="sticky-lg-top"><div class="sticky-xl-top">
+<ul>
+<li><a href="#data-portal">Data Portal</a><ul>
+<li><a href="#point-and-click">Point and click</a></li>
+<li><a href="#data-import-scripts">Data import scripts</a></li>
+</ul>
+</li>
+<li><a href="#ediutils">EDIutils</a></li>
+<li><a href="#accessing-embargoed-data">Accessing embargoed data</a></li>
+</ul>
+</div></div></div></div></aside><main class="main-tutorial">
+<h1 id="accessing-data">Accessing Data</h1>
+<p>Data packages and their contents can be accessed through the EDI Data Portal, EDIutils R Package, and the REST API. These options support scientific workflows driven by manual human effort and automated machine routines.</p>
+<p><img src="/static/images/access.png" width="30%"/></p>
+
+<h2 id="data-portal">Data Portal</h2>
+<p>The <a href="https://portal.edirepository.org/nis/home.jsp">EDI Data Portal</a> provides data access through a user-friendly web browser interface.</p>
+<h3 id="point-and-click">Point and click</h3>
+<p>Single data objects or the entire data package can be downloaded as files:</p>
+<ol>
+<li>From a <a href="/resources/data-package-pages">data package landing page</a>, navigate to the <strong>Resources</strong> section:
+<img src="/static/images/access-resources.png" width="65%"/></li>
+<li>Download individual resources by clicking the links under <strong>Download Data</strong>.</li>
+<li>Use the <strong>Download Zip Archive</strong> button to download the entire data package.</li>
+</ol>
+<h3 id="data-import-scripts">Data import scripts</h3>
+<p>Data import scripts, read data directly from the EDI Repository into common programming language workspaces. This option supports reproducible research by accessing the data directly and reducing the possibility of errors propagating through local files.</p>
+<ol>
+<li>Navigate to the <strong>Code Generation</strong> section of a data package landing page. </li>
+<li>Select the language of interest (R, Python, MATLAB, etc).</li>
+<li>Download the script that is generated as a file, or copy and paste the text into the development environment of the language (e.g. RStudio).</li>
+</ol>
+<h2 id="ediutils">EDIutils</h2>
+<p>The <a href="https://ediorg.github.io/EDIutils/">EDIutils R package</a> allows data to be read directly from the EDI Repository into the R environment. This option serves a similar use case as the data import scripts but provides full access to the <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/about.html">REST API</a>, which is useful when constructing automated workflows.</p>
+<ol>
+<li>Download the metadata of a data package using the <a href="https://ediorg.github.io/EDIutils/reference/read_metadata.html"><code>read_metadata()</code></a> function.</li>
+<li>Download individual resources from a data package using the <a href="https://ediorg.github.io/EDIutils/reference/read_data_entity.html"><code>read_data_entity()</code></a> function.</li>
+<li>Download an entire data package as a zip archive using the <a href="https://ediorg.github.io/EDIutils/reference/create_data_package_archive.html"><code>create_data_package_archive()</code></a> and <a href="https://ediorg.github.io/EDIutils/reference/read_data_package_archive.html"><code>read_data_package_archive()</code></a> functions.</li>
+</ol>
+<p>See the <a href="https://ediorg.github.io/EDIutils/articles/search_and_access.html">Search and Access Data vignette</a> for examples.</p>
+<p>For a language-agnostic solution, see the REST API documentation on <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/pasta_api/data_package_manager_api.html#read-metadata">Read Metadata</a>, <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/pasta_api/data_package_manager_api.html#read-data-entity">Read Data Entity</a>, <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/pasta_api/data_package_manager_api.html#create-data-package-archive">Create Data Package Archive</a>, and <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/pasta_api/data_package_manager_api.html#read-data-package-archive-1">Read Data Package Archive</a>.</p>
+<h2 id="accessing-embargoed-data">Accessing embargoed data</h2>
+<p>Embargoed data can be accessed by users who are authorized according to the &lt;access&gt; element of the EML file. Users should reach out directly to the contact listed on the data package for access to embargoed data. If the contact is unresponsive, <a href="/support/contact-us">contact EDI</a> for assistance.</p>
+</main>
+</div>
+</div>
+</div>
 </div>
