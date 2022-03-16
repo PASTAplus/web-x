@@ -79,8 +79,8 @@
       </a>
       in the EDI Data Repository can be done manually via the EDI Data Portal, or programmatically using the EDIutils R package or the REST API. Across these three methods, the same general pattern is always followed: login, reserve a data package identifier, evaluate the data package, and publish the data package.
      </p>
-     <p style="text-align: center">
-      <img alt="publish" src="/static/images/publish.png" style="max-height: 10vmin;"/>
+     <p>
+      <img src="/static/images/publish.png" width="8%"/>
      </p>
      <blockquote>
       <p>
@@ -123,7 +123,7 @@
       button and enter EDI account credentials.
      </p>
      <p>
-      <img alt="" src="/static/images/login-portal.png"/>
+      <img src="/static/images/login-portal.png" width="80%"/>
      </p>
      <h3 id="reserving-a-data-package-identifier">
       Reserving a data package identifier
@@ -144,7 +144,7 @@
       button to create the reservation.
      </p>
      <p>
-      <img alt="" src="/static/images/reserve-package-id-portal.png"/>
+      <img src="/static/images/reserve-package-id-portal.png" width="80%"/>
      </p>
      <p>
       Add the reserved identifier to the EML metadata document of the data package to be published. Identifiers can be added in the
@@ -160,7 +160,7 @@
        package.id
       </code>
       parameter of the
-      <a href="https://ediorg.github.io/EMLassemblyline/reference/make_eml">
+      <a href="https://ediorg.github.io/EMLassemblyline/reference/make_eml.html">
        <code>
         make_eml()
        </code>
@@ -178,7 +178,7 @@
       page:
      </p>
      <p>
-      <img alt="" src="/static/images/eval-upload-dropdown-portal.png"/>
+      <img src="/static/images/eval-upload-dropdown-portal.png" width="80%"/>
      </p>
      <ol>
       <li>
@@ -200,7 +200,7 @@
       </li>
      </ol>
      <p>
-      <img alt="" src="/static/images/evaluate-manual-upload.png"/>
+      <img src="/static/images/evaluate-manual-upload.png" width="80%"/>
      </p>
      <ol>
       <li>
@@ -212,7 +212,7 @@
       </li>
      </ol>
      <p>
-      <img alt="" src="/static/images/evaluate-manual-upload-page.png"/>
+      <img src="/static/images/evaluate-manual-upload-page.png" width="95%"/>
      </p>
      <blockquote>
       <p>
@@ -260,7 +260,7 @@
       </li>
      </ol>
      <p>
-      <img alt="" src="/static/images/upload-manual-upload.png"/>
+      <img src="/static/images/upload-manual-upload.png" width="80%"/>
      </p>
      <ol>
       <li>
@@ -268,7 +268,7 @@
       </li>
      </ol>
      <p>
-      <img alt="" src="/static/images/confirm-upload.png"/>
+      <img src="/static/images/confirm-upload.png" width="45%"/>
      </p>
      <ol>
       <li>
@@ -291,7 +291,7 @@
       </li>
      </ol>
      <p>
-      <img alt="" src="/static/images/successful-upload.png"/>
+      <img src="/static/images/successful-upload.png" width="85%"/>
      </p>
      <blockquote>
       <p>
@@ -315,19 +315,19 @@
      </h2>
      <p>
       Publishing with the
-      <a href="https://ediorg.github.io/EDIutils/index">
+      <a href="https://ediorg.github.io/EDIutils/index.html">
        EDIutils
       </a>
       R package allows each step of the process to be executed from an R environment. For a language-agnostic solution, see the REST API documentation for
-      <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/pasta_api/data_package_manager_api#create-reservation">
+      <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/pasta_api/data_package_manager_api.html#create-reservation">
        Create Reservation
       </a>
       ,
-      <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/pasta_api/data_package_manager_api#evaluate-data-package">
+      <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/pasta_api/data_package_manager_api.html#evaluate-data-package">
        Evaluate Data Package
       </a>
       , and
-      <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/pasta_api/data_package_manager_api#create-data-package">
+      <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/pasta_api/data_package_manager_api.html#create-data-package">
        Create Data Package
       </a>
       .
@@ -346,7 +346,7 @@
      </h3>
      <p>
       Use the
-      <a href="https://ediorg.github.io/EDIutils/reference/login">
+      <a href="https://ediorg.github.io/EDIutils/reference/login.html">
        <code>
         login()
        </code>
@@ -358,7 +358,7 @@
      </h3>
      <p>
       Use the
-      <a href="https://ediorg.github.io/EDIutils/reference/create_reservation">
+      <a href="https://ediorg.github.io/EDIutils/reference/create_reservation.html">
        <code>
         create_reservation()
        </code>
@@ -370,7 +370,7 @@
      </h3>
      <p>
       Use the
-      <a href="https://ediorg.github.io/EDIutils/reference/evaluate_data_package">
+      <a href="https://ediorg.github.io/EDIutils/reference/evaluate_data_package.html">
        <code>
         evaluate_data_package()
        </code>
@@ -386,7 +386,7 @@
      </h3>
      <p>
       Use the
-      <a href="https://ediorg.github.io/EDIutils/reference/create_data_package">
+      <a href="https://ediorg.github.io/EDIutils/reference/create_data_package.html">
        <code>
         create_data_package()
        </code>
@@ -395,7 +395,7 @@
      </p>
      <p>
       This function returns a "transaction identifier" which can be passed to
-      <a href="https://ediorg.github.io/EDIutils/reference/check_status_create">
+      <a href="https://ediorg.github.io/EDIutils/reference/check_status_create.html">
        <code>
         check_status_create()
        </code>

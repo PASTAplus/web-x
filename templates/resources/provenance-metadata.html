@@ -54,7 +54,7 @@
       Provenance is the origin or history of data and is an important piece of metadata to make research transparent and reproducible. Several elements in metadata are involved in documenting data provenance. First and foremost is a detailed description of the methods by which the data were collected and created. Data processing scripts (R, Python, etc.) provide very detailed provenance information and can be published in a data package. For the special case of a derived dataset, i.e. data that is compiled from one or more other 'original' datasets, a detailed list of those original datasets should be included. Listing such datasets will give the original data creator proper credit, even when more datasets are used than can reasonably be cited in a resulting paper.
      </p>
      <p>
-      <img alt="" src="/static/images/provenance.png"/>
+      <img src="/static/images/provenance.png" width="15%"/>
      </p>
      <h2 id="creating-provenance-metadata">
       Creating provenance metadata
@@ -116,7 +116,7 @@
      <ol>
       <li>
        Run the
-       <a href="https://ediorg.github.io/EMLassemblyline/reference/template_provenance">
+       <a href="https://ediorg.github.io/EMLassemblyline/reference/template_provenance.html">
         <code>
          template_provenance()
         </code>
@@ -129,7 +129,7 @@
         dataPackageID
        </strong>
        field with the EDI
-       <a href="the-data-package#data-package-identifier">
+       <a href="/resources/the-data-package#data-package-identifier">
         data package identifier
        </a>
        and specify "EDI" in the
@@ -140,7 +140,7 @@
       </li>
       <li>
        Run the
-       <a href="https://ediorg.github.io/EMLassemblyline/reference/make_eml">
+       <a href="https://ediorg.github.io/EMLassemblyline/reference/make_eml.html">
         <code>
          make_eml()
         </code>
@@ -172,7 +172,7 @@
       </li>
      </ol>
      <p>
-      <img alt="" src="/static/images/provenance-portal2.png"/>
+      <img src="/static/images/provenance-portal2.png" width="85%"/>
      </p>
      <ol>
       <li>
@@ -188,7 +188,7 @@
       </li>
      </ol>
      <p>
-      <img alt="" src="/static/images/provenance-generator.png"/>
+      <img src="/static/images/provenance-generator.png" width="85%"/>
      </p>
      <ol>
       <li>
@@ -218,7 +218,7 @@
      <ol>
       <li>
        Run the
-       <a href="https://ediorg.github.io/EDIutils/reference/get_provenance_metadata">
+       <a href="https://ediorg.github.io/EDIutils/reference/get_provenance_metadata.html">
         <code>
          get_provenance_metadata()
         </code>
@@ -235,7 +235,7 @@
      </ol>
      <p>
       For a language-agnostic solution, see the REST API documentation for
-      <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/pasta_api/data_package_manager_api#get-provenance-metadata">
+      <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/pasta_api/data_package_manager_api.html#get-provenance-metadata">
        Get Provenance Metadata
       </a>
       .

@@ -1,50 +1,34 @@
 <div metal:use-macro="load: ../shared/layout.html">
  <div metal:fill-slot="content" tal:omit-tag="True">
-  <div class="sidebar-inner">
-   <div class="container">
-    <aside class="sidebar">
-     <div class="sticky-sm-top">
-      <div class="sticky-md-top">
-       <div class="sticky-lg-top">
-        <div class="sticky-xl-top">
-         <ul>
-         </ul>
-        </div>
-       </div>
-      </div>
-     </div>
-    </aside>
-    <main class="main-tutorial">
-     <h1 id="the-rest-api">
-      The REST API
-     </h1>
-     <p>
-      The
-      <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/about">
-       REST API
-      </a>
-      offers solutions for programmatically interacting with the EDI Data Repository. For any functionality that can be manually handled in the EDI Data Portal (evaluating, uploading, searching, etc.), there is a corresponding REST API operation that can be used to automate the process.
-     </p>
-     <p>
-      The API is divided into two main categories. The
-      <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/pasta_api/data_package_manager_api">
-       Data Package Manager API
-      </a>
-      consists of operations involved with publishing and accessing data packages. The
-      <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/pasta_api/audit_manager_api">
-       Audit manager API
-      </a>
-      is used to create and provide access to user Audit logs. The API documentation contains all the information to start using the API operations.
-     </p>
-     <p>
-      For users who prefer to work in an R environment, the
-      <a href="https://ediorg.github.io/EDIutils/">
-       EDIutils R package
-      </a>
-      is a client wrapping the REST API that offers all the API operations as R functions.
-     </p>
-    </main>
-   </div>
-  </div>
+  <main class="main-tutorial">
+   <h1>
+    The REST API
+   </h1>
+   <p>
+    The
+    <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/about.html">
+     REST API
+    </a>
+    offers solutions for programmatically interacting with the EDI Data Repository. For any functionality that can be manually handled in the EDI Data Portal (evaluating, uploading, searching, etc.), there is a corresponding REST API operation that can be used to automate the process.
+   </p>
+   <p>
+    The API is divided into two main categories. The
+    <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/pasta_api/data_package_manager_api.html">
+     Data Package Manager API
+    </a>
+    consists of operations involved with publishing and accessing data packages. The
+    <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/pasta_api/audit_manager_api.html">
+     Audit manager API
+    </a>
+    is used to create and provide access to user Audit logs. The API documentation contains all the information to start using the API operations.
+   </p>
+   <p>
+    For users who prefer to work in an R environment, the
+    <a href="https://ediorg.github.io/EDIutils/">
+     EDIutils R package
+    </a>
+    is a client wrapping the REST API that offers all the API operations as R functions.
+   </p>
+  </main>
  </div>
 </div>

@@ -70,7 +70,7 @@
       and is assigned a new DOI. All revisions of a data package are linked in the EDI Data Repository. Users who end up on the landing page of an older revision will be notified that a newer version is available.
      </p>
      <p>
-      <img alt="" src="/static/images/data-package-versioning.png"/>
+      <img src="/static/images/data-package-versioning.png" width="30%"/>
      </p>
      <blockquote>
       <p>
@@ -82,7 +82,7 @@
      </h2>
      <p>
       It is important to communicate changes and significance in the metadata of an updated data package so users can understand what has changed and why. This information is included in the
-      <a href="https://ediorg.github.io/data-package-best-practices/EMLmetadata/maintenance">
+      <a href="https://ediorg.github.io/data-package-best-practices/EMLmetadata/maintenance.html">
        maintenance
       </a>
       section of EML metadata. Guidance on adding this information is provided below.
@@ -117,7 +117,7 @@
       </li>
      </ol>
      <p>
-      <img alt="" src="/static/images/ezeml-maint.png"/>
+      <img src="/static/images/ezeml-maint.png" width="85%"/>
      </p>
      <ol>
       <li>
@@ -129,7 +129,7 @@
       </li>
      </ol>
      <p>
-      <img alt="" src="/static/images/ezeml-send-revision.png"/>
+      <img src="/static/images/ezeml-send-revision.png" width="85%"/>
      </p>
      <ol>
       <li>
@@ -154,7 +154,7 @@
      </h3>
      <p>
       Edit data and metadata using
-      <a href="https://ediorg.github.io/EMLassemblyline/index">
+      <a href="https://ediorg.github.io/EMLassemblyline/index.html">
        EMLassemblyline
       </a>
       :
@@ -162,19 +162,19 @@
      <ol>
       <li>
        Get the metadata templates and
-       <a href="https://ediorg.github.io/EMLassemblyline/reference/make_eml">
+       <a href="https://ediorg.github.io/EMLassemblyline/reference/make_eml.html">
         <code>
          make_eml()
         </code>
        </a>
        function call for the original data package. If these don't exist, use the
-       <a href="https://ediorg.github.io/EMLassemblyline/reference/eml2eal">
+       <a href="https://ediorg.github.io/EMLassemblyline/reference/eml2eal.html">
         <code>
          eml2eal()
         </code>
        </a>
        and
-       <a href="https://ediorg.github.io/EMLassemblyline/reference/eml2eal_losses">
+       <a href="https://ediorg.github.io/EMLassemblyline/reference/eml2eal_losses.html">
         <code>
          eml2eal_losses()
         </code>
@@ -183,7 +183,7 @@
       </li>
       <li>
        Update the metadata templates and
-       <a href="https://ediorg.github.io/EMLassemblyline/reference/make_eml">
+       <a href="https://ediorg.github.io/EMLassemblyline/reference/make_eml.html">
         <code>
          make_eml()
         </code>
@@ -193,7 +193,7 @@
         maintenance.description
        </code>
        parameter of
-       <a href="https://ediorg.github.io/EMLassemblyline/reference/make_eml">
+       <a href="https://ediorg.github.io/EMLassemblyline/reference/make_eml.html">
         <code>
          make_eml()
         </code>
@@ -206,7 +206,7 @@
         package.id
        </code>
        parameter of
-       <a href="https://ediorg.github.io/EMLassemblyline/reference/make_eml">
+       <a href="https://ediorg.github.io/EMLassemblyline/reference/make_eml.html">
         <code>
          make_eml()
         </code>
@@ -215,7 +215,7 @@
       </li>
       <li>
        Run
-       <a href="https://ediorg.github.io/EMLassemblyline/reference/make_eml">
+       <a href="https://ediorg.github.io/EMLassemblyline/reference/make_eml.html">
         <code>
          make_eml()
         </code>
@@ -262,7 +262,7 @@
        EDIutils
       </a>
       R package using the
-      <a href="https://ediorg.github.io/EDIutils/reference/update_data_package">
+      <a href="https://ediorg.github.io/EDIutils/reference/update_data_package.html">
        <code>
         update_data_package()
        </code>
@@ -289,7 +289,7 @@
      </p>
      <p>
       For a language-agnostic solution, see the REST API documentation for
-      <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/pasta_api/data_package_manager_api#update-data-package">
+      <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/pasta_api/data_package_manager_api.html#update-data-package">
        Updating a Data Package
       </a>
       .
