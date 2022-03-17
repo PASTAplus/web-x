@@ -127,7 +127,7 @@ help_lines = (
                  " Must be used with a DOCMAP file."
 )
 help_md = "Full path to markdown file. Must be used with --html."
-help_html = "Full path to html file. Must be used with --markdown."
+help_html = "Full path to html file. Must be used with --md."
 help_verbose = "Send output to standard out (-v or -vv for increasing output)."
 help_dryrun = "Dry-run only, no output written."
 
