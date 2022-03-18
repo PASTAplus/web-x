@@ -4,6 +4,7 @@ channels:
   - defaults
 dependencies:
   - python=3.9
+  - config
   - fastapi
   - uvicorn
   - httpx
@@ -22,4 +23,5 @@ dependencies:
     - snowballstemmer==2.2.0
     - soupsieve==2.3.1
     - urllib3==1.26.8
-  prefix: /home/servilla/anaconda3/envs/web-x
+    - git+https://github.com/PASTAplus/bugle
+prefix: /home/servilla/anaconda3/envs/web-x
