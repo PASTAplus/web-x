@@ -50,7 +50,7 @@ def template_sidebar(inner_html: str) -> str:
 
 
 def sidebar_html(md: str) -> BeautifulSoup:
-    inner_html = markdown.markdown(md, extensions=[TocExtension(marker='[TOC]', toc_depth='2-6')])
+    inner_html = markdown.markdown(md, extensions=[TocExtension(marker='[TOC]', toc_depth='2-6'), 'tables'])
     html = template_sidebar(inner_html)
     soup = BeautifulSoup(html, "lxml")
     div_toc_tag = soup.find("div", attrs={"class": "toc"}).extract()
@@ -89,7 +89,7 @@ def template_basic(inner_html: str) -> str:
 
 
 def basic_html(md: str) -> BeautifulSoup:
-    inner_html = markdown.markdown(md)
+    inner_html = markdown.markdown(md, extensions=['tables'])
     html = template_basic(inner_html)
     soup = BeautifulSoup(html, "lxml")
     return soup
@@ -99,7 +99,7 @@ def md2html(md_file: str, html_file: str, verbose: int, dryrun: bool):
     try:
         if verbose > 0:
             print(f"Reading: {md_file}")
-        with open(md_file, "r") as f:
+        with open(md_file, "r", encoding="utf-8") as f:
             md = f.read()
             md = md.replace(".md", "")
             md = md.replace("/templates/", "/")
