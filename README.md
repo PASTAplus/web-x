@@ -14,6 +14,7 @@ following sequence:
    authentication configuration.
 1. Change directories into the working `web-x` directory.
 1. `conda env install --file environment-min.yml` (Linux flavor)
+1. Copy `config.py.template` to `config.py`.
 1. `conda activate web-x`
 1. `python main.py`
 1. Set your web browser to `http:\\localhost:8000`
