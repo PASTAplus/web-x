@@ -75,4 +75,5 @@ dependencies:
     - snowballstemmer==2.2.0
     - soupsieve==2.3.1
     - urllib3==1.26.8
+    - git+https://github.com/PASTAplus/bugle
 prefix: /home/servilla/anaconda3/envs/web-x
