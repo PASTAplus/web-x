@@ -28,8 +28,8 @@ def discover(request: Request):
     return vm.to_dict()
 
 
-@router.get('/data/publish')
-@template("data/publish.html")
+@router.get('/data/publish-data')
+@template("data/publish-data.html")
 def publish(request: Request):
     vm = ViewModelBase(request, "Publish Data")
     return vm.to_dict()

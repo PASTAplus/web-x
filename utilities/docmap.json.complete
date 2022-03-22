@@ -41,5 +41,6 @@
     "/home/servilla/git/content-x/templates/resources/uploading-with-static-data-links.md": "/home/servilla/git/web-x/templates/resources/uploading-with-static-data-links.html",
     "/home/servilla/git/content-x/templates/resources/why-publish-data.md": "/home/servilla/git/web-x/templates/resources/why-publish-data.html",
     "/home/servilla/git/content-x/templates/support/contact-us.md": "/home/servilla/git/web-x/templates/support/contact-us.html",
-    "/home/servilla/git/content-x/templates/support/frequently-asked-questions.md": "/home/servilla/git/web-x/templates/support/frequently-asked-questions.html"
+    "/home/servilla/git/content-x/templates/support/frequently-asked-questions.md": "/home/servilla/git/web-x/templates/support/frequently-asked-questions.html",
+	"/home/servilla/git/content-x/templates/data/publish-data.md": "/home/servilla/git/web-x/templates/data/publish-data.html"
 }
