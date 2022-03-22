@@ -47,3 +47,9 @@ def featured(request: Request):
 def example(request: Request):
     vm = ViewModelBase(request, "Example Data")
     return vm.to_dict()
+
+@router.get('/data/featured_mar_2022')
+@template("data/featured_mar_2022.html")
+def featured_mar_2022(request: Request):
+    vm = ViewModelBase(request, "Featured Data 3/2022")
+    return vm.to_dict()
