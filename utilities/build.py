@@ -50,7 +50,10 @@ def template_sidebar(inner_html: str) -> str:
 
 
 def sidebar_html(md: str) -> BeautifulSoup:
-    inner_html = markdown.markdown(md, extensions=[TocExtension(marker='[TOC]', toc_depth='2-6'), 'tables'])
+    inner_html = markdown.markdown(
+        md,
+        extensions=[TocExtension(marker='[TOC]', toc_depth='2-6'), 'tables', 'fenced_code']
+    )
     html = template_sidebar(inner_html)
     soup = BeautifulSoup(html, "lxml")
     div_toc_tag = soup.find("div", attrs={"class": "toc"}).extract()
@@ -89,7 +92,7 @@ def template_basic(inner_html: str) -> str:
 
 
 def basic_html(md: str) -> BeautifulSoup:
-    inner_html = markdown.markdown(md, extensions=['tables'])
+    inner_html = markdown.markdown(md, extensions=['tables', 'fenced_code'])
     html = template_basic(inner_html)
     soup = BeautifulSoup(html, "lxml")
     return soup
