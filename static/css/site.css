@@ -100,6 +100,23 @@ body {
     text-decoration: none;
 }
 
+.figure_featured {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    text-align: center;
+    width: 50%;
+    font-style: italic;  
+}
+
+.figure_featured img {
+    padding-bottom: 2em;
+    vertical-align: top;
+    width: 50%;
+}
+
 footer {
     width: 100%;
     /*    font-size: calc(0.5rem + 0.5vw); */
