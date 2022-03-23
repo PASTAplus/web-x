@@ -29,6 +29,44 @@ daiquiri.setup(level=logging.INFO,
 logger = daiquiri.getLogger(__name__)
 
 
+def safe_image_copy(source: str, target: str, image_files: list, images: list, verbose: int, dryrun: bool):
+    if not Path(target).exists() and not Path(target).is_dir():
+        msg = f"The target '{target}' either does not exist or is not a directory - bye!"
+        raise IOError(msg)
+    else:
+        for image in images:
+            found = False
+            for image_file in image_files:
+                if image in str(image_file):
+                    copy_path = str(image_file).replace(source, target)
+                    if verbose > 0:
+                        print(f"Copying: '{image_file}' to '{copy_path}")
+                    found = True
+                    if not dryrun:
+                        img = Path(image_file).open("rb").read()
+                        path = Path(copy_path)
+                        path.parent.mkdir(exist_ok=True, parents=True)
+                        path.open("wb").write(img)
+            if not found:
+                msg = f"Image '{image}' not found in '{source}'!"
+                raise FileNotFoundError(msg)
+
+
+def safe_html_write(target: str, html_file: str, html: str, verbose: int, dryrun: bool):
+    if not Path(target).exists() and not Path(target).is_dir():
+        msg = f"The target '{target}' either does not exist or is not a directory - bye!"
+        raise IOError(msg)
+    else:
+        if verbose > 0:
+            print(f"Writing: {html_file}")
+        if verbose == 2:
+            print(html)
+        if not dryrun:
+            path = Path(html_file)
+            path.parent.mkdir(exist_ok=True, parents=True)
+            path.open("w", encoding="utf-8").write(html)
+
+
 def get_md_files(source: str, ignore: tuple) -> list:
     files = []
     if Path(source).is_dir():
@@ -59,9 +97,10 @@ def get_image_files(source: str, extensions: tuple) -> list:
     return files
 
 
-def get_html_images(s: BeautifulSoup) -> list:
+def get_html_images(html: str) -> list:
     images = []
-    imgs = s.find_all("img")
+    soup = BeautifulSoup(html, "lxml")
+    imgs = soup.find_all("img")
     for img in imgs:
         src = img["src"]
         images.append(src)
@@ -94,7 +133,6 @@ def sidebar_html(md: str) -> BeautifulSoup:
     )
     html = template_sidebar(inner_html)
     soup = BeautifulSoup(html, "lxml")
-    images = get_html_images(soup)
     div_toc_tag = soup.find("div", attrs={"class": "toc"}).extract()
     div_toc_tag.name = "div"
     div_toc_tag["class"] = "sticky-xl-top"
@@ -134,30 +172,21 @@ def basic_html(md: str) -> BeautifulSoup:
     inner_html = markdown.markdown(md, extensions=['tables', 'fenced_code'])
     html = template_basic(inner_html)
     soup = BeautifulSoup(html, "lxml")
-    images = get_html_images(soup)
     return soup
 
 
-def md2html(md_file: str, html_file: str, verbose: int, dryrun: bool):
+def md2html(md_file: str, verbose: int) -> str:
     try:
         if verbose > 0:
             print(f"Reading: {md_file}")
-        with open(md_file, "r", encoding="utf-8") as f:
-            md = f.read()
-            md = md.replace(".md", "")
-            md = md.replace("/templates/", "/")
+        md = Path(md_file).open("r", encoding="utf-8").read()
+        md = md.replace(".md", "")
+        md = md.replace("/templates/", "/")
         if '[TOC]' in md:
-            _ = str(sidebar_html(md))
+            html = str(sidebar_html(md))
         else:
-            _ = str(basic_html(md))
-        html = _.replace("<html><body>", "").replace("</body></html>", "").strip()
-        if verbose > 0:
-            print(f"Writing: {html_file}")
-        if verbose == 2:
-            print(html)
-        if not dryrun:
-            with open(html_file, "w") as f:
-                f.write(html.strip())
+            html = str(basic_html(md)).replace("<html><body>", "").replace("</body></html>", "").strip()
+        return html
     except IOError as ex:
         logger.error(f"{ex} - {md_file}")
     except AttributeError as ex:
@@ -166,8 +195,7 @@ def md2html(md_file: str, html_file: str, verbose: int, dryrun: bool):
 
 CONTEXT_SETTINGS = dict(help_option_names=["-h", "--help"])
 help_ignore = "Ignore markdown file (may repeat for multiple files)."
-help_md = "Full path to markdown file. Must be used with --html."
-help_html = "Full path to html file. Must be used with --md."
+help_markdown = "Full path to markdown file (may repeat for multiple files)."
 help_extensions = (
     "Extension of image files to copy (may repeat for multiple extensions; default is "
     "png, svg, jpg, and jpeg)."
@@ -180,12 +208,11 @@ help_dryrun = "Dry-run only, no output written."
 @click.argument("source", nargs=1, required=True)
 @click.argument("target", nargs=1, required=True)
 @click.option("-i", "--ignore", type=str, multiple=True, help=help_ignore)
-@click.option("--md", default=None, help=help_md)
-@click.option("--html", default=None, help=help_html)
+@click.option("-m", "--markdown", type=str, multiple=True, help=help_markdown)
 @click.option("-e", "--extension", default=None, help=help_extensions)
 @click.option("-v", "--verbose", count=True, help=help_verbose)
 @click.option("-d", "--dryrun", is_flag=True, default=False, help=help_dryrun)
-def main(source: str, target: str, ignore: tuple, md: str, html: str, extension: tuple, verbose: int, dryrun: bool):
+def main(source: str, target: str, ignore: tuple, markdown: tuple, extension: tuple, verbose: int, dryrun: bool):
     """
         Build (and deploy) HTML from MD
 
@@ -193,18 +220,28 @@ def main(source: str, target: str, ignore: tuple, md: str, html: str, extension:
             SOURCE: Path to markdown root directory.
             TARGET: Path to html root directory.
     """
-
-    md_files = get_md_files(source, ignore)
-    for md_file in md_files:
-        print(md_file)
-    #     md2html(md, html, verbose, dryrun)
-
     if extension is None:
         extension = ("png", "svg", "jpg", "jpeg")
 
     image_files = get_image_files(source, extension)
-    for image_file in image_files:
-        print(image_file)
+
+    if len(markdown) > 0:
+        md_files = markdown
+    else:
+        md_files = get_md_files(source, ignore)
+
+    for md_file in md_files:
+        html_file = str(md_file).replace(source, target).replace(".md", ".html")
+        html = md2html(md_file, verbose).replace("<html><body>", "").replace("</body></html>", "").strip()
+        images = get_html_images(html)
+        safe_html_write(target, html_file, html, verbose, dryrun)
+        try:
+            safe_image_copy(source, target, image_files, images, verbose, dryrun)
+        except FileNotFoundError as ex:
+            logger.error(ex)
+            msg = f"The above error occurred when building '{html_file}'!"
+            logger.error(msg)
+
 
     return 0
 
