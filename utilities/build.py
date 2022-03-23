@@ -12,7 +12,7 @@
 :Created:
     2/20/22
 """
-import json
+from pathlib import Path
 
 from bs4 import BeautifulSoup
 import click
@@ -22,12 +22,50 @@ from markdown.extensions.toc import TocExtension
 import logging
 import os
 
-
 cwd = os.path.dirname(os.path.realpath(__file__))
 logfile = cwd + "/build.log"
 daiquiri.setup(level=logging.INFO,
                outputs=(daiquiri.output.File(logfile), "stdout",))
 logger = daiquiri.getLogger(__name__)
+
+
+def get_md_files(source: str, ignore: tuple) -> list:
+    files = []
+    if Path(source).is_dir():
+        for obj in Path(source).rglob("*.md"):
+            if Path(obj).is_file() and Path(obj).name not in ignore:
+                files.append(obj)
+    else:
+        msg = f"Source '{source}' is not a directory!"
+        raise IOError(msg)
+    return files
+
+
+def get_image_files(source: str, extensions: tuple) -> list:
+    files = []
+    if Path(source).is_dir():
+        for extension in extensions:
+            ext = f"*.{extension.lower()}"
+            for obj in Path(source).rglob(ext):
+                if Path(obj).is_file():
+                    files.append(obj)
+            ext = f"*.{extension.upper()}"
+            for obj in Path(source).rglob(ext):
+                if Path(obj).is_file():
+                    files.append(obj)
+    else:
+        msg = f"Source '{source}' is not a directory!"
+        raise IOError(msg)
+    return files
+
+
+def get_html_images(s: BeautifulSoup) -> list:
+    images = []
+    imgs = s.find_all("img")
+    for img in imgs:
+        src = img["src"]
+        images.append(src)
+    return images
 
 
 def template_sidebar(inner_html: str) -> str:
@@ -56,6 +94,7 @@ def sidebar_html(md: str) -> BeautifulSoup:
     )
     html = template_sidebar(inner_html)
     soup = BeautifulSoup(html, "lxml")
+    images = get_html_images(soup)
     div_toc_tag = soup.find("div", attrs={"class": "toc"}).extract()
     div_toc_tag.name = "div"
     div_toc_tag["class"] = "sticky-xl-top"
@@ -95,6 +134,7 @@ def basic_html(md: str) -> BeautifulSoup:
     inner_html = markdown.markdown(md, extensions=['tables', 'fenced_code'])
     html = template_basic(inner_html)
     soup = BeautifulSoup(html, "lxml")
+    images = get_html_images(soup)
     return soup
 
 
@@ -125,47 +165,46 @@ def md2html(md_file: str, html_file: str, verbose: int, dryrun: bool):
 
 
 CONTEXT_SETTINGS = dict(help_option_names=["-h", "--help"])
-help_lines = (
-                 "Line number (0-based) of mapping to execute - may repeat (e.g., -l 1 -l 3)."
-                 " Must be used with a DOCMAP file."
-)
+help_ignore = "Ignore markdown file (may repeat for multiple files)."
 help_md = "Full path to markdown file. Must be used with --html."
 help_html = "Full path to html file. Must be used with --md."
+help_extensions = (
+    "Extension of image files to copy (may repeat for multiple extensions; default is "
+    "png, svg, jpg, and jpeg)."
+)
 help_verbose = "Send output to standard out (-v or -vv for increasing output)."
 help_dryrun = "Dry-run only, no output written."
 
 
 @click.command(context_settings=CONTEXT_SETTINGS)
-@click.argument("docmap", nargs=1, required=False)
-@click.option("-l", "--lines", type=int, multiple=True, help=help_lines)
+@click.argument("source", nargs=1, required=True)
+@click.argument("target", nargs=1, required=True)
+@click.option("-i", "--ignore", type=str, multiple=True, help=help_ignore)
 @click.option("--md", default=None, help=help_md)
 @click.option("--html", default=None, help=help_html)
+@click.option("-e", "--extension", default=None, help=help_extensions)
 @click.option("-v", "--verbose", count=True, help=help_verbose)
 @click.option("-d", "--dryrun", is_flag=True, default=False, help=help_dryrun)
-def main(docmap: str, lines: tuple, md: str, html: str, verbose: int, dryrun: bool):
+def main(source: str, target: str, ignore: tuple, md: str, html: str, extension: tuple, verbose: int, dryrun: bool):
     """
         Build (and deploy) HTML from MD
 
         \b
-            DOCMAP: Path to JSON file containing one or more source Markdown files with
-                    corresponding target HTML files.
+            SOURCE: Path to markdown root directory.
+            TARGET: Path to html root directory.
     """
 
-    if docmap is not None:
-        try:
-            with open(docmap, "r") as f:
-                maps = json.loads(f.read())
-            for i, map in enumerate(maps):
-                if len(lines) == 0:
-                    md2html(map, maps[map], verbose, dryrun)
-                elif i in lines:
-                    md2html(map, maps[map], verbose, dryrun)
-        except (FileNotFoundError, IOError) as ex:
-            logger.error(ex)
-    elif md is not None and html is not None:
-        md2html(md, html, verbose, dryrun)
-    else:
-        print("No DOCMAP or markdown file to process, try -h or --help for help - bye!")
+    md_files = get_md_files(source, ignore)
+    for md_file in md_files:
+        print(md_file)
+    #     md2html(md, html, verbose, dryrun)
+
+    if extension is None:
+        extension = ("png", "svg", "jpg", "jpeg")
+
+    image_files = get_image_files(source, extension)
+    for image_file in image_files:
+        print(image_file)
 
     return 0
 
