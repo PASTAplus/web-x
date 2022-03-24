@@ -13,6 +13,7 @@
     2/20/22
 """
 from pathlib import Path
+import platform
 
 from bs4 import BeautifulSoup
 import click
@@ -34,8 +35,11 @@ def safe_image_copy(source: str, target: str, image_files: list, images: list, v
         msg = f"The target '{target}' either does not exist or is not a directory - bye!"
         raise IOError(msg)
     else:
+        os = platform.system()
         for image in images:
             found = False
+            if os == "Windows":
+                image.replace("/", "\\")
             for image_file in image_files:
                 if image in str(image_file):
                     copy_path = str(image_file).replace(source, target)
@@ -102,8 +106,8 @@ def get_html_images(html: str) -> list:
     soup = BeautifulSoup(html, "lxml")
     imgs = soup.find_all("img")
     for img in imgs:
-        src = img["src"]
-        if src[0:15] == "/static/images/":
+        src: str = img["src"]
+        if src.startswith("/static/images/"):
             images.append(src)
     return images
 
