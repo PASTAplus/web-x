@@ -1,4 +1,0 @@
-2022-03-10 09:59:55,001 [66010] ERROR    __main__: 'NoneType' object has no attribute 'extract' - /home/servilla/git/content-x/templates/resources/creating-metadata-during-the-research-lifecycle.md
-2022-03-10 09:59:55,066 [66010] ERROR    __main__: 'NoneType' object has no attribute 'extract' - /home/servilla/git/content-x/templates/resources/featured-data.md
-2022-03-10 09:59:55,132 [66010] ERROR    __main__: 'NoneType' object has no attribute 'extract' - /home/servilla/git/content-x/templates/resources/rest-api.md
-2022-03-10 09:59:55,190 [66010] ERROR    __main__: 'NoneType' object has no attribute 'extract' - /home/servilla/git/content-x/templates/support/contact-us.md
