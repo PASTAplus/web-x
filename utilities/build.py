@@ -39,7 +39,7 @@ def safe_image_copy(source: str, target: str, image_files: list, images: list, v
         for image in images:
             found = False
             if os == "Windows":
-                image.replace("/", "\\")
+                image = image.replace("/", "\\")
             for image_file in image_files:
                 if image in str(image_file):
                     copy_path = str(image_file).replace(source, target)
