@@ -103,7 +103,8 @@ def get_html_images(html: str) -> list:
     imgs = soup.find_all("img")
     for img in imgs:
         src = img["src"]
-        images.append(src)
+        if src[0:15] == "/static/images/":
+            images.append(src)
     return images
 
 
