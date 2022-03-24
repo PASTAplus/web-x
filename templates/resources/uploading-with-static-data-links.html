@@ -34,15 +34,15 @@
 <li>Navigate to the directory (from within the Box web application while logged into a premium account) where data files should be submitted.</li>
 <li>Click the <strong>File Request</strong> button on the right side of the screen which will open a pop-up.</li>
 </ol>
-<p><img src="/static/images/file-request1.png" width="100%"/></p>
+<p><img class="screen-shot" src="/static/images/file-request1.png" width="100%"/></p>
 <ol>
 <li>On the pop-up screen, set the link to enabled. This selection should be reflected on the first <strong>File Request</strong> button pressed.</li>
 </ol>
-<p><img src="/static/images/file-request2.png" width="100%"/></p>
+<p><img class="screen-shot" src="/static/images/file-request2.png" width="100%"/></p>
 <ol>
 <li>Copy the shareable link from the pop-up screen and try it in a web browser. This link should lead to a page that looks like the one below.</li>
 </ol>
-<p><img src="/static/images/file-request3.png" width="65%"/></p>
+<p><img class="screen-shot" src="/static/images/file-request3.png" width="65%"/></p>
 <ol>
 <li>Share this link with a data submitter. They will not need to have a Box account to submit data to this directory.</li>
 </ol>
@@ -51,15 +51,15 @@
 <ol>
 <li>Navigate to the directory that contains the data file for which to create a link. Click on the link icon which will open a pop-up window.</li>
 </ol>
-<p><img src="/static/images/static-link1.png" width="100%"/></p>
+<p><img class="screen-shot" src="/static/images/static-link1.png" width="100%"/></p>
 <ol>
 <li>DO NOT use the Share Link from this window for direct download. Instead, click on the <strong>Link Settings</strong> button which will open another pop-up window.</li>
 </ol>
-<p><img src="/static/images/static-link2.png" width="45%"/></p>
+<p><img class="screen-shot" src="/static/images/static-link2.png" width="45%"/></p>
 <ol>
 <li>In the shared link settings, at the bottom of the page, find and copy the direct link URL. </li>
 </ol>
-<p><img src="/static/images/static-link3.png" width="45%"/></p>
+<p><img class="screen-shot" src="/static/images/static-link3.png" width="45%"/></p>
 <h2 id="adding-download-links-to-eml-files">Adding download links to EML files</h2>
 <p>Direct download links of any type, and static links generated from a Box account, can be inserted into an EML document to facilitate upload to the EDI Data Repository.</p>
 <h3 id="ezeml">ezEML</h3>
@@ -67,11 +67,11 @@
 <ol>
 <li>Navigate to the <strong>Data Tables</strong> tab and click the <strong>Edit</strong> button next to the data table.</li>
 </ol>
-<p><img src="/static/images/link-ezeml1.png" width="80%"/></p>
+<p><img class="screen-shot" src="/static/images/link-ezeml1.png" width="80%"/></p>
 <ol>
 <li>Paste the link into the <strong>Online Distribution URL</strong> textbox. Remember to click <strong>Save and Continue</strong> before moving on.</li>
 </ol>
-<p><img src="/static/images/link-ezeml2.png" width="70%"/></p>
+<p><img class="screen-shot" src="/static/images/link-ezeml2.png" width="70%"/></p>
 <p>The data table will now be associated with the provided download link. Submit to EDI via <strong>Send to EDI</strong> or download the XML document with the <strong>Download EML File</strong> button.</p>
 <blockquote>
 <p>This method can be replicated in the <strong>Other Entities</strong> tab as well. </p>
@@ -81,11 +81,11 @@
 <ol>
 <li>Supply the link as a character string to the <code>data.table.url</code> or <code>other.entity.url</code> arguments in the <a href="https://ediorg.github.io/EMLassemblyline/reference/make_eml.html"><code>make_eml()</code></a> function. To add multiple links, supply links as a vector of character strings.</li>
 </ol>
-<p><img src="/static/images/link-eal1.png" width="70%"/></p>
+<p><img class="screen-shot" src="/static/images/link-eal1.png" width="70%"/></p>
 <ol>
 <li>Run <a href="https://ediorg.github.io/EMLassemblyline/reference/make_eml.html"><code>make_eml()</code></a> to associate the tables with the provided links and return an EML file.</li>
 </ol>
-<p><img src="/static/images/link-eal2.png" width="70%"/></p>
+<p><img class="screen-shot" src="/static/images/link-eal2.png" width="70%"/></p>
 <h3 id="manually-editing-xml">Manually editing XML</h3>
 <p>To insert download links manually:</p>
 <ol>
@@ -107,7 +107,7 @@
 <li>Remember to <strong>NOT</strong> check the "Manually upload data" checkbox.</li>
 <li>If some of the objects in the data package package are already in the EDI Repository, remember to check the <strong>Allow PASTA+ to skip …</strong> checkbox.</li>
 </ol>
-<p><img src="/static/images/upload-link.png" width="60%"/></p>
+<p><img class="screen-shot" src="/static/images/upload-link.png" width="60%"/></p>
 </main>
 </div>
 </div>

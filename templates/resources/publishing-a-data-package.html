@@ -32,23 +32,23 @@
 <p>The process of publishing via the <a href="https://portal.edirepository.org/nis/home.jsp">EDI Data Portal</a> is covered in detail in <a href="https://www.youtube.com/watch?v=F_twNhGb42k">this video</a> and is outlined below:</p>
 <h3 id="login">Login</h3>
 <p>From the Data Portal, click the <strong>Login</strong> button and enter EDI account credentials.</p>
-<p><img src="/static/images/login-portal.png" width="80%"/></p>
+<p><img class="screen-shot" src="/static/images/login-portal.png" width="80%"/></p>
 <h3 id="reserving-a-data-package-identifier">Reserving a data package identifier</h3>
 <p>Access the <strong>Data Package Identifier Reservations</strong> button in the <strong>TOOLS</strong> dropdown menu. Click the <strong>Reserve Next Available Identifier(s)</strong> button to create the reservation.</p>
-<p><img src="/static/images/reserve-package-id-portal.png" width="80%"/></p>
+<p><img class="screen-shot" src="/static/images/reserve-package-id-portal.png" width="80%"/></p>
 <p>Add the reserved identifier to the EML metadata document of the data package to be published. Identifiers can be added in the <strong>Data Package ID</strong> tab of <a href="https://ezeml.edirepository.org/eml/">ezEML</a> or provided as the argument to the <code>package.id</code> parameter of the <a href="https://ediorg.github.io/EMLassemblyline/reference/make_eml.html"><code>make_eml()</code></a> function in EMLassemblyline.</p>
 <h3 id="evaluating-the-data-package">Evaluating the data package</h3>
 <p>Navigate to the <strong>Evaluate/Upload Data Packages</strong> page: </p>
-<p><img src="/static/images/eval-upload-dropdown-portal.png" width="80%"/></p>
+<p><img class="screen-shot" src="/static/images/eval-upload-dropdown-portal.png" width="80%"/></p>
 <ol>
 <li><strong>Choose File</strong> - Browse and select the EML file to be evaluated</li>
 <li>Unless every data object in the EML file is associated with <a href="/resources/uploading-with-static-data-links">static data links</a>, select the checkbox next to <strong>Manually upload data…</strong> to allow manual upload.</li>
 </ol>
-<p><img src="/static/images/evaluate-manual-upload.png" width="80%"/></p>
+<p><img class="screen-shot" src="/static/images/evaluate-manual-upload.png" width="80%"/></p>
 <ol>
 <li>From the manual uploads page, choose the files to upload for the data package and click the <strong>Evaluate</strong> button.</li>
 </ol>
-<p><img src="/static/images/evaluate-manual-upload-page.png" width="95%"/></p>
+<p><img class="screen-shot" src="/static/images/evaluate-manual-upload-page.png" width="95%"/></p>
 <blockquote>
 <p>Be aware that the length of the evaluation process increases with the size of the data being evaluated. Once the process has begun, the browser window can be closed without interrupting the evaluation. Use the EDI Dashboard <a href="https://dashboard.edirepository.org/dashboard/pasta/render_working_on">PASTA is Working On</a> feature to see when evaluation has completed. The <a href="/resources/evaluating-a-data-package#interpreting-the-evaluation-report">evaluation report</a> can be viewed from the <strong>View Evaluate/Upload Results</strong> page.</p>
 </blockquote>
@@ -58,16 +58,16 @@
 <li><strong>Choose File</strong> - Browse and select the EML file to be uploaded.</li>
 <li>Unless every data object in the EML file is associated with <a href="/resources/uploading-with-static-data-links">static data links</a>, select the checkbox next to <strong>Manually upload data…</strong> to allow manual upload.</li>
 </ol>
-<p><img src="/static/images/upload-manual-upload.png" width="80%"/></p>
+<p><img class="screen-shot" src="/static/images/upload-manual-upload.png" width="80%"/></p>
 <ol>
 <li>Confirm that upload to the EDI Data Repository.</li>
 </ol>
-<p><img src="/static/images/confirm-upload.png" width="45%"/></p>
+<p><img class="screen-shot" src="/static/images/confirm-upload.png" width="45%"/></p>
 <ol>
 <li>Select files for manual upload and click the <strong>Upload</strong> button.</li>
 <li>At the <strong>Evaluate/Upload Results</strong> page, if the upload was successful, the data package identifier will be linked to the newly published data package <a href="/resources/data-package-pages">landing page</a>.</li>
 </ol>
-<p><img src="/static/images/successful-upload.png" width="85%"/></p>
+<p><img class="screen-shot" src="/static/images/successful-upload.png" width="85%"/></p>
 <blockquote>
 <p>Be aware that the length of the evaluation process increases with the size of the data being evaluated. Once the process has begun, the browser window can be closed without interrupting the evaluation. Use the EDI Dashboard <a href="https://dashboard.edirepository.org/dashboard/pasta/render_working_on">PASTA is Working On</a> feature to see when evaluation has completed. The <a href="/resources/evaluating-a-data-package#interpreting-the-evaluation-report">evaluation report</a> can be viewed from the <strong>View Evaluate/Upload Results</strong> page.</p>
 </blockquote>
