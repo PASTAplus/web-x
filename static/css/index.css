@@ -39,13 +39,13 @@
     font-size: 1.2rem;
     text-decoration: none;
     border-radius: 0.5em;
+    color: white;
     margin: 1em;
     margin-bottom: 0em;
-}
-
-.index a {
-    color: white;
-    text-decoration: underline;
+    text-align:center;
+    /*Control button size*/
+    width:9em;
+    line-height:1.7em;
 }
 
 .index-publish {
