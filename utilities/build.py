@@ -42,15 +42,16 @@ def safe_image_copy(source: str, target: str, image_files: list, images: list, v
                 image = image.replace("/", "\\")
             for image_file in image_files:
                 if image in str(image_file):
+                    found = True
                     copy_path = str(image_file).replace(source, target)
                     if verbose > 0:
                         print(f"Copying: '{image_file}' to '{copy_path}")
-                    found = True
                     if not dryrun:
                         img = Path(image_file).open("rb").read()
                         path = Path(copy_path)
                         path.parent.mkdir(exist_ok=True, parents=True)
                         path.open("wb").write(img)
+                    break
             if not found:
                 msg = f"Image '{image}' not found in '{source}'!"
                 raise FileNotFoundError(msg)
