@@ -230,11 +230,19 @@ def main(source: str, target: str, ignore: tuple, markdown: tuple, extension: tu
         extension = ("png", "svg", "jpg", "jpeg")
 
     image_files = get_image_files(source, extension)
+    md_files = get_md_files(source, ignore)
 
     if len(markdown) > 0:
-        md_files = markdown
-    else:
-        md_files = get_md_files(source, ignore)
+        keepers = []
+        for markdown_file in markdown:
+            at_least_one_match = False
+            for md_file in md_files:
+                if markdown_file == md_file.name:
+                    at_least_one_match = True
+                    keepers.append(md_file)
+            if not at_least_one_match:
+                logger.warn(f"No matches found for '{markdown_file}' in '{source}'.")
+        md_files = keepers
 
     for md_file in md_files:
         html_file = str(md_file).replace(source, target).replace(".md", ".html")
