@@ -24,57 +24,56 @@
 </head>
 <body>
 <div class="main_content">
+
     <!--        <div id="content-wrap"> -->
-    <header>
-        <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse navbar-expand-md">
+    <header class="bg-white">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-white">
             <div class="container-fluid">
-                <a class="navbar-brand" href="/"><img src="/static/images/EDI-logo.png" alt="EDI logo"/></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <div class="collapse navbar-collapse" id="main_nav">
+                    <!--Logo and homepage link-->
+                    <a class="navbar-brand" href="/"><img src="/static/images/EDI-logo.png" alt="EDI logo"/></a>
+                    <!--Dropdown menu-->
+                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 navbar-nav">
+                        <!--Data-->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                               data-bs-toggle="dropdown" aria-expanded="false">Data</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="nav-link  dropdown-toggle text-dark" href="#" data-bs-toggle="dropdown">Data</a>
+                            <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="/data/publish-data">Publish Data</a></li>
                                 <li><a class="dropdown-item" href="https://portal.edirepository.org/nis/advancedSearch.jsp">Find Data</a></li>
                             </ul>
                         </li>
+                        <!--Resources-->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                               data-bs-toggle="dropdown" aria-expanded="false">Resources</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="nav-link  dropdown-toggle text-dark" href="#" data-bs-toggle="dropdown">Resources</a>
+                            <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="/resources/resources-for-data-authors">For Data Authors</a></li>
                                 <li><a class="dropdown-item" href="/resources/resources-for-data-users">For Data Users</a></li>
                                 <li><a class="dropdown-item" href="/resources/resources-for-information-managers">For Information Managers</a></li>
                             </ul>
                         </li>
+                        <!--Support-->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                               data-bs-toggle="dropdown" aria-expanded="false">Help & Support</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="nav-link  dropdown-toggle text-dark" href="#" data-bs-toggle="dropdown">Support</a>
+                            <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="/support/contact-us">Contact Us</a></li>
                                 <li><a class="dropdown-item" href="/support/frequently-asked-questions">FAQ</a></li>
                             </ul>
                         </li>
+                        <!--About-->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                               data-bs-toggle="dropdown" aria-expanded="false">About</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="nav-link  dropdown-toggle text-dark" href="#" data-bs-toggle="dropdown">About</a>
+                            <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="/about/about-edi">EDI</a></li>
                                 <li><a class="dropdown-item" href="/about/edi-policy">Policies</a></li>
                                 <li><a class="dropdown-item" href="/about/partners-and-affiliations">Partners</a></li>
                             </ul>
                         </li>
+                        <!--Login-->
                         <li tal:condition="not is_logged_in" class="nav-item">
-                            <a class="nav-link" href="https://portal.edirepository.org/nis/login.jsp">Login</a>
+                            <a class="nav-link text-dark" href="https://portal.edirepository.org/nis/login.jsp">Login</a>
                         </li>
                         <li tal:condition="is_logged_in" class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
                                data-bs-toggle="dropdown" aria-expanded="false">User</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="#">Profile</a></li>
@@ -84,6 +83,7 @@
                             </ul>
                         </li>
                     </ul>
+                    <!--Search-->
                     <form action="/search" method="POST" class="d-flex" style="margin-bottom:0">
                         <input name="terms" class="form-control me-2" type="search" placeholder="Search website on text"
                                aria-label="Search">
@@ -92,9 +92,9 @@
                 </div>
             </div>
         </nav>
-        <div class="logged-in" tal:condition="is_logged_in">
+        <!--<div class="logged-in" tal:condition="is_logged_in">
             <em>${common_name}</em>
-        </div>
+        </div>-->
         <div class="logged-in not-logged-in" tal:condition="not is_logged_in">
         </div>
     </header>
