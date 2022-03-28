@@ -201,7 +201,8 @@ def md2html(md_file: str, verbose: int) -> str:
 
 CONTEXT_SETTINGS = dict(help_option_names=["-h", "--help"])
 help_ignore = "Ignore markdown file (may repeat for multiple files)."
-help_markdown = "Full path to markdown file (may repeat for multiple files)."
+help_markdown = "Full path to markdown file (may repeat for multiple files; cannot be used with --file)."
+help_file = "File containing markdown files to be processes one per line (cannot be used with --markdown)."
 help_extensions = (
     "Extension of image files to copy (may repeat for multiple extensions; default is "
     "png, svg, jpg, and jpeg)."
@@ -215,10 +216,11 @@ help_dryrun = "Dry-run only, no output written."
 @click.argument("target", nargs=1, required=True)
 @click.option("-i", "--ignore", type=str, multiple=True, help=help_ignore)
 @click.option("-m", "--markdown", type=str, multiple=True, help=help_markdown)
+@click.option("-f", "--file", type=str, default=None, help=help_file)
 @click.option("-e", "--extension", default=None, help=help_extensions)
 @click.option("-v", "--verbose", count=True, help=help_verbose)
 @click.option("-d", "--dryrun", is_flag=True, default=False, help=help_dryrun)
-def main(source: str, target: str, ignore: tuple, markdown: tuple, extension: tuple, verbose: int, dryrun: bool):
+def main(source: str, target: str, ignore: tuple, markdown: tuple, file: str, extension: tuple, verbose: int, dryrun: bool):
     """
         Build (and deploy) HTML from MD
 
@@ -231,6 +233,14 @@ def main(source: str, target: str, ignore: tuple, markdown: tuple, extension: tu
 
     image_files = get_image_files(source, extension)
     md_files = get_md_files(source, ignore)
+
+    if file is not None and len(markdown) > 0:
+        msg = "Cannot use options --markdown and --file together - bye!"
+        logger.error(msg)
+        return 1
+
+    if file is not None and Path(file).exists():
+        markdown = (Path(file).open("r", encoding="utf-8").read()).split("\n")
 
     if len(markdown) > 0:
         keepers = []
@@ -255,7 +265,6 @@ def main(source: str, target: str, ignore: tuple, markdown: tuple, extension: tu
             logger.error(ex)
             msg = f"The above error occurred when building '{html_file}'!"
             logger.error(msg)
-
 
     return 0
 
