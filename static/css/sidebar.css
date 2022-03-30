@@ -4,29 +4,32 @@
 	display: flex;
 }
 
-.sidebar {
-    width: 30%;
-    background-color: #D3D3D3;
-    border-radius: .5em;
-    padding: 1.5em;
-    padding-top: 8em;
+.sidebar-aside {
+    width: 25%;
+    z-index: 0;
 }
 
+.sidebar-aside ul {
+    list-style-type: none;
+    padding-left: 15;
+}
+
+.btn-toggle-nav a { /*hover box size*/
+  display: inline-flex;
+  padding: .3rem .7rem;
+}
+
+
+.fw-semibold { font-weight: 600; }
+
 .main-tutorial {
-	width: 70%;
+	width: 75%;
 	padding: 1.5em;
 	margin-left: 1.5em;
         border-radius: 0.5em;
 }
 
-.sidebar-inner {
-    max-width: 80%;
-    margin-bottom: 2em;
-    color: black;
-    padding: 1.5em 0;
-    text-align: left;
-}
-
-.sidebar-inner h1 {
-    text-align: left;
+.btn-toggle-nav a:hover,
+.btn-toggle-nav a:focus {
+  background-color: #F1F3F4;
 }

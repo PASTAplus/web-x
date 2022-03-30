@@ -1,74 +1,142 @@
 <div metal:use-macro="load: ../shared/layout.html">
-<div metal:fill-slot="content" tal:omit-tag="True">
-<div class="sidebar-inner">
-<div class="container">
-<aside class="sidebar"><div class="sticky-sm-top"><div class="sticky-md-top"><div class="sticky-lg-top"><div class="sticky-xl-top">
-<ul>
-<li><a href="#required-information">Required information</a><ul>
-<li><a href="#relation-types">Relation types</a><ul>
-<li><a href="#iscitedby">IsCitedBy</a></li>
-<li><a href="#isdescribedby">IsDescribedBy</a></li>
-<li><a href="#isreferencedby">IsReferencedBy</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#adding-a-citation-to-a-data-package">Adding a citation to a data package</a><ul>
-<li><a href="#edi-data-portal">EDI Data Portal</a></li>
-<li><a href="#ediutils">EDIutils</a></li>
-</ul>
-</li>
-</ul>
-</div></div></div></div></aside><main class="main-tutorial">
-<h1 id="adding-journal-citations-to-a-data-package">Adding Journal Citations to a Data Package</h1>
-<p>Adding journal citations to a data package allows authors to measure the impact that their data are making and allows potential users to see the context in which the data have been previously applied.</p>
-<p>While EDI takes measures to cross reference new articles to cited data packages, occasionally one is missed. When this is the case, journal citations can be added by emailing the EDI Curation Team with the required information or directly by anyone with an EDI account via the EDI Data Portal, the EDIutils R Package, or the REST API.</p>
-<blockquote>
-<p>The term "journal citations" is broadly defined and includes any external media in which the data have been cited (e.g. reports, articles, software, etc.).</p>
-</blockquote>
-
-<h2 id="required-information">Required information</h2>
-<p>A journal citation must contain a <a href="/resources/the-data-package#data-package-identifier">data package identifier</a>, an article identifier (either a DOI or URL), and a description of the relationship between the article and data package. Including the title of the article and journal is recommended.</p>
-<h3 id="relation-types">Relation types</h3>
-<p>The relation between a journal citation and data package must be described when linking a journal citation. There are three types of relations between data packages and journal articles <a href="https://support.datacite.org/docs/relationtype_for_citation">provided by DataCite</a> and supported by EDI:</p>
-<h4 id="iscitedby">IsCitedBy</h4>
-<ul>
-<li>The data package is formally cited in the article.</li>
-<li>The data package is explicitly cited within the article. </li>
-<li>The data package DOI, a longform citation, or any other indicator identifies a specific data package in the journal article (as data availability statement, in the acknowledgements, methods, citation sections, or supplemental materials).</li>
-</ul>
-<h4 id="isdescribedby">IsDescribedBy</h4>
-<ul>
-<li>The data package is explicitly described within the article.</li>
-<li>Journal articles that explicitly describe the data package, such as a <a href="https://esajournals.onlinelibrary.wiley.com/hub/journal/19399170/resources/data_paper_inst_ecy">data paper</a>.</li>
-</ul>
-<h4 id="isreferencedby">IsReferencedBy</h4>
-<ul>
-<li>The data package is implicitly described within the article.</li>
-<li>The data package was used to produce the results presented in the article but the data package DOI or a longform citation is not present in the article.</li>
-<li>A knowledgeable person assures the use of this data package in the article. </li>
-<li>When linking an older journal article to a newly published data package.</li>
-</ul>
-<h2 id="adding-a-citation-to-a-data-package">Adding a citation to a data package</h2>
-<h3 id="edi-data-portal">EDI Data Portal</h3>
-<p>Journal citations can be added to data packages manually from the <a href="https://portal.edirepository.org/nis/home.jsp">EDI Data Portal</a>:</p>
-<ol>
-<li>Access the <strong>Journal Citations</strong> tool from the dropdown navigation menu</li>
-</ol>
-<p><img class="screen-shot" src="/static/images/journal-citation-tools-dropdown.png" width="75%"/></p>
-<p>or from the <strong>Add Journal Citation</strong> button at the bottom of a data packages landing page</p>
-<p><img class="screen-shot" src="/static/images/journal-citations-landing.png" width="75%"/></p>
-<ol>
-<li>Add the citation information, then use the <strong>Add Journal Citation</strong> button to create and add the journal citation. </li>
-<li>Journal citations can also be updated or deleted using the journal citation tool.</li>
-</ol>
-<p><img class="screen-shot" src="/static/images/journal-citation-tool.png" width="75%"/></p>
-<p><a href="https://www.youtube.com/watch?v=XyyrH4EzTNc&amp;t=291s">Watch a video walkthrough</a> demonstrating the use of the journal citation tool.</p>
-<h3 id="ediutils">EDIutils</h3>
-<p>Journal citations can be added to data packages programmatically with the <a href="https://ediorg.github.io/EDIutils/">EDIutils R package</a>. Provide the required and optional citation information as arguments to the <a href="https://ediorg.github.io/EDIutils/reference/create_journal_citation.html"><code>create_journal_citation()</code></a> function.</p>
-<p>For a language-agnostic solution, see the REST API documentation for <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/pasta_api/data_package_manager_api.html#create-journal-citation">Create Journal Citation</a>.</p>
-</main>
-</div>
-</div>
-</div>
+    <div metal:fill-slot="content" tal:omit-tag="True">
+        
+        <!--New pattern starts here-->
+        
+        <div class="container">
+            <aside class="sidebar-aside">
+                
+                <div class="flex-shrink-0 py-5 px-1 bg-white sticky-top">
+                    <a href="/resources/add-citation#adding-journal-citations-to-a-data-package"
+                       class="d-flex align-items-center mb-2 link-dark text-decoration-none">
+                        <span class="fs-5 fw-semibold">Adding Journal Citations to a Data Package</span>
+                    </a>
+                    <ul class="btn-toggle-nav">
+                        <li><a href="/resources/add-citation#required-information"
+                               class="link-dark rounded">Required information</a>
+                            <ul class="fw-normal small">
+                                <li><a href="/resources/add-citation#relation-types"
+                                       class="link-dark rounded">Relation types</a>
+                                    <ul class="fw-normal small">
+                                        <li><a href="/resources/add-citation#iscitedby"
+                                               class="link-dark rounded">IsCitedBy</a></li>
+                                        <li><a href="/resources/add-citation#isdescribedby"
+                                               class="link-dark rounded">IsDescribedBy</a></li>
+                                        <li><a href="/resources/add-citation#isreferencedby"
+                                               class="link-dark rounded">IsReferencedBy</a>
+                                            <!--testing-->
+                                            <ul class="fw-normal small">
+                                            <li><a href="/resources/add-citation#iscitedby"
+                                                   class="link-dark rounded">IsCitedBy</a></li>
+                                            <li><a href="/resources/add-citation#isdescribedby"
+                                                   class="link-dark rounded">IsDescribedBy</a></li>
+                                            <li><a href="/resources/add-citation#isreferencedby"
+                                                   class="link-dark rounded">IsReferencedBy</a></li>
+                                            </ul>
+                                        <!--testing-->
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        <li><a href="/resources/add-citation#adding-a-citation-to-a-data-package"
+                               class="link-dark rounded">Adding a citation to a data package and again and again </a>
+                            <ul class=" fw-normal small">
+                                <li><a href="/resources/add-citation#edi-data-portal" class="link-dark rounded">EDI Data
+                                    Portal</a></li>
+                                <li><a href="/resources/add-citation#ediutils" class="link-dark rounded">EDIutils</a>
+                                </li>
+                            </ul>
+                        </li>
+                        </li>
+                    </ul>
+                </div>
+            
+            </aside>
+            
+            <main class="main-tutorial">
+                <h1 id="adding-journal-citations-to-a-data-package">Adding Journal Citations to a Data Package</h1>
+                <p>Adding journal citations to a data package allows authors to measure the impact that their data
+                    are making and allows potential users to see the context in which the data have been previously
+                    applied.</p>
+                <p>While EDI takes measures to cross reference new articles to cited data packages, occasionally one
+                    is missed. When this is the case, journal citations can be added by emailing the EDI Curation
+                    Team with the required information or directly by anyone with an EDI account via the EDI Data
+                    Portal, the EDIutils R Package, or the REST API.</p>
+                <blockquote>
+                    <p>The term "journal citations" is broadly defined and includes any external media in which the
+                        data have been cited (e.g. reports, articles, software, etc.).</p>
+                </blockquote>
+                
+                <h2 id="required-information">Required information</h2>
+                <p>A journal citation must contain a <a href="/resources/the-data-package#data-package-identifier">data
+                    package identifier</a>, an article identifier (either a DOI or URL), and a description of the
+                    relationship between the article and data package. Including the title of the article and
+                    journal is recommended.</p>
+                <h3 id="relation-types">Relation types</h3>
+                <p>The relation between a journal citation and data package must be described when linking a journal
+                    citation. There are three types of relations between data packages and journal articles <a
+                            href="https://support.datacite.org/docs/relationtype_for_citation">provided by
+                        DataCite</a> and supported by EDI:</p>
+                <h4 id="iscitedby">IsCitedBy</h4>
+                <ul>
+                    <li>The data package is formally cited in the article.</li>
+                    <li>The data package is explicitly cited within the article.</li>
+                    <li>The data package DOI, a longform citation, or any other indicator identifies a specific data
+                        package in the journal article (as data availability statement, in the acknowledgements,
+                        methods, citation sections, or supplemental materials).
+                    </li>
+                </ul>
+                <h4 id="isdescribedby">IsDescribedBy</h4>
+                <ul>
+                    <li>The data package is explicitly described within the article.</li>
+                    <li>Journal articles that explicitly describe the data package, such as a <a
+                            href="https://esajournals.onlinelibrary.wiley.com/hub/journal/19399170/resources/data_paper_inst_ecy">data
+                        paper</a>.
+                    </li>
+                </ul>
+                <h4 id="isreferencedby">IsReferencedBy</h4>
+                <ul>
+                    <li>The data package is implicitly described within the article.</li>
+                    <li>The data package was used to produce the results presented in the article but the data
+                        package DOI or a longform citation is not present in the article.
+                    </li>
+                    <li>A knowledgeable person assures the use of this data package in the article.</li>
+                    <li>When linking an older journal article to a newly published data package.</li>
+                </ul>
+                <h2 id="adding-a-citation-to-a-data-package">Adding a citation to a data package</h2>
+                <h3 id="edi-data-portal">EDI Data Portal</h3>
+                <p>Journal citations can be added to data packages manually from the <a
+                        href="https://portal.edirepository.org/nis/home.jsp">EDI Data Portal</a>:</p>
+                <ol>
+                    <li>Access the <strong>Journal Citations</strong> tool from the dropdown navigation menu</li>
+                </ol>
+                <p><img class="screen-shot" src="/static/images/journal-citation-tools-dropdown.png" width="75%"/>
+                </p>
+                <p>or from the <strong>Add Journal Citation</strong> button at the bottom of a data packages landing
+                    page</p>
+                <p><img class="screen-shot" src="/static/images/journal-citations-landing.png" width="75%"/></p>
+                <ol>
+                    <li>Add the citation information, then use the <strong>Add Journal Citation</strong> button to
+                        create and add the journal citation.
+                    </li>
+                    <li>Journal citations can also be updated or deleted using the journal citation tool.</li>
+                </ol>
+                <p><img class="screen-shot" src="/static/images/journal-citation-tool.png" width="75%"/></p>
+                <p><a href="https://www.youtube.com/watch?v=XyyrH4EzTNc&amp;t=291s">Watch a video walkthrough</a>
+                    demonstrating the use of the journal citation tool.</p>
+                <h3 id="ediutils">EDIutils</h3>
+                <p>Journal citations can be added to data packages programmatically with the <a
+                        href="https://ediorg.github.io/EDIutils/">EDIutils R package</a>. Provide the required and
+                    optional citation information as arguments to the <a
+                            href="https://ediorg.github.io/EDIutils/reference/create_journal_citation.html"><code>create_journal_citation()</code></a>
+                    function.</p>
+                <p>For a language-agnostic solution, see the REST API documentation for <a
+                        href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/pasta_api/data_package_manager_api.html#create-journal-citation">Create
+                    Journal Citation</a>.</p>
+            </main>
+        
+        </div>
+    
+    
+    </div>
 </div>
