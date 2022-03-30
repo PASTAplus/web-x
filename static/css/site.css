@@ -118,53 +118,26 @@ body {
 
 footer {
     width: 100%;
-    /*    font-size: calc(0.5rem + 0.5vw); */
     font-size: 1rem;
-}
-
-.footer-top ul {
-    text-align: center;
-    margin: 0;
-    /*  padding:0 0 0 ;  */
-}
-
-.footer-top h3 {
-    margin-top: 1.5em;
-    margin-bottom: 0;
-    color: white;
-    font-weight: 400;
-}
-
-.footer-top img {
-    min-width: 0;
-    max-width: 20%;
-    max-height: 4vmin;
-}
-
-.footer-top-logo img {
-    float: right;
-    min-width: 0;
-    max-width: 30%;
-    max-height: 5vmin;
-    min-height: 0;
-    margin-top: 3em;
-    margin-right: 1em;
 }
 
 .footer-bottom {
     margin-bottom: 1em;
     background: #a8b3b8;
     padding: 1.5em;
+    text-align: center;
 }
 
 .footer-bottom img {
     max-height: 3.5vmin;
     min-height: 0;
     margin-right: 1.5em;
+    display: inline-block;
 }
 
 .footer-bottom p {
     margin-bottom: 0;
+    text-align: center;
 }
 
 .form-control {

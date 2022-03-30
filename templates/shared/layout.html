@@ -3,15 +3,15 @@
     <meta charset="UTF-8">
     <meta name="robots" content="noindex">
     <title>${ title }</title>
-
+    
     <link rel="icon" type="image/png" href="/static/images/favicon.png"/>
-
+    
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,600italic,700,700italic|Source+Code+Pro:500">
-
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-
+    
     <link rel="stylesheet" href="/static/css/nav.css"/>
     <link rel="stylesheet" href="/static/css/site.css"/>
     <link rel="stylesheet" href="/static/css/index.css"/>
@@ -19,12 +19,12 @@
     <link rel="stylesheet" href="/static/css/basic.css"/>
     <link rel="stylesheet" href="/static/css/sidebar.css"/>
     <link rel="stylesheet" href="/static/css/example.css"/>
-
-    <div metal:define-slot="additional-css"  tal:omit-tag="True"></div>
+    
+    <div metal:define-slot="additional-css" tal:omit-tag="True"></div>
 </head>
 <body>
 <div class="main_content">
-
+    
     <!--        <div id="content-wrap"> -->
     <header class="bg-white">
         <nav class="navbar navbar-expand-lg navbar-dark bg-white">
@@ -39,21 +39,27 @@
                             <a class="nav-link  dropdown-toggle text-dark" href="#" data-bs-toggle="dropdown">Data</a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="/data/publish-data">Publish Data</a></li>
-                                <li><a class="dropdown-item" href="https://portal.edirepository.org/nis/advancedSearch.jsp">Find Data</a></li>
+                                <li><a class="dropdown-item"
+                                       href="https://portal.edirepository.org/nis/advancedSearch.jsp">Find Data</a></li>
                             </ul>
                         </li>
                         <!--Resources-->
                         <li class="nav-item dropdown">
-                            <a class="nav-link  dropdown-toggle text-dark" href="#" data-bs-toggle="dropdown">Resources</a>
+                            <a class="nav-link  dropdown-toggle text-dark" href="#"
+                               data-bs-toggle="dropdown">Resources</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/resources/resources-for-data-authors">For Data Authors</a></li>
-                                <li><a class="dropdown-item" href="/resources/resources-for-data-users">For Data Users</a></li>
-                                <li><a class="dropdown-item" href="/resources/resources-for-information-managers">For Information Managers</a></li>
+                                <li><a class="dropdown-item" href="/resources/resources-for-data-authors">For Data
+                                    Authors</a></li>
+                                <li><a class="dropdown-item" href="/resources/resources-for-data-users">For Data
+                                    Users</a></li>
+                                <li><a class="dropdown-item" href="/resources/resources-for-information-managers">For
+                                    Information Managers</a></li>
                             </ul>
                         </li>
                         <!--Support-->
                         <li class="nav-item dropdown">
-                            <a class="nav-link  dropdown-toggle text-dark" href="#" data-bs-toggle="dropdown">Support</a>
+                            <a class="nav-link  dropdown-toggle text-dark" href="#"
+                               data-bs-toggle="dropdown">Support</a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="/support/contact-us">Contact Us</a></li>
                                 <li><a class="dropdown-item" href="/support/frequently-asked-questions">FAQ</a></li>
@@ -70,7 +76,8 @@
                         </li>
                         <!--Login-->
                         <li tal:condition="not is_logged_in" class="nav-item">
-                            <a class="nav-link text-dark" href="https://portal.edirepository.org/nis/login.jsp">Login</a>
+                            <a class="nav-link text-dark"
+                               href="https://portal.edirepository.org/nis/login.jsp">Login</a>
                         </li>
                         <li tal:condition="is_logged_in" class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
@@ -98,84 +105,86 @@
         <div class="logged-in not-logged-in" tal:condition="not is_logged_in">
         </div>
     </header>
-
+    
     <div metal:define-slot="content" tal:omit-tag="True">No content</div>
-
-
-    <div class="container-fluid text-center text-md-left" style="padding-left: 0em; padding-right: 0em;">
-        <footer class="py-5">
-            <div class="footer-top">
-                <div class="d-flex justify-content-center flex-wrap"
-                     style="background-color: #676c6e; padding-bottom: 1.5em;">
-
-                    <div class="col-1">
-                        <ul class="nav flex-column">
-                            <li><h3>Data</h3></li>
-                            <li class="na`v-item mb-2"><a href="/resources/publishing-a-data-package" class="nav-link p-0 text-white">Publish
-                                Data</a></li>
-                            <li class="na`v-item mb-2"><a href="https://portal.edirepository.org/nis/advancedSearch.jsp" class="nav-link p-0 text-white">Search
-                                Data</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-1">
-                        <ul class="nav flex-column">
-                            <li><h3>Resources</h3></li>
-                            <li class="na`v-item mb-2"><a href="/resources/resources-for-data-authors" class="nav-link p-0 text-white">For
-                                Data Authors</a></li>
-                            <li class="na`v-item mb-2"><a href="/resources/resources-for-data-users" class="nav-link p-0 text-white">For
-                                Data Users</a></li>
-                            <li class="na`v-item mb-2"><a href="/resources/resources-for-information-managers"
-                                                          class="nav-link p-0 text-white">For Data Managers</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-1">
-                        <ul class="nav flex-column">
-                            <li><h3>Help & Support</h3></li>
-                            <li class="na`v-item mb-2"><a href="/support/contact-us" class="nav-link p-0 text-white">Contact Us</a>
-                            </li>
-                            <li class="na`v-item mb-2"><a href="/support/frequently-asked-questions" class="nav-link p-0 text-white">FAQ</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-1">
-                        <ul class="nav flex-column">
-                            <li><h3>About</h3></li>
-                            <li class="na`v-item mb-2"><a href="/about/about-edi" class="nav-link p-0 text-white">EDI</a></li>
-                            <li class="na`v-item mb-2"><a href="/about/edi-policy" class="nav-link p-0 text-white">Policies</a>
-                            </li>
-                            <li class="na`v-item mb-2"><a href="/about/partners-and-affiliations" class="nav-link p-0 text-white">Partners</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-1">
-                        <div class="footer-top-logo">
-                            <img src="/static/images/edi_logo_grey_and_white.png" alt="EDI Logo">
+    
+    <!--footer-->
+    <div class="container-fluid px-0" style="background-color: #676c6e;">
+        <footer class="py-0">
+            
+            <!--footer-top-->
+            <div class="row" style="padding-right: 15rem; padding-left: 15rem; padding-top: 2rem; padding-bottom: 1rem;">
+                <!--menu items-->
+                <div class="col-2">
+                    <h4 class="text-white">Data</h4>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="/data/publish-data" class="nav-link p-0 text-white">Publish Data</a></li>
+                        <li class="nav-item mb-2"><a href="https://portal.edirepository.org/nis/advancedSearch.jsp" class="nav-link p-0 text-white">Find Data</a></li>
+                    </ul>
+                </div>
+                <div class="col-2">
+                    <h4 class="text-white">Resources</h4>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="/resources/resources-for-data-authors" class="nav-link p-0 text-white">For Data Authors</a></li>
+                        <li class="nav-item mb-2"><a href="/resources/resources-for-data-users" class="nav-link p-0 text-white">For Data Users</a></li>
+                        <li class="nav-item mb-2"><a href="/resources/resources-for-information-managers" class="nav-link p-0 text-white">For Information Managers</a></li>
+                    </ul>
+                </div>
+                <div class="col-2">
+                    <h4 class="text-white">Support</h4>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="/support/contact-us" class="nav-link p-0 text-white">Contact Us</a></li>
+                        <li class="nav-item mb-2"><a href="/support/frequently-asked-questions" class="nav-link p-0 text-white">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-2">
+                    <h4 class="text-white">About</h4>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="/about/about-edi" class="nav-link p-0 text-white">EDI</a></li>
+                        <li class="nav-item mb-2"><a href="/about/edi-policy" class="nav-link p-0 text-white">Policies</a></li>
+                        <li class="nav-item mb-2"><a href="/about/partners-and-affiliations" class="nav-link p-0 text-white">Partners</a></li>
+                    </ul>
+                </div>
+                
+                <!--logo and signature-->
+                <div class="d-flex col-4 offset-0">
+                    <form>
+    
+                        <div>
+                            <h2 class="text-white">
+                                <img src="/static/images/edi_logo_grey_and_white.png" alt="EDI logo" class="bi me-2"
+                                     width="60"/>
+                                Environmental Data Initiative
+                            </h2>
+                            <p class="text-white">Preserving environmental data for open and reproducible science, to
+                                promote synthesis across space and time, and to aid in the assessment of environmental
+                                change and its consequences.</p>
+                            <ul class="list-unstyled d-flex">
+                                <li class="ms-3"><a class="link-dark" href="https://edi-got-data.slack.com">
+                                    <img src="/static/images/slack_circle.png" alt="Slack" class="bi me-2"
+                                     width="45"/>
+                                </a></li>
+                                <li class="ms-3"><a class="link-dark" href="https://www.youtube.com/channel/UCNZoWPaMG6lkEiH8xRNnrrA">
+                                    <img src="/static/images/youtube_circle.png" alt="YouTube" class="bi me-2"
+                                     width="45"/>
+                                </a></li>
+                                <li class="ms-3"><a class="link-dark" href="https://twitter.com/EDIgotdata">
+                                    <img src="/static/images/twitter_circle.png" alt="Twitter" class="bi me-2"
+                                     width="45"/>
+                                </a></li>
+                                <li class="ms-3"><a class="link-dark" href="https://github.com/EDIorg">
+                                    <img src="/static/images/github_circle.png" alt="GitHub/EDIorg" class="bi me-2"
+                                     width="45"/>
+                                </a></li>
+                            </ul>
                         </div>
-                    </div>
-
-                    <div class="col-2">
-                        <h3>Environmental Data Initiative</h3>
-                        <p style="color: white;line-height: normal">
-                            Preserving environmental data for open and reproducible science, to promote synthesis across
-                            space and time, and to aid in the assessment of environmental change and its consequences.
-                        </p>
-                        <a href="https://edi-got-data.slack.com"><img src="/static/images/slack_circle.svg"
-                                                                      alt="Slack circle"></a>
-                        <a href="https://www.youtube.com/channel/UCNZoWPaMG6lkEiH8xRNnrrA"><img
-                                src="/static/images/youtube_circle.svg" alt="YouTube circle"></a>
-                        <a href="https://twitter.com/EDIgotdata"><img src="/static/images/twitter_circle.svg"
-                                                                      alt="Twitter circle"></a>
-                        <a href="https://github.com/EDIorg"><img src="/static/images/github_circle.svg"
-                                                                 alt="GitHub circle"></a>
-                    </div>
+                    </form>
                 </div>
             </div>
-
+            
+            <!--footer-bottom-->
             <div class="footer-bottom">
+                <!--affiliations-->
                 <p>The Environmental Data Initiative is proud to be affiliated with the following organizations:</p>
                 <a href="https://datacite.org/"><img src="/static/images/datacite-logo.png" alt="DataCite logo"></a>
                 <a href="https://www.dataone.org/"><img src="/static/images/dataone-logo.png"  alt="DataONE logo"></a>
@@ -184,13 +193,17 @@
                 <a href="https://lternet.edu/"><img src="/static/images/lter-logo.svg" alt="LTER Network logo"></a>
                 <a href="https://www.neonscience.org/"><img src="/static/images/neon-logo.png" alt="NEON logo"></a>
             </div>
-
+            
         </footer>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    
+    
+    <script src="/docs/5.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"></script>
+    
+    <!--new stop-->
+    
     <div metal:define-slot="additional-js" tal:omit-tag="True"></div>
 </div>
 </body>
