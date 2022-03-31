@@ -1,30 +1,29 @@
 <div metal:use-macro="load: ../shared/layout.html">
 <div metal:fill-slot="content" tal:omit-tag="True">
-<div class="sidebar-inner">
 <div class="container">
-<aside class="sidebar"><div class="sticky-sm-top"><div class="sticky-md-top"><div class="sticky-lg-top"><div class="sticky-xl-top">
-<ul>
-<li><a href="#health">Health</a></li>
-<li><a href="#reports">Reports</a><ul>
-<li><a href="#no-public-access-admin">No Public Access (admin)</a></li>
-<li><a href="#offline-data-admin">Offline Data (admin)</a></li>
-<li><a href="#doi-report-admin">DOI Report (admin)</a></li>
-<li><a href="#package-tracker">Package Tracker</a></li>
-<li><a href="#recent-uploads">Recent Uploads</a></li>
-<li><a href="#upload-report">Upload Report</a></li>
-<li><a href="#site-report">Site Report</a></li>
+<aside class="sidebar-aside"><div class="flex-shrink-0 py-5 px-1 bg-white sticky-top">
+<a class="d-flex align-items-center mb-2 link-dark text-decoration-none" href="#"><span class="fs-5 fw-semibold">The EDI Dashboard</span></a><ul class="btn-toggle-nav">
+<li><a class="link-dark rounded" href="#health">Health</a></li>
+<li><a class="link-dark rounded" href="#reports">Reports</a><ul class="fw-normal">
+<li><a class="link-dark rounded" href="#no-public-access-admin">No Public Access (admin)</a></li>
+<li><a class="link-dark rounded" href="#offline-data-admin">Offline Data (admin)</a></li>
+<li><a class="link-dark rounded" href="#doi-report-admin">DOI Report (admin)</a></li>
+<li><a class="link-dark rounded" href="#package-tracker">Package Tracker</a></li>
+<li><a class="link-dark rounded" href="#recent-uploads">Recent Uploads</a></li>
+<li><a class="link-dark rounded" href="#upload-report">Upload Report</a></li>
+<li><a class="link-dark rounded" href="#site-report">Site Report</a></li>
 </ul>
 </li>
-<li><a href="#pasta">PASTA+</a><ul>
-<li><a href="#reservations">Reservations</a></li>
-<li><a href="#working-on">Working On</a></li>
-<li><a href="#embargo-management-admin">Embargo Management (admin)</a></li>
+<li><a class="link-dark rounded" href="#pasta">PASTA+</a><ul class="fw-normal">
+<li><a class="link-dark rounded" href="#reservations">Reservations</a></li>
+<li><a class="link-dark rounded" href="#working-on">Working On</a></li>
+<li><a class="link-dark rounded" href="#embargo-management-admin">Embargo Management (admin)</a></li>
 </ul>
 </li>
-<li><a href="#user-management">User Management</a></li>
-<li><a href="#edi-portals">EDI Portals</a></li>
+<li><a class="link-dark rounded" href="#user-management">User Management</a></li>
+<li><a class="link-dark rounded" href="#edi-portals">EDI Portals</a></li>
 </ul>
-</div></div></div></div></aside><main class="main-tutorial">
+</div></aside><main class="main-tutorial">
 <h1 id="the-edi-dashboard">The EDI Dashboard</h1>
 <p>The EDI Dashboard gives users access to information and processes related to the functioning of the EDI Data Repository (a.k.a. PASTA). The dashboard provides useful tools for generating site- or package-specific reports, checking the status of data package evaluations and uploads, or for monitoring the health of EDI services and portals. Access is restricted to admin users for some dashboard features (noted in subheaders here and on the dashboard).</p>
 
@@ -57,7 +56,6 @@
 <h2 id="edi-portals">EDI Portals</h2>
 <p>The links underneath this dropdown bring users directly to the EDI Data Portal <a href="/resources/repository-environments">environment</a> listed (Production, Staging, Development).</p>
 </main>
-</div>
 </div>
 </div>
 </div>

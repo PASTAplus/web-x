@@ -1,18 +1,17 @@
 <div metal:use-macro="load: ../shared/layout.html">
 <div metal:fill-slot="content" tal:omit-tag="True">
-<div class="sidebar-inner">
 <div class="container">
-<aside class="sidebar"><div class="sticky-sm-top"><div class="sticky-md-top"><div class="sticky-lg-top"><div class="sticky-xl-top">
-<ul>
-<li><a href="#data-portal">Data Portal</a><ul>
-<li><a href="#point-and-click">Point and click</a></li>
-<li><a href="#data-import-scripts">Data import scripts</a></li>
+<aside class="sidebar-aside"><div class="flex-shrink-0 py-5 px-1 bg-white sticky-top">
+<a class="d-flex align-items-center mb-2 link-dark text-decoration-none" href="#"><span class="fs-5 fw-semibold">Accessing Data</span></a><ul class="btn-toggle-nav">
+<li><a class="link-dark rounded" href="#data-portal">Data Portal</a><ul class="fw-normal">
+<li><a class="link-dark rounded" href="#point-and-click">Point and click</a></li>
+<li><a class="link-dark rounded" href="#data-import-scripts">Data import scripts</a></li>
 </ul>
 </li>
-<li><a href="#ediutils">EDIutils</a></li>
-<li><a href="#accessing-embargoed-data">Accessing embargoed data</a></li>
+<li><a class="link-dark rounded" href="#ediutils">EDIutils</a></li>
+<li><a class="link-dark rounded" href="#accessing-embargoed-data">Accessing embargoed data</a></li>
 </ul>
-</div></div></div></div></aside><main class="main-tutorial">
+</div></aside><main class="main-tutorial">
 <h1 id="accessing-data">Accessing Data</h1>
 <p>Data packages and their contents can be accessed through the EDI Data Portal, EDIutils R Package, and the REST API. These options support scientific workflows driven by manual human effort and automated machine routines.</p>
 <p><img src="/static/images/access.png" width="30%"/></p>
@@ -22,13 +21,11 @@
 <h3 id="point-and-click">Point and click</h3>
 <p>Single data objects or the entire data package can be downloaded as files:</p>
 <ol>
-<li>From a <a href="/resources/data-package-pages">data package landing page</a>, navigate to the <strong>Resources</strong> section:</li>
-</ol>
-<p><img class="screen-shot" src="/static/images/access-resources.png" width="65%"/></p>
-<ol>
+<li>From a <a href="/resources/data-package-pages">data package landing page</a>, navigate to the <strong>Resources</strong> section.</li>
 <li>Download individual resources by clicking the links under <strong>Download Data</strong>.</li>
 <li>Use the <strong>Download Zip Archive</strong> button to download the entire data package.</li>
 </ol>
+<p><img class="screen-shot" src="/static/images/access-resources.png" width="65%"/></p>
 <h3 id="data-import-scripts">Data import scripts</h3>
 <p>Data import scripts, read data directly from the EDI Repository into common programming language workspaces. This option supports reproducible research by accessing the data directly and reducing the possibility of errors propagating through local files.</p>
 <ol>
@@ -48,7 +45,6 @@
 <h2 id="accessing-embargoed-data">Accessing embargoed data</h2>
 <p>Embargoed data can be accessed by users who are authorized according to the &lt;access&gt; element of the EML file. Users should reach out directly to the contact listed on the data package for access to embargoed data. If the contact is unresponsive, <a href="/support/contact-us">contact EDI</a> for assistance.</p>
 </main>
-</div>
 </div>
 </div>
 </div>

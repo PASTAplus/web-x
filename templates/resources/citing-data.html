@@ -1,23 +1,24 @@
 <div metal:use-macro="load: ../shared/layout.html">
 <div metal:fill-slot="content" tal:omit-tag="True">
-<div class="sidebar-inner">
 <div class="container">
-<aside class="sidebar"><div class="sticky-sm-top"><div class="sticky-md-top"><div class="sticky-lg-top"><div class="sticky-xl-top">
-<ul>
-<li><a href="#citing-in-an-article">Citing in an article</a><ul>
-<li><a href="#copy-the-citation-from-a-data-package-landing-page">Copy the citation from a data package landing page</a></li>
-<li><a href="#browser-plugins">Browser plugins</a></li>
-<li><a href="#programmatically-create-data-package-citations">Programmatically create data package citations</a></li>
+<aside class="sidebar-aside"><div class="flex-shrink-0 py-5 px-1 bg-white sticky-top">
+<a class="d-flex align-items-center mb-2 link-dark text-decoration-none" href="#"><span class="fs-5 fw-semibold">Citing a Data Package</span></a><ul class="btn-toggle-nav">
+<li><a class="link-dark rounded" href="#citing-in-an-article">Citing in an article</a><ul class="fw-normal">
+<li><a class="link-dark rounded" href="#copy-the-citation-from-a-data-package-landing-page">Copy the citation from a data package landing page</a></li>
+<li><a class="link-dark rounded" href="#browser-plugins">Browser plugins</a></li>
+<li><a class="link-dark rounded" href="#programmatically-create-data-package-citations">Programmatically create data package citations</a></li>
 </ul>
 </li>
-<li><a href="#citing-in-a-derived-data-package">Citing in a derived data package</a></li>
-<li><a href="#references">References</a></li>
+<li><a class="link-dark rounded" href="#citing-in-a-derived-data-package">Citing in a derived data package</a></li>
+<li><a class="link-dark rounded" href="#references">References</a></li>
 </ul>
-</div></div></div></div></aside><main class="main-tutorial">
+</div></aside><main class="main-tutorial">
 <h1 id="citing-a-data-package">Citing a Data Package</h1>
 <p>Along with ensuring proper attribution is paid to the original data author, citing data in publications and other published data increases findability, encourages data reuse, and enables reliable tracking of data citation metrics.<sup>[1]</sup></p>
-<p><img class="screen-shot" src="/static/images/data-citation.png" width="75%"/></p>
-<p>Components of a data citation: (1) Data Author or Creator, (2) Public Release Date, (3) Title, (4) Version, (5) Repository, (6) Persistent Identifier (DOI), (7) Access Date.</p>
+<figure class="figure">
+<img class="figure-img" src="/static/images/data-citation.png" width="75%"/>
+<figcaption class="figure-caption">Components of a data citation: (1) Data Author or Creator, (2) Public Release Date, (3) Title, (4) Version, (5) Repository, (6) Persistent Identifier (DOI), (7) Access Date.</figcaption>
+</figure>
 
 <h2 id="citing-in-an-article">Citing in an article</h2>
 <h3 id="copy-the-citation-from-a-data-package-landing-page">Copy the citation from a data package landing page</h3>
@@ -33,7 +34,6 @@
 <h2 id="references">References</h2>
 <p><sup>[1]</sup>Renée F Brown, The Importance of Data Citation, <em>BioScience</em>, Volume 71, Issue 3, March 2021, Page 211,<a href="https://doi.org/10.1093/biosci/biab012"> https://doi.org/10.1093/biosci/biab012</a></p>
 </main>
-</div>
 </div>
 </div>
 </div>

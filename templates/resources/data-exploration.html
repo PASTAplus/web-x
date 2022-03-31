@@ -1,31 +1,30 @@
 <div metal:use-macro="load: ../shared/layout.html">
 <div metal:fill-slot="content" tal:omit-tag="True">
-<div class="sidebar-inner">
 <div class="container">
-<aside class="sidebar"><div class="sticky-sm-top"><div class="sticky-md-top"><div class="sticky-lg-top"><div class="sticky-xl-top">
-<ul>
-<li><a href="#data-explorer-dex">Data eXplorer (DeX)</a><ul>
-<li><a href="#profile">Profile</a><ul>
-<li><a href="#overview">Overview</a></li>
-<li><a href="#sample">Sample</a></li>
-<li><a href="#variables">Variables</a></li>
+<aside class="sidebar-aside"><div class="flex-shrink-0 py-5 px-1 bg-white sticky-top">
+<a class="d-flex align-items-center mb-2 link-dark text-decoration-none" href="#"><span class="fs-5 fw-semibold">Data Exploration</span></a><ul class="btn-toggle-nav">
+<li><a class="link-dark rounded" href="#data-explorer-dex">Data eXplorer (DeX)</a><ul class="fw-normal">
+<li><a class="link-dark rounded" href="#profile">Profile</a><ul class="fw-normal">
+<li><a class="link-dark rounded" href="#overview">Overview</a></li>
+<li><a class="link-dark rounded" href="#sample">Sample</a></li>
+<li><a class="link-dark rounded" href="#variables">Variables</a></li>
 </ul>
 </li>
-<li><a href="#subset">Subset</a><ul>
-<li><a href="#query">Query</a></li>
-<li><a href="#time-period">Time period</a></li>
-<li><a href="#row-index">Row index</a></li>
-<li><a href="#category">Category</a></li>
+<li><a class="link-dark rounded" href="#subset">Subset</a><ul class="fw-normal">
+<li><a class="link-dark rounded" href="#query">Query</a></li>
+<li><a class="link-dark rounded" href="#time-period">Time period</a></li>
+<li><a class="link-dark rounded" href="#row-index">Row index</a></li>
+<li><a class="link-dark rounded" href="#category">Category</a></li>
 </ul>
 </li>
-<li><a href="#plot">Plot</a></li>
-<li><a href="#eml">EML</a></li>
+<li><a class="link-dark rounded" href="#plot">Plot</a></li>
+<li><a class="link-dark rounded" href="#eml">EML</a></li>
 </ul>
 </li>
-<li><a href="#data-import-scripts">Data Import Scripts</a></li>
-<li><a href="#datapie">datapie</a></li>
+<li><a class="link-dark rounded" href="#data-import-scripts">Data Import Scripts</a></li>
+<li><a class="link-dark rounded" href="#datapie">datapie</a></li>
 </ul>
-</div></div></div></div></aside><main class="main-tutorial">
+</div></aside><main class="main-tutorial">
 <h1 id="data-exploration">Data Exploration</h1>
 <p>At the beginning of any data reuse or synthesis project, it is important to quickly gain a thorough understanding of the type and scope of data under consideration. Additionally, it is a good practice to scan data for issues before publishing.</p>
 <p>While data package metadata, such as the <a href="/resources/data-package-pages#data-entities">Data Entities</a> section in the full metadata page, provide concise explanations of data attributes, summary and visualization tools can provide a quick and easy interactive view into the actual data values. EDI offers three options for data exploration: Data eXplorer, Data Import Scripts, and datapie.</p>
@@ -74,7 +73,6 @@
 <h2 id="datapie">datapie</h2>
 <p>The Data Package Interface for Evaluation (<a href="https://imcr-hackathon.github.io/datapie/">datapie</a>) R Package lets users explore data packages that are available through the DataONE Network via an R Shiny application. <em>This project is under development.</em></p>
 </main>
-</div>
 </div>
 </div>
 </div>

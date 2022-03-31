@@ -1,25 +1,24 @@
 <div metal:use-macro="load: ../shared/layout.html">
 <div metal:fill-slot="content" tal:omit-tag="True">
-<div class="sidebar-inner">
 <div class="container">
-<aside class="sidebar"><div class="sticky-sm-top"><div class="sticky-md-top"><div class="sticky-lg-top"><div class="sticky-xl-top">
-<ul>
-<li><a href="#edi-data-portal">EDI Data Portal</a><ul>
-<li><a href="#login">Login</a></li>
-<li><a href="#reserving-a-data-package-identifier">Reserving a data package identifier</a></li>
-<li><a href="#evaluating-the-data-package">Evaluating the data package</a></li>
-<li><a href="#publishing-the-data-package">Publishing the data package</a></li>
+<aside class="sidebar-aside"><div class="flex-shrink-0 py-5 px-1 bg-white sticky-top">
+<a class="d-flex align-items-center mb-2 link-dark text-decoration-none" href="#"><span class="fs-5 fw-semibold">Publishing a Data Package</span></a><ul class="btn-toggle-nav">
+<li><a class="link-dark rounded" href="#edi-data-portal">EDI Data Portal</a><ul class="fw-normal">
+<li><a class="link-dark rounded" href="#login">Login</a></li>
+<li><a class="link-dark rounded" href="#reserving-a-data-package-identifier">Reserving a data package identifier</a></li>
+<li><a class="link-dark rounded" href="#evaluating-the-data-package">Evaluating the data package</a></li>
+<li><a class="link-dark rounded" href="#publishing-the-data-package">Publishing the data package</a></li>
 </ul>
 </li>
-<li><a href="#ediutils">EDIutils</a><ul>
-<li><a href="#login_1">Login</a></li>
-<li><a href="#reserving-a-data-package-identifier_1">Reserving a data package identifier</a></li>
-<li><a href="#evaluating-the-data-package_1">Evaluating the data package</a></li>
-<li><a href="#publishing-the-data-package_1">Publishing the data package</a></li>
+<li><a class="link-dark rounded" href="#ediutils">EDIutils</a><ul class="fw-normal">
+<li><a class="link-dark rounded" href="#login_1">Login</a></li>
+<li><a class="link-dark rounded" href="#reserving-a-data-package-identifier_1">Reserving a data package identifier</a></li>
+<li><a class="link-dark rounded" href="#evaluating-the-data-package_1">Evaluating the data package</a></li>
+<li><a class="link-dark rounded" href="#publishing-the-data-package_1">Publishing the data package</a></li>
 </ul>
 </li>
 </ul>
-</div></div></div></div></aside><main class="main-tutorial">
+</div></aside><main class="main-tutorial">
 <h1 id="publishing-a-data-package">Publishing a Data Package</h1>
 <p>Publishing a <a href="/resources/the-data-package">data package</a> in the EDI Data Repository can be done manually via the EDI Data Portal, or programmatically using the EDIutils R package or the REST API. Across these three methods, the same general pattern is always followed: login, reserve a data package identifier, evaluate the data package, and publish the data package.</p>
 <p><img src="/static/images/publish.png" width="8%"/></p>
@@ -86,7 +85,6 @@
 <p>Use the <a href="https://ediorg.github.io/EDIutils/reference/create_data_package.html"><code>create_data_package()</code></a> function to publish the data package in the EDI Data Repository.</p>
 <p>This function returns a "transaction identifier" which can be passed to <a href="https://ediorg.github.io/EDIutils/reference/check_status_create.html"><code>check_status_create()</code></a> to determine the status of the publication.</p>
 </main>
-</div>
 </div>
 </div>
 </div>

@@ -1,23 +1,22 @@
 <div metal:use-macro="load: ../shared/layout.html">
 <div metal:fill-slot="content" tal:omit-tag="True">
-<div class="sidebar-inner">
 <div class="container">
-<aside class="sidebar"><div class="sticky-sm-top"><div class="sticky-md-top"><div class="sticky-lg-top"><div class="sticky-xl-top">
-<ul>
-<li><a href="#considerations-for-design">Considerations for design</a><ul>
-<li><a href="#reproducible-science">Reproducible science</a></li>
-<li><a href="#duplicated-data">Duplicated data</a></li>
-<li><a href="#theme-of-the-data">Theme of the data</a></li>
-<li><a href="#method-of-collection">Method of collection</a></li>
-<li><a href="#location-of-collection">Location of collection</a></li>
-<li><a href="#completeness-of-the-data">Completeness of the data</a></li>
-<li><a href="#size-of-data-files">Size of data files</a></li>
-<li><a href="#sampling-frequency">Sampling frequency</a></li>
-<li><a href="#level-of-processing">Level of processing</a></li>
+<aside class="sidebar-aside"><div class="flex-shrink-0 py-5 px-1 bg-white sticky-top">
+<a class="d-flex align-items-center mb-2 link-dark text-decoration-none" href="#"><span class="fs-5 fw-semibold">Designing a Data Package</span></a><ul class="btn-toggle-nav">
+<li><a class="link-dark rounded" href="#considerations-for-design">Considerations for design</a><ul class="fw-normal">
+<li><a class="link-dark rounded" href="#reproducible-science">Reproducible science</a></li>
+<li><a class="link-dark rounded" href="#duplicated-data">Duplicated data</a></li>
+<li><a class="link-dark rounded" href="#theme-of-the-data">Theme of the data</a></li>
+<li><a class="link-dark rounded" href="#method-of-collection">Method of collection</a></li>
+<li><a class="link-dark rounded" href="#location-of-collection">Location of collection</a></li>
+<li><a class="link-dark rounded" href="#completeness-of-the-data">Completeness of the data</a></li>
+<li><a class="link-dark rounded" href="#size-of-data-files">Size of data files</a></li>
+<li><a class="link-dark rounded" href="#sampling-frequency">Sampling frequency</a></li>
+<li><a class="link-dark rounded" href="#level-of-processing">Level of processing</a></li>
 </ul>
 </li>
 </ul>
-</div></div></div></div></aside><main class="main-tutorial">
+</div></aside><main class="main-tutorial">
 <h1 id="designing-a-data-package">Designing a Data Package</h1>
 <p>When designing a <a href="/resources/the-data-package">data package</a>, it is important to consider multiple factors in order to satisfy local or community research needs. Considerations such as whether data should be published as a single package or in a set of related packages must be made to ultimately create a data package that is optimized for discovery and reuse.</p>
 
@@ -50,7 +49,6 @@
 <p>Always try to archive the "minimally processed" version of the data so future users can apply methods appropriate to their research. However, if a lot of effort has gone into formatting and cleaning data, those should be published as well, either in the same package or separately with <a href="/resources/provenance-metadata">provenance metadata</a> to make the relationship clear between them.</p>
 <p><img src="/static/images/data-processing-levels.png" width="75%"/> </p>
 </main>
-</div>
 </div>
 </div>
 </div>

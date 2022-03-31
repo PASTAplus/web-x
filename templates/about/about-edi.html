@@ -1,22 +1,21 @@
 <div metal:use-macro="load: ../shared/layout.html">
 <div metal:fill-slot="content" tal:omit-tag="True">
-<div class="sidebar-inner">
 <div class="container">
-<aside class="sidebar"><div class="sticky-sm-top"><div class="sticky-md-top"><div class="sticky-lg-top"><div class="sticky-xl-top">
-<ul>
-<li><a href="#vision-mission">Vision &amp; Mission</a></li>
-<li><a href="#project">Project</a></li>
-<li><a href="#team">Team</a></li>
-<li><a href="#repository-infrastructure">Repository infrastructure</a></li>
-<li><a href="#physical-management-and-curation-of-digital-products">Physical management and curation of digital products</a><ul>
-<li><a href="#standards-for-data-metadata-and-software">Standards for data, metadata, and software</a></li>
-<li><a href="#risk-management">Risk management</a></li>
-<li><a href="#security-access-and-confidentiality">Security, access, and confidentiality</a></li>
-<li><a href="#reuse-and-redistribution">Reuse and redistribution</a></li>
+<aside class="sidebar-aside"><div class="flex-shrink-0 py-5 px-1 bg-white sticky-top">
+<a class="d-flex align-items-center mb-2 link-dark text-decoration-none" href="#"><span class="fs-5 fw-semibold">About EDI</span></a><ul class="btn-toggle-nav">
+<li><a class="link-dark rounded" href="#vision-mission">Vision &amp; Mission</a></li>
+<li><a class="link-dark rounded" href="#project">Project</a></li>
+<li><a class="link-dark rounded" href="#team">Team</a></li>
+<li><a class="link-dark rounded" href="#repository-infrastructure">Repository infrastructure</a></li>
+<li><a class="link-dark rounded" href="#physical-management-and-curation-of-digital-products">Physical management and curation of digital products</a><ul class="fw-normal">
+<li><a class="link-dark rounded" href="#standards-for-data-metadata-and-software">Standards for data, metadata, and software</a></li>
+<li><a class="link-dark rounded" href="#risk-management">Risk management</a></li>
+<li><a class="link-dark rounded" href="#security-access-and-confidentiality">Security, access, and confidentiality</a></li>
+<li><a class="link-dark rounded" href="#reuse-and-redistribution">Reuse and redistribution</a></li>
 </ul>
 </li>
 </ul>
-</div></div></div></div></aside><main class="main-tutorial">
+</div></aside><main class="main-tutorial">
 <h1 id="about-edi">About EDI</h1>
 
 <h2 id="vision-mission">Vision &amp; Mission</h2>
@@ -200,7 +199,6 @@
 <p>EDI advocates for open and unfettered access to science data and metadata, including data and metadata that reside in the EDI data repository. Science data and metadata contributors have the option to provide a reuse policy of their choice, which is declared within the "intellectual rights" section of the EML metadata document. If a contributor reuse policy does not exist in the EML metadata, EDI will apply a default policy that states data and metadata are to be released as "public domain" under Creative Commons CC0 1.0 "No Rights Reserved" license.</p>
 <p>Science data and metadata, which are unfettered per access rules, can be downloaded individually and used in accordance with the stated reuse policy. Similarly, complete data packages can be accessed and downloaded as a single archive in a "zip" format, including a contents manifest. In the event that EDI ceases operations, all science data and metadata would be made available on portable storage for transfer to another repository; use of the embedded data package identifier and EML metadata would be possible with minimal effort. Updates to target URLs of Digital Object Identifiers (DOIs), managed through DataCite, would allow continued resolution to preferred landing pages. If a cessation scenario occurred, the target repository would be requested to support the access rules declared in all EML metadata documents.</p>
 </main>
-</div>
 </div>
 </div>
 </div>

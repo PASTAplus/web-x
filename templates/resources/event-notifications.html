@@ -1,25 +1,24 @@
 <div metal:use-macro="load: ../shared/layout.html">
 <div metal:fill-slot="content" tal:omit-tag="True">
-<div class="sidebar-inner">
 <div class="container">
-<aside class="sidebar"><div class="sticky-sm-top"><div class="sticky-md-top"><div class="sticky-lg-top"><div class="sticky-xl-top">
-<ul>
-<li><a href="#requirements">Requirements</a></li>
-<li><a href="#components">Components</a><ul>
-<li><a href="#the-subscription">The subscription</a><ul>
-<li><a href="#create-a-subscription">Create a subscription</a></li>
-<li><a href="#test-a-subscription">Test a subscription</a></li>
-<li><a href="#delete-a-subscription">Delete a Subscription</a></li>
+<aside class="sidebar-aside"><div class="flex-shrink-0 py-5 px-1 bg-white sticky-top">
+<a class="d-flex align-items-center mb-2 link-dark text-decoration-none" href="#"><span class="fs-5 fw-semibold">Event Notifications</span></a><ul class="btn-toggle-nav">
+<li><a class="link-dark rounded" href="#requirements">Requirements</a></li>
+<li><a class="link-dark rounded" href="#components">Components</a><ul class="fw-normal">
+<li><a class="link-dark rounded" href="#the-subscription">The subscription</a><ul class="fw-normal">
+<li><a class="link-dark rounded" href="#create-a-subscription">Create a subscription</a></li>
+<li><a class="link-dark rounded" href="#test-a-subscription">Test a subscription</a></li>
+<li><a class="link-dark rounded" href="#delete-a-subscription">Delete a Subscription</a></li>
 </ul>
 </li>
-<li><a href="#the-notification">The notification</a></li>
+<li><a class="link-dark rounded" href="#the-notification">The notification</a></li>
 </ul>
 </li>
-<li><a href="#considerations">Considerations</a></li>
-<li><a href="#tools">Tools</a></li>
-<li><a href="#examples">Examples</a></li>
+<li><a class="link-dark rounded" href="#considerations">Considerations</a></li>
+<li><a class="link-dark rounded" href="#tools">Tools</a></li>
+<li><a class="link-dark rounded" href="#examples">Examples</a></li>
 </ul>
-</div></div></div></div></aside><main class="main-tutorial">
+</div></aside><main class="main-tutorial">
 <h1 id="event-notifications">Event Notifications</h1>
 <p>The EDI Event Notification Service allows data users to stay on top of changes in the EDI Repository. For example, users can receive notification when a new data package is uploaded or when an existing data package is updated. Such information helps researchers using data from the EDI Repository keep their science up-to-date.</p>
 
@@ -96,7 +95,6 @@
 <li><a href="https://github.com/EDIorg/pasta-upload-tweeter">PASTA Upload Tweeter</a> - Tweets when a new data package is uploaded to the EDI Data Repository.</li>
 </ul>
 </main>
-</div>
 </div>
 </div>
 </div>

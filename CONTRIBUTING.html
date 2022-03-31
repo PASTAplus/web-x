@@ -1,0 +1,103 @@
+<div metal:use-macro="load: ../shared/layout.html">
+<div metal:fill-slot="content" tal:omit-tag="True">
+<main class="main-tutorial">
+<!-- Output copied to clipboard! -->
+<!-- Yay, no errors, warnings, or alerts! -->
+<h1>CONTRIBUTING</h1>
+<h2>git structure</h2>
+<p>The active branch is <code>development</code>. <code>development</code> is merged into <code>main</code> for releases. Please submit your pull requests to <code>development</code>.</p>
+<h2>Repository structure</h2>
+<p>The repository structure mirrors <a href="https://github.com/PASTAplus/web-x">web-x</a> thereby enabling developers to build, link, and preview static web pages as they will be displayed in web-x.</p>
+<h2>Design and goals</h2>
+<p>Content is organized into stand alone pages cross referencing each other. This modular design minimizes content duplication and maintenance. Focus on topics relevant to EDI users and not covered by other online resources (e.g. DataONE, NCEAS). Do summarize and reference other resources when relevant.</p>
+<h2>General guidelines</h2>
+<ul>
+<li>New pages - Before adding a new page, open an issue describing the content to be developed. Maintainers (the website team) will provide feedback and suggestions for cross referencing.</li>
+<li>File names - Replace spaces with dashes (e.g. new-page, new-image.png).</li>
+<li>Audience - Pages should target one of the three user classes: data author, data user, or information manager.</li>
+<li>Modularity - Each page should cover one topic with the goal of organizing information as modular building blocks.</li>
+<li>Introductory paragraphs - Each page should begin with an introduction/overview describing why the contents of the page are important and a brief overview of the concept or process the page covers. Pages should begin with little to no prerequisite knowledge. Build prerequisite knowledge in the opening paragraphs with reference to necessary information.</li>
+<li>Subsections - Use subsections to facilitate page navigation and content links.</li>
+<li>Be concise and minimize jargon.</li>
+</ul>
+<h2>Formatting and style</h2>
+<ul>
+<li>Markdown - Pages should be written using the <a href="https://www.markdownguide.org/basic-syntax/">basic markdown syntax</a>.</li>
+<li>Note: Lists (enumerated and bulleted) must be both preceded and followed by an empty line to be rendered correctly in web-x.</li>
+<li>Voice - Pages should be written primarily in the first and third voice. The use of the second voice is acceptable when speaking directly to the audience (e.g. "Please contact us if you encounter an error") or in "imperative" contexts (e.g. providing step-by-step instructions).</li>
+<li>Section headers - Use the gerund form a verb for the header titles (e.g. "Using Download Links", "Uploading to EDI"). Don't use a gerund in headers or subheaders if it's redundant to the higher level (Title: Publishing a data package, Header: EDI Data Portal (good), Publishing via the EDI Data Portal (bad, redundant)). A counter example would be Header: Using Box Cloud Storage, Subheader: Creating a Box File Request (good, gerund is not redundant).</li>
+<li>References and links - References and links to online resources should be added as either:<ul>
+<li>Hyperlinked text to the target URL</li>
+<li>The wikipedia reference format (i.e. The item being referenced is super scripted in square brackets<sup>[1]</sup> and the citation is listed in a "References" section at the bottom of the page).</li>
+</ul>
+</li>
+</ul>
+<h2>Images</h2>
+<h3>Creating images</h3>
+<ol>
+<li>Create an image with high enough resolution so that it isn't distorted at its intended magnification and when enlarged to approximately twice its intended size. Generally, screenshots from a web browser should be taken at normal 100% magnification.</li>
+<li>Trim white space from around the image.</li>
+<li>Compress the image to reduce file size. Use the <a href="https://tinypng.com/">tinypng.com</a> web service to do this.</li>
+</ol>
+<h3>Adding images to markdown</h3>
+<ol>
+<li>Add the image file to the <code>/static/images</code> directory. </li>
+<li>Reference the image from within a markdown page using HTML. There are 4 use cases:</li>
+<li>Screenshots - A drop shadow is added to screenshots to help distinguish them from the body text. This is done with the <code>screen-shot</code> CSS class. Example:</li>
+</ol>
+<p><code>&lt;img class="screen-shot" src="/static/images/ezeml-send-revision.png" width="85%"&gt;</code></p>
+<ol>
+<li>Figures with captions - Example:</li>
+</ol>
+<p>```
+ <br/>
+<figure class="figure">
+<img class="figure-img" src="/static/images/image.png" width="75%"/>
+<figcaption class="figure-caption">A caption for the image.</figcaption>
+</figure></p>
+<p>```</p>
+<ol>
+<li>All other image types - Example:</li>
+</ol>
+<p><code>&lt;img src="/static/images/metadata-in-the-research-life-cycle.png" width="55%"&gt;</code></p>
+<ol>
+<li>Resize for display in the GitHub preview. The general rule of thumb is that the image should be sized so normal body text displayed in the images should match text size on the web page. Set the image size using the <code>width</code> parameter and use a unit of <code>%</code>, meaning percent width of the page view port.</li>
+</ol>
+<blockquote>
+<p>NOTE: A blank newline is required before and after the HTML snippet for markdown to render correctly in HTML.</p>
+</blockquote>
+<h2>Terminology</h2>
+<p>Consistent terminology conveys coherence and makes editing across all web pages, through search and replace methods, much simpler. Below is the current implementation of terminology throughout web pages:</p>
+<ul>
+<li>Capitalize EDI services and features - These are proper nouns (e.g. "EDI Data Portal")</li>
+<li>"EDI Data Repository" or "EDI Repository" not "EDI Data Commons"</li>
+<li>Use "research" instead of "science". Research is more diverse, science is more specific.</li>
+<li>Use "data/dataset" and "metadata" before publication &amp; "data package" after publication.</li>
+<li>Use "publish" over "archive" to build off the "article publishing" schema.</li>
+<li>Prioritize "data publication" over "published data package"</li>
+<li>Prefer "EDI Data Repository" to "PASTA" whenever possible.</li>
+<li>Use "REST API" not "API".</li>
+<li>Use "Information Manager (IM)" not "Data Manager (DM)"</li>
+<li>Use "search data" not "find data" and "discover"data</li>
+<li>"EDI Data Curation Team" or "EDI Curation Team" or "EDI curators"</li>
+<li>Prefer "data file" over "data object" and "data entity" -  The latter two are non-colloquial</li>
+<li>Use "EML file" when referencing the file object and "EML" or "EML metadata"  when referring to content in the file.</li>
+<li>Possessive apostrophes -  don't use possessive apostrophes to denote ownership of non-living entities (e.g. "the EDI Repository's" or "a data packages'")</li>
+<li>Use official terminology to establish consistency when referencing an EDI feature (e.g. "EDI Data Portal") rather than variations thereof (e.g. EDI repository interface).</li>
+<li>Use "Data package landing page" or "Data package summary page" and "Full metadata page".</li>
+</ul>
+<h2>Format</h2>
+<ul>
+<li>Code - Use code highlighting when referencing code, functions, and parameters.</li>
+<li>Functions - Format using <code>function_name()</code></li>
+<li>Colon before a list</li>
+<li>Use bold when referencing terms/items on page,  not quotes or code highlighting.</li>
+<li>EML elements are listed verbatim as they appear in the schema (i.e. camel case and within "&lt;" and "&gt;" tags). Only do this in the context of EML metadata, which is typically technical documentation targeting the information manager and advanced user.</li>
+<li>Use enumerated lists when describing a sequential process.</li>
+<li>Be precise when linking to content in other pages - Link directly to a topic sub-section rather than just the parent page.</li>
+<li>Quotes - Replace smart quotes and apostrophes with dumb quotes and apostrophes</li>
+<li>Spaces - Replace all double spaces with single spaces. Single spaces after periods.</li>
+</ul>
+</main>
+</div>
+</div>

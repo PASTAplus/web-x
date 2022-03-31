@@ -1,18 +1,19 @@
 <div metal:use-macro="load: ../shared/layout.html">
 <div metal:fill-slot="content" tal:omit-tag="True">
-<div class="sidebar-inner">
 <div class="container">
-<aside class="sidebar"><div class="sticky-sm-top"><div class="sticky-md-top"><div class="sticky-lg-top"><div class="sticky-xl-top">
-<ul>
-<li><a href="#production">Production</a></li>
-<li><a href="#staging">Staging</a></li>
-<li><a href="#development">Development</a></li>
+<aside class="sidebar-aside"><div class="flex-shrink-0 py-5 px-1 bg-white sticky-top">
+<a class="d-flex align-items-center mb-2 link-dark text-decoration-none" href="#"><span class="fs-5 fw-semibold">Repository Environments</span></a><ul class="btn-toggle-nav">
+<li><a class="link-dark rounded" href="#production">Production</a></li>
+<li><a class="link-dark rounded" href="#staging">Staging</a></li>
+<li><a class="link-dark rounded" href="#development">Development</a></li>
 </ul>
-</div></div></div></div></aside><main class="main-tutorial">
+</div></aside><main class="main-tutorial">
 <h1 id="repository-environments">Repository Environments</h1>
 <p>There are three different environments/tiers in the EDI Data Repository: production, staging, and development. Production is the primary environment where fully published data packages are securely and permanently hosted, staging is used for previewing data packages and testing workflows, and the development environment is used by EDI Repository developers to test new repository features.</p>
-<p><img src="/static/images/repository-tier-earths.jpg" width="75%"/></p>
-<p>Analogous to use of the EDI Data Repository tiers, a worldly deity would  (hopefully) test new features on development and staging Earths before releasing to production.</p>
+<figure class="figure">
+<img class="figure-img" src="/static/images/repository-tier-earths.jpg" width="75%"/>
+<figcaption class="figure-caption">Analogous to use of the EDI Data Repository tiers, a worldly deity would  (hopefully) test new features on development and staging Earths before releasing to production.</figcaption>
+</figure>
 
 <h2 id="production">Production</h2>
 <p>The production environment is where data packages are officially and securely published with a DOI and made permanently accessible for reuse. All features of the production environment are mature and stable. The production version of the EDI Data Portal is accessible at <a href="https://portal.edirepository.org">portal.edirepository.org</a>.</p>
@@ -23,7 +24,6 @@
 <p>The development environment is used for testing new and, possibly, unstable features of the EDI Data Repository that are not yet mature enough for release to staging. The development version of the EDI Data Portal can be accessed at <a href="https://portal-d.edirepository.org">portal-d.edirepository.org</a>. </p>
 <p>While there is rarely a reason for most users to operate in the development environment, it can be used to test data packages and workflows with the newest features that will eventually be released to production.</p>
 </main>
-</div>
 </div>
 </div>
 </div>

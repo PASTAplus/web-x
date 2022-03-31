@@ -1,16 +1,15 @@
 <div metal:use-macro="load: ../shared/layout.html">
 <div metal:fill-slot="content" tal:omit-tag="True">
-<div class="sidebar-inner">
 <div class="container">
-<aside class="sidebar"><div class="sticky-sm-top"><div class="sticky-md-top"><div class="sticky-lg-top"><div class="sticky-xl-top">
-<ul>
-<li><a href="#linking-data-publications-to-an-orcid-profile">Linking data publications to an ORCID profile</a><ul>
-<li><a href="#allowing-search-and-link-through-datacite">Allowing "Search and Link" through DataCite</a></li>
-<li><a href="#manually-updating">Manually updating</a></li>
+<aside class="sidebar-aside"><div class="flex-shrink-0 py-5 px-1 bg-white sticky-top">
+<a class="d-flex align-items-center mb-2 link-dark text-decoration-none" href="#"><span class="fs-5 fw-semibold">Track Attribution with an ORCID iD</span></a><ul class="btn-toggle-nav">
+<li><a class="link-dark rounded" href="#linking-data-publications-to-an-orcid-profile">Linking data publications to an ORCID profile</a><ul class="fw-normal">
+<li><a class="link-dark rounded" href="#allowing-search-and-link-through-datacite">Allowing "Search and Link" through DataCite</a></li>
+<li><a class="link-dark rounded" href="#manually-updating">Manually updating</a></li>
 </ul>
 </li>
 </ul>
-</div></div></div></div></aside><main class="main-tutorial">
+</div></aside><main class="main-tutorial">
 <h1 id="track-attribution-with-an-orcid-id">Track Attribution with an ORCID iD</h1>
 <p>An <a href="https://orcid.org/">ORCID iD</a> is a free, unique, persistent identifier for researchers. Having an ORCID distinguishes researchers with similar names, ensures that scientific output is correctly attributed, and improves the overall discoverability of scientific products. Linking data publications to an ORCID profile ensures that research contributions are correctly attributed across scholarly databases.</p>
 <p><img src="/static/images/attribution.png" width="40%"/></p>
@@ -35,6 +34,7 @@
 <li>From the DataCite Profiles page, next to ORCID permissions, click the green <strong>Get ORCID token</strong> button.</li>
 <li>Click the <strong>Update</strong> button on the bottom of the page and ensure that the Auto-Update is enabled option is selected.</li>
 </ol>
+<p><img class="screen-shot" src="/static/images/orcid-works-datacite.png" width="60%"/></p>
 <p>For more see the ORCID video <a href="https://vimeo.com/236776451">Use the Search &amp; Link Wizard to Import Works</a> or read the article <a href="https://support.orcid.org/hc/en-us/articles/360006973653-Add-works-by-direct-import-from-other-systems">adding works by direct import</a>.</p>
 <h3 id="manually-updating">Manually updating</h3>
 <p>If you would prefer not to allow DataCite to automatically update your ORCID profile when new works with your ORCID iD are published, you can opt to manually update your profile.</p>
@@ -61,7 +61,6 @@
 <p><img class="screen-shot" src="/static/images/orcid-works3.png" width="45%"/></p>
 <p>For more see the ORCID documentation on <a href="https://support.orcid.org/hc/en-us/articles/360022298153-Add-works-using-an-identifier">adding works using an identifier</a>.</p>
 </main>
-</div>
 </div>
 </div>
 </div>

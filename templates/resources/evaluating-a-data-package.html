@@ -1,35 +1,34 @@
 <div metal:use-macro="load: ../shared/layout.html">
 <div metal:fill-slot="content" tal:omit-tag="True">
-<div class="sidebar-inner">
 <div class="container">
-<aside class="sidebar"><div class="sticky-sm-top"><div class="sticky-md-top"><div class="sticky-lg-top"><div class="sticky-xl-top">
-<ul>
-<li><a href="#edi-data-portal">EDI Data Portal</a><ul>
-<li><a href="#login">Login</a></li>
-<li><a href="#evaluating-the-data-package">Evaluating the data package</a></li>
-<li><a href="#viewing-the-evaluation-report-summary">Viewing the evaluation report summary</a></li>
-<li><a href="#viewing-the-evaluation-report">Viewing the evaluation report</a></li>
+<aside class="sidebar-aside"><div class="flex-shrink-0 py-5 px-1 bg-white sticky-top">
+<a class="d-flex align-items-center mb-2 link-dark text-decoration-none" href="#"><span class="fs-5 fw-semibold">Evaluating a Data Package</span></a><ul class="btn-toggle-nav">
+<li><a class="link-dark rounded" href="#edi-data-portal">EDI Data Portal</a><ul class="fw-normal">
+<li><a class="link-dark rounded" href="#login">Login</a></li>
+<li><a class="link-dark rounded" href="#evaluating-the-data-package">Evaluating the data package</a></li>
+<li><a class="link-dark rounded" href="#viewing-the-evaluation-report-summary">Viewing the evaluation report summary</a></li>
+<li><a class="link-dark rounded" href="#viewing-the-evaluation-report">Viewing the evaluation report</a></li>
 </ul>
 </li>
-<li><a href="#ediutils">EDIutils</a><ul>
-<li><a href="#login_1">Login</a></li>
-<li><a href="#evaluating-the-data-package_1">Evaluating the data package</a></li>
-<li><a href="#viewing-the-evaluation-report-summary_1">Viewing the evaluation report summary</a></li>
-<li><a href="#viewing-the-evaluation-report_1">Viewing the evaluation report</a></li>
+<li><a class="link-dark rounded" href="#ediutils">EDIutils</a><ul class="fw-normal">
+<li><a class="link-dark rounded" href="#login_1">Login</a></li>
+<li><a class="link-dark rounded" href="#evaluating-the-data-package_1">Evaluating the data package</a></li>
+<li><a class="link-dark rounded" href="#viewing-the-evaluation-report-summary_1">Viewing the evaluation report summary</a></li>
+<li><a class="link-dark rounded" href="#viewing-the-evaluation-report_1">Viewing the evaluation report</a></li>
 </ul>
 </li>
-<li><a href="#handling-warnings-and-errors">Handling warnings and errors</a></li>
-<li><a href="#interpreting-the-evaluation-report-summary">Interpreting the evaluation report summary</a><ul>
-<li><a href="#purpose">Purpose</a></li>
+<li><a class="link-dark rounded" href="#handling-warnings-and-errors">Handling warnings and errors</a></li>
+<li><a class="link-dark rounded" href="#interpreting-the-evaluation-report-summary">Interpreting the evaluation report summary</a><ul class="fw-normal">
+<li><a class="link-dark rounded" href="#purpose">Purpose</a></li>
 </ul>
 </li>
-<li><a href="#interpreting-the-evaluation-report">Interpreting the evaluation report</a><ul>
-<li><a href="#structure">Structure</a></li>
-<li><a href="#interpretation">Interpretation</a></li>
+<li><a class="link-dark rounded" href="#interpreting-the-evaluation-report">Interpreting the evaluation report</a><ul class="fw-normal">
+<li><a class="link-dark rounded" href="#structure">Structure</a></li>
+<li><a class="link-dark rounded" href="#interpretation">Interpretation</a></li>
 </ul>
 </li>
 </ul>
-</div></div></div></div></aside><main class="main-tutorial">
+</div></aside><main class="main-tutorial">
 <h1 id="evaluating-a-data-package">Evaluating a Data Package</h1>
 <p>Evaluating a data package is key to ensuring that it contains a valid, well-formed EML file that accurately describes the data. Evaluations can be performed manually via the EDI Data Portal, or programmatically using the EDIutils R package or the REST API.</p>
 <p>Evaluating a data package requires an <a href="/resources/information-manager-quickstart#sign-up-for-an-edi-account">EDI account</a>. Other methods of authentication (e.g. Google, ORCID, GitHub) do not allow evaluation.</p>
@@ -193,7 +192,6 @@
 <h3 id="interpretation">Interpretation</h3>
 <p>Parse through the document and address any errors or warnings (denoted by the <strong>Error</strong> and <strong>Warn</strong> labels). To understand why a quality check failed, first read the <strong>Name</strong> and <strong>Description</strong> of the quality check to determine what was being tested and how the test was being conducted. Then, compare the <strong>Expected</strong> result to what was <strong>Found</strong>. If it is still not clear what caused the failure, try to gain additional insight from the <strong>Explanation</strong>, <strong>Suggestion</strong>, and <strong>Reference</strong> fields, or <a href="/support/contact-us">contact EDI</a> for clarification.</p>
 </main>
-</div>
 </div>
 </div>
 </div>

@@ -1,19 +1,18 @@
 <div metal:use-macro="load: ../shared/layout.html">
 <div metal:fill-slot="content" tal:omit-tag="True">
-<div class="sidebar-inner">
 <div class="container">
-<aside class="sidebar"><div class="sticky-sm-top"><div class="sticky-md-top"><div class="sticky-lg-top"><div class="sticky-xl-top">
-<ul>
-<li><a href="#creating-provenance-metadata">Creating provenance metadata</a><ul>
-<li><a href="#ezeml">ezEML</a></li>
-<li><a href="#emlassemblyline">EMLassemblyline</a></li>
-<li><a href="#edi-data-portal">EDI Data Portal</a></li>
-<li><a href="#ediutils">EDIutils</a></li>
+<aside class="sidebar-aside"><div class="flex-shrink-0 py-5 px-1 bg-white sticky-top">
+<a class="d-flex align-items-center mb-2 link-dark text-decoration-none" href="#"><span class="fs-5 fw-semibold">Provenance Metadata</span></a><ul class="btn-toggle-nav">
+<li><a class="link-dark rounded" href="#creating-provenance-metadata">Creating provenance metadata</a><ul class="fw-normal">
+<li><a class="link-dark rounded" href="#ezeml">ezEML</a></li>
+<li><a class="link-dark rounded" href="#emlassemblyline">EMLassemblyline</a></li>
+<li><a class="link-dark rounded" href="#edi-data-portal">EDI Data Portal</a></li>
+<li><a class="link-dark rounded" href="#ediutils">EDIutils</a></li>
 </ul>
 </li>
-<li><a href="#resources">Resources</a></li>
+<li><a class="link-dark rounded" href="#resources">Resources</a></li>
 </ul>
-</div></div></div></div></aside><main class="main-tutorial">
+</div></aside><main class="main-tutorial">
 <h1 id="provenance-metadata">Provenance Metadata</h1>
 <p>Provenance is the origin or history of data and is an important piece of metadata to make research transparent and reproducible. Several elements in metadata are involved in documenting data provenance. First and foremost is a detailed description of the methods by which the data were collected and created. Data processing scripts (R, Python, etc.) provide very detailed provenance information and can be published in a data package. For the special case of a derived dataset, i.e. data that is compiled from one or more other 'original' datasets, a detailed list of those original datasets should be included. Listing such datasets will give the original data creator proper credit, even when more datasets are used than can reasonably be cited in a resulting paper.</p>
 <p><img src="/static/images/provenance.png" width="15%"/></p>
@@ -64,7 +63,6 @@
 <li><a href="https://github.com/End-to-end-provenance/End-to-end-provenance.github.io/blob/master/README">End-to-End Provenance</a> - Software tools to collect and use provenance information.</li>
 </ul>
 </main>
-</div>
 </div>
 </div>
 </div>

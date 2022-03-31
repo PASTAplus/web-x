@@ -1,14 +1,13 @@
 <div metal:use-macro="load: ../shared/layout.html">
 <div metal:fill-slot="content" tal:omit-tag="True">
-<div class="sidebar-inner">
 <div class="container">
-<aside class="sidebar"><div class="sticky-sm-top"><div class="sticky-md-top"><div class="sticky-lg-top"><div class="sticky-xl-top">
-<ul>
-<li><a href="#examples-of-quality-assurance">Examples of Quality Assurance</a></li>
-<li><a href="#applying-quality-assurance">Applying Quality Assurance</a></li>
-<li><a href="#metadata">Metadata</a></li>
+<aside class="sidebar-aside"><div class="flex-shrink-0 py-5 px-1 bg-white sticky-top">
+<a class="d-flex align-items-center mb-2 link-dark text-decoration-none" href="#"><span class="fs-5 fw-semibold">Quality Assurance</span></a><ul class="btn-toggle-nav">
+<li><a class="link-dark rounded" href="#examples-of-quality-assurance">Examples of Quality Assurance</a></li>
+<li><a class="link-dark rounded" href="#applying-quality-assurance">Applying Quality Assurance</a></li>
+<li><a class="link-dark rounded" href="#metadata">Metadata</a></li>
 </ul>
-</div></div></div></div></aside><main class="main-tutorial">
+</div></aside><main class="main-tutorial">
 <h1 id="quality-assurance">Quality Assurance</h1>
 <p>Quality Assurance (QA) is the set of processes or steps taken to ensure data collection is developed and adhered to in a way that minimizes inaccuracies in the resultant data. The purpose of QA is to produce high-quality data while minimizing the need for corrective measures later. Related to QA is the documentation of noteworthy events that may affect interpretation of the data and be important to include with the metadata when the data are published.</p>
 
@@ -30,8 +29,10 @@
 <li><strong>Prioritize</strong> essential components and processes and down weight others.</li>
 <li><strong>Allocate</strong> resources according to priorities and formalize operational protocols.</li>
 </ol>
-<p><img src="/static/images/quality-assurance.jpg" width="45%"/></p>
-<p>Figure: A data collection scheme in which QA measures have been applied (components in orange). QA in this diagram consists of redundant power sources to instrumentation and telemetry, replicate instrumentation and human observers, as well as database backup and value checking.</p>
+<figure class="figure">
+<img src="/static/images/quality-assurance.jpg" width="45%"/>
+<figcaption class="figure-caption">A data collection scheme in which QA measures have been applied (components in orange). QA in this diagram consists of redundant power sources to instrumentation and telemetry, replicate instrumentation and human observers, as well as database backup and value checking.</figcaption>
+</figure>
 <h2 id="metadata">Metadata</h2>
 <p>Some examples of metadata to record during data collection:</p>
 <ul>
@@ -42,7 +43,6 @@
 <li>Deviations from collection protocols and plans.</li>
 </ul>
 </main>
-</div>
 </div>
 </div>
 </div>

@@ -1,22 +1,230 @@
 <!DOCTYPE html>
 <div metal:use-macro="load: shared/layout.html">
     <div metal:fill-slot="content" tal:omit-tag="True">
+        
+        
+        <!--hero-->
         <div class="index">
-            <div class="index-inner">
-                <img src="/static/images/EDI-logo.png" alt="logo">
-                <h1>Environmental Data Initiative</h1>
-                <div class="by-line">
-                    ~ Repository and Curation Services for Environmental and Ecological Science ~
+            <div class="px-4 py-1 my-0 text-center">
+                <br>
+                <img class="d-block mx-auto mb-4" src="/static/images/EDI-logo.png" alt="EDI logo" width="175">
+                <h class="display-3 fw-normal">Environmental Data Initiative</h>
+                <br>
+                <br>
+                <p class="fw-normal" style="font-size:2em;">Create . Package . Archive . Discover . Reuse</p>
+                <br>
+                <!--buttons-->
+                <div class="col-lg-6 mx-auto">
+                    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center call-to-action">
+                        <a class="btn btn-dark btn-lg" href="/data/publish-data" role="button">Publish Data</a>
+                        <a class="btn btn-dark btn-lg" href="https://portal.edirepository.org/nis/advancedSearch.jsp"
+                           role="button">Find Data</a>
+                    </div>
                 </div>
-                <a class="btn btn-dark" href="/data/publish-data" role="button">Publish Data</a>
-                <a class="btn btn-dark" href="https://portal.edirepository.org/nis/advancedSearch.jsp" role="button">Find Data</a>
+                <br>
             </div>
         </div>
-        <div class="index-publish">
+        
+        <hr>
+        
+        <!--vision and mission-->
+        <div class="px-4 py-1 my-0 text-center">
+            <p class="fw-bold" style="font-size:1.5em;">Our Vision</p>
+            <div class="col-lg-6 mx-auto">
+                <p class="lead mb-4">A future of intensified and diverse scientific discovery fueled by data commons
+                    accessible to everyone.</p>
+            </div>
+            <p class="fw-bold" style="font-size:1.5em;">Our Mission</p>
+            <div class="col-lg-6 mx-auto">
+                <p class="lead mb-4">Preserve environmental data for open and reproducible science, to promote synthesis
+                    across space and time, and to aid in the assessment of environmental change and its
+                    consequences.</p>
+            </div>
+        </div>
+        
+        <hr style="width: 15%;">
+        
+        <!--what we provide-->
+        <div class="px-4 py-1 my-0 text-center">
+            <br>
+            <p class="fw-normal" style="font-size:1.5em;">What We Provide</p>
+        </div>
+        <div class="container px-4 py-0" id="icon-grid">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+                <!--information rich metadata-->
+                <div class="col d-flex align-items-start">
+                    <a href="/resources/services#information-rich-metadata"><img src="/static/images/describe.png" alt="describe" class="bi me-2" width="45"/></a>
+                    <div>
+                        <a href="/resources/services#information-rich-metadata"><h4 class="fw-bold mb-0">Information Rich Metadata</h4></a>
+                        <a href="/resources/services#information-rich-metadata"><p>Required by human and machine understanding. Metadata editing tools minimize effort and maximize content and accuracy.</p></a>
+                    </div>
+                </div>
+                <!--Publication quality data for reuse-->
+                <div class="col d-flex align-items-start">
+                    <a href="/resources/services#publication-quality-data-for-reuse"><img src="/static/images/data.png" alt="" class="bi me-2" width="45"/></a>
+                    <div>
+                        <a href="/resources/services#publication-quality-data-for-reuse"><h4 class="fw-bold mb-0">Publication Quality Data for Reuse</h4></a>
+                        <a href="/resources/services#publication-quality-data-for-reuse"><p>Our open-access repository holds a thematically diverse collection of data with temporal extents from days to decades.</p></a>
+                    </div>
+                </div>
+                <!--Tools to support research-->
+                <div class="col d-flex align-items-start">
+                    <a href="/resources/services#tools-to-support-research"><img src="/static/images/tools.png" alt="" class="bi me-2" width="45"/></a>
+                    <div>
+                        <a href="/resources/services#tools-to-support-research"><h4 class="fw-bold mb-0">Tools to Support Research</h4></a>
+                        <a href="/resources/services#tools-to-support-research"><p>Tools help publish, revise, find, and access data, create personalized data catalogs, report to funders, and inject automation into scientific workflows.</p></a>
+                    </div>
+                </div>
+                <!--Secure and persistent archive-->
+                <div class="col d-flex align-items-start">
+                    <a href="/resources/services#secure-and-persistent-archive"><img src="/static/images/secure.png" alt="" class="bi me-2" width="45"/></a>
+                    <div>
+                        <a href="/resources/services#secure-and-persistent-archive"><h4 class="fw-bold mb-0">Secure and Persistent Archive</h4></a>
+                        <a href="/resources/services#secure-and-persistent-archive"><p>We assign Digital Object Identifiers (DOIs) and guarantee immutability of all data for long-term access, transparency, and reuse.</p></a>
+                    </div>
+                </div>
+                <!--Timely one-on-one support-->
+                <div class="col d-flex align-items-start">
+                    <a href="/resources/services#timely-one-on-one-support"><img src="/static/images/support.png" alt="" class="bi me-2" width="45"/></a>
+                    <div>
+                        <a href="/resources/services#timely-one-on-one-support"><h4 class="fw-bold mb-0">Timely One-on-One Support</h4></a>
+                        <a href="/resources/services#timely-one-on-one-support"><p>We offer support on a broad range of topics from data curation to software design and can be reached around the clock.</p></a>
+                    </div>
+                </div>
+                <!--Streamlined citation & attribution-->
+                <div class="col d-flex align-items-start">
+                    <a href="/resources/services#streamlined-citation-attribution"><img src="/static/images/citation.png" alt="" class="bi me-2" width="45"/></a>
+                    <div>
+                        <a href="/resources/services#streamlined-citation-attribution"><h4 class="fw-bold mb-0">Streamlined Citation & Attribution</h4></a>
+                        <a href="/resources/services#streamlined-citation-attribution"><p>We work with ORCID, ROR, DataCite, and Crossref to ensure data are linked to articles and Google Scholar and ORCID profiles are automatically updated.</p></a>
+                    </div>
+                </div>
+                <!--Enhanced discovery-->
+                <div class="col d-flex align-items-start">
+                    <a href="/resources/services#enhanced-discovery"><img src="/static/images/discovery.png" alt="" class="bi me-2" width="45"/></a>
+                    <div>
+                        <a href="/resources/services#enhanced-discovery"><h4 class="fw-bold mb-0">Enhanced Discovery</h4></a>
+                        <a href="/resources/services#enhanced-discovery"><p>Data in the EDI Repository are also findable in the DataONE and Google Dataset Search Engines.</p></a>
+                    </div>
+                </div>
+                <!--Data exploration & analysis-->
+                <div class="col d-flex align-items-start">
+                    <a href="/resources/services#data-exploration-analysis"><img src="/static/images/exploration.png" alt="" class="bi me-2" width="45"/></a>
+                    <div>
+                        <a href="/resources/services#data-exploration-analysis"><h4 class="fw-bold mb-0">Data Exploration & Analysis</h4></a>
+                        <a href="/resources/services#data-exploration-analysis"><p>Data exploration tools provide a quick interactive view into a dataset and thereby deepening understanding of a data package beyond the metadata alone.</p></a>
+                    </div>
+                </div>
+                <!--Analysis ready data-->
+                <div class="col d-flex align-items-start">
+                    <a href="/resources/services#analysis-ready-data"><img src="/static/images/analysis-ready-data.png" alt="" class="bi me-2" width="45"/></a>
+                    <div>
+                        <a href="/resources/services#analysis-ready-data"><h4 class="fw-bold mb-0">Analysis Ready Data</h4></a>
+                        <a href="/resources/services#analysis-ready-data"><p>Our thematic standardization process accelerates integration and synthesis of data within EDI and across collaborating repositories.</p></a>
+                    </div>
+                </div>
+                <!--Workflow automation-->
+                <div class="col d-flex align-items-start">
+                    <a href="/resources/services#workflow-automation"><img src="/static/images/automate.png" alt="" class="bi me-2" width="45"/></a>
+                    <div>
+                        <a href="/resources/services#workflow-automation"><h4 class="fw-bold mb-0">Workflow Automation</h4></a>
+                        <a href="/resources/services#workflow-automation"><p>Our repository REST API facilitates automation of curation tasks, reporting to stakeholders, and enables fully open and reproducible science analysis workflows.</p></a>
+                    </div>
+                </div>
+                <!--Training & skill building-->
+                <div class="col d-flex align-items-start">
+                    <a href="/resources/services#training-skill-building"><img src="/static/images/training.png" alt="" class="bi me-2" width="45"/></a>
+                    <div>
+                        <a href="/resources/services#training-skill-building"><h4 class="fw-bold mb-0">Training & Skill Building</h4></a>
+                        <a href="/resources/services#training-skill-building"><p>Our information management resources are based on 40+ years of information management expertise, including from the U.S. LTER Network.</p></a>
+                    </div>
+                </div>
+                <!--Personalized data catalogs-->
+                <div class="col d-flex align-items-start">
+                    <a href="/resources/services#personalized-data-catalogs"><img src="/static/images/person.png" alt="" class="bi me-2" width="45"/></a>
+                    <div>
+                        <a href="/resources/services#personalized-data-catalogs"><h4 class="fw-bold mb-0">Personalized Data Catalogs</h4></a>
+                        <a href="/resources/services#personalized-data-catalogs"><p>Catalogs create a searchable index within a project website and facilitate custom branding and an additional avenue of discovery.</p></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--<hr>-->
+    
+        <!--featured data-->
+        <div class="px-4 py-1 my-0 text-center">
+            <br>
+            <p class="fw-normal" style="font-size:2em;">Featured Data Contribution</p>
+        </div>
+        <div class="container py-4">
+            <div class="p-4 mb-4 bg-light rounded-3 jumbotron">
+                <div class="container-fluid py-5">
+                    <h1 class="display-5 fw-bold text-white">Effects of copper sulfate toxicity on multiple phytoplankton and animals in Standardized Aquatic Microcosms</h1>
+                    <p class="col-md-11 fs-5 text-white">The data published in this featured data package were obtained from a study funded by the Food and Drug Administration (1983-1986) to determine if ecosystems could be used to regulate chemicals. The work on this topic was published in several peer-reviewed articles that have been added as journal citations to the data package landing page in the EDI data repository.</p>
+                    <p class="lead mb-0"><a href="/data/featured_mar_2022" class="text-white fw-bold">Continue reading...</a></p>
+                </div>
+            </div>
+        </div>
+    
+        <!--news-->
+        <div class="px-4 py-1 my-0 text-center">
+            <br>
+            <p class="fw-normal" style="font-size:2em;">News</p>
+        </div>
+        <div class="container px-4 py-4">
+            <div class="row mb-2">
+                <div class="col-md-6">
+                    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                        <div class="col p-4 d-flex flex-column position-static">
+                            <strong class="d-inline-block mb-2 text-success">Technical, Resources</strong>
+                            <h3 class="mb-0">ezEML Templates</h3>
+                            <div class="mb-1 text-muted">Mar 10</div>
+                            <p class="mb-auto">Research sites (e.g., LTER sites) and teams of researchers who are using ezEML to capture metadata may find that certain content is used repeatedly across a number of documents. Examples of such repeated content can include Creators, Contacts, Keywords, Intellectual Rights, Geographic Coverage, Project, etc. Users can avoid the tedious task of re-entering this information for each new dataset by creating and publishing one or more “templates” that are prepopulated with this standard content. </p>
+                            <a href="#" class="stretched-link">Continue reading</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                        <div class="col p-4 d-flex flex-column position-static">
+                            <strong class="d-inline-block mb-2 text-primary">Technical, Resources</strong>
+                            <h3 class="mb-0">EDIutils R Package Update</h3>
+                            <div class="mb-1 text-muted">Jan 26</div>
+                            <p class="card-text mb-auto">EDIutils is a client for the Environmental Data Initiative repository REST API and includes functions to search and access existing data, evaluate and upload new data, and assist with related data management tasks (https://github.com/EDIorg/EDIutils). The package has undergone a major refactor for submission to rOpenSci and CRAN. This new and improved version (0.0.0.9000) covers the full data repository REST API, handles authentication more securely, better matches API ...</p>
+                            <a href="#" class="stretched-link">Continue reading</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                        <div class="col p-4 d-flex flex-column position-static">
+                            <strong class="d-inline-block mb-2 text-primary">Technical, Resources</strong>
+                            <h3 class="mb-0">A Quick Overview of EDI’s Data Explorer (DeX)</h3>
+                            <div class="mb-1 text-muted">Jan 22</div>
+                            <p class="card-text mb-auto">The EDI software team is excited to announce DeX, a tool for exploring and subsetting tabular data, which is now in beta testing on the EDI staging Data Portal (https://portal-s.edirepository.org/nis). DeX provides three views into tabular data found in the EDI Data Repository: 1) a statistical profiler that analyzes the data table and displays detailed information about each attribute; 2) a filter and subsetting application that allows you to download the subsetted data, along with a ...</p>
+                            <a href="#" class="stretched-link">Continue reading</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                        <div class="col p-4 d-flex flex-column position-static">
+                            <strong class="d-inline-block mb-2 text-success">Technical</strong>
+                            <h3 class="mb-0">Normalization of Creator Names in EDI’s Data Portal</h3>
+                            <div class="mb-1 text-muted">Nov 2</div>
+                            <p class="mb-auto">The Advanced Search feature of EDI’s Data Portal lets you select a dataset Creator name from a drop-down list of all dataset creators in our repository. The search then displays all the datasets that have that name as one of its creators. Unfortunately, many creators’ names occur in multiple variations in different datasets and, in the past, each variation appeared separately in the drop-down list. Selecting a variant would return only the datasets for which the creator’s name was spelled as in that particular variant.</p>
+                            <a href="#" class="stretched-link">Continue reading</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--<div class="index-publish">
             <div class="index-column">
-                <hr>
-                <h2>How to Publish</h2>
-                <div class="publish-tile">
+                &lt;!&ndash;<h2>Our Vision</h2>&ndash;&gt;
+                &lt;!&ndash;<div class="publish-tile">
                     <div>
                         <img src="/static/images/describe.png" alt="describe">
                         <h3>Describe</h3>
@@ -32,8 +240,8 @@
                         <h3>Publish</h3>
                         <p>Publish your dataset when you are ready and update your research profile.</p>
                     </div>
-                </div>
-                <hr>
+                </div>&ndash;&gt;
+                <div class="b-example-divider"></div>
                 <h2>EDI Services</h2>
                 <div class="list-tile">
                     <ul>
@@ -48,7 +256,7 @@
                     </ul>
                 </div>
                 <h4><a href="/resources/services">More ...</a></h4>
-                <hr>
+                <div class="b-example-divider"></div>
                 <div class="featured-tile">
                     <div>
                         <h2>Featured Data</h2>
@@ -70,7 +278,7 @@
                                     href="/data/featured">More ...</a></p>
                     </div>
                 </div>
-                <hr>
+                <div class="b-example-divider"></div>
                 <h2>Recent News</h2>
                 <div class="webinar-tile">
                     <div class="webinar-item1">
@@ -113,12 +321,12 @@
                     </div>
                 </div>
                 <h4><a href="https://environmentaldatainitiative.org/blog/" target="_blank">More News ...</a></h4>
-                <hr>
-
+                <div class="b-example-divider"></div>
+            
             </div>
-        </div>
+        </div>-->
     </div>
-
+    
     <div metal:fill-slot="additional-css" tal:omit-tag="True">
         <!-- additional css from the page -->
     </div>

@@ -1,14 +1,13 @@
 <div metal:use-macro="load: ../shared/layout.html">
 <div metal:fill-slot="content" tal:omit-tag="True">
-<div class="sidebar-inner">
 <div class="container">
-<aside class="sidebar"><div class="sticky-sm-top"><div class="sticky-md-top"><div class="sticky-lg-top"><div class="sticky-xl-top">
-<ul>
-<li><a href="#listing-data-publications">Listing data publications</a></li>
-<li><a href="#impact-of-data-publications">Impact of data publications</a></li>
-<li><a href="#reporting-to-nsf">Reporting to NSF</a></li>
+<aside class="sidebar-aside"><div class="flex-shrink-0 py-5 px-1 bg-white sticky-top">
+<a class="d-flex align-items-center mb-2 link-dark text-decoration-none" href="#"><span class="fs-5 fw-semibold">Reporting to Funders</span></a><ul class="btn-toggle-nav">
+<li><a class="link-dark rounded" href="#listing-data-publications">Listing data publications</a></li>
+<li><a class="link-dark rounded" href="#impact-of-data-publications">Impact of data publications</a></li>
+<li><a class="link-dark rounded" href="#reporting-to-nsf">Reporting to NSF</a></li>
 </ul>
-</div></div></div></div></aside><main class="main-tutorial">
+</div></aside><main class="main-tutorial">
 <h1 id="reporting-to-funders">Reporting to Funders</h1>
 <p>Research funders often require project data to be archived in a trustworthy repository for future discovery and use. EDI provides services for projects to generate a list of associated data publications and provide metrics on the reuse and impact.</p>
 
@@ -20,7 +19,6 @@
 <p>NSF recently opened its <a href="https://par.nsf.gov/">Public Access Repository</a> for data. Once logged in to <strong><a href="https://www.research.gov/research-web/">research.gov</a> / Awards and reporting / Add Research Product</strong>, it is possible to enter an EDI data package DOI and the full citation information will be filled in automatically. The record may then be linked to an award in the NSF system to which the logged in person has access.</p>
 <p>Alternatively, data packages may be included in BibTex files as <strong>Other Publication</strong> and uploaded in the products section of an annual report.</p>
 </main>
-</div>
 </div>
 </div>
 </div>

@@ -1,15 +1,14 @@
 <div metal:use-macro="load: ../shared/layout.html">
 <div metal:fill-slot="content" tal:omit-tag="True">
-<div class="sidebar-inner">
 <div class="container">
-<aside class="sidebar"><div class="sticky-sm-top"><div class="sticky-md-top"><div class="sticky-lg-top"><div class="sticky-xl-top">
-<ul>
-<li><a href="#ezcatalog">ezCatalog</a></li>
-<li><a href="#catalogs-for-obfs-members">Catalogs for OBFS members</a></li>
-<li><a href="#advanced-implementations">Advanced implementations</a></li>
-<li><a href="#resources">Resources</a></li>
+<aside class="sidebar-aside"><div class="flex-shrink-0 py-5 px-1 bg-white sticky-top">
+<a class="d-flex align-items-center mb-2 link-dark text-decoration-none" href="#"><span class="fs-5 fw-semibold">Create a Local Data Catalog for a Website</span></a><ul class="btn-toggle-nav">
+<li><a class="link-dark rounded" href="#ezcatalog">ezCatalog</a></li>
+<li><a class="link-dark rounded" href="#catalogs-for-obfs-members">Catalogs for OBFS members</a></li>
+<li><a class="link-dark rounded" href="#advanced-implementations">Advanced implementations</a></li>
+<li><a class="link-dark rounded" href="#resources">Resources</a></li>
 </ul>
-</div></div></div></div></aside><main class="main-tutorial">
+</div></aside><main class="main-tutorial">
 <h1 id="create-a-local-data-catalog-for-a-website">Create a Local Data Catalog for a Website</h1>
 <p>Local data catalogs allow researchers, projects, and organizations to present their data within the unique look and feel of their own website while providing access to the full metadata and other "data reuse" services offered in the EDI Data Portal.</p>
 <p>EDI provides two prebuilt catalogs which can be easily embedded in an existing website. These catalogs are a searchable list of all the data packages belonging to a group and links back to the newest version of the data package in the EDI Data Portal. More advanced and customized catalogs can be implemented using the REST API.</p>
@@ -62,7 +61,6 @@ OR%2B%28*%3A*%2BAND%2Btitle%3A(ADIRONDACK)%29%2BOR%2B%28*%3A*%2BAND%2Bkeyword%3A
 <li><strong>Build a Static Website</strong> - Static websites are secure, low maintenance, free to host, fast, and easy to work with. <a href="https://youtu.be/i4QczI3evGA">See this video</a> and <a href="https://github.com/BLE-LTER/LTER-website">associated GitHub repository</a> to create a static website with a built-in data catalog.</li>
 </ul>
 </main>
-</div>
 </div>
 </div>
 </div>

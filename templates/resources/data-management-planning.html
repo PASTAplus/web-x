@@ -1,13 +1,12 @@
 <div metal:use-macro="load: ../shared/layout.html">
 <div metal:fill-slot="content" tal:omit-tag="True">
-<div class="sidebar-inner">
 <div class="container">
-<aside class="sidebar"><div class="sticky-sm-top"><div class="sticky-md-top"><div class="sticky-lg-top"><div class="sticky-xl-top">
-<ul>
-<li><a href="#a-tool-for-creating-a-dmp">A tool for creating a DMP</a></li>
-<li><a href="#including-edi-in-a-dmp">Including EDI in a DMP</a></li>
+<aside class="sidebar-aside"><div class="flex-shrink-0 py-5 px-1 bg-white sticky-top">
+<a class="d-flex align-items-center mb-2 link-dark text-decoration-none" href="#"><span class="fs-5 fw-semibold">Data Management Planning</span></a><ul class="btn-toggle-nav">
+<li><a class="link-dark rounded" href="#a-tool-for-creating-a-dmp">A tool for creating a DMP</a></li>
+<li><a class="link-dark rounded" href="#including-edi-in-a-dmp">Including EDI in a DMP</a></li>
 </ul>
-</div></div></div></div></aside><main class="main-tutorial">
+</div></aside><main class="main-tutorial">
 <h1 id="data-management-planning">Data Management Planning</h1>
 <p>A data management plan (DMP) is a document describing the data a researcher will collect, quality assure, secure, describe, share, and archive over the course of a research project. DMPs are living documents and should be updated as research plans change to ensure new data management practices are captured.</p>
 <p><img src="/static/images/data-management-planning.png" width="45%"/> </p>
@@ -20,7 +19,6 @@
 <p><strong>Plans for archiving data, samples, software, and other research products, and for on-going access to these products through their lifecycle of usefulness to research and education.</strong></p>
 <p><em>This project will archive datasets in the Environmental Data Initiative (EDI) Data Repository (https://portal.edirepository.org/nis/home.jsp). Data authors will clean, quality controlled, and describe with information-rich metadata, each dataset submitted into the established EDI data curation pipeline. Data authors may participate in data management training provided by EDI as needed and seek advice from the EDI Data Curation Team for optimally structuring and documenting their data. Data published in the EDI Repository will be findable through the EDI (https://portal.edirepository.org/nis/advancedSearch.jsp), DataONE (https://search.dataone.org/data), and Google (https://datasetsearch.research.google.com/) Dataset Search Engines, where they can be discovered via a multitude of search mechanisms and manually or programmatically downloaded. All datasets will be documented in the Ecological Metadata Language (EML; https://eml.ecoinformatics.org/), a metadata standard well established and widely used within the ecological and environmental research communities. The EDI Data Repository fully supports immutability and strong versioning of datasets with all older versions being available for auditing and reproducible research purposes. Each dataset version is provided its own unique Digital Object Identifier (DOI), which is registered and resolvable through DataCite (https://datacite.org/). In addition, dataset specific processing scripts will be archived with the data in the EDI Repository.</em></p>
 </main>
-</div>
 </div>
 </div>
 </div>

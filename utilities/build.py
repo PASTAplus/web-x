@@ -117,7 +117,6 @@ def template_sidebar(inner_html: str) -> str:
     open = """
 <div metal:use-macro="load: ../shared/layout.html">
 <div metal:fill-slot="content" tal:omit-tag="True">
-<div class="sidebar-inner">
 <div class="container">
 <main class="main-tutorial">
 """
@@ -139,21 +138,28 @@ def sidebar_html(md: str) -> BeautifulSoup:
     )
     html = template_sidebar(inner_html)
     soup = BeautifulSoup(html, "lxml")
-    div_toc_tag = soup.find("div", attrs={"class": "toc"}).extract()
-    div_toc_tag.name = "div"
-    div_toc_tag["class"] = "sticky-xl-top"
-    div_sticky_lg_top = soup.new_tag("div")
-    div_sticky_lg_top["class"] = "sticky-lg-top"
-    div_sticky_lg_top.insert(0, div_toc_tag)
-    div_sticky_md_top = soup.new_tag("div")
-    div_sticky_md_top["class"] = "sticky-md-top"
-    div_sticky_md_top.insert(0, div_sticky_lg_top)
-    div_sticky_sm_top = soup.new_tag("div")
-    div_sticky_sm_top["class"] = "sticky-sm-top"
-    div_sticky_sm_top.insert(0, div_sticky_md_top)
+    toc = soup.find("div", attrs={"class": "toc"}).extract()
+    h1 = soup.find("h1")
+    h1_a = soup.new_tag(
+        "a",
+        attrs={"href": "#", "class": "d-flex align-items-center mb-2 link-dark text-decoration-none"}
+    )
+    h1_span = soup.new_tag("span", attrs={"class": "fs-5 fw-semibold"})
+    h1_span.string = h1.get_text()
+    h1_a.insert(0, h1_span)
+    toc.insert(1, h1_a)
+    for tag in toc.find_all('ul'):
+        if 'ul' in tag.name:
+            tag['class'] = 'fw-normal'
+    ul_tag = toc.find('ul')  # Class of the first <ul> is different
+    ul_tag['class'] = "btn-toggle-nav"
+    for li in toc.find_all('li'):
+        for a in li.find_all('a'):
+            a['class'] = 'link-dark rounded'
+    toc["class"] = "flex-shrink-0 py-5 px-1 bg-white sticky-top"
     aside = soup.new_tag("aside")
-    aside["class"] = "sidebar"
-    aside.insert(0, div_sticky_sm_top)
+    aside["class"] = "sidebar-aside"
+    aside.insert(0, toc)
     main_tag = soup.find("main")
     main_tag.insert_before(aside)
     return soup

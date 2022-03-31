@@ -1,18 +1,17 @@
 <div metal:use-macro="load: ../shared/layout.html">
 <div metal:fill-slot="content" tal:omit-tag="True">
-<div class="sidebar-inner">
 <div class="container">
-<aside class="sidebar"><div class="sticky-sm-top"><div class="sticky-md-top"><div class="sticky-lg-top"><div class="sticky-xl-top">
-<ul>
-<li><a href="#ecocomdp">ecocomDP</a></li>
-<li><a href="#hymetdp">hymetDP</a></li>
-<li><a href="#discovering-thematic-standardization-data">Discovering thematic standardization data</a><ul>
-<li><a href="#edi-data-portal">EDI Data Portal</a></li>
-<li><a href="#r-packages">R Packages</a></li>
+<aside class="sidebar-aside"><div class="flex-shrink-0 py-5 px-1 bg-white sticky-top">
+<a class="d-flex align-items-center mb-2 link-dark text-decoration-none" href="#"><span class="fs-5 fw-semibold">Thematic Standardization</span></a><ul class="btn-toggle-nav">
+<li><a class="link-dark rounded" href="#ecocomdp">ecocomDP</a></li>
+<li><a class="link-dark rounded" href="#hymetdp">hymetDP</a></li>
+<li><a class="link-dark rounded" href="#discovering-thematic-standardization-data">Discovering thematic standardization data</a><ul class="fw-normal">
+<li><a class="link-dark rounded" href="#edi-data-portal">EDI Data Portal</a></li>
+<li><a class="link-dark rounded" href="#r-packages">R Packages</a></li>
 </ul>
 </li>
 </ul>
-</div></div></div></div></aside><main class="main-tutorial">
+</div></aside><main class="main-tutorial">
 <h1 id="thematic-standardization">Thematic Standardization</h1>
 <p>Data in the EDI Repository are thematically and structurally diverse. Converting them into standardized formats, according to theme, facilitates interoperability and reuse. </p>
 <p>Thematic standardization is a cooperative effort to develop and support a design pattern which serves as a standardized intermediary between raw "Level-0" data and synthesis research "Level-2" data. Collaborative effort to build tools that support the creation and use of the intermediate "Level-1" datasets, helps to incentivize the extra effort of reformatting and increase the likelihood of data reuse.</p>
@@ -33,7 +32,6 @@
 <h3 id="r-packages">R Packages</h3>
 <p>The <a href="https://cran.r-project.org/web/packages/ecocomDP/index.html">ecocomDP</a> and <a href="https://github.com/kzollove/hymetDP">hymetDP</a> R packages have a built-in function, <code>search_data()</code>, to search across an index of existing standardized data packages from within an R environment.</p>
 </main>
-</div>
 </div>
 </div>
 </div>
