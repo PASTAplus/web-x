@@ -51,10 +51,6 @@ a.navbar-brand.mb-0 {
     margin-top: 20px;
 }
 
-.navbar-nav li {
-    /*margin-top: 20px;*/
-}
-
 #last_nav_link {
     margin-right: 45px;
 }
@@ -63,7 +59,7 @@ nav {
     padding: 10px;
     font-size: 17px;
     color: white;
-    height: 85px;
+    /*height: 85px;*/ /*This affects the collapsed menu on mobile devices*/
     background-color: #0073b7;
 }
 
@@ -108,7 +104,8 @@ nav > a {
 }
 
 /* Drop down menu on mouse hover */
-@media all and (min-width: 992px) {
+
+@media all and (min-width: 800px) {
 	.navbar .nav-item .dropdown-menu{ display: none; }
 	.navbar .nav-item:hover .nav-link{   }
 	.navbar .nav-item:hover .dropdown-menu{ display: block; }
