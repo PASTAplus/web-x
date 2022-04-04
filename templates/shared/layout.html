@@ -135,105 +135,110 @@
     <div metal:define-slot="content" tal:omit-tag="True">No content</div>
     
     <!--footer-->
-    <div class="container-fluid px-0" style="background-color: #676c6e;">
-        <footer class="py-0">
-            
-            <!--footer-top-->
-            <div class="row"
-                 style="padding-right: 15rem; padding-left: 15rem; padding-top: 2rem; padding-bottom: 1rem;">
-                <!--menu items-->
-                <div class="col-2">
-                    <h4 class="text-white">Data</h4>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="/data/publish-data" class="nav-link p-0 text-white">Publish
-                            Data</a></li>
-                        <li class="nav-item mb-2"><a href="https://portal.edirepository.org/nis/advancedSearch.jsp"
-                                                     class="nav-link p-0 text-white">Find Data</a></li>
-                    </ul>
-                </div>
-                <div class="col-2">
-                    <h4 class="text-white">Resources</h4>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="/resources/resources-for-data-authors"
-                                                     class="nav-link p-0 text-white">For Data Authors</a></li>
-                        <li class="nav-item mb-2"><a href="/resources/resources-for-data-users"
-                                                     class="nav-link p-0 text-white">For Data Users</a></li>
-                        <li class="nav-item mb-2"><a href="/resources/resources-for-information-managers"
-                                                     class="nav-link p-0 text-white">For Information Managers</a></li>
-                    </ul>
-                </div>
-                <div class="col-2">
-                    <h4 class="text-white">Support</h4>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="/support/contact-us" class="nav-link p-0 text-white">Contact
-                            Us</a></li>
-                        <li class="nav-item mb-2"><a href="/support/frequently-asked-questions"
-                                                     class="nav-link p-0 text-white">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="col-2">
-                    <h4 class="text-white">About</h4>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="/about/about-edi" class="nav-link p-0 text-white">EDI</a>
-                        </li>
-                        <li class="nav-item mb-2"><a href="/about/edi-policy"
-                                                     class="nav-link p-0 text-white">Policies</a></li>
-                        <li class="nav-item mb-2"><a href="/about/partners-and-affiliations"
-                                                     class="nav-link p-0 text-white">Partners</a></li>
-                    </ul>
+    <div class="container-fluid" style="background-color: #676c6e;">
+        <div class="container px-4 py-4" style="background-color: #676c6e;">
+            <footer>
+                
+                <!--footer-top-->
+                <div class="row">
+                    <!--menu items-->
+                    <div class="col-2">
+                        <h4 class="text-white">Data</h4>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="/data/publish-data" class="nav-link p-0 text-white">Publish
+                                Data</a></li>
+                            <li class="nav-item mb-2"><a href="https://portal.edirepository.org/nis/advancedSearch.jsp"
+                                                         class="nav-link p-0 text-white">Find Data</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-2">
+                        <h4 class="text-white">Resources</h4>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="/resources/resources-for-data-authors"
+                                                         class="nav-link p-0 text-white">For Data Authors</a></li>
+                            <li class="nav-item mb-2"><a href="/resources/resources-for-data-users"
+                                                         class="nav-link p-0 text-white">For Data Users</a></li>
+                            <li class="nav-item mb-2"><a href="/resources/resources-for-information-managers"
+                                                         class="nav-link p-0 text-white">For Information Managers</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-2">
+                        <h4 class="text-white">Support</h4>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="/support/contact-us" class="nav-link p-0 text-white">Contact
+                                Us</a></li>
+                            <li class="nav-item mb-2"><a href="/support/frequently-asked-questions"
+                                                         class="nav-link p-0 text-white">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-2">
+                        <h4 class="text-white">About</h4>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="/about/about-edi" class="nav-link p-0 text-white">EDI</a>
+                            </li>
+                            <li class="nav-item mb-2"><a href="/about/edi-policy"
+                                                         class="nav-link p-0 text-white">Policies</a></li>
+                            <li class="nav-item mb-2"><a href="/about/partners-and-affiliations"
+                                                         class="nav-link p-0 text-white">Partners</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!--logo and signature-->
+                    <div class="d-flex col-4 offset-0">
+                        <form>
+                            
+                            <div>
+                                <h2 class="text-white">
+                                    <img src="/static/images/edi_logo_grey_and_white.png" alt="EDI logo" class="bi me-2"
+                                         width="60"/>
+                                    Environmental Data Initiative
+                                </h2>
+                                <p class="text-white">Preserving environmental data for open and reproducible science,
+                                    to
+                                    promote synthesis across space and time, and to aid in the assessment of
+                                    environmental
+                                    change and its consequences.</p>
+                                <ul class="list-unstyled d-flex">
+                                    <li class="ms-3"><a class="link-dark" href="https://edi-got-data.slack.com">
+                                        <img src="/static/images/slack_circle.png" alt="Slack" class="bi me-2"
+                                             width="45"/>
+                                    </a></li>
+                                    <li class="ms-3"><a class="link-dark"
+                                                        href="https://www.youtube.com/channel/UCNZoWPaMG6lkEiH8xRNnrrA">
+                                        <img src="/static/images/youtube_circle.png" alt="YouTube" class="bi me-2"
+                                             width="45"/>
+                                    </a></li>
+                                    <li class="ms-3"><a class="link-dark" href="https://twitter.com/EDIgotdata">
+                                        <img src="/static/images/twitter_circle.png" alt="Twitter" class="bi me-2"
+                                             width="45"/>
+                                    </a></li>
+                                    <li class="ms-3"><a class="link-dark" href="https://github.com/EDIorg">
+                                        <img src="/static/images/github_circle.png" alt="GitHub/EDIorg" class="bi me-2"
+                                             width="45"/>
+                                    </a></li>
+                                </ul>
+                            </div>
+                        </form>
+                    </div>
                 </div>
                 
-                <!--logo and signature-->
-                <div class="d-flex col-4 offset-0">
-                    <form>
-                        
-                        <div>
-                            <h2 class="text-white">
-                                <img src="/static/images/edi_logo_grey_and_white.png" alt="EDI logo" class="bi me-2"
-                                     width="60"/>
-                                Environmental Data Initiative
-                            </h2>
-                            <p class="text-white">Preserving environmental data for open and reproducible science, to
-                                promote synthesis across space and time, and to aid in the assessment of environmental
-                                change and its consequences.</p>
-                            <ul class="list-unstyled d-flex">
-                                <li class="ms-3"><a class="link-dark" href="https://edi-got-data.slack.com">
-                                    <img src="/static/images/slack_circle.png" alt="Slack" class="bi me-2"
-                                         width="45"/>
-                                </a></li>
-                                <li class="ms-3"><a class="link-dark"
-                                                    href="https://www.youtube.com/channel/UCNZoWPaMG6lkEiH8xRNnrrA">
-                                    <img src="/static/images/youtube_circle.png" alt="YouTube" class="bi me-2"
-                                         width="45"/>
-                                </a></li>
-                                <li class="ms-3"><a class="link-dark" href="https://twitter.com/EDIgotdata">
-                                    <img src="/static/images/twitter_circle.png" alt="Twitter" class="bi me-2"
-                                         width="45"/>
-                                </a></li>
-                                <li class="ms-3"><a class="link-dark" href="https://github.com/EDIorg">
-                                    <img src="/static/images/github_circle.png" alt="GitHub/EDIorg" class="bi me-2"
-                                         width="45"/>
-                                </a></li>
-                            </ul>
-                        </div>
-                    </form>
+                <!--footer-bottom-->
+                <div class="footer-bottom">
+                    <!--affiliations-->
+                    <p>The Environmental Data Initiative is proud to be affiliated with the following organizations:</p>
+                    <a href="https://datacite.org/"><img src="/static/images/datacite-logo.png" alt="DataCite logo"></a>
+                    <a href="https://www.dataone.org/"><img src="/static/images/dataone-logo.png"
+                                                            alt="DataONE logo"></a>
+                    <a href="https://www.esa.org/"><img style="max-height: 6vmin;" src="/static/images/esa-logo.png"
+                                                        alt="ESA logo"></a>
+                    <a href="https://www.esipfed.org/"><img src="/static/images/esip-logo.png" alt="ESIP logo"></a>
+                    <a href="https://lternet.edu/"><img src="/static/images/lter-logo.svg" alt="LTER Network logo"></a>
+                    <a href="https://www.neonscience.org/"><img src="/static/images/neon-logo.png" alt="NEON logo"></a>
                 </div>
-            </div>
             
-            <!--footer-bottom-->
-            <div class="footer-bottom">
-                <!--affiliations-->
-                <p>The Environmental Data Initiative is proud to be affiliated with the following organizations:</p>
-                <a href="https://datacite.org/"><img src="/static/images/datacite-logo.png" alt="DataCite logo"></a>
-                <a href="https://www.dataone.org/"><img src="/static/images/dataone-logo.png" alt="DataONE logo"></a>
-                <a href="https://www.esa.org/"><img style="max-height: 6vmin;" src="/static/images/esa-logo.png"
-                                                    alt="ESA logo"></a>
-                <a href="https://www.esipfed.org/"><img src="/static/images/esip-logo.png" alt="ESIP logo"></a>
-                <a href="https://lternet.edu/"><img src="/static/images/lter-logo.svg" alt="LTER Network logo"></a>
-                <a href="https://www.neonscience.org/"><img src="/static/images/neon-logo.png" alt="NEON logo"></a>
-            </div>
-        
-        </footer>
+            </footer>
+        </div>
     </div>
     
     

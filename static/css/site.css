@@ -30,6 +30,14 @@ body {
     line-height: 1.5;
 }
 
+.footer-padding {
+  padding-right: 15rem;
+  padding-left: 15rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  /*width: 75%*/
+}
+
 .main_content hr {
     color: #999999;
     height: 0.4em;
