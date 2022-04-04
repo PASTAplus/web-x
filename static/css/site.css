@@ -30,14 +30,6 @@ body {
     line-height: 1.5;
 }
 
-.footer-padding {
-  padding-right: 15rem;
-  padding-left: 15rem;
-  padding-top: 2rem;
-  padding-bottom: 1rem;
-  /*width: 75%*/
-}
-
 .main_content hr {
     color: #999999;
     height: 0.4em;
@@ -137,9 +129,10 @@ footer {
 }
 
 .footer-bottom img {
-    max-height: 3.5vmin;
-    min-height: 0;
+    height: 60px;
     margin-right: 1.5em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
     display: inline-block;
 }
 

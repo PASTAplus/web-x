@@ -135,11 +135,10 @@
     <div metal:define-slot="content" tal:omit-tag="True">No content</div>
     
     <!--footer-->
-    <div class="container-fluid" style="background-color: #676c6e;">
-        <div class="container px-4 py-4" style="background-color: #676c6e;">
-            <footer>
-                
-                <!--footer-top-->
+    <footer>
+        <!--footer-top-->
+        <div class="container-fluid" style="background-color: #676c6e;">
+            <div class="container px-4 py-4">
                 <div class="row">
                     <!--menu items-->
                     <div class="col-2">
@@ -183,11 +182,11 @@
                                                          class="nav-link p-0 text-white">Partners</a></li>
                         </ul>
                     </div>
-                    
+            
                     <!--logo and signature-->
                     <div class="d-flex col-4 offset-0">
                         <form>
-                            
+                    
                             <div>
                                 <h2 class="text-white">
                                     <img src="/static/images/edi_logo_grey_and_white.png" alt="EDI logo" class="bi me-2"
@@ -222,24 +221,28 @@
                         </form>
                     </div>
                 </div>
-                
-                <!--footer-bottom-->
-                <div class="footer-bottom">
-                    <!--affiliations-->
-                    <p>The Environmental Data Initiative is proud to be affiliated with the following organizations:</p>
-                    <a href="https://datacite.org/"><img src="/static/images/datacite-logo.png" alt="DataCite logo"></a>
-                    <a href="https://www.dataone.org/"><img src="/static/images/dataone-logo.png"
-                                                            alt="DataONE logo"></a>
-                    <a href="https://www.esa.org/"><img style="max-height: 6vmin;" src="/static/images/esa-logo.png"
-                                                        alt="ESA logo"></a>
-                    <a href="https://www.esipfed.org/"><img src="/static/images/esip-logo.png" alt="ESIP logo"></a>
-                    <a href="https://lternet.edu/"><img src="/static/images/lter-logo.svg" alt="LTER Network logo"></a>
-                    <a href="https://www.neonscience.org/"><img src="/static/images/neon-logo.png" alt="NEON logo"></a>
-                </div>
-            
-            </footer>
+            </div>
         </div>
-    </div>
+        <!--footer-bottom-->
+        <section>
+            <div class="container-fluid" style="background-color: #a8b3b8;">
+                <div class="container px-4 py-4 justify-content-center">
+                    <div class="footer-bottom">
+                        <!--affiliations-->
+                        <p>The Environmental Data Initiative is proud to be affiliated with the following
+                            organizations:</p>
+                        <a href="https://datacite.org/"><img src="/static/images/datacite-logo.png" alt="DataCite logo"></a>
+                        <a href="https://www.dataone.org/"><img src="/static/images/dataone-logo.png" alt="DataONE logo"></a>
+                        <a href="https://www.esa.org/"><img src="/static/images/esa-logo.png" alt="ESA logo"></a>
+                        <a href="https://www.esipfed.org/"><img src="/static/images/esip-logo.png" alt="ESIP logo"></a>
+                        <a href="https://lternet.edu/"><img src="/static/images/lter-logo.svg" alt="LTER Network logo"></a>
+                        <a href="https://www.neonscience.org/"><img src="/static/images/neon-logo.png" alt="NEON logo"></a>
+                    </div>
+                </div>
+        
+            </div>
+        </section>
+    </footer>
     
     
     <script src="/docs/5.1/dist/js/bootstrap.bundle.min.js"
