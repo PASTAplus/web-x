@@ -35,17 +35,9 @@
 }
 
 .call-to-action .btn {
-    /*padding: 0.25em 1.5em 0.25em 1.5em;
-    font-size: 1.2rem;
-    text-decoration: none;*/
     border-radius: 0.5em;
-    /*color: white;
-    margin: 1em;
-    margin-bottom: 0em;
-    text-align:center;*/
-    /*Control button size*/
-    width:8em;
-    /*line-height:1.7em;*/
+    width: 8em;
+    margin: .25em;
 }
 
 .index-publish {
