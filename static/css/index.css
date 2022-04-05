@@ -236,3 +236,14 @@
   background-image: url("../images/featured_data/daphnia_magna_asexual.jpg");
   background-size: cover;
 }
+
+/*Hover effect*/
+.pop-out {
+    transition: all 0.2s ease;
+    cursor: pointer
+}
+
+.pop-out:hover {
+    box-shadow: 5px 6px 6px 2px #e9ecef;
+    transform: scale(1.05)
+}
