@@ -1,0 +1,83 @@
+<div metal:use-macro="load: ../shared/layout.html">
+<div metal:fill-slot="content" tal:omit-tag="True">
+<main class="main-tutorial">
+<h1>News</h1>
+<h2>Normalization of Creator Names in EDI’s Data Portal</h2>
+<p>November 2, 2021</p>
+<p>Susanne Grossman-Clarke</p>
+<h3>Description</h3>
+<p>The Advanced Search feature of EDI’s Data Portal lets you select a dataset Creator name from a drop-down list of all dataset creators in our repository. The search then displays all the datasets that have that name as one of its creators.</p>
+<p>Unfortunately, many creators’ names occur in multiple variations in different datasets and, in the past, each variation appeared separately in the drop-down list. Selecting a variant would return only the datasets for which the creator’s name was spelled as in that particular variant. To give a hypothetical example, the names James T Kirk, James T. Kirk, Jim Kirk, J T Kirk, and J Kirk may all refer to the same person. In such a case, we’d like to display a single, canonical entry (James T Kirk, in this example) and have the search function return the union of all datasets for which that creator’s name appears in one of its variations.</p>
+<p>We have recently created web services that implement this kind of names normalization, and the EDI Data Portal is now using the normalized names.</p>
+<p>For example, the following names all refer to the same person: “McKnight, Diane M”, “McKnight, Diane”, “Mcknight, Diane”, and “Mcnight, Diane”. The drop-down list now shows just “McKnight, Diane M” and selecting it finds the datasets corresponding to any of the four variants. In addition, accents in names are handled and they now sort in the expected order in the drop-down list. For example, “González, Maria J” corresponds to “González, María J”, “Gonzalez, Maria”, and “Gonzalez, Maria J”. And there are names with misspellings in the surname that are now handled correctly. For example, “Sokol, Eric R” is the same person as “Sokal, Eric”.</p>
+<p>You get the idea. If you’re interested in some of the technical details, read on.</p>
+<p>In rough outline, here’s how it works. All the EML files are scanned to extract all responsible parties (creators, contacts, etc.), including their names, positions, addresses, organizations, email addresses, ORCIDs, and URLs. These are saved in a database. The software then scans the database to build up lists of variants that appear to correspond to the same person. This is done in multiple passes. First, if James Kirk and Jim Kirk appear in the same dataset, once as a creator and once as a contact, say, they are taken to be the same person. (There is an XML file of nicknames that is consulted to match Jim with James.) The two occurrences of this person may have different attributes associated with them. One may contain an address, say, and the other an ORCID. As names are matched up, the software builds up a set of “evidence” that is the union of all of the attributes for the different variants that have been combined.</p>
+<p>Having matched up variants that occur in the same dataset, we next look at variants that occur in the same scope and match them up based on names. In the process, we continue to build up the evidence set for each person. When we move to matching names across scopes, we require there to be a meaningful match in their evidence sets. Just matching their names isn’t strong enough.</p>
+<p>Matching people based on the evidence is a bit complicated, however. Consider organization names, for example. If James Kirk in one scope has the same organization as Jim Kirk in another scope, we take them to be the same person. But a given organization can be spelled many different ways. Some of the spellings for “University of Wisconsin” in our database, for example, include:</p>
+<p>University of Wisconsin – Madison
+University of Wisconsin
+University of Wisconsin at Madison
+University of Wisconsin – Madison
+University of Wisconsin – Madison
+University of Wisconsin Madison
+University of Wisconsin, Madison
+University of Wisconsin-Madison</p>
+<p>not to mention the various misspellings that occur, such as:</p>
+<p>University of Wisconson
+University of Wisonsin
+Univeristy of Wisconsin</p>
+<p>So, a simple text match won’t suffice. We’ve created an XML file that contains search strings that can be used in SQL to match addresses, organizations, and email addresses to an “organization keyword.” E.g., for the University of Wisconsin, we have:</p>
+<pre><code>&lt;organization&gt;
+    &lt;name&gt;U%of Wisconsin&lt;/name&gt;
+    &lt;name&gt;UW%Madison&lt;/name&gt;
+    &lt;name&gt;UW%Milwaukee&lt;/name&gt;
+    &lt;email&gt;wisc.edu&lt;/email&gt;
+    &lt;email&gt;uwm.edu&lt;/email&gt;
+    &lt;keyword&gt;UWisconsin&lt;/keyword&gt;
+&lt;/organization&gt;
+</code></pre>
+<p>In that way, James Kirk with email address jkirk@wisc.edu can get matched to Jim Kirk with organization “Center for Limnology, UW – Madison”, even though the occurrences are in different scopes.</p>
+<p>Sometimes, manual intervention is required, for example when a surname is misspelled. In addition to the XML files that list nickname correspondences and organization keyword definitions, there is an XML file that lists name “overrides” – e.g., cases where we’ve detected a surname misspelling, with entries like:</p>
+<pre><code>&lt;override&gt;
+    &lt;original&gt;
+        &lt;surname&gt;Sokal&lt;/surname&gt;
+        &lt;givenname&gt;Eric&lt;/givenname&gt;
+    &lt;/original&gt;
+    &lt;corrected&gt;
+        &lt;surname&gt;Sokol&lt;/surname&gt;
+        &lt;givenname&gt;Eric&lt;/givenname&gt;
+    &lt;/corrected&gt;
+    &lt;scope&gt;knb-lter-nwt&lt;/scope&gt;
+&lt;/override&gt;
+</code></pre>
+<p>Another XML file collects variants that have been adjudicated manually, with entries like:</p>
+<pre><code>&lt;person&gt;
+    &lt;variant&gt;
+        &lt;surname&gt;Fergus&lt;/surname&gt;
+        &lt;givenname&gt;C Emi&lt;/givenname&gt;
+        &lt;scope&gt;edi&lt;/scope&gt;
+    &lt;/variant&gt;
+    &lt;variant&gt;
+        &lt;surname&gt;Fergus&lt;/surname&gt;
+        &lt;givenname&gt;CEmi&lt;/givenname&gt;
+        &lt;scope&gt;edi&lt;/scope&gt;
+    &lt;/variant&gt;
+    &lt;variant&gt;
+        &lt;surname&gt;Fergus&lt;/surname&gt;
+        &lt;givenname&gt;C&lt;/givenname&gt;
+        &lt;scope&gt;knb-lter-ntl&lt;/scope&gt;
+    &lt;/variant&gt;
+    &lt;variant&gt;
+        &lt;surname&gt;Fergus&lt;/surname&gt;
+        &lt;givenname&gt;Emi&lt;/givenname&gt;
+        &lt;scope&gt;knb-lter-ntl&lt;/scope&gt;
+    &lt;/variant&gt;
+    &lt;comment&gt;ORCID and emails&lt;/comment&gt;
+&lt;/person&gt;
+</code></pre>
+<p>We have a web service that is called hourly to update the names database based on any new datasets that have just been submitted to the repository. Another web service that is called manually once a week or so highlights any cases that appear to require manual inspection because there are multiple given names associated with the same surname, and they are cases we haven’t already examined.</p>
+<p>Together, these services provide a much-improved search capability based on creator names. We hope to continue to provide other kinds of metadata normalization and harmonization in the future.</p>
+<!-- EDI repository, News, Technical -->
+</main>
+</div>
+</div>
