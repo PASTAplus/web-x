@@ -23,7 +23,6 @@ body {
 
 .main_content {
     position: relative;
-    min-height: 100vh;
     background: #fff;
     margin: 0em;
     padding: 0 0 3em;
