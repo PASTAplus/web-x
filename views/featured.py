@@ -21,8 +21,8 @@ from viewmodels.shared.viewmodel import ViewModelBase
 router = fastapi.APIRouter()
 
 
-@router.get('/data/publish-data')
-@template("data/publish-data.html")
-def publish(request: Request):
-    vm = ViewModelBase(request, "Publish Data")
+@router.get('/featured/featured')
+@template("featured/featured.html")
+def featured(request: Request):
+    vm = ViewModelBase(request, "Featured Data")
     return vm.to_dict()

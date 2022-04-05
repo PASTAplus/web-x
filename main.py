@@ -28,6 +28,8 @@ from views import data
 from views import home
 from views import user
 from views import search
+from views import featured
+from views import news
 
 
 cwd = os.path.dirname(os.path.realpath(__file__))
@@ -58,6 +60,8 @@ def configure_routes():
     app.include_router(home.router)
     app.include_router(user.router)
     app.include_router(search.router)
+    app.include_router(featured.router)
+    app.include_router(news.router)
 
 
 if __name__ == "__main__":
