@@ -26,14 +26,14 @@ router = fastapi.APIRouter()
 
 
 @router.get('/featured/featured-grid')
-@template("featured/featured-grid.html")
+@template("featured_data/featured-grid.html")
 def featured_grid(request: Request):
     vm = ViewModelBase(request, "Featured Data")
     return vm.to_dict()
 
 
 @router.get('/featured/{name}')
-@template("featured/featured.html")
+@template("featured_data/featured.html")
 def featured(request: Request, name: str):
     vm = FeaturedViewModel(request, f"Featured Data - {name} ", name=name)
     return vm.to_dict()

@@ -21,7 +21,7 @@ from services.literal import Literal
 
 def get_html(name: str) -> Literal:
     template_path = fastapi_chameleon.engine.template_path
-    featured_file = f"{template_path}/featured/{name}.html"
+    featured_file = f"{template_path}/featured_data/{name}.html"
     with Path(featured_file).open("r") as f:
         html = f.read()
     return Literal(html)
