@@ -28,7 +28,7 @@ from views import data
 from views import home
 from views import user
 from views import search
-
+from views import featured
 
 cwd = os.path.dirname(os.path.realpath(__file__))
 logfile = cwd + "/web-x.log"
@@ -58,6 +58,7 @@ def configure_routes():
     app.include_router(home.router)
     app.include_router(user.router)
     app.include_router(search.router)
+    app.include_router(featured.router)
 
 
 if __name__ == "__main__":
