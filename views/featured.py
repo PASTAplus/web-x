@@ -16,13 +16,20 @@
 from pathlib import Path
 
 import fastapi
-import fastapi_chameleon
 from fastapi_chameleon import template
 from starlette.requests import Request
 
+from viewmodels.shared.viewmodel import ViewModelBase
 from viewmodels.featured.featuredviewmodel import FeaturedViewModel
 
 router = fastapi.APIRouter()
+
+
+@router.get('/featured/featured-grid')
+@template("featured/featured-grid.html")
+def featured_grid(request: Request):
+    vm = ViewModelBase(request, "Featured Data")
+    return vm.to_dict()
 
 
 @router.get('/featured/{name}')
@@ -30,4 +37,3 @@ router = fastapi.APIRouter()
 def featured(request: Request, name: str):
     vm = FeaturedViewModel(request, f"Featured Data - {name} ", name=name)
     return vm.to_dict()
-

@@ -21,8 +21,8 @@ from viewmodels.shared.viewmodel import ViewModelBase
 router = fastapi.APIRouter()
 
 
-@router.get('/news/news')
-@template("news/news.html")
-def news(request: Request):
+@router.get('/news/news-grid')
+@template("news/news-grid.html")
+def news_grid(request: Request):
     vm = ViewModelBase(request, "News")
     return vm.to_dict()
