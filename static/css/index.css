@@ -231,12 +231,6 @@
   fill: currentColor;
 }
 
-/*featured data jumbotron*/
-.jumbotron {
-  background-image: url("../images/featured_data/daphnia_magna_asexual.jpg");
-  background-size: cover;
-}
-
 /*Hover effect*/
 .pop-out {
     transition: all 0.2s ease;
