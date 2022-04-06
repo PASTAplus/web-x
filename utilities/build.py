@@ -187,6 +187,32 @@ def basic_html(md: str) -> BeautifulSoup:
     return soup
 
 
+def template_featured_data(inner_html: str) -> str:
+    open = '<main class="main-tutorial">\n'
+    close = "\n</main>"
+    return open + inner_html + close
+
+
+def featured_data_html(md: str) -> BeautifulSoup:
+    inner_html = markdown.markdown(md, extensions=['tables', 'fenced_code'])
+    html = template_featured_data(inner_html)
+    soup = BeautifulSoup(html, "lxml")
+    return soup
+
+
+def template_news(inner_html: str) -> str:
+    open = '<main class="main-tutorial">\n'
+    close = "\n</main>"
+    return open + inner_html + close
+
+
+def news_html(md: str) -> BeautifulSoup:
+    inner_html = markdown.markdown(md, extensions=['tables', 'fenced_code'])
+    html = template_news(inner_html)
+    soup = BeautifulSoup(html, "lxml")
+    return soup
+
+
 def md2html(md_file: str, verbose: int) -> str:
     try:
         if verbose > 0:
@@ -194,10 +220,14 @@ def md2html(md_file: str, verbose: int) -> str:
         md = Path(md_file).open("r", encoding="utf-8").read()
         md = md.replace(".md", "")
         md = md.replace("/templates/", "/")
-        if '[TOC]' in md:
+        if "[TOC]" in md:
             html = str(sidebar_html(md))
+        elif "# Featured Data" in md:
+            html = str(featured_data_html(md))
+        elif "# News" in md:
+            html = str(featured_data_html(md))
         else:
-            html = str(basic_html(md)).replace("<html><body>", "").replace("</body></html>", "").strip()
+            html = str(basic_html(md))
         return html
     except IOError as ex:
         logger.error(f"{ex} - {md_file}")
