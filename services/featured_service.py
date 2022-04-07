@@ -17,6 +17,7 @@ from pathlib import Path
 import fastapi_chameleon
 from bs4 import BeautifulSoup
 
+from services.clipper import clip
 from services.literal import Literal
 from services.grid_object import GridObject
 
@@ -66,5 +67,5 @@ def make_grid_object(file: str) -> GridObject:
         thumbnail=thumbnail,
         date=date,
         author=author,
-        description=description[:500]
+        description=clip(description, 200)
     )
