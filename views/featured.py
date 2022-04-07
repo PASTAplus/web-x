@@ -19,8 +19,8 @@ import fastapi
 from fastapi_chameleon import template
 from starlette.requests import Request
 
-from viewmodels.shared.viewmodel import ViewModelBase
-from viewmodels.featured.featuredviewmodel import FeaturedViewModel
+from viewmodels.featured.featured_grid_viewmodel import FeaturedGridViewModel
+from viewmodels.featured.featured_viewmodel import FeaturedViewModel
 
 router = fastapi.APIRouter()
 
@@ -28,7 +28,7 @@ router = fastapi.APIRouter()
 @router.get('/featured/featured-grid')
 @template("featured/featured-grid.html")
 def featured_grid(request: Request):
-    vm = ViewModelBase(request, "Featured Data")
+    vm = FeaturedGridViewModel(request, "Featured Data")
     return vm.to_dict()
 
 
