@@ -16,7 +16,7 @@
 </ul>
 </div></aside><main class="main-tutorial">
 <h1 id="the-data-package">The Data Package</h1>
-<p>The data package is the unit of publication within the EDI Data Repository. It's an assemblage of science metadata, one or more science data objects, a package quality report, and manifest of contents. Each data package is assigned a Digital Object Identifier (DOI) and published in the repository for future use.</p>
+<p>The data package is the unit of publication within the EDI Data Repository. It's an assemblage of science metadata, one or more science data objects (including scripts, documents, images etc.), a package quality report, and manifest of contents. Each data package is assigned a Digital Object Identifier (DOI) and published in the repository for future use.</p>
 <p><img src="/static/images/the-data-package.png" width="55%"/></p>
 
 <h2 id="features-of-a-data-package">Features of a data package</h2>
@@ -24,17 +24,17 @@
 <h2 id="example-data-package">Example data package</h2>
 <p><a href="https://portal.edirepository.org/nis/mapbrowse?scope=edi&amp;identifier=9">Here's an example</a> of what a data package looks like once published in the EDI Repository.</p>
 <h2 id="what-to-include-in-a-data-package">What to include in a data package</h2>
-<p>When publishing data in support of a manuscript, include the data required to reproduce the results. Consider publishing this data in a minimally processed form, so it can be reused in other contexts. To make results reproducible, include any scripts used in processing and analyzing the data. Be sure to include links to any external source data used in a data package with <a href="/resources/provenance-metadata">provenance metadata</a>.</p>
-<p>If a data publication is not part of a manuscript, but serving general data reuse, then see our information management resource on <a href="/resources/designing-a-data-package">designing a data package</a>.</p>
+<p>When publishing data in support of a manuscript, include the data required to reproduce the results. Consider publishing this data in a minimally processed form, so it can be reused in other contexts. To make results reproducible, include any scripts used in processing and analyzing the data. Be sure to include links to any external source data used in a data package with <a href="/resources/provenance-metadata">provenance metadata</a>. Also, consider adding documents that provide additional metadata detail (e.g. pdf of protocols).</p>
+<p>For further information on optimizing a data package for reuse see <a href="/resources/designing-a-data-package">designing a data package</a>.</p>
 <h2 id="identifiers-of-a-data-package">Identifiers of a data package</h2>
 <h3 id="digital-object-identifier-doi">Digital Object Identifier (DOI)</h3>
 <p>The DOI is a globally unique and persistent identifier that unambiguously resolves to the data package <a href="/resources/data-package-pages">landing page</a>. DOIs are used in citations and references of a data package.</p>
 <p>Example DOI: <strong>doi:10.6073/pasta/0cd8caf2eb9959c98b335828628914fb</strong></p>
 <h3 id="data-package-identifier">Data package identifier</h3>
-<p>The data package identifier is used exclusively within the EDI Data Repository to associate the components of a data package. A data package identifier has the form <strong>scope.identifier.revision</strong>, where:</p>
+<p>The data package identifier is used exclusively within the EDI Data Repository to associate the components of a data package. A data package identifier has the form <strong>scope.accession.revision</strong>, where:</p>
 <ul>
 <li><strong>scope</strong> is a string value that identifies the organization, project, or theme of the data package</li>
-<li><strong>identifier</strong> is an integer value that uniquely identifies the data package in the namespace of the scope</li>
+<li><strong>accession</strong> is an integer value that uniquely identifies the data package in the namespace of the scope</li>
 <li><strong>revision</strong> is an integer value in increasing order that identifies the version of the data package</li>
 </ul>
 <p>Example data package identifier: <strong>edi.1072.1</strong></p>
@@ -42,7 +42,7 @@
 <p>Individual data objects within a data package can be referenced and downloaded using the corresponding data object identifier. This value is hyperlinked to each data object listed under the <strong>Download Data</strong> section of the data package landing page and listed under the <strong>Data Entity</strong> section of the data package full metadata page.</p>
 <p>Example data object identifier: <strong>https://portal.edirepository.org/nis/dataviewer?packageid=edi.1100.1&amp;entityid=63bea300d6a56a7f88986f0262ae5e74</strong></p>
 <h2 id="versioning-data-packages">Versioning data packages</h2>
-<p>The EDI Data Repository enforces strong versioning (i.e. published data and metadata are immutable). Each revision of a data package is published under a new version number.</p>
+<p>The EDI Data Repository enforces strong versioning (i.e. published data and metadata are immutable). Each revision of a data package is published under a new version number with each revision receiving a new DOI.</p>
 <p><img src="/static/images/data-package-versioning.png" width="30%"/></p>
 <p>In the example above <strong>edi.10.1</strong> is superseded by <strong>edi.10.2</strong>, which in turn is superseded by <strong>edi.10.3</strong>. Each version in this series is accessible under the data package landing page <strong>previous revision</strong> link, but only the newest version is returned when searching. If browsing a superseded version, the landing page will highlight that "<strong>This data package is not the most recent revision of a series"</strong>.</p>
 <p>See the page on <a href="/resources/updating-a-data-package">Updating a Data Package</a> for more on this topic.</p>

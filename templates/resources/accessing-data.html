@@ -5,7 +5,7 @@
 <a class="d-flex align-items-center mb-2 link-dark text-decoration-none" href="#"><span class="fs-5 fw-semibold">Accessing Data</span></a><ul class="btn-toggle-nav">
 <li><a class="link-dark rounded" href="#data-portal">Data Portal</a><ul class="fw-normal">
 <li><a class="link-dark rounded" href="#point-and-click">Point and click</a></li>
-<li><a class="link-dark rounded" href="#data-import-scripts">Data import scripts</a></li>
+<li><a class="link-dark rounded" href="#data-download-scripts">Data download scripts</a></li>
 </ul>
 </li>
 <li><a class="link-dark rounded" href="#ediutils">EDIutils</a></li>
@@ -26,15 +26,15 @@
 <li>Use the <strong>Download Zip Archive</strong> button to download the entire data package.</li>
 </ol>
 <p><img class="screen-shot" src="/static/images/access-resources.png" width="65%"/></p>
-<h3 id="data-import-scripts">Data import scripts</h3>
-<p>Data import scripts, read data directly from the EDI Repository into common programming language workspaces. This option supports reproducible research by accessing the data directly and reducing the possibility of errors propagating through local files.</p>
+<h3 id="data-download-scripts">Data download scripts</h3>
+<p>Data download scripts, read data directly from the EDI Repository into common programming language workspaces. This option supports reproducible research by accessing the data directly and reducing the possibility of errors propagating through local files.</p>
 <ol>
 <li>Navigate to the <strong>Code Generation</strong> section of a data package landing page. </li>
 <li>Select the language of interest (R, Python, MATLAB, etc).</li>
 <li>Download the script that is generated as a file, or copy and paste the text into the development environment of the language (e.g. RStudio).</li>
 </ol>
 <h2 id="ediutils">EDIutils</h2>
-<p>The <a href="https://ediorg.github.io/EDIutils/">EDIutils R package</a> allows data to be read directly from the EDI Repository into the R environment. This option serves a similar use case as the data import scripts but provides full access to the <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/about.html">REST API</a>, which is useful when constructing automated workflows.</p>
+<p>The <a href="https://ediorg.github.io/EDIutils/">EDIutils R package</a> allows data to be read directly from the EDI Repository into the R environment. This option serves a similar use case as the data download scripts but provides full access to the <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/about.html">REST API</a>, which is useful when constructing automated workflows.</p>
 <ol>
 <li>Download the metadata of a data package using the <a href="https://ediorg.github.io/EDIutils/reference/read_metadata.html"><code>read_metadata()</code></a> function.</li>
 <li>Download individual resources from a data package using the <a href="https://ediorg.github.io/EDIutils/reference/read_data_entity.html"><code>read_data_entity()</code></a> function.</li>
