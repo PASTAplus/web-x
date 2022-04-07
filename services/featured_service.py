@@ -15,6 +15,7 @@
 from pathlib import Path
 
 import fastapi_chameleon
+from bs4 import BeautifulSoup
 
 from services.literal import Literal
 from services.grid_object import GridObject
@@ -34,7 +35,36 @@ def get_grid_objects() -> list:
     featured_path = f"{template_path}/featured"
     if Path(featured_path).is_dir():
         for obj in Path(featured_path).rglob("featured-*.*.html"):
-            if Path(obj).is_file():
-                go = GridObject(name=obj.stem, leader="This is a leader...", thumbnail="/featured/data/x.png");
+            if obj.is_file():
+                fd = f"{featured_path}/{obj.name}"
+                go = make_grid_object(fd)
                 grid_objects.append(go)
     return grid_objects
+
+
+def make_grid_object(file: str) -> GridObject:
+    name = Path(file).stem
+    fd = Path(file).open("r", encoding="utf-8").read()
+    soup = BeautifulSoup(fd, "lxml")
+    title = soup.find("h2").get_text()
+    paras = soup.find_all("p")
+    date = paras[0].get_text()
+    author = paras[1].get_text()
+    h3s = soup.find_all("h3")
+    description = None
+    for h3 in h3s:
+        if h3.get_text() == "Description":
+            description = h3.findNext("p").get_text()
+    image = soup.find("img")
+    thumbnail = None
+    if image:
+        thumbnail = image["src"]
+
+    return GridObject(
+        name=name,
+        title=title,
+        thumbnail=thumbnail,
+        date=date,
+        author=author,
+        description=description[:500]
+    )
