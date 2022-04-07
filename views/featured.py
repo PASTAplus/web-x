@@ -12,9 +12,6 @@
 :Created:
     4/5/22
 """
-
-from pathlib import Path
-
 import fastapi
 from fastapi_chameleon import template
 from starlette.requests import Request
