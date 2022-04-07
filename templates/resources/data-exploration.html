@@ -33,6 +33,9 @@
 <p>The EDI <a href="http://dex.edirepository.org">Data Explorer (DeX)</a> is a web browser application offering summary information, subsetting, and plotting features for data packages containing tabular data files. DeX is a great tool for making a preliminary assessment about fitness for use. Click the <strong>Data Explorer</strong> link next to a data object from the <strong>Resources</strong> section of a data package landing page (currently only available in the <a href="/resources/repository-environments#staging">staging environment</a> of the Data Portal).</p>
 <p><img class="screen-shot" src="/static/images/dex-in-portal.png" width="80%"/> </p>
 <p>Alternatively, open a table from a data package in DeX by providing the Data Entity URL (currently limited to tabular data). </p>
+<blockquote>
+<p>In order to provide a standard of efficiency while working with limited computing power, DeX currently has a size limit of 50 million cells. Tables with more than 50 million cells will be truncated by row. For example, a table with 10 columns and 5,000,010 rows will only import the first 5,000,000 rows, leaving off the last 10 rows. The DeX profile, as well as any subsets or plots, will be generated from the truncated table and will not necessarily be representative of the original table.</p>
+</blockquote>
 <h3 id="profile">Profile</h3>
 <p>The <strong>Profile</strong> tab provides data table overview information, a sample of the first and last rows in the table, and summary information for every variable in the table.</p>
 <h4 id="overview">Overview</h4>
