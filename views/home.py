@@ -16,7 +16,7 @@ import fastapi
 from fastapi_chameleon import template
 from starlette.requests import Request
 
-from viewmodels.indexviewmodel import IndexViewModel
+from viewmodels.index_viewmodel import IndexViewModel
 
 router = fastapi.APIRouter()
 
