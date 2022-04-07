@@ -35,7 +35,7 @@ def get_grid_objects() -> list:
     template_path = fastapi_chameleon.engine.template_path
     featured_path = f"{template_path}/featured"
     if Path(featured_path).is_dir():
-        for obj in Path(featured_path).rglob("featured-*.*.html"):
+        for obj in sorted(Path(featured_path).rglob("featured-*.*.html"), reverse=True):
             if obj.is_file():
                 fd = f"{featured_path}/{obj.name}"
                 go = make_grid_object(fd)
