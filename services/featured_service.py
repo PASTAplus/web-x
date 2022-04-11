@@ -56,7 +56,9 @@ def make_grid_object(file: str) -> GridObject:
     for h3 in h3s:
         if h3.get_text() == "Description":
             description = h3.findNext("p").get_text()
-    image = soup.find("img")
+    image = soup.find("img", id="pickme")
+    if image is None:
+        image = soup.find("img")
     thumbnail = None
     if image:
         thumbnail = image["src"]
