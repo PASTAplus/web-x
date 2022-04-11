@@ -16,11 +16,12 @@
 
 def clip(sentence: str, length: int) -> str:
     clipped = ""
-    words = sentence.split()
-    for word in words:
-        if len(clipped) + len(word) < length - 3:
-            clipped = " ".join([clipped, word])
-        else:
-            clipped += "..."
-            break
+    if sentence is not None:
+        words = sentence.split()
+        for word in words:
+            if len(clipped) + len(word) < length - 3:
+                clipped = " ".join([clipped, word])
+            else:
+                clipped += "..."
+                break
     return clipped.strip()
