@@ -1,0 +1,42 @@
+<main class="main-tutorial">
+<h1>News</h1>
+<h2>RFC: Annotating EML with the EMLassemblyline R Package</h2>
+<p>March 25, 2020</p>
+<h3>Description</h3>
+<p>We’d like your feedback on a new EMLassemblyline feature that supports annotation of both new and existing EML documents.</p>
+<p>Annotating new EML within the EMLassemblyline workflow:</p>
+<ol>
+<li>Create metadata templates for your dataset (as usual).</li>
+<li>Run the template_annotations() function to create the annotations template then fill it out. Template features:</li>
+<li>The annotations template reports the annotatable elements within your metadata and assigns default predicate labels and URIs. You’ll have to add object labels and URIs from ontologies of your choosing. You can remove annotations by deleting rows and add annotations by copying a subject’s row, pasting it to a new line, then modifying the object label and URI.</li>
+<li>Default annotations can be changed by the user.</li>
+<li>Recurring nodes (e.g. ResponsibleParty) only require one set of annotations within the template.</li>
+<li>Instructions for creating the annotations template from scratch are included in the function documentation for users gathering annotations in other ways.</li>
+<li>Run the make_eml() function to get an annotated EML document.</li>
+</ol>
+<p>Annotating existing EML that was created by other methods:</p>
+<ol>
+<li>Run the template_annotations() function for your EML document then fill it out.</li>
+<li>Run the annotate_eml() function to get an annotated revision of your EML file.</li>
+</ol>
+<p>Notes:</p>
+<ul>
+<li>All annotated elements are assigned IDs and their annotations are placed both immediately under the parent element (subject) and within the /eml/annotations node through ID + Reference pairs. This redundant approach supports variation in where EML metadata consumers prefer to harvest this information and supports annotation of elements requiring ID + Reference pairs.</li>
+<li>The currently supported EML nodes are:<ul>
+<li>dataset</li>
+<li>dataTable</li>
+<li>attribute (of dataTable)</li>
+<li>otherEntity</li>
+<li>ResponsibleParty (e.g. creator, contact, associatedParty)</li>
+</ul>
+</li>
+</ul>
+<p>A beta-release of this enhancement is available on branch “fix_31b” of the EMLassemblyline project GitHub. Install this version with the command:</p>
+<p><strong>remotes::install_github(“EDIorg/EMLassemblyline”, ref = “fix_31b”)</strong></p>
+<p>Comments can be submitted to the project GitHub:</p>
+<p><a href="https://github.com/EDIorg/EMLassemblyline/issues/31">https://github.com/EDIorg/EMLassemblyline/issues/31</a></p>
+<p>or emailed to:</p>
+<p><a href="mailto:info@environmentaldatainitiative.org">info@environmentaldatainitiative.org</a></p>
+<p>Many thanks!</p>
+<!-- Technical -->
+</main>

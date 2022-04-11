@@ -1,0 +1,19 @@
+<main class="main-tutorial">
+<h1>Featured Data</h1>
+<h2>Global Lake Area, Climate, and Population Dataset</h2>
+<p>July 1, 2021</p>
+<p>Susanne Grossman-Clarke</p>
+<h3>Citation</h3>
+<p>Labou, S.G., M.F. Meyer, M.R. Brousil, A.N. Cramer, and B.T. Luff. 2020. Global lake area, climate, and population dataset ver 4. Environmental Data Initiative. <a href="https://doi.org/10.6073/pasta/834e2d4e8ee7eb2fa9a5a5b32d759683">https://doi.org/10.6073/pasta/834e2d4e8ee7eb2fa9a5a5b32d759683</a> (Accessed 2020-06-30).</p>
+<h3>Description</h3>
+<p>This featured data package is a great example of re-using and combining datasets to further new science. Existing global datasets were harmonized to create the Global Lake area, Climate, and Population (GLCP) dataset. The harmonized data are presented in a recent article in the journal Scientific Data (Meyer et al. 2020), along with a description of the kind of research questions to which the GLCP can be applied.</p>
+<p>An increasing population in conjunction with a changing climate necessitates a detailed understanding of water abundance at multiple spatial and temporal scales. Remote sensing has provided massive data volumes to track fluctuations in water quantity, yet contextualizing water abundance with other local, regional, and global trends remains challenging by often requiring large computational resources to combine multiple data sources into analytically-friendly formats. To bridge this gap and facilitate future freshwater research opportunities, the GLCP dataset was created.</p>
+<figure class="figure_featured">
+<img alt="glcp flowchart" src="/static/images/featured_data/glcp.png" width="50%"/>
+<figcaption>Conceptual diagram of data harmonization process. JRC Water area was calculated in Google Earth Engine (GEE), and then aggregated locally within the R environment. Similarly, basin population was calculated on GEE, and then aggregated locally within the R environment. Climate data from MERRA-2, however, was first aggregated from hourly to monthly and annual values, then resampled for 1/10th of their original resolutions with a subsequent raster clipping performed within the R environment. We then imported the geotiff outputs to GEE to calculate basin climate variables. GEE output was then downloaded locally and aggregated within the R environment. Image credit: Meyer et al. (2020)</figcaption>
+</figure>
+<p>The GLCP is a compilation of lake surface area for 1.42+ million lakes and reservoirs of at least 10 ha in size from 1995 to 2015 with co-located basin-level temperature, precipitation, and population data. The compiled dataset was created with <a href="https://www.go-fair.org/">FAIR data principles</a> (Findable, Accessible, Interoperable, Re-usable) in mind and retains unique identifiers from parent datasets to expedite interoperability. The GLCP offers critical data for basic and applied investigations of lake surface area, and water quantity, at local, regional, and global scales.</p>
+<h3>References</h3>
+<p>Meyer, M.F., Labou, S.G., Cramer, A.N. , Brousil, M.R., Luff, B.T. The global lake area, climate, and population dataset. Sci Data 7, 174 (2020). <a href="https://doi.org/10.1038/s41597-020-0517-4">https://doi.org/10.1038/s41597-020-0517-4</a></p>
+<h3><a href="/featured_data/featured-grid">All featured data contributions</a></h3>
+</main>
