@@ -78,7 +78,7 @@ def get_post_html(post_type: str, name: str) -> Literal:
     return Literal(html)
 
 
-def get_postcard_objects(post_type: str) -> list:
+def get_postcard_objects(post_type: str, clip_len: int, img_picker: str) -> list:
     postcard_objects = []
     template_path = fastapi_chameleon.engine.template_path
     posts_path = f"{template_path}/{post_type}"
@@ -86,6 +86,6 @@ def get_postcard_objects(post_type: str) -> list:
         for post in sorted(Path(posts_path).rglob(f"{post_type}-*.*.html"), reverse=True):
             if post.is_file():
                 fd = f"{posts_path}/{post.name}"
-                pco = make_postcard_object(fd, clip_len=200, img_picker="pickme")
+                pco = make_postcard_object(fd, clip_len, img_picker)
                 postcard_objects.append(pco)
     return postcard_objects
