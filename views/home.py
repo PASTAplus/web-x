@@ -24,5 +24,5 @@ router = fastapi.APIRouter()
 @router.get('/')
 @template("index.html")
 def index(request: Request):
-    vm = IndexViewModel(request)
+    vm = IndexViewModel(request, "Environmental Data Initiative")
     return vm.to_dict()
