@@ -16,7 +16,7 @@ from typing import Optional
 
 from starlette.requests import Request
 
-from services import news_service
+from services.post_service import get_post_html
 from viewmodels.shared.viewmodel import ViewModelBase
 
 
@@ -24,4 +24,4 @@ class NewsViewModel(ViewModelBase):
 
     def __init__(self, request: Request, title: str = "Environmental Data Initiative", name=None):
         super().__init__(request, title)
-        self.main = news_service.get_html(name)
+        self.main = get_post_html("news", name)

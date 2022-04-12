@@ -14,7 +14,7 @@
 """
 from starlette.requests import Request
 
-from services import news_service
+from services.post_service import get_postcard_objects
 from viewmodels.shared.viewmodel import ViewModelBase
 
 
@@ -22,4 +22,4 @@ class NewsGridViewModel(ViewModelBase):
 
     def __init__(self, request: Request, title: str = "Environmental Data Initiative"):
         super().__init__(request, title)
-        self.grid_objects = news_service.get_grid_objects()
+        self.grid_objects = get_postcard_objects("news")
