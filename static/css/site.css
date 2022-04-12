@@ -198,3 +198,9 @@ blockquote {
     border-left-color: rgb(210, 205, 205);
     background-color: #f2f2f2;
 }
+
+.card-body {
+    overflow: clip;
+    height: 15em;
+    margin-bottom: 1em;
+}
