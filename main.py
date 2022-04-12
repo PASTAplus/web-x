@@ -25,7 +25,7 @@ from views import about
 from views import resources
 from views import support
 from views import data
-from views import home
+from views import index
 from views import user
 from views import search
 from views import featured
@@ -57,7 +57,7 @@ def configure_routes():
     app.include_router(resources.router)
     app.include_router(data.router)
     app.include_router(support.router)
-    app.include_router(home.router)
+    app.include_router(index.router)
     app.include_router(user.router)
     app.include_router(search.router)
     app.include_router(featured.router)

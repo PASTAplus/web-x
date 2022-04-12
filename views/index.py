@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-:Mod: about
+:Mod: index
 
 :Synopsis:
 
