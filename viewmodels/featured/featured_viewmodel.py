@@ -25,6 +25,3 @@ class FeaturedViewModel(ViewModelBase):
     def __init__(self, request: Request, title: str = "Environmental Data Initiative", name=None):
         super().__init__(request, title)
         self.main = featured_service.get_html(name)
-
-    def to_dict(self) -> dict:
-        return self.__dict__

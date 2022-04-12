@@ -25,6 +25,3 @@ class FeaturedGridViewModel(ViewModelBase):
     def __init__(self, request: Request, title: str = "Environmental Data Initiative"):
         super().__init__(request, title)
         self.grid_objects = featured_service.get_grid_objects()
-
-    def to_dict(self) -> dict:
-        return self.__dict__
