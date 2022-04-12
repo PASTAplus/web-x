@@ -190,16 +190,11 @@
             <p class="fw-normal" style="font-size:2em;">Featured Data Contribution</p>
         </div>
         <div class="container px-4 pt-4">
-            <a href="/featured/featured-20220301.00">
-                <div class="p-4 mb-4 bg-light rounded-3" style="background-image: url('../../static/images/featured_data/daphnia_magna_asexual.jpg'); background-size: cover;">
+            <a href="/featured/${featured[0].name}">
+                <div class="p-4 mb-4 bg-light rounded-3" style="background-image: url('${featured[0].thumbnail}'); background-size: cover;">
                     <div class="container-fluid py-5">
-                        <h1 class="display-5 fw-bold text-white">Effects of Copper Sulfate Toxicity on Multiple
-                            Phytoplankton and Animals in Standardized Aquatic Microcosms</h1>
-                        <p class="col-md-11 fs-5 text-white">The data published in this featured data package were
-                            obtained from a study funded by the Food and Drug Administration (1983-1986) to determine if
-                            ecosystems could be used to regulate chemicals. The work on this topic was published in
-                            several peer-reviewed articles that have been added as journal citations to the data package
-                            landing page in the EDI data repository.</p>
+                        <h1 class="display-5 fw-bold text-white">${featured[0].title}</h1>
+                        <p class="col-md-11 fs-5 text-white">${featured[0].description}</p>
                         <p class="lead mb-0 text-white fw-bold">Continue reading</p>
                     </div>
                 </div>
@@ -219,40 +214,40 @@
                 <div class="col-md-6">
                     <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                         <div class="col p-4 d-flex flex-column position-static">
-                            <h3 class="mb-0">ezEML Templates</h3>
-                            <div class="mb-1 text-muted">March 10, 2022</div>
-                            <p class="mb-auto">Research sites (e.g., LTER sites) and teams of researchers who are using ezEML to capture metadata may find that certain content is used repeatedly across a number of documents. Examples of such repeated content can include Creators, Contacts, Keywords, Intellectual Rights, Geographic Coverage, Project, etc. Users can avoid the tedious task of re-entering this information for each new dataset by creating and publishing one or more “templates” that are prepopulated with this standard content. </p>
-                            <a href="/news/news-20220310.00" class="stretched-link">Continue reading</a>
+                            <h3 class="mb-0">${news[0].title}</h3>
+                            <div class="mb-1 text-muted">${news[0].date}</div>
+                            <p class="mb-auto">${news[0].description}</p>
+                            <a href="/news/${news[0].name}" class="stretched-link">Continue reading</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                         <div class="col p-4 d-flex flex-column position-static">
-                            <h3 class="mb-0">A Quick Overview of EDI’s Data Explorer (DeX)</h3>
-                            <div class="mb-1 text-muted">Jan 28, 2022</div>
-                            <p class="card-text mb-auto">The EDI software team is excited to announce DeX, a tool for exploring and subsetting tabular data, which is now in beta testing on the EDI staging Data Portal (https://portal-s.edirepository.org/nis). DeX provides three views into tabular data found in the EDI Data Repository: 1) a statistical profiler that analyzes the data table and displays detailed information about each attribute; 2) a filter and subsetting application that allows you to download the subsetted data, along with a ...</p>
-                            <a href="/news/news-20220128.00" class="stretched-link">Continue reading</a>
+                            <h3 class="mb-0">${news[1].title}</h3>
+                            <div class="mb-1 text-muted">${news[1].date}</div>
+                            <p class="mb-auto">${news[1].description}</p>
+                            <a href="/news/${news[1].name}" class="stretched-link">Continue reading</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                         <div class="col p-4 d-flex flex-column position-static">
-                            <h3 class="mb-0">EDIutils R Package Update</h3>
-                            <div class="mb-1 text-muted">January 26, 2022</div>
-                            <p class="card-text mb-auto">EDIutils is a client for the Environmental Data Initiative repository REST API and includes functions to search and access existing data, evaluate and upload new data, and assist with related data management tasks (https://github.com/EDIorg/EDIutils). The package has undergone a major refactor for submission to rOpenSci and CRAN. This new and improved version (0.0.0.9000) covers the full data repository REST API, handles authentication more securely, better matches API ...</p>
-                            <a href="/news/news-20220126.00" class="stretched-link">Continue reading</a>
+                            <h3 class="mb-0">${news[2].title}</h3>
+                            <div class="mb-1 text-muted">${news[2].date}</div>
+                            <p class="mb-auto">${news[2].description}</p>
+                            <a href="/news/${news[2].name}" class="stretched-link">Continue reading</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                         <div class="col p-4 d-flex flex-column position-static">
-                            <h3 class="mb-0">Normalization of Creator Names in EDI’s Data Portal</h3>
-                            <div class="mb-1 text-muted">November 2, 2021</div>
-                            <p class="mb-auto">The Advanced Search feature of EDI’s Data Portal lets you select a dataset Creator name from a drop-down list of all dataset creators in our repository. The search then displays all the datasets that have that name as one of its creators. Unfortunately, many creators’ names occur in multiple variations in different datasets and, in the past, each variation appeared separately in the drop-down list. Selecting a variant would return only the datasets for which the creator’s name was spelled as in that particular variant.</p>
-                            <a href="/news/news-20211102.01" class="stretched-link">Continue reading</a>
+                            <h3 class="mb-0">${news[3].title}</h3>
+                            <div class="mb-1 text-muted">${news[3].date}</div>
+                            <p class="mb-auto">${news[3].description}</p>
+                            <a href="/news/${news[3].name}" class="stretched-link">Continue reading</a>
                         </div>
                     </div>
                 </div>
