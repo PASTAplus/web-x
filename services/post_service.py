@@ -13,6 +13,7 @@
     4/6/22
 """
 from pathlib import Path
+from typing import Optional
 
 import fastapi_chameleon
 from bs4 import BeautifulSoup
@@ -39,7 +40,7 @@ class PostCardObject:
         self.description = description
 
 
-def make_postcard_object(file: str, clip_len: int, img_picker: str) -> PostCardObject:
+def make_postcard_object(file: str, clip_len: Optional[int] = None, img_picker: str = "pickme") -> PostCardObject:
     name = Path(file).stem
     fd = Path(file).open("r", encoding="utf-8").read()
     soup = BeautifulSoup(fd, "lxml")
