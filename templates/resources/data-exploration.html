@@ -31,7 +31,7 @@
 
 <h2 id="data-explorer-dex">Data eXplorer (DeX)</h2>
 <p>The EDI <a href="http://dex.edirepository.org">Data Explorer (DeX)</a> is a web browser application offering summary information, subsetting, and plotting features for data packages containing tabular data files. DeX is a great tool for making a preliminary assessment about fitness for use. Click the <strong>Data Explorer</strong> link next to a data object from the <strong>Resources</strong> section of a data package landing page (currently only available in the <a href="/resources/repository-environments#staging">staging environment</a> of the Data Portal).</p>
-<p><img class="screen-shot" src="/static/images/dex-in-portal.png" width="80%"/> </p>
+<p><img class="screen-shot" src="/static/images/dex-in-portal.png" width="95%"/> </p>
 <p>Alternatively, open a table from a data package in DeX by providing the Data Entity URL (currently limited to tabular data). </p>
 <blockquote>
 <p>In order to provide a standard of efficiency while working with limited computing power, DeX currently has a size limit of 50 million cells. Tables with more than 50 million cells will be truncated by row. For example, a table with 10 columns and 5,000,010 rows will only import the first 5,000,000 rows, leaving off the last 10 rows. The DeX profile, as well as any subsets or plots, will be generated from the truncated table and will not necessarily be representative of the original table.</p>
@@ -49,17 +49,17 @@
 <h4 id="query">Query</h4>
 <p>Users can type a query to filter data. The query syntax is based on the Python Pandas' query method.</p>
 <p>Rows can be filtered by values in character columns using the <code>==</code> and <code>!=</code> operators:</p>
-<p><img class="screen-shot" src="/static/images/numexpr1.png" width="80%"/> </p>
+<p><img class="screen-shot" src="/static/images/numexpr1.png" width="100%"/> </p>
 <p>Rows can also be filtered by values in numeric columns using the <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>, <code>!=</code> and <code>==</code> operators. Use backticks to select columns that have spaces or special characters in their name:</p>
-<p><img class="screen-shot" src="/static/images/numexpr2.png" width="80%"/> </p>
+<p><img class="screen-shot" src="/static/images/numexpr2.png" width="100%"/> </p>
 <p>Rows can be filtered using comparisons between different columns. Multiple logical queries can be combined with the <code>&amp;</code> and <code>|</code> symbols to create advanced logical queries:</p>
-<p><img class="screen-shot" src="/static/images/numexpr6.png" width="80%"/> </p>
+<p><img class="screen-shot" src="/static/images/numexpr6.png" width="100%"/> </p>
 <p>Individual rows can be selected by their index using square brackets:</p>
-<p><img class="screen-shot" src="/static/images/numexpr3.png" width="80%"/> </p>
+<p><img class="screen-shot" src="/static/images/numexpr3.png" width="100%"/> </p>
 <p>Rows where the values from two columns are equal (or not equal) may also be filtered by comparing the two columns: <code>col_1 == col_2</code> or <code>col_1 != col_2</code></p>
-<p><img class="screen-shot" src="/static/images/numexpr7.png" width="120%"/> </p>
+<p><img class="screen-shot" src="/static/images/numexpr7.png" width="100%"/> </p>
 <p>Rows where the values from one column are present (or not present) anywhere in another column may be filtered by using the "in" (or "not in") operator with the two columns: <code>col_1 in col_2</code> or <code>col_1 not in col_2</code></p>
-<p><img class="screen-shot" src="/static/images/numexpr8.png" width="120%"/> </p>
+<p><img class="screen-shot" src="/static/images/numexpr8.png" width="100%"/> </p>
 <p>For details, refer to the Pandas' <a href="https://pandas.pydata.org/docs/user_guide/indexing.html#the-query-method">general guide to querying data</a> and the <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.query.html">pandas.DataFrame.query</a> API documentation specifically.</p>
 <h4 id="time-period">Time period</h4>
 <p>Users can filter by time period by selecting a <strong>Date</strong> column and entering a start and end date.</p>

@@ -5,7 +5,7 @@
 <a class="d-flex align-items-center mb-2 link-dark text-decoration-none" href="#"><span class="fs-5 fw-semibold">Citing a Data Package</span></a><ul class="btn-toggle-nav">
 <li><a class="link-dark rounded" href="#citing-in-an-article">Citing in an article</a><ul class="fw-normal">
 <li><a class="link-dark rounded" href="#copy-the-citation-from-a-data-package-landing-page">Copy the citation from a data package landing page</a></li>
-<li><a class="link-dark rounded" href="#browser-plugins">Browser plugins</a></li>
+<li><a class="link-dark rounded" href="#managing-data-citations">Managing data citations</a></li>
 <li><a class="link-dark rounded" href="#programmatically-create-data-package-citations">Programmatically create data package citations</a></li>
 </ul>
 </li>
@@ -16,19 +16,19 @@
 <h1 id="citing-a-data-package">Citing a Data Package</h1>
 <p>Along with ensuring proper attribution is paid to the original data author, citing data in publications and other published data increases findability, encourages data reuse, and enables reliable tracking of data citation metrics.<sup>[1]</sup></p>
 <figure class="figure">
-<img class="figure-img" src="/static/images/data-citation.png" width="75%"/>
+<img class="figure-img" src="/static/images/data-citation.png" width="90%"/>
 <figcaption class="figure-caption">Components of a data citation: (1) Data Author or Creator, (2) Public Release Date, (3) Title, (4) Version, (5) Repository, (6) Persistent Identifier (DOI), (7) Access Date.</figcaption>
 </figure>
 
 <h2 id="citing-in-an-article">Citing in an article</h2>
 <h3 id="copy-the-citation-from-a-data-package-landing-page">Copy the citation from a data package landing page</h3>
 <p>Every data package <a href="/resources/data-package-pages">landing page</a> provides a citation, formatted to <a href="https://doi.org/10.6084/m9.figshare.8441816">community adopted practices</a>, that can be easily copied into a document.</p>
-<p><img class="screen-shot" src="/static/images/copy-citation.png" width="85%"/></p>
-<h3 id="browser-plugins">Browser plugins</h3>
-<p>The data package citation can be automatically imported from the data package landing page into a reference manager application using web browser plugins (e.g. <a href="https://www.zotero.org/download/connectors">Zotero Connector</a> and <a href="https://www.mendeley.com/reference-management/web-importer">Mendeley Web Importer</a>). Once in the reference manager, the citation can be exported to a bibliography.</p>
+<p><img class="screen-shot" src="/static/images/copy-citation.png" width="90%"/></p>
+<h3 id="managing-data-citations">Managing data citations</h3>
+<p>The data package citation can be automatically imported into a reference manager application using web browser plugins (e.g. <a href="https://www.zotero.org/support/adding_items_to_zotero">Zotero Connector</a> and <a href="https://www.mendeley.com/guides/desktop/02-adding-documents">Mendeley Web Importer</a>) which allow users to copy the dataset DOI into a specified field. Once in the reference manager, the DOI will be used to look-up and download the citation metadata, and the citation can be exported to a bibliography.</p>
 <h3 id="programmatically-create-data-package-citations">Programmatically create data package citations</h3>
-<p>Use the EDI <a href="https://github.com/PASTAplus/cite">Cite web service</a> to generate data package citations formatted for different communities of practice.</p>
-<p>Watch a <a href="https://www.youtube.com/watch?v=7GppJUxCJIU">video walkthrough</a> demonstrating the use of Cite.</p>
+<p>Use the EDIutils <a href="https://ediorg.github.io/EDIutils/reference/read_data_package_citation.html"><code>read_data_package_citation</code></a> to generate data package citations formatted for different communities of practice.</p>
+<p>This operation can also be performed using the EDI <a href="https://github.com/PASTAplus/cite">Cite web service</a>. Watch a <a href="https://www.youtube.com/watch?v=7GppJUxCJIU">video walkthrough</a> demonstrating the use of Cite.</p>
 <h2 id="citing-in-a-derived-data-package">Citing in a derived data package</h2>
 <p>For citing data in a data package derived from one or more source data packages, see the page on <a href="/resources/provenance-metadata">provenance metadata</a>.</p>
 <h2 id="references">References</h2>

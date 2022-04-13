@@ -45,21 +45,21 @@
 <li>Reference the image from within a markdown page using HTML. There are 4 use cases:</li>
 <li>Screenshots - A drop shadow is added to screenshots to help distinguish them from the body text. This is done with the <code>screen-shot</code> CSS class. Example:</li>
 </ol>
-<p><code>&lt;img class="screen-shot" src="/static/images/ezeml-send-revision.png" width="85%"&gt;</code></p>
+<p><code>&lt;img class="screen-shot" src="/static/images/ezeml-send-revision.png" alt="Send ezEML revision" width="85%"&gt;</code></p>
 <ol>
 <li>Figures with captions - Example:</li>
 </ol>
 <p>```
  <br/>
 <figure class="figure">
-<img class="figure-img" src="/static/images/image.png" width="75%"/>
+<img alt="Description of image" class="figure-img" src="/static/images/image.png" width="75%"/>
 <figcaption class="figure-caption">A caption for the image.</figcaption>
 </figure></p>
 <p>```</p>
 <ol>
 <li>All other image types - Example:</li>
 </ol>
-<p><code>&lt;img src="/static/images/metadata-in-the-research-life-cycle.png" width="55%"&gt;</code></p>
+<p><code>&lt;img src="/static/images/metadata-in-the-research-life-cycle.png" alt="Creating metadata in the research life cycle" width="55%"&gt;</code></p>
 <ol>
 <li>Resize for display in the GitHub preview. The general rule of thumb is that the image should be sized so normal body text displayed in the images should match text size on the web page. Set the image size using the <code>width</code> parameter and use a unit of <code>%</code>, meaning percent width of the page view port.</li>
 </ol>

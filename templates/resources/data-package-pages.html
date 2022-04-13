@@ -4,11 +4,7 @@
 <aside class="sidebar-aside"><div class="flex-shrink-0 py-5 px-1 bg-white sticky-top">
 <a class="d-flex align-items-center mb-2 link-dark text-decoration-none" href="#"><span class="fs-5 fw-semibold">Data Package Pages</span></a><ul class="btn-toggle-nav">
 <li><a class="link-dark rounded" href="#summary-page">Summary Page</a><ul class="fw-normal">
-<li><a class="link-dark rounded" href="#title">Title</a></li>
-<li><a class="link-dark rounded" href="#creators">Creators</a></li>
-<li><a class="link-dark rounded" href="#publication-date">Publication Date</a></li>
 <li><a class="link-dark rounded" href="#citation">Citation</a></li>
-<li><a class="link-dark rounded" href="#abstract">Abstract</a></li>
 <li><a class="link-dark rounded" href="#spatial-coverage">Spatial Coverage</a></li>
 <li><a class="link-dark rounded" href="#package-id">Package ID</a></li>
 <li><a class="link-dark rounded" href="#resources">Resources</a><ul class="fw-normal">
@@ -27,29 +23,12 @@
 </ul>
 </li>
 <li><a class="link-dark rounded" href="#full-metadata-page">Full Metadata Page</a><ul class="fw-normal">
-<li><a class="link-dark rounded" href="#general-information">General Information</a><ul class="fw-normal">
-<li><a class="link-dark rounded" href="#data-package">Data Package</a></li>
-<li><a class="link-dark rounded" href="#for-more-information">For More Information</a></li>
-<li><a class="link-dark rounded" href="#time-period">Time Period</a></li>
-<li><a class="link-dark rounded" href="#people-and-organizations">People and Organizations</a></li>
+<li><a class="link-dark rounded" href="#general-information">General Information</a></li>
+<li><a class="link-dark rounded" href="#detailed-metadata">Detailed Metadata</a><ul class="fw-normal">
 <li><a class="link-dark rounded" href="#data-entities">Data Entities</a></li>
 </ul>
 </li>
-<li><a class="link-dark rounded" href="#detailed-metadata">Detailed Metadata</a><ul class="fw-normal">
-<li><a class="link-dark rounded" href="#data-entities_1">Data Entities</a></li>
-<li><a class="link-dark rounded" href="#data-package-usage-rights">Data Package Usage Rights</a></li>
-<li><a class="link-dark rounded" href="#keywords">Keywords</a></li>
-<li><a class="link-dark rounded" href="#methods-and-protocols">Methods and Protocols</a></li>
-<li><a class="link-dark rounded" href="#people-and-organizations_1">People and Organizations</a></li>
-<li><a class="link-dark rounded" href="#temporal-geographic-and-taxonomic-coverage">Temporal, Geographic and Taxonomic Coverage</a></li>
-<li><a class="link-dark rounded" href="#project">Project</a></li>
-<li><a class="link-dark rounded" href="#maintenance">Maintenance</a></li>
-</ul>
-</li>
-<li><a class="link-dark rounded" href="#other-metadata">Other Metadata</a><ul class="fw-normal">
-<li><a class="link-dark rounded" href="#additional-metadata">Additional Metadata</a></li>
-</ul>
-</li>
+<li><a class="link-dark rounded" href="#download-as-xml">Download as XML</a></li>
 </ul>
 </li>
 </ul>
@@ -58,17 +37,9 @@
 <p>A data package <strong><a href="https://portal.edirepository.org/nis/mapbrowse?scope=edi&amp;identifier=1">Landing Page</a></strong> (or <strong>Summary Page</strong>) and <strong><a href="https://portal.edirepository.org/nis/metadataviewer?packageid=edi.1.1">Full Metadata Page</a></strong> are generated from the metadata within a data package and deliver the first impression of a data package scope and coverage to data users who are browsing on the EDI Data Portal. They can be discovered by resolving the Digital Object Identifier (DOI) of a data package, or through the Data Portal search engine. </p>
 
 <h2 id="summary-page">Summary Page</h2>
-<p>The summary page displays overview information for a data package, and it can be discovered through its DOI and other links. </p>
-<h3 id="title">Title</h3>
-<p>The title of the data package.</p>
-<h3 id="creators">Creators</h3>
-<p>A list of the data package creators and their affiliations.</p>
-<h3 id="publication-date">Publication Date</h3>
-<p>The date that the data package was published.</p>
+<p>The summary page displays overview information for a data package, and it can be discovered through its DOI and other links. Overview information on this page includes data package title and abstract, a list of creators, date of publication, and more explained below:</p>
 <h3 id="citation">Citation</h3>
 <p>The suggested citation for the data package and a button to copy it. For more information see  <a href="/resources/citing-data">citing a data package</a>.</p>
-<h3 id="abstract">Abstract</h3>
-<p>The abstract for the data package.</p>
 <h3 id="spatial-coverage">Spatial Coverage</h3>
 <p>An embedded map displaying the geographic location as provided in the EML metadata. The coverage may be one or more bounding boxes, point coordinates, or a mix of both. </p>
 <h3 id="package-id">Package ID</h3>
@@ -95,48 +66,23 @@
 <p>Code generation functionality is <em>briefly demonstrated</em> in <a href="https://youtu.be/B50L1AKXcT8">this video</a>.</p>
 <h3 id="provenance">Provenance</h3>
 <p>This section displays <a href="/resources/provenance-metadata">provenance information</a> related to the data package, including any packages that are derivations of the data package, or any data package that serve as a source to it.</p>
-<p><img class="screen-shot" src="/static/images/provenance-section.png" width="80%"/> </p>
+<p><img class="screen-shot" src="/static/images/provenance-section.png" width="95%"/> </p>
 <p>Additionally, the section contains a link to generate provenance metadata to include in derived data package metadata.</p>
 <h3 id="journal-citations">Journal Citations</h3>
 <p>This section displays journal citations that have been added to the data package. For more information see <a href="/resources/add-citation">adding journal citations to data packages</a>. </p>
-<p><img class="screen-shot" src="/static/images/journal-citations-section.png" width="80%"/> </p>
+<p><img class="screen-shot" src="/static/images/journal-citations-section.png" width="95%"/> </p>
 <h2 id="full-metadata-page">Full Metadata Page</h2>
 <p>The <strong>Full Metadata Page</strong>  provides a more in-depth description of the data package. Access the full metadata page from the links at the top of the <strong>Summary Page</strong> and in the <strong>Resources</strong> section.</p>
 <h3 id="general-information">General Information</h3>
-<p>The General Information section contains information that should help a data user understand the scope and coverage of the data package.</p>
-<h4 id="data-package">Data Package</h4>
-<p>This section displays overview information about the data package, including the title, abstract, package identifier, DOI, and publication date.</p>
-<h4 id="for-more-information">For More Information</h4>
-<p>This section displays the DOI as a resolvable link. This link redirects to the <strong>Summary Page</strong>.</p>
-<h4 id="time-period">Time Period</h4>
-<p>This section displays the temporal coverage information of the data package. </p>
-<h4 id="people-and-organizations">People and Organizations</h4>
-<p>This section displays the names, affiliations and positions of the <strong>Creators</strong>, <strong>Contacts</strong>, and <strong>Associated Parties</strong> of a data package.</p>
-<h4 id="data-entities">Data Entities</h4>
-<p>This section displays the name and description of the data entities of the data package.</p>
+<p>The General Information section covers similar information as the top of the Summary page (title, abstract, date of publication, etc.) information that should help a data user understand the scope and coverage of the data package, as well as information about who created it or should be contacted for questions.</p>
 <h3 id="detailed-metadata">Detailed Metadata</h3>
 <p>The <strong>Detailed Metadata</strong> section contains organized representations of almost all the elements from the EML metadata. Use the <strong>Show</strong> and <strong>Hide</strong> details buttons to expand or compact every subsection in the detailed metadata. Individual sections can be expanded or compacted using the <strong>+/-</strong> buttons next to the section headers.</p>
-<p><img class="screen-shot" src="/static/images/show-hide.png" width="80%"/> </p>
-<h4 id="data-entities_1">Data Entities</h4>
+<p><img class="screen-shot" src="/static/images/show-hide.png" width="95%"/> </p>
+<h4 id="data-entities">Data Entities</h4>
 <p>The <strong>Data Entities</strong> section provides a comprehensive breakdown of each data entity (tables, spatial data, or other entities) formed from the information provided in the EML metadata. In general, the subsections underneath data entities focus on overview information (name, type, and description; number of rows and columns for tables), physical structure (size, MD5 checksum, data format), and provide a direct download link for the entity.</p>
 <p>For <strong>Data Tables</strong> in particular, there is an additional subsection, <strong>Table Column Descriptions</strong>, that provides name, definition, data type, and more, for each individual column within the table. For columns containing numeric values, the unit and range of the column is listed. For columns containing categorical information, each code and its explanation are featured. Due to the depth of information presented in the <strong>Table Column Descriptions</strong> sections, data users can generally gather all the information necessary to determine a data package's fitness for their particular purpose without ever downloading a table.</p>
-<h4 id="data-package-usage-rights">Data Package Usage Rights</h4>
-<p>The license associated with the data package.</p>
-<h4 id="keywords">Keywords</h4>
-<p>This section displays the keywords, organized by their source thesaurus.</p>
-<h4 id="methods-and-protocols">Methods and Protocols</h4>
-<p>The methods as outlined in the data package metadata.</p>
-<h4 id="people-and-organizations_1">People and Organizations</h4>
-<p>A detailed view of all <strong>Publishers</strong>, <strong>Creators</strong>, <strong>Contacts</strong>, and <strong>Associated Parties</strong> with all of their provided information.</p>
-<h4 id="temporal-geographic-and-taxonomic-coverage">Temporal, Geographic and Taxonomic Coverage</h4>
-<p>The temporal, geographic, and taxonomic coverage information of a data package.</p>
-<h4 id="project">Project</h4>
-<p>The funding and project information associated with these data, including the Principal Investigators on the grants. </p>
-<h4 id="maintenance">Maintenance</h4>
-<p>This section describes whether the data package creators plan to update the package with new data or if data collection is complete. This section will also display any history of revisions as documented during a <a href="/resources/updating-a-data-package">data package update</a>.</p>
-<h3 id="other-metadata">Other Metadata</h3>
-<h4 id="additional-metadata">Additional Metadata</h4>
-<p>This section displays any information from the additionalMetadata element of the EML metadata. Notably, any custom units will be displayed in this section.</p>
+<h3 id="download-as-xml">Download as XML</h3>
+<p>At the bottom of the Full Metadata Page, there is a link to download the data package's metadata as XML. This link will open the associated XML file in your browser where it can be downloaded by right-clicking and selecting <strong>Save Page As</strong></p>
 </main>
 </div>
 </div>

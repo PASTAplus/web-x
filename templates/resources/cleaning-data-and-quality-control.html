@@ -50,7 +50,7 @@
 <h3 id="one-value-per-cell">One value per cell</h3>
 <p>Within a column each cell should contain only one piece of information in a consistent format to enable accurate variable typing (e.g. datetime, numeric), reshaping, subsetting, and other transformations (e.g. joins). The most frequent problems are comments entered into an otherwise numeric column (e.g. to denote a missing value). In that case it is recommended to have the value column and add a comment column where the text comments may be entered.</p>
 <p>Another recommendation is to avoid overloading a cell with composite information. Below is an example illustrating the issue of more than one piece of information per cell. In the first table, the <strong>Location_ID</strong> column is a composite of multiple variables. Selecting values from a variable requires parsing. The second table follows the best practice of one piece of information per cell, where the data are easily accessed.</p>
-<p><img src="/static/images/one-value-per-cell.png" width="85%"/> </p>
+<p><img src="/static/images/one-value-per-cell.png" width="100%"/> </p>
 <h3 id="variable-types">Variable types</h3>
 <p>Consistency within variables facilitates type wise operations allowing similar types of data to be combined and operated on together. Data become much more difficult to understand and use when variable types are mixed (e.g. numeric data mixed with character strings).</p>
 <h4 id="dates-and-times">Dates and times</h4>
@@ -85,7 +85,7 @@
 </blockquote>
 <h3 id="data-processing-levels">Data processing levels</h3>
 <p>Data can be processed at progressive levels and published as separate but related data packages. For example, the raw or minimally processed data can be published as a level-0 data package, and a level-1 version, with more processing applied, published as another data package. This process repeats for each new level with <a href="/resources/provenance-metadata">provenance metadata</a> describing the relationships among the levels.</p>
-<p><img src="/static/images/data-processing-levels.png" width="75%"/> </p>
+<p><img src="/static/images/data-processing-levels.png" width="90%"/> </p>
 <h3 id="quality-control-as-a-process">Quality Control as a process</h3>
 <p>Data quality improvement is an ongoing process with the recurring steps:</p>
 <ol>
@@ -94,7 +94,7 @@
 <li><strong>Implement</strong> - Translate rules into code and implement in scripted workflows. Capture exceptions to the rules and report to the information manager.</li>
 <li><strong>Monitor</strong> - Track data health and report to data users. Data quality should improve. Gather user feedback.</li>
 </ol>
-<p><img src="/static/images/data-quality-management.png" width="25%"/> </p>
+<p><img src="/static/images/data-quality-management.png" width="35%"/> </p>
 <p><a href="/resources/updating-a-data-package">New versions of a data package</a> are clearly marked with an incrementing version number and should be accompanied by release notes in the metadata to communicate what has changed and why (e.g. implementation of new tests to improve coverage).</p>
 </main>
 </div>

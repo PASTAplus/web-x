@@ -19,7 +19,7 @@
 </div></aside><main class="main-tutorial">
 <h1 id="uploading-with-static-data-links">Uploading with Static Data Links</h1>
 <p>A static URL resolving to a data file can be inserted into the physical/distribution element of an EML file and serve as a data source when uploading to the EDI Data Repository. This can be useful for bypassing the 500 MB size limit of manual uploads on the EDI Data Portal, for facilitating workflow automation, and for handling files that may be too large to transfer directly to a data curator.</p>
-<p><a href="https://www.box.com/">Box Cloud Storage</a> is an example service that allows for generating links that do not offer any redirects and are static, two requirements of links that are used to upload to the EDI Data Portal.</p>
+<p>Any static download URLs that do not offer redirects can serve as the data source in an EML document. A locally managed web server or cloud hosting service are both viable options for generating these links. <a href="https://www.box.com/">Box Cloud Storage</a> is an example cloud service that allows for generating links that do not offer any redirects and are static.</p>
 <p><img src="/static/images/download-links.png" width="15%"/></p>
 
 <h2 id="using-box-cloud-storage">Using Box Cloud Storage</h2>
@@ -41,7 +41,7 @@
 <ol>
 <li>Copy the shareable link from the pop-up screen and try it in a web browser. This link should lead to a page that looks like the one below.</li>
 </ol>
-<p><img class="screen-shot" src="/static/images/file-request3.png" width="65%"/></p>
+<p><img class="screen-shot" src="/static/images/file-request3.png" width="85%"/></p>
 <ol>
 <li>Share this link with a data submitter. They will not need to have a Box account to submit data to this directory.</li>
 </ol>
@@ -54,11 +54,11 @@
 <ol>
 <li>DO NOT use the Share Link from this window for direct download. Instead, click on the <strong>Link Settings</strong> button which will open another pop-up window.</li>
 </ol>
-<p><img class="screen-shot" src="/static/images/static-link2.png" width="45%"/></p>
+<p><img class="screen-shot" src="/static/images/static-link2.png" width="55%"/></p>
 <ol>
 <li>In the shared link settings, at the bottom of the page, find and copy the direct link URL. </li>
 </ol>
-<p><img class="screen-shot" src="/static/images/static-link3.png" width="45%"/></p>
+<p><img class="screen-shot" src="/static/images/static-link3.png" width="55%"/></p>
 <h2 id="adding-download-links-to-eml-files">Adding download links to EML files</h2>
 <p>Direct download links of any type, and static links generated from a Box account, can be inserted into an EML document to facilitate upload to the EDI Data Repository.</p>
 <h3 id="ezeml">ezEML</h3>
@@ -66,11 +66,11 @@
 <ol>
 <li>Navigate to the <strong>Data Tables</strong> tab and click the <strong>Edit</strong> button next to the data table.</li>
 </ol>
-<p><img class="screen-shot" src="/static/images/link-ezeml1.png" width="80%"/></p>
+<p><img class="screen-shot" src="/static/images/link-ezeml1.png" width="95%"/></p>
 <ol>
 <li>Paste the link into the <strong>Online Distribution URL</strong> textbox. Remember to click <strong>Save and Continue</strong> before moving on.</li>
 </ol>
-<p><img class="screen-shot" src="/static/images/link-ezeml2.png" width="70%"/></p>
+<p><img class="screen-shot" src="/static/images/link-ezeml2.png" width="80%"/></p>
 <p>The data table will now be associated with the provided download link. Submit to EDI via <strong>Send to EDI</strong> or download the XML document with the <strong>Download EML File</strong> button.</p>
 <blockquote>
 <p>This method can be replicated in the <strong>Other Entities</strong> tab as well. </p>
@@ -106,7 +106,7 @@
 <li>Remember to <strong>NOT</strong> check the "Manually upload data" checkbox.</li>
 <li>If some of the objects in the data package package are already in the EDI Repository, remember to check the <strong>Allow PASTA+ to skip …</strong> checkbox.</li>
 </ol>
-<p><img class="screen-shot" src="/static/images/upload-link.png" width="60%"/></p>
+<p><img class="screen-shot" src="/static/images/upload-link.png" width="70%"/></p>
 </main>
 </div>
 </div>

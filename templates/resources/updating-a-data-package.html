@@ -19,7 +19,7 @@
 </div></aside><main class="main-tutorial">
 <h1 id="updating-a-data-package">Updating a Data Package</h1>
 <p>Perform a data package update whenever data or metadata need to be changed or added to a published data package. Updates may be performed routinely or sporadically and will result in a new "revision". A revision of a data package has the same identifier, but receives a new <a href="/resources/the-data-package#data-package-identifier">version number</a> and is assigned a new DOI. All revisions of a data package are linked in the EDI Data Repository. Users who end up on the landing page of an older revision will be notified that a newer version is available.</p>
-<p><img src="/static/images/data-package-versioning.png" width="30%"/></p>
+<p><img src="/static/images/data-package-versioning.png" width="35%"/></p>
 <blockquote>
 <p>Note to Information Managers: Be aware of the EML &lt;access&gt; element. Only credentials already specified in an existing version of a data package can be used to publish an update (i.e. to publish edi.10.2, credentials must be specified in edi.10.1). If you are unable to publish a revision for this reason, contact the EDI Curation Team.</p>
 </blockquote>
@@ -33,7 +33,7 @@
 <li>Open the EML document for the original data package. If this doesn't exist, request it by sending the EDI Curation Team an email with a link to the original data package in the EDI Repository.</li>
 <li>Describe the changes in the new revision. From the <strong>Maintenance</strong> tab, add a new paragraph to the <strong>Description</strong> text.</li>
 </ol>
-<p><img class="screen-shot" src="/static/images/ezeml-maint.png" width="85%"/></p>
+<p><img class="screen-shot" src="/static/images/ezeml-maint.png" width="100%"/></p>
 <ol>
 <li>Submit to EDI - Click <strong>Send to EDI</strong> and add a note mentioning that this is an update to an existing data package (e.g. "This submission is a revision to package edi.101.1"). </li>
 </ol>
@@ -56,7 +56,7 @@
 <h3 id="edi-data-portal">EDI Data Portal</h3>
 <p>An updated data package can be uploaded via the EDI Data Portal similarly to a <a href="/resources/publishing-a-data-package">new data package</a>, but with one key difference:</p>
 <p>Use the <strong>Allow PASTA+ to skip…</strong> option if any of the data files are unchanged between versions. This allows the EDI Data Repository (a.k.a. PASTA) to forgo reuploading replicate data and can save time and repository space. <em>Caution: take care to ensure that the metadata-documented checksum values of each data file are accurate and up to date.</em></p>
-<p><img class="screen-shot" src="/static/images/allow-pasta-update.png" width="60%"/></p>
+<p><img class="screen-shot" src="/static/images/allow-pasta-update.png" width="70%"/></p>
 <p>For more information on this option, watch <a href="https://youtu.be/AS6-m17I6pk">this video</a>.</p>
 <h3 id="ediutils">EDIutils</h3>
 <p>An updated data package can be uploaded via the <a href="https://ediorg.github.io/EDIutils/">EDIutils</a> R package using the <a href="https://ediorg.github.io/EDIutils/reference/update_data_package.html"><code>update_data_package()</code></a> function. For updating with this function, all data files must be web-hosted and be associated with <a href="/resources/uploading-with-static-data-links">static data links</a>. When using this function, the <code>useChecksum</code> option can be selected.</p>
