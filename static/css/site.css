@@ -100,19 +100,16 @@ body {
 }
 
 .figure_featured {
-    display: block;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 2em;
-    padding-bottom: 2em;
-    text-align: center;
-    width: 50%;
-    font-style: italic;  
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 .figure_featured img {
-    padding-bottom: 2em;
+    padding-bottom: 1em;
     vertical-align: top;
+    width: 100%;
 }
 
 footer {
