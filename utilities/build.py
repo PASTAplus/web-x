@@ -167,6 +167,15 @@ def sidebar_html(md: str) -> BeautifulSoup:
     return soup
 
 
+def external_refs(html: str) -> BeautifulSoup:
+    for a in html.find_all('a'):
+        if a.has_attr('href'):
+            if 'http' in a['href']:
+                a['target'] = "_blank"
+                a['rel'] = "noopener noreferrer"
+    return html
+
+
 def template_basic(inner_html: str) -> str:
     open = """
 <div metal:use-macro="load: ../shared/layout.html">
@@ -223,13 +232,15 @@ def md2html(md_file: str, verbose: int) -> str:
         md = md.replace(".md", "")
         md = md.replace("/templates/", "/")
         if "[TOC]" in md:
-            html = str(sidebar_html(md))
+            html = sidebar_html(md)
         elif "# Featured Data" in md:
-            html = str(featured_data_html(md))
+            html = featured_data_html(md)
         elif "# News" in md:
-            html = str(featured_data_html(md))
+            html = featured_data_html(md)
         else:
-            html = str(basic_html(md))
+            html = basic_html(md)
+        html = external_refs(html)
+        html = str(html)
         return html
     except IOError as ex:
         logger.error(f"{ex} - {md_file}")
