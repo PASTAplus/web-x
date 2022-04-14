@@ -1,20 +1,20 @@
 <div metal:use-macro="load: ../shared/layout.html">
 <div metal:fill-slot="content" tal:omit-tag="True">
 <div class="container">
-<aside class="sidebar-aside"><div class="flex-shrink-0 py-5 px-1 bg-white sticky-top">
-<a class="d-flex align-items-center mb-2 link-dark text-decoration-none" href="#"><span class="fs-5 fw-semibold">Adding Journal Citations to a Data Package</span></a><ul class="btn-toggle-nav">
-<li><a class="link-dark rounded" href="#required-information">Required information</a><ul class="fw-normal">
-<li><a class="link-dark rounded" href="#relation-types">Relation types</a><ul class="fw-normal">
-<li><a class="link-dark rounded" href="#iscitedby">IsCitedBy</a></li>
-<li><a class="link-dark rounded" href="#isdescribedby">IsDescribedBy</a></li>
-<li><a class="link-dark rounded" href="#isreferencedby">IsReferencedBy</a></li>
+<aside class="sidebar-aside"><div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted sticky-top" style="padding-top: 60; padding-right: 15; padding-left: 0;">
+<a class="d-block h6 my-2 pb-2 text-muted" href="#"><span class="fs-5 fw-semibold">Adding Journal Citations to a Data Package</span></a><ul class="btn-toggle-nav">
+<li><a class="link-dark rounded text-muted" href="#required-information">Required information</a><ul class="fw-normal">
+<li><a class="link-dark rounded text-muted" href="#relation-types">Relation types</a><ul class="fw-normal">
+<li><a class="link-dark rounded text-muted" href="#iscitedby">IsCitedBy</a></li>
+<li><a class="link-dark rounded text-muted" href="#isdescribedby">IsDescribedBy</a></li>
+<li><a class="link-dark rounded text-muted" href="#isreferencedby">IsReferencedBy</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a class="link-dark rounded" href="#adding-a-citation-to-a-data-package">Adding a citation to a data package</a><ul class="fw-normal">
-<li><a class="link-dark rounded" href="#edi-data-portal">EDI Data Portal</a></li>
-<li><a class="link-dark rounded" href="#ediutils">EDIutils</a></li>
+<li><a class="link-dark rounded text-muted" href="#adding-a-citation-to-a-data-package">Adding a citation to a data package</a><ul class="fw-normal">
+<li><a class="link-dark rounded text-muted" href="#edi-data-portal">EDI Data Portal</a></li>
+<li><a class="link-dark rounded text-muted" href="#ediutils">EDIutils</a></li>
 </ul>
 </li>
 </ul>
@@ -29,7 +29,7 @@
 <h2 id="required-information">Required information</h2>
 <p>A journal citation must contain a <a href="/resources/the-data-package#data-package-identifier">data package identifier</a>, an article identifier (either a DOI or URL), and a description of the relationship between the article and data package. Including the title of the article and journal is recommended.</p>
 <h3 id="relation-types">Relation types</h3>
-<p>The relation between a journal citation and data package must be described when linking a journal citation. There are three types of relations between data packages and journal articles <a href="https://support.datacite.org/docs/relationtype_for_citation">provided by DataCite</a> and supported by EDI:</p>
+<p>The relation between a journal citation and data package must be described when linking a journal citation. There are three types of relations between data packages and journal articles <a href="https://support.datacite.org/docs/relationtype_for_citation" rel="noopener noreferrer" target="_blank">provided by DataCite</a> and supported by EDI:</p>
 <h4 id="iscitedby">IsCitedBy</h4>
 <ul>
 <li>The data package is formally cited in the article.</li>
@@ -39,7 +39,7 @@
 <h4 id="isdescribedby">IsDescribedBy</h4>
 <ul>
 <li>The data package is explicitly described within the article.</li>
-<li>Journal articles that explicitly describe the data package, such as a <a href="https://esajournals.onlinelibrary.wiley.com/hub/journal/19399170/resources/data_paper_inst_ecy">data paper</a>.</li>
+<li>Journal articles that explicitly describe the data package, such as a <a href="https://esajournals.onlinelibrary.wiley.com/hub/journal/19399170/resources/data_paper_inst_ecy" rel="noopener noreferrer" target="_blank">data paper</a>.</li>
 </ul>
 <h4 id="isreferencedby">IsReferencedBy</h4>
 <ul>
@@ -50,7 +50,7 @@
 </ul>
 <h2 id="adding-a-citation-to-a-data-package">Adding a citation to a data package</h2>
 <h3 id="edi-data-portal">EDI Data Portal</h3>
-<p>Journal citations can be added to data packages manually from the <a href="https://portal.edirepository.org/nis/home.jsp">EDI Data Portal</a>:</p>
+<p>Journal citations can be added to data packages manually from the <a href="https://portal.edirepository.org/nis/home.jsp" rel="noopener noreferrer" target="_blank">EDI Data Portal</a>:</p>
 <ol>
 <li>Access the <strong>Journal Citations</strong> tool from the dropdown navigation menu</li>
 </ol>
@@ -62,10 +62,10 @@
 <li>Journal citations can also be updated or deleted using the journal citation tool.</li>
 </ol>
 <p><img class="screen-shot" src="/static/images/journal-citation-tool.png" width="95%"/></p>
-<p><a href="https://www.youtube.com/watch?v=XyyrH4EzTNc&amp;t=291s">Watch a video walkthrough</a> demonstrating the use of the journal citation tool.</p>
+<p><a href="https://www.youtube.com/watch?v=XyyrH4EzTNc&amp;t=291s" rel="noopener noreferrer" target="_blank">Watch a video walkthrough</a> demonstrating the use of the journal citation tool.</p>
 <h3 id="ediutils">EDIutils</h3>
-<p>Journal citations can be added to data packages programmatically with the <a href="https://ediorg.github.io/EDIutils/">EDIutils R package</a>. Provide the required and optional citation information as arguments to the <a href="https://ediorg.github.io/EDIutils/reference/create_journal_citation.html"><code>create_journal_citation()</code></a> function.</p>
-<p>For a language-agnostic solution, see the REST API documentation for <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/pasta_api/data_package_manager_api.html#create-journal-citation">Create Journal Citation</a>.</p>
+<p>Journal citations can be added to data packages programmatically with the <a href="https://ediorg.github.io/EDIutils/" rel="noopener noreferrer" target="_blank">EDIutils R package</a>. Provide the required and optional citation information as arguments to the <a href="https://ediorg.github.io/EDIutils/reference/create_journal_citation.html" rel="noopener noreferrer" target="_blank"><code>create_journal_citation()</code></a> function.</p>
+<p>For a language-agnostic solution, see the REST API documentation for <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/pasta_api/data_package_manager_api.html#create-journal-citation" rel="noopener noreferrer" target="_blank">Create Journal Citation</a>.</p>
 </main>
 </div>
 </div>

@@ -1,16 +1,16 @@
 <div metal:use-macro="load: ../shared/layout.html">
 <div metal:fill-slot="content" tal:omit-tag="True">
 <div class="container">
-<aside class="sidebar-aside"><div class="flex-shrink-0 py-5 px-1 bg-white sticky-top">
-<a class="d-flex align-items-center mb-2 link-dark text-decoration-none" href="#"><span class="fs-5 fw-semibold">Provenance Metadata</span></a><ul class="btn-toggle-nav">
-<li><a class="link-dark rounded" href="#creating-provenance-metadata">Creating provenance metadata</a><ul class="fw-normal">
-<li><a class="link-dark rounded" href="#ezeml">ezEML</a></li>
-<li><a class="link-dark rounded" href="#emlassemblyline">EMLassemblyline</a></li>
-<li><a class="link-dark rounded" href="#edi-data-portal">EDI Data Portal</a></li>
-<li><a class="link-dark rounded" href="#ediutils">EDIutils</a></li>
+<aside class="sidebar-aside"><div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted sticky-top" style="padding-top: 60; padding-right: 15; padding-left: 0;">
+<a class="d-block h6 my-2 pb-2 text-muted" href="#"><span class="fs-5 fw-semibold">Provenance Metadata</span></a><ul class="btn-toggle-nav">
+<li><a class="link-dark rounded text-muted" href="#creating-provenance-metadata">Creating provenance metadata</a><ul class="fw-normal">
+<li><a class="link-dark rounded text-muted" href="#ezeml">ezEML</a></li>
+<li><a class="link-dark rounded text-muted" href="#emlassemblyline">EMLassemblyline</a></li>
+<li><a class="link-dark rounded text-muted" href="#edi-data-portal">EDI Data Portal</a></li>
+<li><a class="link-dark rounded text-muted" href="#ediutils">EDIutils</a></li>
 </ul>
 </li>
-<li><a class="link-dark rounded" href="#resources">Resources</a></li>
+<li><a class="link-dark rounded text-muted" href="#resources">Resources</a></li>
 </ul>
 </div></aside><main class="main-tutorial">
 <h1 id="provenance-metadata">Provenance Metadata</h1>
@@ -20,7 +20,7 @@
 <h2 id="creating-provenance-metadata">Creating provenance metadata</h2>
 <p>Provenance metadata for data sources both internal and external to the EDI Data Repository can be created using ezEML and EMLassemblyline. The EDI Data Portal and EDIutils only support the creation of metadata internal to the EDI Repository.</p>
 <h3 id="ezeml">ezEML</h3>
-<p>To create provenance metadata using <a href="https://ezeml.edirepository.org/eml/">ezEML</a>:</p>
+<p>To create provenance metadata using <a href="https://ezeml.edirepository.org/eml/" rel="noopener noreferrer" target="_blank">ezEML</a>:</p>
 <ol>
 <li>From the <strong>Methods</strong> tab, click the <strong>Add Method Step</strong> button. </li>
 <li>In the <strong>Data Sources</strong> textbox, enter as much information about the source dataset(s) as possible. At minimum, provide the DOI or a URL linking to the data source. The name and email for the data creator and contact are valuable information that should be provided, if available.</li>
@@ -30,14 +30,14 @@
 <p>Provenance metadata submitted via ezEML is converted by data curators to the EML formatted provenance &lt;methodStep&gt; before publishing in the EDI Data Repository. Data curators processing an ezEML submission should see the EDI Data Portal section below for an example of the EML provenance format.</p>
 </blockquote>
 <h3 id="emlassemblyline">EMLassemblyline</h3>
-<p>To create provenance metadata using <a href="https://ediorg.github.io/EMLassemblyline/">EMLassemblyline</a>:</p>
+<p>To create provenance metadata using <a href="https://ediorg.github.io/EMLassemblyline/" rel="noopener noreferrer" target="_blank">EMLassemblyline</a>:</p>
 <ol>
-<li>Run the <a href="https://ediorg.github.io/EMLassemblyline/reference/template_provenance.html"><code>template_provenance()</code></a> function to create an empty provenance template.</li>
+<li>Run the <a href="https://ediorg.github.io/EMLassemblyline/reference/template_provenance.html" rel="noopener noreferrer" target="_blank"><code>template_provenance()</code></a> function to create an empty provenance template.</li>
 <li>For data sources originating from the EDI Data Repository, populate the template <strong>dataPackageID</strong> field with the EDI <a href="/resources/the-data-package#data-package-identifier">data package identifier</a> and specify "EDI" in the <strong>systemID</strong> field. Use the other fields of this template when creating provenance for data sources external to EDI Repository.</li>
-<li>Run the <a href="https://ediorg.github.io/EMLassemblyline/reference/make_eml.html"><code>make_eml()</code></a> function to add the provenance metadata to the EML for the derived data.</li>
+<li>Run the <a href="https://ediorg.github.io/EMLassemblyline/reference/make_eml.html" rel="noopener noreferrer" target="_blank"><code>make_eml()</code></a> function to add the provenance metadata to the EML for the derived data.</li>
 </ol>
 <h3 id="edi-data-portal">EDI Data Portal</h3>
-<p>To create provenance metadata from the <a href="https://portal.edirepository.org/nis/home.jsp">EDI Data Portal</a> for the original dataset already residing in the EDI Repository:</p>
+<p>To create provenance metadata from the <a href="https://portal.edirepository.org/nis/home.jsp" rel="noopener noreferrer" target="_blank">EDI Data Portal</a> for the original dataset already residing in the EDI Repository:</p>
 <ol>
 <li>Navigate to the <strong>Provenance</strong> section at the bottom of a data package <a href="/resources/data-package-pages">landing page</a>. This section displays provenance information and includes a link to generate provenance metadata for the data package.</li>
 </ol>
@@ -52,15 +52,15 @@
 </ol>
 <p>See <a href="/resources/creating-metadata-for-publication#editing-eml">Editing EML</a> for more on XML editors.</p>
 <h3 id="ediutils">EDIutils</h3>
-<p>To create provenance metadata from the <a href="https://ediorg.github.io/EDIutils/">EDIutils</a> R Package:</p>
+<p>To create provenance metadata from the <a href="https://ediorg.github.io/EDIutils/" rel="noopener noreferrer" target="_blank">EDIutils</a> R Package:</p>
 <ol>
-<li>Run the <a href="https://ediorg.github.io/EDIutils/reference/get_provenance_metadata.html"><code>get_provenance_metadata()</code></a> function with the corresponding source <a href="/resources/the-data-package#data-package-identifier">data package identifier</a>.</li>
+<li>Run the <a href="https://ediorg.github.io/EDIutils/reference/get_provenance_metadata.html" rel="noopener noreferrer" target="_blank"><code>get_provenance_metadata()</code></a> function with the corresponding source <a href="/resources/the-data-package#data-package-identifier">data package identifier</a>.</li>
 <li>Add the returned &lt;methodStep&gt; element into an EML R object of a derived data package or write it to file for other use cases.</li>
 </ol>
-<p>For a language-agnostic solution, see the REST API documentation for <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/pasta_api/data_package_manager_api.html#get-provenance-metadata">Get Provenance Metadata</a>.</p>
+<p>For a language-agnostic solution, see the REST API documentation for <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/pasta_api/data_package_manager_api.html#get-provenance-metadata" rel="noopener noreferrer" target="_blank">Get Provenance Metadata</a>.</p>
 <h2 id="resources">Resources</h2>
 <ul>
-<li><a href="https://github.com/End-to-end-provenance/End-to-end-provenance.github.io/blob/master/README">End-to-End Provenance</a> - Software tools to collect and use provenance information.</li>
+<li><a href="https://github.com/End-to-end-provenance/End-to-end-provenance.github.io/blob/master/README" rel="noopener noreferrer" target="_blank">End-to-End Provenance</a> - Software tools to collect and use provenance information.</li>
 </ul>
 </main>
 </div>

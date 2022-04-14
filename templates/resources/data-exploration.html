@@ -1,28 +1,28 @@
 <div metal:use-macro="load: ../shared/layout.html">
 <div metal:fill-slot="content" tal:omit-tag="True">
 <div class="container">
-<aside class="sidebar-aside"><div class="flex-shrink-0 py-5 px-1 bg-white sticky-top">
-<a class="d-flex align-items-center mb-2 link-dark text-decoration-none" href="#"><span class="fs-5 fw-semibold">Data Exploration</span></a><ul class="btn-toggle-nav">
-<li><a class="link-dark rounded" href="#data-explorer-dex">Data eXplorer (DeX)</a><ul class="fw-normal">
-<li><a class="link-dark rounded" href="#profile">Profile</a><ul class="fw-normal">
-<li><a class="link-dark rounded" href="#overview">Overview</a></li>
-<li><a class="link-dark rounded" href="#sample">Sample</a></li>
-<li><a class="link-dark rounded" href="#variables">Variables</a></li>
+<aside class="sidebar-aside"><div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted sticky-top" style="padding-top: 60; padding-right: 15; padding-left: 0;">
+<a class="d-block h6 my-2 pb-2 text-muted" href="#"><span class="fs-5 fw-semibold">Data Exploration</span></a><ul class="btn-toggle-nav">
+<li><a class="link-dark rounded text-muted" href="#data-explorer-dex">Data eXplorer (DeX)</a><ul class="fw-normal">
+<li><a class="link-dark rounded text-muted" href="#profile">Profile</a><ul class="fw-normal">
+<li><a class="link-dark rounded text-muted" href="#overview">Overview</a></li>
+<li><a class="link-dark rounded text-muted" href="#sample">Sample</a></li>
+<li><a class="link-dark rounded text-muted" href="#variables">Variables</a></li>
 </ul>
 </li>
-<li><a class="link-dark rounded" href="#subset">Subset</a><ul class="fw-normal">
-<li><a class="link-dark rounded" href="#query">Query</a></li>
-<li><a class="link-dark rounded" href="#time-period">Time period</a></li>
-<li><a class="link-dark rounded" href="#row-index">Row index</a></li>
-<li><a class="link-dark rounded" href="#category">Category</a></li>
+<li><a class="link-dark rounded text-muted" href="#subset">Subset</a><ul class="fw-normal">
+<li><a class="link-dark rounded text-muted" href="#query">Query</a></li>
+<li><a class="link-dark rounded text-muted" href="#time-period">Time period</a></li>
+<li><a class="link-dark rounded text-muted" href="#row-index">Row index</a></li>
+<li><a class="link-dark rounded text-muted" href="#category">Category</a></li>
 </ul>
 </li>
-<li><a class="link-dark rounded" href="#plot">Plot</a></li>
-<li><a class="link-dark rounded" href="#eml">EML</a></li>
+<li><a class="link-dark rounded text-muted" href="#plot">Plot</a></li>
+<li><a class="link-dark rounded text-muted" href="#eml">EML</a></li>
 </ul>
 </li>
-<li><a class="link-dark rounded" href="#data-download-scripts">Data download scripts</a></li>
-<li><a class="link-dark rounded" href="#datapie">datapie</a></li>
+<li><a class="link-dark rounded text-muted" href="#data-download-scripts">Data download scripts</a></li>
+<li><a class="link-dark rounded text-muted" href="#datapie">datapie</a></li>
 </ul>
 </div></aside><main class="main-tutorial">
 <h1 id="data-exploration">Data Exploration</h1>
@@ -30,7 +30,7 @@
 <p>While data package metadata, such as the <a href="/resources/data-package-pages#data-entities">Data Entities</a> section in the full metadata page, provide concise explanations of data attributes, summary and visualization tools can provide a quick and easy interactive view into the actual data values. EDI offers three options for data exploration: Data eXplorer, Data Download Scripts, and datapie.</p>
 
 <h2 id="data-explorer-dex">Data eXplorer (DeX)</h2>
-<p>The EDI <a href="http://dex.edirepository.org">Data Explorer (DeX)</a> is a web browser application offering summary information, subsetting, and plotting features for data packages containing tabular data files. DeX is a great tool for making a preliminary assessment about fitness for use. Click the <strong>Data Explorer</strong> link next to a data object from the <strong>Resources</strong> section of a data package landing page (currently only available in the <a href="/resources/repository-environments#staging">staging environment</a> of the Data Portal).</p>
+<p>The EDI <a href="http://dex.edirepository.org" rel="noopener noreferrer" target="_blank">Data Explorer (DeX)</a> is a web browser application offering summary information, subsetting, and plotting features for data packages containing tabular data files. DeX is a great tool for making a preliminary assessment about fitness for use. Click the <strong>Data Explorer</strong> link next to a data object from the <strong>Resources</strong> section of a data package landing page (currently only available in the <a href="/resources/repository-environments#staging">staging environment</a> of the Data Portal).</p>
 <p><img class="screen-shot" src="/static/images/dex-in-portal.png" width="95%"/> </p>
 <p>Alternatively, open a table from a data package in DeX by providing the Data Entity URL (currently limited to tabular data). </p>
 <blockquote>
@@ -60,7 +60,7 @@
 <p><img class="screen-shot" src="/static/images/numexpr7.png" width="100%"/> </p>
 <p>Rows where the values from one column are present (or not present) anywhere in another column may be filtered by using the "in" (or "not in") operator with the two columns: <code>col_1 in col_2</code> or <code>col_1 not in col_2</code></p>
 <p><img class="screen-shot" src="/static/images/numexpr8.png" width="100%"/> </p>
-<p>For details, refer to the Pandas' <a href="https://pandas.pydata.org/docs/user_guide/indexing.html#the-query-method">general guide to querying data</a> and the <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.query.html">pandas.DataFrame.query</a> API documentation specifically.</p>
+<p>For details, refer to the Pandas' <a href="https://pandas.pydata.org/docs/user_guide/indexing.html#the-query-method" rel="noopener noreferrer" target="_blank">general guide to querying data</a> and the <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.query.html" rel="noopener noreferrer" target="_blank">pandas.DataFrame.query</a> API documentation specifically.</p>
 <h4 id="time-period">Time period</h4>
 <p>Users can filter by time period by selecting a <strong>Date</strong> column and entering a start and end date.</p>
 <h4 id="row-index">Row index</h4>
@@ -74,7 +74,7 @@
 <h2 id="data-download-scripts">Data download scripts</h2>
 <p><a href="/resources/accessing-data#data-import-scripts">Data download scripts</a>, available in the <strong>Code Generation</strong> section of the data package landing page, read data directly from the EDI Repository into common programming language workspaces. This service provides full control over data manipulation and statistical exploration.</p>
 <h2 id="datapie">datapie</h2>
-<p>The Data Package Interface for Evaluation (<a href="https://imcr-hackathon.github.io/datapie/">datapie</a>) R Package lets users explore data packages that are available through the DataONE Network via an R Shiny application. <em>This project is under development.</em></p>
+<p>The Data Package Interface for Evaluation (<a href="https://imcr-hackathon.github.io/datapie/" rel="noopener noreferrer" target="_blank">datapie</a>) R Package lets users explore data packages that are available through the DataONE Network via an R Shiny application. <em>This project is under development.</em></p>
 </main>
 </div>
 </div>

@@ -1,30 +1,30 @@
 <div metal:use-macro="load: ../shared/layout.html">
 <div metal:fill-slot="content" tal:omit-tag="True">
 <div class="container">
-<aside class="sidebar-aside"><div class="flex-shrink-0 py-5 px-1 bg-white sticky-top">
-<a class="d-flex align-items-center mb-2 link-dark text-decoration-none" href="#"><span class="fs-5 fw-semibold">Evaluating a Data Package</span></a><ul class="btn-toggle-nav">
-<li><a class="link-dark rounded" href="#edi-data-portal">EDI Data Portal</a><ul class="fw-normal">
-<li><a class="link-dark rounded" href="#login">Login</a></li>
-<li><a class="link-dark rounded" href="#evaluating-the-data-package">Evaluating the data package</a></li>
-<li><a class="link-dark rounded" href="#viewing-the-evaluation-report-summary">Viewing the evaluation report summary</a></li>
-<li><a class="link-dark rounded" href="#viewing-the-evaluation-report">Viewing the evaluation report</a></li>
+<aside class="sidebar-aside"><div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted sticky-top" style="padding-top: 60; padding-right: 15; padding-left: 0;">
+<a class="d-block h6 my-2 pb-2 text-muted" href="#"><span class="fs-5 fw-semibold">Evaluating a Data Package</span></a><ul class="btn-toggle-nav">
+<li><a class="link-dark rounded text-muted" href="#edi-data-portal">EDI Data Portal</a><ul class="fw-normal">
+<li><a class="link-dark rounded text-muted" href="#login">Login</a></li>
+<li><a class="link-dark rounded text-muted" href="#evaluating-the-data-package">Evaluating the data package</a></li>
+<li><a class="link-dark rounded text-muted" href="#viewing-the-evaluation-report-summary">Viewing the evaluation report summary</a></li>
+<li><a class="link-dark rounded text-muted" href="#viewing-the-evaluation-report">Viewing the evaluation report</a></li>
 </ul>
 </li>
-<li><a class="link-dark rounded" href="#ediutils">EDIutils</a><ul class="fw-normal">
-<li><a class="link-dark rounded" href="#login_1">Login</a></li>
-<li><a class="link-dark rounded" href="#evaluating-the-data-package_1">Evaluating the data package</a></li>
-<li><a class="link-dark rounded" href="#viewing-the-evaluation-report-summary_1">Viewing the evaluation report summary</a></li>
-<li><a class="link-dark rounded" href="#viewing-the-evaluation-report_1">Viewing the evaluation report</a></li>
+<li><a class="link-dark rounded text-muted" href="#ediutils">EDIutils</a><ul class="fw-normal">
+<li><a class="link-dark rounded text-muted" href="#login_1">Login</a></li>
+<li><a class="link-dark rounded text-muted" href="#evaluating-the-data-package_1">Evaluating the data package</a></li>
+<li><a class="link-dark rounded text-muted" href="#viewing-the-evaluation-report-summary_1">Viewing the evaluation report summary</a></li>
+<li><a class="link-dark rounded text-muted" href="#viewing-the-evaluation-report_1">Viewing the evaluation report</a></li>
 </ul>
 </li>
-<li><a class="link-dark rounded" href="#handling-warnings-and-errors">Handling warnings and errors</a></li>
-<li><a class="link-dark rounded" href="#interpreting-the-evaluation-report-summary">Interpreting the evaluation report summary</a><ul class="fw-normal">
-<li><a class="link-dark rounded" href="#purpose">Purpose</a></li>
+<li><a class="link-dark rounded text-muted" href="#handling-warnings-and-errors">Handling warnings and errors</a></li>
+<li><a class="link-dark rounded text-muted" href="#interpreting-the-evaluation-report-summary">Interpreting the evaluation report summary</a><ul class="fw-normal">
+<li><a class="link-dark rounded text-muted" href="#purpose">Purpose</a></li>
 </ul>
 </li>
-<li><a class="link-dark rounded" href="#interpreting-the-evaluation-report">Interpreting the evaluation report</a><ul class="fw-normal">
-<li><a class="link-dark rounded" href="#structure">Structure</a></li>
-<li><a class="link-dark rounded" href="#interpretation">Interpretation</a></li>
+<li><a class="link-dark rounded text-muted" href="#interpreting-the-evaluation-report">Interpreting the evaluation report</a><ul class="fw-normal">
+<li><a class="link-dark rounded text-muted" href="#structure">Structure</a></li>
+<li><a class="link-dark rounded text-muted" href="#interpretation">Interpretation</a></li>
 </ul>
 </li>
 </ul>
@@ -32,10 +32,10 @@
 <h1 id="evaluating-a-data-package">Evaluating a Data Package</h1>
 <p>Evaluating a data package is key to ensuring that it contains a valid, well-formed EML file that accurately describes the data. Evaluations can be performed manually via the EDI Data Portal, or programmatically using the EDIutils R package or the REST API.</p>
 <p>Evaluating a data package requires an <a href="/resources/information-manager-quickstart#sign-up-for-an-edi-account">EDI account</a>. Other methods of authentication (e.g. Google, ORCID, GitHub) do not allow evaluation.</p>
-<p>To learn more about evaluation and to request new checks, see the <a href="https://github.com/EDIorg/ECC">EML Congruence Checker GitHub</a>.</p>
+<p>To learn more about evaluation and to request new checks, see the <a href="https://github.com/EDIorg/ECC" rel="noopener noreferrer" target="_blank">EML Congruence Checker GitHub</a>.</p>
 
 <h2 id="edi-data-portal">EDI Data Portal</h2>
-<p>To evaluate a data package via the <a href="https://portal.edirepository.org/nis/home.jsp">EDI Data Portal</a>:</p>
+<p>To evaluate a data package via the <a href="https://portal.edirepository.org/nis/home.jsp" rel="noopener noreferrer" target="_blank">EDI Data Portal</a>:</p>
 <h3 id="login">Login</h3>
 <p>From the Data Portal, click the <strong>Login</strong> button and enter EDI account credentials.</p>
 <p><img class="screen-shot" src="/static/images/login-portal.png" width="95%"/></p>
@@ -52,7 +52,7 @@
 </ol>
 <p><img class="screen-shot" src="/static/images/evaluate-manual-upload-page.jpg" width="95%"/></p>
 <blockquote>
-<p>Be aware that the length of the evaluation process increases with the size of the data being evaluated. Once the process has begun, the browser window can be closed without interrupting the evaluation. Use the EDI Dashboard <a href="https://dashboard.edirepository.org/dashboard/pasta/render_working_on">PASTA is Working On</a> feature to see when evaluation has completed. The evaluation report summary and full report can be viewed from the <strong>View Evaluate/Upload Results</strong> page.</p>
+<p>Be aware that the length of the evaluation process increases with the size of the data being evaluated. Once the process has begun, the browser window can be closed without interrupting the evaluation. Use the EDI Dashboard <a href="https://dashboard.edirepository.org/dashboard/pasta/render_working_on" rel="noopener noreferrer" target="_blank">PASTA is Working On</a> feature to see when evaluation has completed. The evaluation report summary and full report can be viewed from the <strong>View Evaluate/Upload Results</strong> page.</p>
 </blockquote>
 <h3 id="viewing-the-evaluation-report-summary">Viewing the evaluation report summary</h3>
 <p>After the evaluation runs, the <strong>View Evaluate/Upload Results</strong> page will be displayed. This page provides the <strong>Evaluation Report Summary</strong>, the first view of the data package quality.</p>
@@ -61,21 +61,21 @@
 <p>This summary table also provides a link to the full <strong>Evaluation Report</strong>, which documents the outcome of each evaluation test performed, including the specific areas for improvement noted by <strong>Warn</strong> and <strong>Error</strong> labels.</p>
 <p><img class="screen-shot" src="/static/images/eval-report.png" width="100%"/></p>
 <h2 id="ediutils">EDIutils</h2>
-<p>To evaluate a data package using the <a href="https://ediorg.github.io/EDIutils/">EDIutils</a> R package:</p>
+<p>To evaluate a data package using the <a href="https://ediorg.github.io/EDIutils/" rel="noopener noreferrer" target="_blank">EDIutils</a> R package:</p>
 <h3 id="login_1">Login</h3>
-<p>Use the <a href="https://ediorg.github.io/EDIutils/reference/login.html"><code>login()</code></a> function with EDI account credentials.</p>
+<p>Use the <a href="https://ediorg.github.io/EDIutils/reference/login.html" rel="noopener noreferrer" target="_blank"><code>login()</code></a> function with EDI account credentials.</p>
 <h3 id="evaluating-the-data-package_1">Evaluating the data package</h3>
-<p>Use the <a href="https://ediorg.github.io/EDIutils/reference/evaluate_data_package.html"><code>evaluate_data_package()</code></a> function to begin the evaluation process and provide the full path to the EML file and the <a href="/resources/repository-environments">repository environment</a> to evaluate in.</p>
-<p>This function returns a "transaction identifier" that is used to reference the evaluation in subsequent function calls. After the evaluation process has begun, pass the transaction identifier to the <a href="https://ediorg.github.io/EDIutils/reference/check_status_evaluate.html"><code>check_status_evaluate()</code></a> function to determine if evaluation has completed.</p>
+<p>Use the <a href="https://ediorg.github.io/EDIutils/reference/evaluate_data_package.html" rel="noopener noreferrer" target="_blank"><code>evaluate_data_package()</code></a> function to begin the evaluation process and provide the full path to the EML file and the <a href="/resources/repository-environments">repository environment</a> to evaluate in.</p>
+<p>This function returns a "transaction identifier" that is used to reference the evaluation in subsequent function calls. After the evaluation process has begun, pass the transaction identifier to the <a href="https://ediorg.github.io/EDIutils/reference/check_status_evaluate.html" rel="noopener noreferrer" target="_blank"><code>check_status_evaluate()</code></a> function to determine if evaluation has completed.</p>
 <h3 id="viewing-the-evaluation-report-summary_1">Viewing the evaluation report summary</h3>
-<p>Pass the transaction identifier to the <a href="https://ediorg.github.io/EDIutils/reference/read_evaluate_report_summary.html"><code>read_evaluate_report_summary()</code></a> function to view the evaluation report summary as plain text.</p>
+<p>Pass the transaction identifier to the <a href="https://ediorg.github.io/EDIutils/reference/read_evaluate_report_summary.html" rel="noopener noreferrer" target="_blank"><code>read_evaluate_report_summary()</code></a> function to view the evaluation report summary as plain text.</p>
 <h3 id="viewing-the-evaluation-report_1">Viewing the evaluation report</h3>
-<p>Pass the transaction identifier to the <a href="https://ediorg.github.io/EDIutils/reference/read_evaluate_report.html"><code>read_evaluate_report()</code></a> function, which returns raw XML by default, but will return HTML or text by specifying the <code>as</code> parameter.</p>
-<p>For a language-agnostic solution, see the REST API documentation for <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/pasta_api/data_package_manager_api.html#evaluate-data-package">Evaluate Data Package</a>, <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/pasta_api/data_package_manager_api.html#read-data-package-error">Read Data Package Error</a>, and <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/pasta_api/data_package_manager_api.html#read-evaluate-report-1">Read Evaluate Report</a>.</p>
+<p>Pass the transaction identifier to the <a href="https://ediorg.github.io/EDIutils/reference/read_evaluate_report.html" rel="noopener noreferrer" target="_blank"><code>read_evaluate_report()</code></a> function, which returns raw XML by default, but will return HTML or text by specifying the <code>as</code> parameter.</p>
+<p>For a language-agnostic solution, see the REST API documentation for <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/pasta_api/data_package_manager_api.html#evaluate-data-package" rel="noopener noreferrer" target="_blank">Evaluate Data Package</a>, <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/pasta_api/data_package_manager_api.html#read-data-package-error" rel="noopener noreferrer" target="_blank">Read Data Package Error</a>, and <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/pasta_api/data_package_manager_api.html#read-evaluate-report-1" rel="noopener noreferrer" target="_blank">Read Evaluate Report</a>.</p>
 <h2 id="handling-warnings-and-errors">Handling warnings and errors</h2>
 <p>Any evaluation check that results in a warning or error status should be resolved before moving ahead (note that errors must be corrected). Resolve problems with the data and metadata and repeat the evaluation process until all errors (and preferably all warnings) are resolved.</p>
 <h2 id="interpreting-the-evaluation-report-summary">Interpreting the evaluation report summary</h2>
-<p>The evaluation report summary is displayed as part of the evaluation process via the EDI Data Portal or can be generated from the EDIutils <a href="https://ediorg.github.io/EDIutils/reference/read_evaluate_report_summary.html"><code>read_evaluate_report_summary()</code></a> function.</p>
+<p>The evaluation report summary is displayed as part of the evaluation process via the EDI Data Portal or can be generated from the EDIutils <a href="https://ediorg.github.io/EDIutils/reference/read_evaluate_report_summary.html" rel="noopener noreferrer" target="_blank"><code>read_evaluate_report_summary()</code></a> function.</p>
 <h3 id="purpose">Purpose</h3>
 <p>Provide a quick look at the data package evaluation results. Specifically, the total number of checks run and how many of these checks resulted in statuses of <strong>valid</strong>, <strong>info</strong>, <strong>warn</strong>, or <strong>error</strong>. The meaning of these status messages is as follows:</p>
 <table>

@@ -1,18 +1,18 @@
 <div metal:use-macro="load: ../shared/layout.html">
 <div metal:fill-slot="content" tal:omit-tag="True">
 <div class="container">
-<aside class="sidebar-aside"><div class="flex-shrink-0 py-5 px-1 bg-white sticky-top">
-<a class="d-flex align-items-center mb-2 link-dark text-decoration-none" href="#"><span class="fs-5 fw-semibold">The Data Package</span></a><ul class="btn-toggle-nav">
-<li><a class="link-dark rounded" href="#features-of-a-data-package">Features of a data package</a></li>
-<li><a class="link-dark rounded" href="#example-data-package">Example data package</a></li>
-<li><a class="link-dark rounded" href="#what-to-include-in-a-data-package">What to include in a data package</a></li>
-<li><a class="link-dark rounded" href="#identifiers-of-a-data-package">Identifiers of a data package</a><ul class="fw-normal">
-<li><a class="link-dark rounded" href="#digital-object-identifier-doi">Digital Object Identifier (DOI)</a></li>
-<li><a class="link-dark rounded" href="#data-package-identifier">Data package identifier</a></li>
-<li><a class="link-dark rounded" href="#data-object-identifier">Data object identifier</a></li>
+<aside class="sidebar-aside"><div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted sticky-top" style="padding-top: 60; padding-right: 15; padding-left: 0;">
+<a class="d-block h6 my-2 pb-2 text-muted" href="#"><span class="fs-5 fw-semibold">The Data Package</span></a><ul class="btn-toggle-nav">
+<li><a class="link-dark rounded text-muted" href="#features-of-a-data-package">Features of a data package</a></li>
+<li><a class="link-dark rounded text-muted" href="#example-data-package">Example data package</a></li>
+<li><a class="link-dark rounded text-muted" href="#what-to-include-in-a-data-package">What to include in a data package</a></li>
+<li><a class="link-dark rounded text-muted" href="#identifiers-of-a-data-package">Identifiers of a data package</a><ul class="fw-normal">
+<li><a class="link-dark rounded text-muted" href="#digital-object-identifier-doi">Digital Object Identifier (DOI)</a></li>
+<li><a class="link-dark rounded text-muted" href="#data-package-identifier">Data package identifier</a></li>
+<li><a class="link-dark rounded text-muted" href="#data-object-identifier">Data object identifier</a></li>
 </ul>
 </li>
-<li><a class="link-dark rounded" href="#versioning-data-packages">Versioning data packages</a></li>
+<li><a class="link-dark rounded text-muted" href="#versioning-data-packages">Versioning data packages</a></li>
 </ul>
 </div></aside><main class="main-tutorial">
 <h1 id="the-data-package">The Data Package</h1>
@@ -22,7 +22,7 @@
 <h2 id="features-of-a-data-package">Features of a data package</h2>
 <p>Data packages have some important features. First, they're immutable which makes them suitable for reproducible research. Second, data packages are versionable thereby accommodating updates and improvements through time. Finally, data packages are citable through globally unique and persistent DOIs.</p>
 <h2 id="example-data-package">Example data package</h2>
-<p><a href="https://portal.edirepository.org/nis/mapbrowse?scope=edi&amp;identifier=9">Here's an example</a> of what a data package looks like once published in the EDI Repository.</p>
+<p><a href="https://portal.edirepository.org/nis/mapbrowse?scope=edi&amp;identifier=9" rel="noopener noreferrer" target="_blank">Here's an example</a> of what a data package looks like once published in the EDI Repository.</p>
 <h2 id="what-to-include-in-a-data-package">What to include in a data package</h2>
 <p>When publishing data in support of a manuscript, include the data required to reproduce the results. Consider publishing this data in a minimally processed form, so it can be reused in other contexts. To make results reproducible, include any scripts used in processing and analyzing the data. Be sure to include links to any external source data used in a data package with <a href="/resources/provenance-metadata">provenance metadata</a>. Also, consider adding documents that provide additional metadata detail (e.g. pdf of protocols).</p>
 <p>For further information on optimizing a data package for reuse see <a href="/resources/designing-a-data-package">designing a data package</a>.</p>

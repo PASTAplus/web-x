@@ -1,22 +1,22 @@
 <div metal:use-macro="load: ../shared/layout.html">
 <div metal:fill-slot="content" tal:omit-tag="True">
 <div class="container">
-<aside class="sidebar-aside"><div class="flex-shrink-0 py-5 px-1 bg-white sticky-top">
-<a class="d-flex align-items-center mb-2 link-dark text-decoration-none" href="#"><span class="fs-5 fw-semibold">Event Notifications</span></a><ul class="btn-toggle-nav">
-<li><a class="link-dark rounded" href="#requirements">Requirements</a></li>
-<li><a class="link-dark rounded" href="#components">Components</a><ul class="fw-normal">
-<li><a class="link-dark rounded" href="#the-subscription">The subscription</a><ul class="fw-normal">
-<li><a class="link-dark rounded" href="#create-a-subscription">Create a subscription</a></li>
-<li><a class="link-dark rounded" href="#test-a-subscription">Test a subscription</a></li>
-<li><a class="link-dark rounded" href="#delete-a-subscription">Delete a Subscription</a></li>
+<aside class="sidebar-aside"><div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted sticky-top" style="padding-top: 60; padding-right: 15; padding-left: 0;">
+<a class="d-block h6 my-2 pb-2 text-muted" href="#"><span class="fs-5 fw-semibold">Event Notifications</span></a><ul class="btn-toggle-nav">
+<li><a class="link-dark rounded text-muted" href="#requirements">Requirements</a></li>
+<li><a class="link-dark rounded text-muted" href="#components">Components</a><ul class="fw-normal">
+<li><a class="link-dark rounded text-muted" href="#the-subscription">The subscription</a><ul class="fw-normal">
+<li><a class="link-dark rounded text-muted" href="#create-a-subscription">Create a subscription</a></li>
+<li><a class="link-dark rounded text-muted" href="#test-a-subscription">Test a subscription</a></li>
+<li><a class="link-dark rounded text-muted" href="#delete-a-subscription">Delete a Subscription</a></li>
 </ul>
 </li>
-<li><a class="link-dark rounded" href="#the-notification">The notification</a></li>
+<li><a class="link-dark rounded text-muted" href="#the-notification">The notification</a></li>
 </ul>
 </li>
-<li><a class="link-dark rounded" href="#considerations">Considerations</a></li>
-<li><a class="link-dark rounded" href="#tools">Tools</a></li>
-<li><a class="link-dark rounded" href="#examples">Examples</a></li>
+<li><a class="link-dark rounded text-muted" href="#considerations">Considerations</a></li>
+<li><a class="link-dark rounded text-muted" href="#tools">Tools</a></li>
+<li><a class="link-dark rounded text-muted" href="#examples">Examples</a></li>
 </ul>
 </div></aside><main class="main-tutorial">
 <h1 id="event-notifications">Event Notifications</h1>
@@ -30,7 +30,7 @@
 <h2 id="components">Components</h2>
 <p>Event notifications have two parts: a subscription and a corresponding notification.</p>
 <h3 id="the-subscription">The subscription</h3>
-<p>The subscription defines what events to follow and where to send the notification when the event occurs. The create, test, and delete subscription processes outlined below can be performed programmatically using the <a href="https://ediorg.github.io/EDIutils/">EDIutils</a> R Package or similarly the <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/about.html">REST API</a>.</p>
+<p>The subscription defines what events to follow and where to send the notification when the event occurs. The create, test, and delete subscription processes outlined below can be performed programmatically using the <a href="https://ediorg.github.io/EDIutils/" rel="noopener noreferrer" target="_blank">EDIutils</a> R Package or similarly the <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/about.html" rel="noopener noreferrer" target="_blank">REST API</a>.</p>
 <h4 id="create-a-subscription">Create a subscription</h4>
 <p>To create a subscription:</p>
 <ol>
@@ -86,13 +86,13 @@
 </ul>
 <h2 id="tools">Tools</h2>
 <ul>
-<li><a href="https://github.com/EDIorg/ecocomDP-listener">listener</a> - This web application listens for EDI Event Notifications and places each incoming notification into a queue. The queue is an SQLite database containing attributes of the notification and are marked with a "processed"/"unprocessed" tag.</li>
-<li><a href="https://github.com/clnsmth/maintainer">maintainer</a> - This web application builds on the event notification listener by including a workflow manager and static website for research projects. This application maps event notifications to workflows and posts updates in real time to a project website.</li>
+<li><a href="https://github.com/EDIorg/ecocomDP-listener" rel="noopener noreferrer" target="_blank">listener</a> - This web application listens for EDI Event Notifications and places each incoming notification into a queue. The queue is an SQLite database containing attributes of the notification and are marked with a "processed"/"unprocessed" tag.</li>
+<li><a href="https://github.com/clnsmth/maintainer" rel="noopener noreferrer" target="_blank">maintainer</a> - This web application builds on the event notification listener by including a workflow manager and static website for research projects. This application maps event notifications to workflows and posts updates in real time to a project website.</li>
 </ul>
 <h2 id="examples">Examples</h2>
 <ul>
 <li>ecocomDP-maintainer - Updates <a href="/resources/thematic-standardization#ecocomdp">ecocomDP</a> data packages when their corresponding source data package updates.</li>
-<li><a href="https://github.com/EDIorg/pasta-upload-tweeter">PASTA Upload Tweeter</a> - Tweets when a new data package is uploaded to the EDI Data Repository.</li>
+<li><a href="https://github.com/EDIorg/pasta-upload-tweeter" rel="noopener noreferrer" target="_blank">PASTA Upload Tweeter</a> - Tweets when a new data package is uploaded to the EDI Data Repository.</li>
 </ul>
 </main>
 </div>

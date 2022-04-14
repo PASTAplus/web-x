@@ -1,25 +1,25 @@
 <div metal:use-macro="load: ../shared/layout.html">
 <div metal:fill-slot="content" tal:omit-tag="True">
 <div class="container">
-<aside class="sidebar-aside"><div class="flex-shrink-0 py-5 px-1 bg-white sticky-top">
-<a class="d-flex align-items-center mb-2 link-dark text-decoration-none" href="#"><span class="fs-5 fw-semibold">Uploading with Static Data Links</span></a><ul class="btn-toggle-nav">
-<li><a class="link-dark rounded" href="#using-box-cloud-storage">Using Box Cloud Storage</a><ul class="fw-normal">
-<li><a class="link-dark rounded" href="#creating-a-box-file-request">Creating a Box File Request</a></li>
-<li><a class="link-dark rounded" href="#creating-a-static-download-link">Creating a static download link</a></li>
+<aside class="sidebar-aside"><div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted sticky-top" style="padding-top: 60; padding-right: 15; padding-left: 0;">
+<a class="d-block h6 my-2 pb-2 text-muted" href="#"><span class="fs-5 fw-semibold">Uploading with Static Data Links</span></a><ul class="btn-toggle-nav">
+<li><a class="link-dark rounded text-muted" href="#using-box-cloud-storage">Using Box Cloud Storage</a><ul class="fw-normal">
+<li><a class="link-dark rounded text-muted" href="#creating-a-box-file-request">Creating a Box File Request</a></li>
+<li><a class="link-dark rounded text-muted" href="#creating-a-static-download-link">Creating a static download link</a></li>
 </ul>
 </li>
-<li><a class="link-dark rounded" href="#adding-download-links-to-eml-files">Adding download links to EML files</a><ul class="fw-normal">
-<li><a class="link-dark rounded" href="#ezeml">ezEML</a></li>
-<li><a class="link-dark rounded" href="#emlassemblyline">EMLassemblyline</a></li>
-<li><a class="link-dark rounded" href="#manually-editing-xml">Manually editing XML</a></li>
+<li><a class="link-dark rounded text-muted" href="#adding-download-links-to-eml-files">Adding download links to EML files</a><ul class="fw-normal">
+<li><a class="link-dark rounded text-muted" href="#ezeml">ezEML</a></li>
+<li><a class="link-dark rounded text-muted" href="#emlassemblyline">EMLassemblyline</a></li>
+<li><a class="link-dark rounded text-muted" href="#manually-editing-xml">Manually editing XML</a></li>
 </ul>
 </li>
-<li><a class="link-dark rounded" href="#uploading-to-edi">Uploading to EDI</a></li>
+<li><a class="link-dark rounded text-muted" href="#uploading-to-edi">Uploading to EDI</a></li>
 </ul>
 </div></aside><main class="main-tutorial">
 <h1 id="uploading-with-static-data-links">Uploading with Static Data Links</h1>
 <p>A static URL resolving to a data file can be inserted into the physical/distribution element of an EML file and serve as a data source when uploading to the EDI Data Repository. This can be useful for bypassing the 500 MB size limit of manual uploads on the EDI Data Portal, for facilitating workflow automation, and for handling files that may be too large to transfer directly to a data curator.</p>
-<p>Any static download URLs that do not offer redirects can serve as the data source in an EML document. A locally managed web server or cloud hosting service are both viable options for generating these links. <a href="https://www.box.com/">Box Cloud Storage</a> is an example cloud service that allows for generating links that do not offer any redirects and are static.</p>
+<p>Any static download URLs that do not offer redirects can serve as the data source in an EML document. A locally managed web server or cloud hosting service are both viable options for generating these links. <a href="https://www.box.com/" rel="noopener noreferrer" target="_blank">Box Cloud Storage</a> is an example cloud service that allows for generating links that do not offer any redirects and are static.</p>
 <p><img src="/static/images/download-links.png" width="15%"/></p>
 
 <h2 id="using-box-cloud-storage">Using Box Cloud Storage</h2>
@@ -62,7 +62,7 @@
 <h2 id="adding-download-links-to-eml-files">Adding download links to EML files</h2>
 <p>Direct download links of any type, and static links generated from a Box account, can be inserted into an EML document to facilitate upload to the EDI Data Repository.</p>
 <h3 id="ezeml">ezEML</h3>
-<p>To insert a download link via <a href="https://ezeml.edirepository.org/eml/">ezEML</a>:</p>
+<p>To insert a download link via <a href="https://ezeml.edirepository.org/eml/" rel="noopener noreferrer" target="_blank">ezEML</a>:</p>
 <ol>
 <li>Navigate to the <strong>Data Tables</strong> tab and click the <strong>Edit</strong> button next to the data table.</li>
 </ol>
@@ -76,13 +76,13 @@
 <p>This method can be replicated in the <strong>Other Entities</strong> tab as well. </p>
 </blockquote>
 <h3 id="emlassemblyline">EMLassemblyline</h3>
-<p>To insert a download link via <a href="https://ediorg.github.io/EMLassemblyline/index.html">EMLassembylline</a>:</p>
+<p>To insert a download link via <a href="https://ediorg.github.io/EMLassemblyline/index.html" rel="noopener noreferrer" target="_blank">EMLassembylline</a>:</p>
 <ol>
-<li>Supply the link as a character string to the <code>data.table.url</code> or <code>other.entity.url</code> arguments in the <a href="https://ediorg.github.io/EMLassemblyline/reference/make_eml.html"><code>make_eml()</code></a> function. To add multiple links, supply links as a vector of character strings.</li>
+<li>Supply the link as a character string to the <code>data.table.url</code> or <code>other.entity.url</code> arguments in the <a href="https://ediorg.github.io/EMLassemblyline/reference/make_eml.html" rel="noopener noreferrer" target="_blank"><code>make_eml()</code></a> function. To add multiple links, supply links as a vector of character strings.</li>
 </ol>
 <p><img class="screen-shot" src="/static/images/link-eal1.png" width="70%"/></p>
 <ol>
-<li>Run <a href="https://ediorg.github.io/EMLassemblyline/reference/make_eml.html"><code>make_eml()</code></a> to associate the tables with the provided links and return an EML file.</li>
+<li>Run <a href="https://ediorg.github.io/EMLassemblyline/reference/make_eml.html" rel="noopener noreferrer" target="_blank"><code>make_eml()</code></a> to associate the tables with the provided links and return an EML file.</li>
 </ol>
 <p><img class="screen-shot" src="/static/images/link-eal2.png" width="70%"/></p>
 <h3 id="manually-editing-xml">Manually editing XML</h3>

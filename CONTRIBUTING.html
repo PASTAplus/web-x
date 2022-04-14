@@ -7,7 +7,7 @@
 <h2>git structure</h2>
 <p>The active branch is <code>development</code>. <code>development</code> is merged into <code>main</code> for releases. Please submit your pull requests to <code>development</code>.</p>
 <h2>Repository structure</h2>
-<p>The repository structure mirrors <a href="https://github.com/PASTAplus/web-x">web-x</a> thereby enabling developers to build, link, and preview static web pages as they will be displayed in web-x.</p>
+<p>The repository structure mirrors <a href="https://github.com/PASTAplus/web-x" rel="noopener noreferrer" target="_blank">web-x</a> thereby enabling developers to build, link, and preview static web pages as they will be displayed in web-x.</p>
 <h2>Design and goals</h2>
 <p>Content is organized into stand alone pages cross referencing each other. This modular design minimizes content duplication and maintenance. Focus on topics relevant to EDI users and not covered by other online resources (e.g. DataONE, NCEAS). Do summarize and reference other resources when relevant.</p>
 <h2>General guidelines</h2>
@@ -22,7 +22,7 @@
 </ul>
 <h2>Formatting and style</h2>
 <ul>
-<li>Markdown - Pages should be written using the <a href="https://www.markdownguide.org/basic-syntax/">basic markdown syntax</a>.</li>
+<li>Markdown - Pages should be written using the <a href="https://www.markdownguide.org/basic-syntax/" rel="noopener noreferrer" target="_blank">basic markdown syntax</a>.</li>
 <li>Note: Lists (enumerated and bulleted) must be both preceded and followed by an empty line to be rendered correctly in web-x.</li>
 <li>Voice - Pages should be written primarily in the first and third voice. The use of the second voice is acceptable when speaking directly to the audience (e.g. "Please contact us if you encounter an error") or in "imperative" contexts (e.g. providing step-by-step instructions).</li>
 <li>Section headers - Use the gerund form a verb for the header titles (e.g. "Using Download Links", "Uploading to EDI"). Don't use a gerund in headers or subheaders if it's redundant to the higher level (Title: Publishing a data package, Header: EDI Data Portal (good), Publishing via the EDI Data Portal (bad, redundant)). A counter example would be Header: Using Box Cloud Storage, Subheader: Creating a Box File Request (good, gerund is not redundant).</li>
@@ -37,7 +37,7 @@
 <ol>
 <li>Create an image with high enough resolution so that it isn't distorted at its intended magnification and when enlarged to approximately twice its intended size. Generally, screenshots from a web browser should be taken at normal 100% magnification.</li>
 <li>Trim white space from around the image.</li>
-<li>Compress the image to reduce file size. Use the <a href="https://tinypng.com/">tinypng.com</a> web service to do this.</li>
+<li>Compress the image to reduce file size. Use the <a href="https://tinypng.com/" rel="noopener noreferrer" target="_blank">tinypng.com</a> web service to do this.</li>
 </ol>
 <h3>Adding images to markdown</h3>
 <ol>
@@ -51,10 +51,12 @@
 </ol>
 <p>```
  <br/>
-<figure class="figure">
-<img alt="Description of image" class="figure-img" src="/static/images/image.png" width="75%"/>
-<figcaption class="figure-caption">A caption for the image.</figcaption>
-</figure></p>
+</p><div class="figure_featured" style="width: 25%;">
+<figure>
+<img alt="aquatic microcosm" src="/static/images/featured_data/aquatic-microcosm.png"/>
+<figcaption class="figure-caption">Fig. 1: Principal components of a Standardized Aquatic Microcosm ...</figcaption>
+</figure>
+</div>
 <p>```</p>
 <ol>
 <li>All other image types - Example:</li>

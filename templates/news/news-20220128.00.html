@@ -5,21 +5,33 @@
 <p>Susanne Grossman-Clarke</p>
 <h3>Description</h3>
 <p>The EDI software team is excited to announce DeX, a tool for exploring and subsetting tabular data, which is now in beta testing on the EDI staging Data Portal (https://portal-s.edirepository.org/nis). DeX provides three views into tabular data found in the EDI Data Repository: 1) a statistical profiler that analyzes the data table and displays detailed information about each attribute; 2) a filter and subsetting application that allows you to download the subsetted data, along with a new EML metadata document describing the subset; and 3) a simple-to-use scatter and line plotting application that gives you a visual glimpse into data trends. DeX is currently available on either of our development or staging Data Portals and works with CSV-based data tables (soon to work with a wider set of tabular formats). To see DeX in action, look for a data package in the staging Data Portal containing a CSV data file and click on the “Data Explorer – experimental” link at the end of the data entity record information (see below):</p>
-<figure class="figure_news">
-<img alt="data explorer link in context of landing page" src="https://lh6.googleusercontent.com/vVDVudLxWGLF6nvq-wyBDDqPF4GkdmJ8RtYFqgmptw_ZuIu9YBMofn_dhwMwgyiQdhSdw8JqdcqOnif6rYJ56Uve31doM-2GN5YcLFIhqP4TjMWC6UOW8hgWu3rQ4FmFG7dK6-dB" width="50%"/>
+<div class="figure_featured" style="width: 60%;">
+<figure>
+<img alt="data explorer link in context of landing page" src="https://lh6.googleusercontent.com/vVDVudLxWGLF6nvq-wyBDDqPF4GkdmJ8RtYFqgmptw_ZuIu9YBMofn_dhwMwgyiQdhSdw8JqdcqOnif6rYJ56Uve31doM-2GN5YcLFIhqP4TjMWC6UOW8hgWu3rQ4FmFG7dK6-dB"/>
+<figcaption class="figure-caption"></figcaption>
 </figure>
+</div>
 <p>DeX is written in Python using the Pandas and Pandas Profiling packages for analyses and subsetting and uses the Bokeh package for plotting. The DeX “Profile” page is a Swiss Army Knife of statistical analyses and provides you with a good understanding (to the best of Pandas Profiling’s ability) of the data. Note that the Profile does not use the information within the EML metadata and may not align perfectly with attribute-level information from the EML. The profile is cached locally on the DeX server after the first download, thereby improving performance with subsequent views.</p>
-<figure class="figure_news">
-<img alt="data explorer profile page" src="https://lh6.googleusercontent.com/idu6Ju3Ea_8aKcuPmhxKMwERcQ2akEmd2A7NAroOwo2NMnsFELYPUJ7mCjmcJo6RH1v0vA-z6r5nvVronPkIg8aXt8LNu5ueYZkROzPXtuUkzIxi84QIbLX-cGuKlx6PEVqP-Dmh" width="50%"/>
+<div class="figure_featured" style="width: 70%;">
+<figure>
+<img alt="data explorer profile page" src="https://lh6.googleusercontent.com/idu6Ju3Ea_8aKcuPmhxKMwERcQ2akEmd2A7NAroOwo2NMnsFELYPUJ7mCjmcJo6RH1v0vA-z6r5nvVronPkIg8aXt8LNu5ueYZkROzPXtuUkzIxi84QIbLX-cGuKlx6PEVqP-Dmh"/>
+<figcaption class="figure-caption"></figcaption>
 </figure>
+</div>
 <p>The DeX Subset page allows you to filter and subset on various modes, including a tabular query operation that uses the NumExpr query language for fine-level filtering. In this case, filtering uses attribute-level information from the EML metadata. For this reason, it may show unexpected results if the EML and data table do not match perfectly (what a great way to check your pre-publication data package table when viewing proofs through the staging Data Portal). Other modes are “Filter by time period,” “Filter by row index,” and “Filter by category.” The subset operation allows you to combine the result from all filter modes into a single modified data table that you can download to your local computer. The downloaded zip file contains the new data table, a new EML metadata document describing the data table, and a JSON file containing the filter criteria used to create the data table.</p>
-<figure class="figure_news">
-<img alt="data explorer filter by query page" src="https://lh4.googleusercontent.com/J38tcEJTAGj7TMV9JVigW06J5IJgFj5kvX_aVwmkeDJKi65hkneeRiJxS_Ijx2UlFFpfrgvKAs3Rdg3VEfacKxmoi9m0ejL-kenkNPgFV9R4y_hWMNf0fpj85hAYFQrf3vUyyBiG" width="50%"/>
+<div class="figure_featured" style="width: 80%;">
+<figure>
+<img alt="data explorer filter by query page" src="https://lh4.googleusercontent.com/J38tcEJTAGj7TMV9JVigW06J5IJgFj5kvX_aVwmkeDJKi65hkneeRiJxS_Ijx2UlFFpfrgvKAs3Rdg3VEfacKxmoi9m0ejL-kenkNPgFV9R4y_hWMNf0fpj85hAYFQrf3vUyyBiG"/>
+<figcaption class="figure-caption"></figcaption>
 </figure>
+</div>
 <p>The DeX Plot page is a simple X/Y plotting application that provides you with a good perspective of trends within the data. You may select a single independent variable (including datetime values) along with one or more dependent variables. Large data tables (those greater than 10,000 records) are subsampled to provide better viewing performance. The dynamic plots let you zoom in/out or move around within the plot viewport. You may also save the plot to your local computer as a PNG image.</p>
-<figure class="figure_news">
-<img alt="data explorer XY plot" src="https://lh4.googleusercontent.com/PRAzhBxWaY0_nOn0IAI3lSE5kBu1OMdUYWSWQUFjHt1ID87ooW1x6aAzhHqqH_bCOLMRbJVnk8fGMWq5xo75I3m05vahw4eiw850AQQWD7139_v3B6zWeFAW5ADdxMzfVVW9_kXi" width="50%"/>
+<div class="figure_featured" style="width: 50%;">
+<figure>
+<img alt="data explorer XY plot" src="https://lh4.googleusercontent.com/PRAzhBxWaY0_nOn0IAI3lSE5kBu1OMdUYWSWQUFjHt1ID87ooW1x6aAzhHqqH_bCOLMRbJVnk8fGMWq5xo75I3m05vahw4eiw850AQQWD7139_v3B6zWeFAW5ADdxMzfVVW9_kXi"/>
+<figcaption class="figure-caption"></figcaption>
 </figure>
+</div>
 <p>As the hyperlink text states, DeX is still experimental and may not respond as you expect. We are asking for feedback and reports of any issues with it. And please let us know if you have any exciting use case scenarios in which you can apply DeX.</p>
 <!-- News, Resources, Technical -->
 </main>

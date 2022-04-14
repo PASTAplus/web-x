@@ -1,13 +1,13 @@
 <div metal:use-macro="load: ../shared/layout.html">
 <div metal:fill-slot="content" tal:omit-tag="True">
 <div class="container">
-<aside class="sidebar-aside"><div class="flex-shrink-0 py-5 px-1 bg-white sticky-top">
-<a class="d-flex align-items-center mb-2 link-dark text-decoration-none" href="#"><span class="fs-5 fw-semibold">Why Publish Data?</span></a><ul class="btn-toggle-nav">
-<li><a class="link-dark rounded" href="#receive-attribution">Receive attribution</a></li>
-<li><a class="link-dark rounded" href="#meet-requirements">Meet requirements</a></li>
-<li><a class="link-dark rounded" href="#improve-data-management">Improve data management</a></li>
-<li><a class="link-dark rounded" href="#enable-new-scientific-insight">Enable new scientific insight</a></li>
-<li><a class="link-dark rounded" href="#references">References</a></li>
+<aside class="sidebar-aside"><div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted sticky-top" style="padding-top: 60; padding-right: 15; padding-left: 0;">
+<a class="d-block h6 my-2 pb-2 text-muted" href="#"><span class="fs-5 fw-semibold">Why Publish Data?</span></a><ul class="btn-toggle-nav">
+<li><a class="link-dark rounded text-muted" href="#receive-attribution">Receive attribution</a></li>
+<li><a class="link-dark rounded text-muted" href="#meet-requirements">Meet requirements</a></li>
+<li><a class="link-dark rounded text-muted" href="#improve-data-management">Improve data management</a></li>
+<li><a class="link-dark rounded text-muted" href="#enable-new-scientific-insight">Enable new scientific insight</a></li>
+<li><a class="link-dark rounded text-muted" href="#references">References</a></li>
 </ul>
 </div></aside><main class="main-tutorial">
 <h1 id="why-publish-data">Why Publish Data?</h1>
@@ -21,10 +21,10 @@
 <blockquote>
 <p>EDI tools simplify reporting:</p>
 <ul>
-<li><a href="https://dashboard.edirepository.org/dashboard/reports/package_tracker">Package Tracker</a> - List and plot downloads of a published data package.</li>
-<li><a href="https://dashboard.edirepository.org/dashboard/reports/site_report">Site Report</a> - List references to all data packages published by a research site. Currently only available to LTER sites.</li>
-<li><a href="https://dashboard.edirepository.org/dashboard/reports/upload_report">Upload Report</a> - List references to all data packages published by a research site within a specified time frame. Currently only available to LTER sites.</li>
-<li><a href="https://ediorg.github.io/EDIutils/articles/retrieve_citations.html">Retrieve Citation Metrics</a> - Get journal citations referencing a data publication.</li>
+<li><a href="https://dashboard.edirepository.org/dashboard/reports/package_tracker" rel="noopener noreferrer" target="_blank">Package Tracker</a> - List and plot downloads of a published data package.</li>
+<li><a href="https://dashboard.edirepository.org/dashboard/reports/site_report" rel="noopener noreferrer" target="_blank">Site Report</a> - List references to all data packages published by a research site. Currently only available to LTER sites.</li>
+<li><a href="https://dashboard.edirepository.org/dashboard/reports/upload_report" rel="noopener noreferrer" target="_blank">Upload Report</a> - List references to all data packages published by a research site within a specified time frame. Currently only available to LTER sites.</li>
+<li><a href="https://ediorg.github.io/EDIutils/articles/retrieve_citations.html" rel="noopener noreferrer" target="_blank">Retrieve Citation Metrics</a> - Get journal citations referencing a data publication.</li>
 </ul>
 </blockquote>
 <h2 id="improve-data-management">Improve data management</h2>
@@ -36,23 +36,23 @@
 <blockquote>
 <p>EDI tools enable reuse:
 * Code Generation - Read data into common computational languages (e.g. R, Python, MatLab). This service is available on data package landing pages under the "Code Generation" section.
-* <a href="https://ediorg.github.io/EDIutils/index.html">EDIutils</a> - An R package for accessing data in the EDI repository.</p>
+* <a href="https://ediorg.github.io/EDIutils/index.html" rel="noopener noreferrer" target="_blank">EDIutils</a> - An R package for accessing data in the EDI repository.</p>
 </blockquote>
 <h2 id="references">References</h2>
 <ol>
-<li>Data's shameful neglect. Nature 461, 145 (2009). <a href="https://doi.org/10.1038/461145a">https://doi.org/10.1038/461145a</a></li>
-<li>Duke, C.S., Porter, J.H., 2013. The ethics of data sharing and reuse in biology. BioScience 63, 483-489. <a href="https://doi.org/10.1525/bio.2013.63.6.10">https://doi.org/10.1525/bio.2013.63.6.10</a></li>
-<li>Funk, F, Hefferon, M, Kennedy, B, and Johnson C. 2019. Trust and Mistrust in Americans' Views of Scientific Experts: More Americans have confidence in scientists, but there are political divides over the role of scientific experts in policy issues. <a href="https://www.pewresearch.org/science/2019/08/02/trust-and-mistrust-in-americans-views-of-scientific-experts/">https://www.pewresearch.org/science/2019/08/02/trust-and-mistrust-in-americans-views-of-scientific-experts/</a></li>
-<li>Hampton, S.E., Strasser, C.A., Tewksbury, J.J., Gram, W.K., Budden, A.E., Batcheller, A.L., Duke, C.S. and Porter, J.H. (2013), Big data and the future of ecology. Frontiers in Ecology and the Environment, 11: 156-162. <a href="https://doi.org/10.1890/120103">https://doi.org/10.1890/120103</a> </li>
-<li>Magnuson, J. J. (1990). Long-Term Ecological Research and the Invisible Present. BioScience, 40(7), 495–501. <a href="https://doi.org/10.2307/1311317">https://doi.org/10.2307/1311317</a></li>
-<li>Nelson, B. Data sharing: Empty archives. Nature 461, 160–163 (2009). <a href="https://doi.org/10.1038/461160a">https://doi.org/10.1038/461160a</a></li>
-<li>Nosek, B. A., Alter, G., Banks, G. C., Borsboom, D., Bowman, S. D., Breckler, S. J., Buck, S., Chambers, C. D., Chin, G., Christensen, G., Contestabile, M., Dafoe, A., Eich, E., Freese, J., Glennerster, R., Goroff, D., Green, D. P., Hesse, B., Humphreys, M., Ishiyama, J., … Yarkoni, T. (2015). SCIENTIFIC STANDARDS. Promoting an open research culture. Science (New York, N.Y.), 348(6242), 1422–1425. <a href="https://doi.org/10.1126/science.aab2374">https://doi.org/10.1126/science.aab2374</a></li>
-<li>NSF: "Investigators are expected to share with other researchers, at no more than incremental cost and within a reasonable time, the primary data, samples, physical collections and other supporting materials created or gathered in the course of work under NSF grants. Grantees are expected to encourage and facilitate such sharing." <a href="https://www.nsf.gov/pubs/policydocs/pappg19_1/pappg_11.jsp#XID4">https://www.nsf.gov/pubs/policydocs/pappg19_1/pappg_11.jsp#XID4</a></li>
-<li>Parsons, M. A., R. Duerr, and J.-B. Minster (2010), Data citation and peer review, Eos Trans. AGU, 91(34), 297–298, <a href="https://doi.org/10.1029/2010EO340001">https://doi.org/10.1029/2010EO340001</a></li>
-<li>Piwowar, H. A., &amp; Chapman, W. W. (2010). Public sharing of research datasets: a pilot study of associations. Journal of informetrics, 4(2), 148–156. <a href="https://doi.org/10.1016/j.joi.2009.11.010">https://doi.org/10.1016/j.joi.2009.11.010</a></li>
-<li>Piwowar HA, Day RS, Fridsma DB (2007) Sharing Detailed Research Data Is Associated with Increased Citation Rate. PLoS ONE 2(3): e308. <a href="https://doi.org/10.1371/journal.pone.0000308">https://doi.org/10.1371/journal.pone.0000308</a>.</li>
-<li>Ryan Raub. 2013. Data Integrity, The Phrase I Don't Hear Enough. <a href="https://lternet.edu/wp-content/uploads/2017/12/2013-fall-lter-databits.pdf">https://lternet.edu/wp-content/uploads/2017/12/2013-fall-lter-databits.pdf</a></li>
-<li>Whitlock, M.C., McPeek, M.A., Rausher, M.D., Rieseberg, L., Moore, A.J., 2010. Data archiving. The American Naturalist 175, 145-146. <a href="https://doi.org/10.1086/650340">https://doi.org/10.1086/650340</a></li>
+<li>Data's shameful neglect. Nature 461, 145 (2009). <a href="https://doi.org/10.1038/461145a" rel="noopener noreferrer" target="_blank">https://doi.org/10.1038/461145a</a></li>
+<li>Duke, C.S., Porter, J.H., 2013. The ethics of data sharing and reuse in biology. BioScience 63, 483-489. <a href="https://doi.org/10.1525/bio.2013.63.6.10" rel="noopener noreferrer" target="_blank">https://doi.org/10.1525/bio.2013.63.6.10</a></li>
+<li>Funk, F, Hefferon, M, Kennedy, B, and Johnson C. 2019. Trust and Mistrust in Americans' Views of Scientific Experts: More Americans have confidence in scientists, but there are political divides over the role of scientific experts in policy issues. <a href="https://www.pewresearch.org/science/2019/08/02/trust-and-mistrust-in-americans-views-of-scientific-experts/" rel="noopener noreferrer" target="_blank">https://www.pewresearch.org/science/2019/08/02/trust-and-mistrust-in-americans-views-of-scientific-experts/</a></li>
+<li>Hampton, S.E., Strasser, C.A., Tewksbury, J.J., Gram, W.K., Budden, A.E., Batcheller, A.L., Duke, C.S. and Porter, J.H. (2013), Big data and the future of ecology. Frontiers in Ecology and the Environment, 11: 156-162. <a href="https://doi.org/10.1890/120103" rel="noopener noreferrer" target="_blank">https://doi.org/10.1890/120103</a> </li>
+<li>Magnuson, J. J. (1990). Long-Term Ecological Research and the Invisible Present. BioScience, 40(7), 495–501. <a href="https://doi.org/10.2307/1311317" rel="noopener noreferrer" target="_blank">https://doi.org/10.2307/1311317</a></li>
+<li>Nelson, B. Data sharing: Empty archives. Nature 461, 160–163 (2009). <a href="https://doi.org/10.1038/461160a" rel="noopener noreferrer" target="_blank">https://doi.org/10.1038/461160a</a></li>
+<li>Nosek, B. A., Alter, G., Banks, G. C., Borsboom, D., Bowman, S. D., Breckler, S. J., Buck, S., Chambers, C. D., Chin, G., Christensen, G., Contestabile, M., Dafoe, A., Eich, E., Freese, J., Glennerster, R., Goroff, D., Green, D. P., Hesse, B., Humphreys, M., Ishiyama, J., … Yarkoni, T. (2015). SCIENTIFIC STANDARDS. Promoting an open research culture. Science (New York, N.Y.), 348(6242), 1422–1425. <a href="https://doi.org/10.1126/science.aab2374" rel="noopener noreferrer" target="_blank">https://doi.org/10.1126/science.aab2374</a></li>
+<li>NSF: "Investigators are expected to share with other researchers, at no more than incremental cost and within a reasonable time, the primary data, samples, physical collections and other supporting materials created or gathered in the course of work under NSF grants. Grantees are expected to encourage and facilitate such sharing." <a href="https://www.nsf.gov/pubs/policydocs/pappg19_1/pappg_11.jsp#XID4" rel="noopener noreferrer" target="_blank">https://www.nsf.gov/pubs/policydocs/pappg19_1/pappg_11.jsp#XID4</a></li>
+<li>Parsons, M. A., R. Duerr, and J.-B. Minster (2010), Data citation and peer review, Eos Trans. AGU, 91(34), 297–298, <a href="https://doi.org/10.1029/2010EO340001" rel="noopener noreferrer" target="_blank">https://doi.org/10.1029/2010EO340001</a></li>
+<li>Piwowar, H. A., &amp; Chapman, W. W. (2010). Public sharing of research datasets: a pilot study of associations. Journal of informetrics, 4(2), 148–156. <a href="https://doi.org/10.1016/j.joi.2009.11.010" rel="noopener noreferrer" target="_blank">https://doi.org/10.1016/j.joi.2009.11.010</a></li>
+<li>Piwowar HA, Day RS, Fridsma DB (2007) Sharing Detailed Research Data Is Associated with Increased Citation Rate. PLoS ONE 2(3): e308. <a href="https://doi.org/10.1371/journal.pone.0000308" rel="noopener noreferrer" target="_blank">https://doi.org/10.1371/journal.pone.0000308</a>.</li>
+<li>Ryan Raub. 2013. Data Integrity, The Phrase I Don't Hear Enough. <a href="https://lternet.edu/wp-content/uploads/2017/12/2013-fall-lter-databits.pdf" rel="noopener noreferrer" target="_blank">https://lternet.edu/wp-content/uploads/2017/12/2013-fall-lter-databits.pdf</a></li>
+<li>Whitlock, M.C., McPeek, M.A., Rausher, M.D., Rieseberg, L., Moore, A.J., 2010. Data archiving. The American Naturalist 175, 145-146. <a href="https://doi.org/10.1086/650340" rel="noopener noreferrer" target="_blank">https://doi.org/10.1086/650340</a></li>
 </ol>
 </main>
 </div>

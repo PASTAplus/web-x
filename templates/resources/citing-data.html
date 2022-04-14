@@ -1,16 +1,16 @@
 <div metal:use-macro="load: ../shared/layout.html">
 <div metal:fill-slot="content" tal:omit-tag="True">
 <div class="container">
-<aside class="sidebar-aside"><div class="flex-shrink-0 py-5 px-1 bg-white sticky-top">
-<a class="d-flex align-items-center mb-2 link-dark text-decoration-none" href="#"><span class="fs-5 fw-semibold">Citing a Data Package</span></a><ul class="btn-toggle-nav">
-<li><a class="link-dark rounded" href="#citing-in-an-article">Citing in an article</a><ul class="fw-normal">
-<li><a class="link-dark rounded" href="#copy-the-citation-from-a-data-package-landing-page">Copy the citation from a data package landing page</a></li>
-<li><a class="link-dark rounded" href="#managing-data-citations">Managing data citations</a></li>
-<li><a class="link-dark rounded" href="#programmatically-create-data-package-citations">Programmatically create data package citations</a></li>
+<aside class="sidebar-aside"><div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted sticky-top" style="padding-top: 60; padding-right: 15; padding-left: 0;">
+<a class="d-block h6 my-2 pb-2 text-muted" href="#"><span class="fs-5 fw-semibold">Citing a Data Package</span></a><ul class="btn-toggle-nav">
+<li><a class="link-dark rounded text-muted" href="#citing-in-an-article">Citing in an article</a><ul class="fw-normal">
+<li><a class="link-dark rounded text-muted" href="#copy-the-citation-from-a-data-package-landing-page">Copy the citation from a data package landing page</a></li>
+<li><a class="link-dark rounded text-muted" href="#managing-data-citations">Managing data citations</a></li>
+<li><a class="link-dark rounded text-muted" href="#programmatically-create-data-package-citations">Programmatically create data package citations</a></li>
 </ul>
 </li>
-<li><a class="link-dark rounded" href="#citing-in-a-derived-data-package">Citing in a derived data package</a></li>
-<li><a class="link-dark rounded" href="#references">References</a></li>
+<li><a class="link-dark rounded text-muted" href="#citing-in-a-derived-data-package">Citing in a derived data package</a></li>
+<li><a class="link-dark rounded text-muted" href="#references">References</a></li>
 </ul>
 </div></aside><main class="main-tutorial">
 <h1 id="citing-a-data-package">Citing a Data Package</h1>
@@ -22,18 +22,18 @@
 
 <h2 id="citing-in-an-article">Citing in an article</h2>
 <h3 id="copy-the-citation-from-a-data-package-landing-page">Copy the citation from a data package landing page</h3>
-<p>Every data package <a href="/resources/data-package-pages">landing page</a> provides a citation, formatted to <a href="https://doi.org/10.6084/m9.figshare.8441816">community adopted practices</a>, that can be easily copied into a document.</p>
+<p>Every data package <a href="/resources/data-package-pages">landing page</a> provides a citation, formatted to <a href="https://doi.org/10.6084/m9.figshare.8441816" rel="noopener noreferrer" target="_blank">community adopted practices</a>, that can be easily copied into a document.</p>
 <p><img class="screen-shot" src="/static/images/copy-citation.png" width="90%"/></p>
 <h3 id="managing-data-citations">Managing data citations</h3>
-<p>The data package citation can be automatically imported into a reference manager application using web browser plugins (e.g. <a href="https://www.zotero.org/support/adding_items_to_zotero">Zotero Connector</a> and <a href="https://www.mendeley.com/guides/desktop/02-adding-documents">Mendeley Web Importer</a>) which allow users to copy the dataset DOI into a specified field. Once in the reference manager, the DOI will be used to look-up and download the citation metadata, and the citation can be exported to a bibliography.</p>
+<p>The data package citation can be automatically imported into a reference manager application using web browser plugins (e.g. <a href="https://www.zotero.org/support/adding_items_to_zotero" rel="noopener noreferrer" target="_blank">Zotero Connector</a> and <a href="https://www.mendeley.com/guides/desktop/02-adding-documents" rel="noopener noreferrer" target="_blank">Mendeley Web Importer</a>) which allow users to copy the dataset DOI into a specified field. Once in the reference manager, the DOI will be used to look-up and download the citation metadata, and the citation can be exported to a bibliography.</p>
 <h3 id="programmatically-create-data-package-citations">Programmatically create data package citations</h3>
-<p>Use the EDIutils <a href="https://ediorg.github.io/EDIutils/reference/read_data_package_citation.html"><code>read_data_package_citation</code></a> to generate data package citations formatted for different communities of practice.</p>
-<p>This operation can also be performed using the EDI <a href="https://github.com/PASTAplus/cite">Cite web service</a>. Watch a <a href="https://www.youtube.com/watch?v=7GppJUxCJIU">video walkthrough</a> demonstrating the use of Cite.</p>
+<p>Use the EDIutils <a href="https://ediorg.github.io/EDIutils/reference/read_data_package_citation.html" rel="noopener noreferrer" target="_blank"><code>read_data_package_citation</code></a> to generate data package citations formatted for different communities of practice.</p>
+<p>This operation can also be performed using the EDI <a href="https://github.com/PASTAplus/cite" rel="noopener noreferrer" target="_blank">Cite web service</a>. Watch a <a href="https://www.youtube.com/watch?v=7GppJUxCJIU" rel="noopener noreferrer" target="_blank">video walkthrough</a> demonstrating the use of Cite.</p>
 <h2 id="citing-in-a-derived-data-package">Citing in a derived data package</h2>
 <p>For citing data in a data package derived from one or more source data packages, see the page on <a href="/resources/provenance-metadata">provenance metadata</a>.</p>
 <h2 id="references">References</h2>
-<p><sup>[1]</sup>Renée F Brown, The Importance of Data Citation, <em>BioScience</em>, Volume 71, Issue 3, March 2021, Page 211,<a href="https://doi.org/10.1093/biosci/biab012"> https://doi.org/10.1093/biosci/biab012</a></p>
-<p>ESIP Data Preservation and Stewardship Committee (2019): Data Citation Guidelines for Earth Science Data , Version 2. ESIP. Online resource. <a href="https://doi.org/10.6084/m9.figshare.8441816.v1">https://doi.org/10.6084/m9.figshare.8441816.v1</a></p>
+<p><sup>[1]</sup>Renée F Brown, The Importance of Data Citation, <em>BioScience</em>, Volume 71, Issue 3, March 2021, Page 211,<a href="https://doi.org/10.1093/biosci/biab012" rel="noopener noreferrer" target="_blank"> https://doi.org/10.1093/biosci/biab012</a></p>
+<p>ESIP Data Preservation and Stewardship Committee (2019): Data Citation Guidelines for Earth Science Data , Version 2. ESIP. Online resource. <a href="https://doi.org/10.6084/m9.figshare.8441816.v1" rel="noopener noreferrer" target="_blank">https://doi.org/10.6084/m9.figshare.8441816.v1</a></p>
 </main>
 </div>
 </div>

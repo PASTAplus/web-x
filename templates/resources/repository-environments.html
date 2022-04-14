@@ -1,11 +1,11 @@
 <div metal:use-macro="load: ../shared/layout.html">
 <div metal:fill-slot="content" tal:omit-tag="True">
 <div class="container">
-<aside class="sidebar-aside"><div class="flex-shrink-0 py-5 px-1 bg-white sticky-top">
-<a class="d-flex align-items-center mb-2 link-dark text-decoration-none" href="#"><span class="fs-5 fw-semibold">Repository Environments</span></a><ul class="btn-toggle-nav">
-<li><a class="link-dark rounded" href="#production">Production</a></li>
-<li><a class="link-dark rounded" href="#staging">Staging</a></li>
-<li><a class="link-dark rounded" href="#development">Development</a></li>
+<aside class="sidebar-aside"><div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted sticky-top" style="padding-top: 60; padding-right: 15; padding-left: 0;">
+<a class="d-block h6 my-2 pb-2 text-muted" href="#"><span class="fs-5 fw-semibold">Repository Environments</span></a><ul class="btn-toggle-nav">
+<li><a class="link-dark rounded text-muted" href="#production">Production</a></li>
+<li><a class="link-dark rounded text-muted" href="#staging">Staging</a></li>
+<li><a class="link-dark rounded text-muted" href="#development">Development</a></li>
 </ul>
 </div></aside><main class="main-tutorial">
 <h1 id="repository-environments">Repository Environments</h1>
@@ -16,12 +16,12 @@
 </figure>
 
 <h2 id="production">Production</h2>
-<p>The production environment is where data packages are officially and securely published with a DOI and made permanently accessible for reuse. All features of the production environment are mature and stable. The production version of the EDI Data Portal is accessible at <a href="https://portal.edirepository.org">portal.edirepository.org</a>.</p>
+<p>The production environment is where data packages are officially and securely published with a DOI and made permanently accessible for reuse. All features of the production environment are mature and stable. The production version of the EDI Data Portal is accessible at <a href="https://portal.edirepository.org" rel="noopener noreferrer" target="_blank">portal.edirepository.org</a>.</p>
 <h2 id="staging">Staging</h2>
-<p>The staging environment is where new features of the EDI Data Repository mature before release to production, and is used for creating a shareable proof of a data package during <a href="/resources/the-review-process">the review process</a>, and testing new workflows. The staging version of the EDI Data Portal can be accessed at <a href="https://portal-s.edirepository.org">portal-s.edirepository.org</a>. </p>
+<p>The staging environment is where new features of the EDI Data Repository mature before release to production, and is used for creating a shareable proof of a data package during <a href="/resources/the-review-process">the review process</a>, and testing new workflows. The staging version of the EDI Data Portal can be accessed at <a href="https://portal-s.edirepository.org" rel="noopener noreferrer" target="_blank">portal-s.edirepository.org</a>. </p>
 <p>While the staging functions almost exactly as production, there are notable differences. The key differences are that packages published to the staging portal are not assigned a DOI and that landing pages have additional markup to alert users that they are viewing a test version of a package. Furthermore, EDI does not guarantee for data to be available here indefinitely.</p>
 <h2 id="development">Development</h2>
-<p>The development environment is used for testing new and, possibly, unstable features of the EDI Data Repository that are not yet mature enough for release to staging. The development version of the EDI Data Portal can be accessed at <a href="https://portal-d.edirepository.org">portal-d.edirepository.org</a>. </p>
+<p>The development environment is used for testing new and, possibly, unstable features of the EDI Data Repository that are not yet mature enough for release to staging. The development version of the EDI Data Portal can be accessed at <a href="https://portal-d.edirepository.org" rel="noopener noreferrer" target="_blank">portal-d.edirepository.org</a>. </p>
 <p>While there is rarely a reason for most users to operate in the development environment, it can be used to test data packages and workflows with the newest features that will eventually be released to production.</p>
 </main>
 </div>

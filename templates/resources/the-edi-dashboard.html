@@ -1,34 +1,34 @@
 <div metal:use-macro="load: ../shared/layout.html">
 <div metal:fill-slot="content" tal:omit-tag="True">
 <div class="container">
-<aside class="sidebar-aside"><div class="flex-shrink-0 py-5 px-1 bg-white sticky-top">
-<a class="d-flex align-items-center mb-2 link-dark text-decoration-none" href="#"><span class="fs-5 fw-semibold">The EDI Dashboard</span></a><ul class="btn-toggle-nav">
-<li><a class="link-dark rounded" href="#health">Health</a></li>
-<li><a class="link-dark rounded" href="#reports">Reports</a><ul class="fw-normal">
-<li><a class="link-dark rounded" href="#no-public-access-admin">No Public Access (admin)</a></li>
-<li><a class="link-dark rounded" href="#offline-data-admin">Offline Data (admin)</a></li>
-<li><a class="link-dark rounded" href="#doi-report-admin">DOI Report (admin)</a></li>
-<li><a class="link-dark rounded" href="#package-tracker">Package Tracker</a></li>
-<li><a class="link-dark rounded" href="#recent-uploads">Recent Uploads</a></li>
-<li><a class="link-dark rounded" href="#upload-report">Upload Report</a></li>
-<li><a class="link-dark rounded" href="#site-report">Site Report</a></li>
+<aside class="sidebar-aside"><div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted sticky-top" style="padding-top: 60; padding-right: 15; padding-left: 0;">
+<a class="d-block h6 my-2 pb-2 text-muted" href="#"><span class="fs-5 fw-semibold">The EDI Dashboard</span></a><ul class="btn-toggle-nav">
+<li><a class="link-dark rounded text-muted" href="#health">Health</a></li>
+<li><a class="link-dark rounded text-muted" href="#reports">Reports</a><ul class="fw-normal">
+<li><a class="link-dark rounded text-muted" href="#no-public-access-admin">No Public Access (admin)</a></li>
+<li><a class="link-dark rounded text-muted" href="#offline-data-admin">Offline Data (admin)</a></li>
+<li><a class="link-dark rounded text-muted" href="#doi-report-admin">DOI Report (admin)</a></li>
+<li><a class="link-dark rounded text-muted" href="#package-tracker">Package Tracker</a></li>
+<li><a class="link-dark rounded text-muted" href="#recent-uploads">Recent Uploads</a></li>
+<li><a class="link-dark rounded text-muted" href="#upload-report">Upload Report</a></li>
+<li><a class="link-dark rounded text-muted" href="#site-report">Site Report</a></li>
 </ul>
 </li>
-<li><a class="link-dark rounded" href="#pasta">PASTA+</a><ul class="fw-normal">
-<li><a class="link-dark rounded" href="#reservations">Reservations</a></li>
-<li><a class="link-dark rounded" href="#working-on">Working On</a></li>
-<li><a class="link-dark rounded" href="#embargo-management-admin">Embargo Management (admin)</a></li>
+<li><a class="link-dark rounded text-muted" href="#pasta">PASTA+</a><ul class="fw-normal">
+<li><a class="link-dark rounded text-muted" href="#reservations">Reservations</a></li>
+<li><a class="link-dark rounded text-muted" href="#working-on">Working On</a></li>
+<li><a class="link-dark rounded text-muted" href="#embargo-management-admin">Embargo Management (admin)</a></li>
 </ul>
 </li>
-<li><a class="link-dark rounded" href="#user-management">User Management</a></li>
-<li><a class="link-dark rounded" href="#edi-portals">EDI Portals</a></li>
+<li><a class="link-dark rounded text-muted" href="#user-management">User Management</a></li>
+<li><a class="link-dark rounded text-muted" href="#edi-portals">EDI Portals</a></li>
 </ul>
 </div></aside><main class="main-tutorial">
 <h1 id="the-edi-dashboard">The EDI Dashboard</h1>
 <p>The EDI Dashboard gives users access to information and processes related to the functioning of the EDI Data Repository (a.k.a. PASTA). The dashboard provides useful tools for generating site- or package-specific reports, checking the status of data package evaluations and uploads, or for monitoring the health of EDI services and portals. Access is restricted to admin users for some dashboard features (noted in subheaders here and on the dashboard).</p>
 
 <h2 id="health">Health</h2>
-<p><a href="https://dashboard.edirepository.org/dashboard/health/glance">Health at a Glance</a> displays the statuses for PASTA+ Infrastructure and corresponding EDI Data Portals (see <a href="/resources/repository-environments">Repository Environments</a> for more on the differences), EDI and LTER Generic Member Nodes (used to expose data hosted on the EDI Data Repository to DataONE), and other related services from EDI.</p>
+<p><a href="https://dashboard.edirepository.org/dashboard/health/glance" rel="noopener noreferrer" target="_blank">Health at a Glance</a> displays the statuses for PASTA+ Infrastructure and corresponding EDI Data Portals (see <a href="/resources/repository-environments">Repository Environments</a> for more on the differences), EDI and LTER Generic Member Nodes (used to expose data hosted on the EDI Data Repository to DataONE), and other related services from EDI.</p>
 <h2 id="reports">Reports</h2>
 <h3 id="no-public-access-admin">No Public Access (admin)</h3>
 <p>Users with admin privileges can access the list of data packages with entities (data objects, metadata, or both) that are currently placed under embargo.</p>

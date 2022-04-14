@@ -1,30 +1,30 @@
 <div metal:use-macro="load: ../shared/layout.html">
 <div metal:fill-slot="content" tal:omit-tag="True">
 <div class="container">
-<aside class="sidebar-aside"><div class="flex-shrink-0 py-5 px-1 bg-white sticky-top">
-<a class="d-flex align-items-center mb-2 link-dark text-decoration-none" href="#"><span class="fs-5 fw-semibold">EDI Policy</span></a><ul class="btn-toggle-nav">
-<li><a class="link-dark rounded" href="#data-policy">Data policy</a><ul class="fw-normal">
-<li><a class="link-dark rounded" href="#definitions">Definitions</a></li>
-<li><a class="link-dark rounded" href="#data-package-accessibility">Data package accessibility</a></li>
-<li><a class="link-dark rounded" href="#sensitive-data">Sensitive data</a></li>
-<li><a class="link-dark rounded" href="#offline-data">Offline data</a></li>
-<li><a class="link-dark rounded" href="#intellectual-rights-of-the-data-contributor">Intellectual rights of the data contributor</a></li>
+<aside class="sidebar-aside"><div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted sticky-top" style="padding-top: 60; padding-right: 15; padding-left: 0;">
+<a class="d-block h6 my-2 pb-2 text-muted" href="#"><span class="fs-5 fw-semibold">EDI Policy</span></a><ul class="btn-toggle-nav">
+<li><a class="link-dark rounded text-muted" href="#data-policy">Data policy</a><ul class="fw-normal">
+<li><a class="link-dark rounded text-muted" href="#definitions">Definitions</a></li>
+<li><a class="link-dark rounded text-muted" href="#data-package-accessibility">Data package accessibility</a></li>
+<li><a class="link-dark rounded text-muted" href="#sensitive-data">Sensitive data</a></li>
+<li><a class="link-dark rounded text-muted" href="#offline-data">Offline data</a></li>
+<li><a class="link-dark rounded text-muted" href="#intellectual-rights-of-the-data-contributor">Intellectual rights of the data contributor</a></li>
 </ul>
 </li>
-<li><a class="link-dark rounded" href="#privacy-policy">Privacy policy</a><ul class="fw-normal">
-<li><a class="link-dark rounded" href="#definitions_1">Definitions</a></li>
-<li><a class="link-dark rounded" href="#why-and-how-we-collect-personal-data">Why and how we collect personal data</a></li>
-<li><a class="link-dark rounded" href="#security-of-collected-personal-data">Security of collected personal data</a></li>
-<li><a class="link-dark rounded" href="#personal-data-found-within-science-metadata">Personal data found within science metadata</a></li>
-<li><a class="link-dark rounded" href="#transparency-and-sharing-of-personal-data">Transparency and sharing of personal data</a></li>
-<li><a class="link-dark rounded" href="#personal-data-retention-access-and-removal-of-personal-data">Personal data retention, access and removal of personal data</a></li>
+<li><a class="link-dark rounded text-muted" href="#privacy-policy">Privacy policy</a><ul class="fw-normal">
+<li><a class="link-dark rounded text-muted" href="#definitions_1">Definitions</a></li>
+<li><a class="link-dark rounded text-muted" href="#why-and-how-we-collect-personal-data">Why and how we collect personal data</a></li>
+<li><a class="link-dark rounded text-muted" href="#security-of-collected-personal-data">Security of collected personal data</a></li>
+<li><a class="link-dark rounded text-muted" href="#personal-data-found-within-science-metadata">Personal data found within science metadata</a></li>
+<li><a class="link-dark rounded text-muted" href="#transparency-and-sharing-of-personal-data">Transparency and sharing of personal data</a></li>
+<li><a class="link-dark rounded text-muted" href="#personal-data-retention-access-and-removal-of-personal-data">Personal data retention, access and removal of personal data</a></li>
 </ul>
 </li>
-<li><a class="link-dark rounded" href="#code-of-conduct">Code of conduct</a><ul class="fw-normal">
-<li><a class="link-dark rounded" href="#expected-behavior">Expected behavior</a></li>
-<li><a class="link-dark rounded" href="#unacceptable-behavior">Unacceptable behavior</a></li>
-<li><a class="link-dark rounded" href="#consequences">Consequences</a></li>
-<li><a class="link-dark rounded" href="#reporting">Reporting</a></li>
+<li><a class="link-dark rounded text-muted" href="#code-of-conduct">Code of conduct</a><ul class="fw-normal">
+<li><a class="link-dark rounded text-muted" href="#expected-behavior">Expected behavior</a></li>
+<li><a class="link-dark rounded text-muted" href="#unacceptable-behavior">Unacceptable behavior</a></li>
+<li><a class="link-dark rounded text-muted" href="#consequences">Consequences</a></li>
+<li><a class="link-dark rounded text-muted" href="#reporting">Reporting</a></li>
 </ul>
 </li>
 </ul>
@@ -40,7 +40,7 @@
 <p><strong>EDI customer</strong>. An individual or individuals who utilizes EDI's data publication and archive service.</p>
 <p><strong>EDI data repository</strong>. An Internet-based scientific data repository service for scientific data publication and archive.</p>
 <p><strong>EDI data publication and archive</strong>. The process by which scientific data and metadata are made discoverable and available through EDI computational infrastructure, including the long-term curation and management of such data.</p>
-<p><strong>EDI website</strong>. The official EDI Internet website (<a href="https://environmentaldatainitiative.org">https://environmentaldatainitiative.org</a>) where general information about EDI, including policies, news, events, and featured scientific data may be accessed.</p>
+<p><strong>EDI website</strong>. The official EDI Internet website (<a href="https://environmentaldatainitiative.org" rel="noopener noreferrer" target="_blank">https://environmentaldatainitiative.org</a>) where general information about EDI, including policies, news, events, and featured scientific data may be accessed.</p>
 <p><strong>Science Data</strong>. Data collected by external parties that is published and archived by EDI.</p>
 <p><strong>Science Data Package</strong>. The aggregate product produced by combining science data with science metadata.</p>
 <p><strong>Science Metadata</strong>. Textual metadata describing scientific data that is published and archived by EDI</p>
@@ -52,7 +52,7 @@
 <p>There is an option to declare data "offline" within the distribution field of the data package metadata. Doing so eliminates the need to have data be "network" accessible to the EDI Data Repository during the data package upload process. The use of offline data is only recommended for data that are too voluminous for network or storage capacity, such as the output from numerical models. Offline data must be provided to the EDI Data Repository through alternative means (e.g., SSD drive via a common carrier) prior to uploading the data package metadata. EDI requests that an explanation of the offline status be provided in the data entity description field of the data package metadata, including the preferred method of data distribution if required to satisfy a data request. See here for details: .</p>
 <h3 id="intellectual-rights-of-the-data-contributor">Intellectual rights of the data contributor</h3>
 <p>EDI makes every effort to ensure that all data are curated with intellectual rights defined by the data provider as found in the data package metadata. Although EDI advocates for open and unfettered access to data packages without use restrictions, we do not forbid data providers from declaring more restrictive licensing agreements for use of their data packages. Data providers should include a statement of Intellectual Rights in the metadata of their submissions. If they do not, EDI reserves the right to add a default declaration of intellectual rights to the data package metadata. The default declaration of intellectual rights used by EDI is based on the Creative Commons CC0 "No Rights Reserved" waiver. See below for the full default statement:</p>
-<p><em>This data package is released to the "public domain" under <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons CC0 1.0</a> "No Rights Reserved". It is considered professional etiquette to provide attribution of the original work if this data package is shared in whole or by individual components. A generic citation is provided for this data package on <a href="https://portal.edirepository.org">the website</a> (herein "website") in the summary metadata page. Communication (and collaboration) with the creators of this data package is recommended to prevent duplicate research or publication. This data package (and its components) is made available "as is" and with no warranty of accuracy or fitness for use. The creators of this data package and the website shall not be liable for any damages resulting from misinterpretation or misuse of the data package or its components. Periodic updates of this data package may be available from the website. Thank you.</em></p>
+<p><em>This data package is released to the "public domain" under <a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="noopener noreferrer" target="_blank">Creative Commons CC0 1.0</a> "No Rights Reserved". It is considered professional etiquette to provide attribution of the original work if this data package is shared in whole or by individual components. A generic citation is provided for this data package on <a href="https://portal.edirepository.org" rel="noopener noreferrer" target="_blank">the website</a> (herein "website") in the summary metadata page. Communication (and collaboration) with the creators of this data package is recommended to prevent duplicate research or publication. This data package (and its components) is made available "as is" and with no warranty of accuracy or fitness for use. The creators of this data package and the website shall not be liable for any damages resulting from misinterpretation or misuse of the data package or its components. Periodic updates of this data package may be available from the website. Thank you.</em></p>
 <h2 id="privacy-policy">Privacy policy</h2>
 <p>Version 1.0, Adopted 10 October 2019</p>
 <p>The Environmental Data Initiative (herein EDI) publishes this Privacy Policy to inform you, our customers, of the collection, use, and disclosure ("Processing") of personal data by the EDI project, its computational infrastructure, and scientific partners during the operation of data publication and archive (collectively, our "services"). This Privacy Policy is effective 2 October 2019, and may be amended in the future.</p>
@@ -63,15 +63,15 @@
 <p><strong>EDI customer</strong>. An individual or organization that utilizes one or more services provided by EDI.</p>
 <p><strong>EDI data repository</strong>. An Internet-based scientific data repository service for scientific data publication and archive.</p>
 <p><strong>EDI data publication and archive</strong>. The process by which scientific data and metadata are made discoverable and available through EDI computational infrastructure, including the long-term curation and management of such data.</p>
-<p><strong>EDI website</strong>. The official EDI Internet <a href="https://environmentaldatainitiative.org">website</a> where general information about EDI, including policies, news, events, and featured scientific data may be accessed.</p>
+<p><strong>EDI website</strong>. The official EDI Internet <a href="https://environmentaldatainitiative.org" rel="noopener noreferrer" target="_blank">website</a> where general information about EDI, including policies, news, events, and featured scientific data may be accessed.</p>
 <p><strong>EDI workshop</strong>. An organized and scheduled effort by EDI (or scientific partner) personnel to disseminate educational materials related to scientific data publication and archive to EDI customers.</p>
-<p><strong>PASTA+ software</strong>. <a href="https://github.com/PASTAplus/PASTA">The software</a> developed, maintained, and used by EDI to provide its data publication and archive service.</p>
+<p><strong>PASTA+ software</strong>. <a href="https://github.com/PASTAplus/PASTA" rel="noopener noreferrer" target="_blank">The software</a> developed, maintained, and used by EDI to provide its data publication and archive service.</p>
 <p><strong>Personal data</strong>. Data relating to an identified or identifiable natural person, which may include: common name, surname, given name, email address, organizational associations (name, address, phone), and or unique identifier (such as ORCID or GitHub identity).</p>
 <p><strong>Science Data</strong>. Data collected by external parties that is published and archived by EDI.</p>
 <p><strong>Science Metadata</strong>. Textual metadata describing scientific data that is published and archived by EDI</p>
 <h3 id="why-and-how-we-collect-personal-data">Why and how we collect personal data</h3>
 <ol>
-<li>Dissemination of EDI news and updates. EDI sends news items and updates about our project, operation, and services to EDI customers who subscribe to such information. Customers must actively submit personal data, including: email (required), surname (optional), given name (optional), organization (optional), and organizational role (optional), to EDI's <a href="https://mailchimp.com">MailChimp</a> account. These personal data are not shared with any 3rd party or partner.</li>
+<li>Dissemination of EDI news and updates. EDI sends news items and updates about our project, operation, and services to EDI customers who subscribe to such information. Customers must actively submit personal data, including: email (required), surname (optional), given name (optional), organization (optional), and organizational role (optional), to EDI's <a href="https://mailchimp.com" rel="noopener noreferrer" target="_blank">MailChimp</a> account. These personal data are not shared with any 3rd party or partner.</li>
 <li>Customer identity information for authorization to EDI data repository services and scientific data and metadata. EDI restricts access to some data repository services (e.g., publishing and archiving scientific data) to a subset of customers who have agreed to our data publication policy. In addition, customers who contribute science data and metadata have the option to apply access control to their data and metadata to limit distribution of their products. Customers who identify through an EDI accepted authentication protocol can be filtered against one or more rules used to allow or deny access to EDI data repository services or scientific data and metadata. Customers who require the ability to publish and archive science data and metadata must request an EDI LDAP account through an EDI representative. An EDI LDAP account requires a unique customer identifier composed into an LDAP distinguished name, given name, surname, and valid email address. Customers who only require identification to access controlled science data or metadata may use a third party identity service (either Google, GitHub, or ORCID) to verify their identity; successful authentication through the third party stores either the customer's gmail email address, GitHub home location, or ORCID identifier, respectively, into the active EDI web browser session, in addition to the customer's common name.</li>
 <li>Customer email or other contact information. EDI customers may register contact information with EDI for the purpose of notification when the creation, addition, or modification of science data and metadata that is curated by EDI occurs within the EDI data repository. Notifications of this type serve to inform customers when new or updated science data are added to the system or to alert customers when science data are found to be suspect or erroneous post-publication. The collection of customer contact information is an option provided to EDI customers during an authenticated web browser session. Customer contact information includes only an email address.</li>
 <li>Web browser session cookies and authentication tokens. EDI websites utilize web browser session cookies and authentication tokens to maintain an authenticated state between the customer's web browser and EDI's website services. Session cookies are generated by the EDI website and authentication tokens are generated by the EDI authentication service at the point a customer self-identifies. EDI authentication tokens include the customer's unique identifier, a token time-to-live, and any membership in recognized roles or groups.</li>

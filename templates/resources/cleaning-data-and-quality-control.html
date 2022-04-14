@@ -1,28 +1,28 @@
 <div metal:use-macro="load: ../shared/layout.html">
 <div metal:fill-slot="content" tal:omit-tag="True">
 <div class="container">
-<aside class="sidebar-aside"><div class="flex-shrink-0 py-5 px-1 bg-white sticky-top">
-<a class="d-flex align-items-center mb-2 link-dark text-decoration-none" href="#"><span class="fs-5 fw-semibold">Cleaning Data and Quality Control</span></a><ul class="btn-toggle-nav">
-<li><a class="link-dark rounded" href="#cleaning-data">Cleaning data</a><ul class="fw-normal">
-<li><a class="link-dark rounded" href="#file-and-variable-naming">File and variable naming</a></li>
-<li><a class="link-dark rounded" href="#data-table-structure">Data table structure</a></li>
-<li><a class="link-dark rounded" href="#one-value-per-cell">One value per cell</a></li>
-<li><a class="link-dark rounded" href="#variable-types">Variable types</a><ul class="fw-normal">
-<li><a class="link-dark rounded" href="#dates-and-times">Dates and times</a></li>
-<li><a class="link-dark rounded" href="#numeric">Numeric</a></li>
-<li><a class="link-dark rounded" href="#categorical">Categorical</a></li>
-<li><a class="link-dark rounded" href="#character">Character</a></li>
+<aside class="sidebar-aside"><div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted sticky-top" style="padding-top: 60; padding-right: 15; padding-left: 0;">
+<a class="d-block h6 my-2 pb-2 text-muted" href="#"><span class="fs-5 fw-semibold">Cleaning Data and Quality Control</span></a><ul class="btn-toggle-nav">
+<li><a class="link-dark rounded text-muted" href="#cleaning-data">Cleaning data</a><ul class="fw-normal">
+<li><a class="link-dark rounded text-muted" href="#file-and-variable-naming">File and variable naming</a></li>
+<li><a class="link-dark rounded text-muted" href="#data-table-structure">Data table structure</a></li>
+<li><a class="link-dark rounded text-muted" href="#one-value-per-cell">One value per cell</a></li>
+<li><a class="link-dark rounded text-muted" href="#variable-types">Variable types</a><ul class="fw-normal">
+<li><a class="link-dark rounded text-muted" href="#dates-and-times">Dates and times</a></li>
+<li><a class="link-dark rounded text-muted" href="#numeric">Numeric</a></li>
+<li><a class="link-dark rounded text-muted" href="#categorical">Categorical</a></li>
+<li><a class="link-dark rounded text-muted" href="#character">Character</a></li>
 </ul>
 </li>
-<li><a class="link-dark rounded" href="#missing-values">Missing values</a></li>
-<li><a class="link-dark rounded" href="#file-format">File format</a></li>
+<li><a class="link-dark rounded text-muted" href="#missing-values">Missing values</a></li>
+<li><a class="link-dark rounded text-muted" href="#file-format">File format</a></li>
 </ul>
 </li>
-<li><a class="link-dark rounded" href="#quality-control-of-measured-values">Quality Control of measured values</a><ul class="fw-normal">
-<li><a class="link-dark rounded" href="#checking-values">Checking values</a></li>
-<li><a class="link-dark rounded" href="#data-flagging">Data flagging</a></li>
-<li><a class="link-dark rounded" href="#data-processing-levels">Data processing levels</a></li>
-<li><a class="link-dark rounded" href="#quality-control-as-a-process">Quality Control as a process</a></li>
+<li><a class="link-dark rounded text-muted" href="#quality-control-of-measured-values">Quality Control of measured values</a><ul class="fw-normal">
+<li><a class="link-dark rounded text-muted" href="#checking-values">Checking values</a></li>
+<li><a class="link-dark rounded text-muted" href="#data-flagging">Data flagging</a></li>
+<li><a class="link-dark rounded text-muted" href="#data-processing-levels">Data processing levels</a></li>
+<li><a class="link-dark rounded text-muted" href="#quality-control-as-a-process">Quality Control as a process</a></li>
 </ul>
 </li>
 </ul>
@@ -54,7 +54,7 @@
 <h3 id="variable-types">Variable types</h3>
 <p>Consistency within variables facilitates type wise operations allowing similar types of data to be combined and operated on together. Data become much more difficult to understand and use when variable types are mixed (e.g. numeric data mixed with character strings).</p>
 <h4 id="dates-and-times">Dates and times</h4>
-<p>Using a widely accepted and unambiguous datetime format maximizes the readability across software applications and integration with other data. The EDI Data Repository recommends the <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601 Standard</a> whenever possible (e.g. YYYY-MM-DD hh:mm:ss). The full list of ISO 8601 permutations recognized by the EDI Data Quality Checker is available <a href="https://github.com/EDIorg/ECC/blob/master/practices/dateTimeFormatString/dateTimeFormatString_list.csv">here</a>. Remember to also specify the time zone and daylight savings observation practices during measurements.</p>
+<p>Using a widely accepted and unambiguous datetime format maximizes the readability across software applications and integration with other data. The EDI Data Repository recommends the <a href="https://en.wikipedia.org/wiki/ISO_8601" rel="noopener noreferrer" target="_blank">ISO 8601 Standard</a> whenever possible (e.g. YYYY-MM-DD hh:mm:ss). The full list of ISO 8601 permutations recognized by the EDI Data Quality Checker is available <a href="https://github.com/EDIorg/ECC/blob/master/practices/dateTimeFormatString/dateTimeFormatString_list.csv" rel="noopener noreferrer" target="_blank">here</a>. Remember to also specify the time zone and daylight savings observation practices during measurements.</p>
 <h4 id="numeric">Numeric</h4>
 <p>Numeric types should be consistent within a column (e.g. integer, real). If the measurements have a practical precision, the values within the column should be consistently represented in this precision, (i.e. keep meaningful numbers of decimals).</p>
 <h4 id="categorical">Categorical</h4>
