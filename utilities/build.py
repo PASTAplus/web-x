@@ -142,7 +142,7 @@ def sidebar_html(md: str) -> BeautifulSoup:
     h1 = soup.find("h1")
     h1_a = soup.new_tag(
         "a",
-        attrs={"href": "#", "class": "d-flex align-items-center mb-2 link-dark text-decoration-none"}
+        attrs={"href": "#", "class": "d-block h6 my-2 pb-2 text-muted"}
     )
     h1_span = soup.new_tag("span", attrs={"class": "fs-5 fw-semibold"})
     h1_span.string = h1.get_text()
@@ -155,8 +155,10 @@ def sidebar_html(md: str) -> BeautifulSoup:
     ul_tag['class'] = "btn-toggle-nav"
     for li in toc.find_all('li'):
         for a in li.find_all('a'):
-            a['class'] = 'link-dark rounded'
-    toc["class"] = "flex-shrink-0 py-5 px-1 bg-white sticky-top"
+            a['class'] = 'link-dark rounded text-muted'
+    # toc["class"] = "flex-shrink-0 py-5 px-1 bg-white sticky-top"
+    toc["class"] = "bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted sticky-top"
+    toc["style"] = "padding-top: 60; padding-right: 15; padding-left: 0;"
     aside = soup.new_tag("aside")
     aside["class"] = "sidebar-aside"
     aside.insert(0, toc)

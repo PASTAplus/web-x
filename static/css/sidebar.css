@@ -16,7 +16,9 @@
 
 .btn-toggle-nav a { /*hover box size*/
   display: inline-flex;
-  padding: .3rem .7rem;
+  padding: .3rem .0rem;
+  line-height: 1.2;
+  font-size: 14;
 }
 
 
