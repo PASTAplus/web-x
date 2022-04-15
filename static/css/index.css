@@ -234,10 +234,14 @@
 /*Hover effect*/
 .pop-out {
     transition: all 0.2s ease;
-    cursor: pointer
+    cursor: pointer;
+}
+
+.pop-out div p {
+    margin-bottom: 0em;
 }
 
 .pop-out:hover {
     box-shadow: 5px 6px 6px 2px #e9ecef;
-    transform: scale(1.05)
+    transform: scale(1.05);
 }
