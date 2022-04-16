@@ -79,7 +79,7 @@ def get_post_html(post_type: str, name: str) -> Literal:
     return Literal(html)
 
 
-def get_postcard_objects(post_type: str, clip_len: int, img_picker: str) -> list:
+def get_postcard_objects(post_type: str, clip_len: Optional[int] = None, img_picker: str = "pickme") -> list:
     postcard_objects = []
     template_path = fastapi_chameleon.engine.template_path
     posts_path = f"{template_path}/{post_type}"

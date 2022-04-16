@@ -24,5 +24,5 @@ class IndexViewModel(ViewModelBase):
     def __init__(self, request: Request, title: str = "Environmental Data Initiative"):
         super().__init__(request, title)
 
-        self.featured = post_service.get_postcard_objects(post_type="featured", clip_len=200, img_picker="pickme")
+        self.featured = post_service.get_postcard_objects(post_type="featured", clip_len=None, img_picker="pickme")
         self.news = post_service.get_postcard_objects(post_type="news", clip_len=200, img_picker="pickme")
