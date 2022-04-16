@@ -26,3 +26,10 @@ router = fastapi.APIRouter()
 def publish(request: Request):
     vm = ViewModelBase(request, "Publish Data")
     return vm.to_dict()
+
+
+@router.get('/data/find-data')
+@template("data/find-data.html")
+def find(request: Request):
+    vm = ViewModelBase(request, "Find Data")
+    return vm.to_dict()
