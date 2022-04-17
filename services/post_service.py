@@ -21,6 +21,8 @@ from bs4 import BeautifulSoup
 from services.clipper import clip
 from services.literal import Literal
 
+import re
+
 
 class PostCardObject:
     def __init__(
@@ -30,7 +32,8 @@ class PostCardObject:
             thumbnail: str = None,
             date: str = None,
             author: str = None,
-            description: str = None
+            description: str = None,
+            citation_author: str = None
     ):
         self.name = name
         self.title = title
@@ -38,6 +41,7 @@ class PostCardObject:
         self.date = date
         self.author = author
         self.description = description
+        self.citation_author = citation_author
 
 
 def make_postcard_object(file: str, clip_len: Optional[int] = None, img_picker: str = "pickme") -> PostCardObject:
@@ -50,11 +54,16 @@ def make_postcard_object(file: str, clip_len: Optional[int] = None, img_picker: 
     author = paras[1].get_text()
     h3s = soup.find_all("h3")
     description = None
+    citation_author = None
     for h3 in h3s:
         if h3.get_text() == "Description":
             p = h3.findNext("p").get_text()
             if p is not None:
                 description = p if clip_len is None else clip(p, clip_len)
+        if h3.get_text() == "Citation":
+            p = h3.findNext("p").get_text()
+            if p is not None:
+                citation_author = re.findall('^.*[0-9]{4}\\.', p)[0]
 
     image = soup.find("img", id=img_picker)
     if image is None:
@@ -67,7 +76,8 @@ def make_postcard_object(file: str, clip_len: Optional[int] = None, img_picker: 
         thumbnail=thumbnail,
         date=date,
         author=author,
-        description=description
+        description=description,
+        citation_author=citation_author
     )
 
 
