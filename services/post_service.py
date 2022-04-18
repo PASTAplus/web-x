@@ -33,7 +33,7 @@ class PostCardObject:
             date: str = None,
             author: str = None,
             description: str = None,
-            citation_author: str = None
+            data_author: str = None
     ):
         self.name = name
         self.title = title
@@ -41,7 +41,7 @@ class PostCardObject:
         self.date = date
         self.author = author
         self.description = description
-        self.citation_author = citation_author
+        self.data_author = data_author
 
 
 def make_postcard_object(file: str, clip_len: Optional[int] = None, img_picker: str = "pickme") -> PostCardObject:
@@ -54,7 +54,7 @@ def make_postcard_object(file: str, clip_len: Optional[int] = None, img_picker: 
     author = paras[1].get_text()
     h3s = soup.find_all("h3")
     description = None
-    citation_author = None
+    data_author = None
     for h3 in h3s:
         if h3.get_text() == "Description":
             p = h3.findNext("p").get_text()
@@ -63,8 +63,8 @@ def make_postcard_object(file: str, clip_len: Optional[int] = None, img_picker: 
         if h3.get_text() == "Citation":
             p = h3.findNext("p").get_text()
             if p is not None:
-                citation_author = re.findall('^.*[0-9]{4}\\.', p)[0]
-
+                if re.match('^\D*[0-9]{4}\\.', p) is not None:
+                    data_author = re.match('^\D*[0-9]{4}\\.', p).group()
     image = soup.find("img", id=img_picker)
     if image is None:
         image = soup.find("img")
@@ -77,7 +77,7 @@ def make_postcard_object(file: str, clip_len: Optional[int] = None, img_picker: 
         date=date,
         author=author,
         description=description,
-        citation_author=citation_author
+        data_author=data_author
     )
 
 
