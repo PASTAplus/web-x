@@ -1,0 +1,88 @@
+<div metal:use-macro="load: ../shared/layout.html">
+<div metal:fill-slot="content" tal:omit-tag="True">
+<div class="container">
+<aside class="sidebar-aside"><div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted sticky-top" style="padding-top: 60; padding-right: 15; padding-left: 0;">
+<a class="d-block h6 my-2 pb-2 text-muted" href="#"><span class="fs-5 fw-semibold">Managing Data Packages in the EDI Repository</span></a><ul class="btn-toggle-nav">
+<li><a class="link-dark rounded text-muted" href="#boiler-plate-metadata-templates">Boiler plate metadata (templates)</a><ul class="fw-normal">
+<li><a class="link-dark rounded text-muted" href="#ezeml">ezEML</a><ul class="fw-normal">
+<li><a class="link-dark rounded text-muted" href="#creating-templates">Creating Templates</a><ul class="fw-normal">
+<li><a class="link-dark rounded text-muted" href="#design-considerations-for-ezeml-templates">Design considerations for ezEML templates</a></li>
+</ul>
+</li>
+<li><a class="link-dark rounded text-muted" href="#using-templates">Using Templates</a></li>
+</ul>
+</li>
+<li><a class="link-dark rounded text-muted" href="#emlassemblyline">EMLassemblyline</a></li>
+</ul>
+</li>
+<li><a class="link-dark rounded text-muted" href="#collaboration">Collaboration</a><ul class="fw-normal">
+<li><a class="link-dark rounded text-muted" href="#ezeml_1">ezEML</a></li>
+<li><a class="link-dark rounded text-muted" href="#emlassemblyline_1">EMLassemblyline</a></li>
+</ul>
+</li>
+<li><a class="link-dark rounded text-muted" href="#importing-a-data-package-to-update">Importing a data package to update</a><ul class="fw-normal">
+<li><a class="link-dark rounded text-muted" href="#ezeml_2">ezEML</a></li>
+<li><a class="link-dark rounded text-muted" href="#emlassemblyline_2">EMLassemblyline</a></li>
+</ul>
+</li>
+<li><a class="link-dark rounded text-muted" href="#automation">Automation</a><ul class="fw-normal">
+<li><a class="link-dark rounded text-muted" href="#ezeml_3">ezEML</a></li>
+<li><a class="link-dark rounded text-muted" href="#emlassemblyline_3">EMLassemblyline</a></li>
+</ul>
+</li>
+<li><a class="link-dark rounded text-muted" href="#saving-work-between-sessions">Saving work between sessions</a></li>
+<li><a class="link-dark rounded text-muted" href="#converting-between-ezeml-and-emlassemblyline">Converting between ezEML and EMLassemblyline</a></li>
+</ul>
+</div></aside><main class="main-tutorial">
+<h1 id="managing-data-packages-in-the-edi-repository">Managing Data Packages in the EDI Repository</h1>
+<p>Creating and updating data packages in the EDI Repository are the most common tasks performed by an information manager. Within these tasks are sub-processes. The metadata editors, <a href="templates/resources/creating-metadata-for-publication#ezeml">ezEML</a> and <a href="templates/resources/creating-metadata-for-publication#emlassemblyline">EMLassemblyline</a>, support these tasks and subprocesses but differ slightly in certain contexts. The good news is you don't have to commit to one or the other and switching between them is simple.</p>
+<p>Generally, the main differences between ezEML and EMLassemblyline are:</p>
+<ul>
+<li>ezEML - Is very user-friendly (small learning curve) ... ezEML is a form-based online application designed to streamline the creation of EML-formatted metadata. When searching for an option to manage EML metadata, some information managers may be quick to dismiss ezEML as a viable option in favor of a scripted workflow. While the web interface may be limiting in some regards, ezEML's multitude of options for collaboration paired with its connectedness with the EDI repository make it an excellent option for handling data management tasks from creating, publishing, updating, and sharing EML.</li>
+<li>EMLassemblyline - Automation ... EMLassemblyline is an R package for creating high quality EML metadata and is optimized for automating recurring publications. For information managers comfortable working in R, EMLassemblyline offers a framework that combines scripted workflow with templates. EMLassemblyline tends to offer more options for creating specific elements in EML, such as dataset provenance and spatial elements. Its ability to run in automated workflows makes it an attractive option for maintaining ongoing datasets.</li>
+</ul>
+
+<h2 id="boiler-plate-metadata-templates">Boiler plate metadata (templates)</h2>
+<h3 id="ezeml">ezEML</h3>
+<p>ezEML templates allow information managers to host site- or project-specific, partially-filled ezEML data packages that can be accessed by anyone on ezEML. </p>
+<h4 id="creating-templates">Creating Templates</h4>
+<p>Templates are created just like a normal ezEML data package. Once you've designed the template by filling in all of the fields that you expect one of your site's data authors would use, you can submit the template to EDI via teh <strong>Send to EDI</strong> button, or by exporting the template and emailing it directly support@environmentaldatainitiative.org. Remember to include a note stating that you would like to make the template available on ezEML.</p>
+<blockquote>
+<p>If you are not an LTER IM, or if you have not previously created templates for ezEML before, please first reach out to support@environmentaldatainitiative.org to confirm that we will be able to host a template for your group.</p>
+</blockquote>
+<h5 id="design-considerations-for-ezeml-templates">Design considerations for ezEML templates</h5>
+<p>When designing an ezEML template (or a series of ezEML templates), consider who will likely be using your template and which facets of EML will remain constant among that user base. Some examples of ezEML template designs:
+ * A single template for a project that every dataset associated with the project should use could pre-fill information regarding funding information, point-of-contact, principal investigator, intellectual rights, and keywords. Whenever a scientist needs to publish their data from this project, the information manager can refer them to the same template.
+ * Multiple templates for a field station could be broken down based on the geographic location of the sites. For example, the Piedraroja Field Station could have one template for each of the three stream sensor sites that produce data. While all templates share project-wide information, they each have a different geographic coverage. The template that a data collector from this field station would use depends on the location of their study.</p>
+<p>An important thing to remember about ezEML templates is that their simplicity is their power. Since an ezEML template is really just a partially-filled ezEML data package, you have the freedom to design a suite of templates to best suit your organization's needs. A template that only pre-fills one or two fields goes along way to ensure that data is standardized across your organization. Finally, remember that a data author can augment, delete, or overwrite fields in a template if necessary. Consider developing lightweight documentation or how-to guides to inform your organization's data authors on the best way to utilize your templates.</p>
+<h4 id="using-templates">Using Templates</h4>
+<p><a href="https://ezeml.edirepository.org/static/user_guide/templates.pdf?version=2022.04.25" rel="noopener noreferrer" target="_blank">This resource</a> explains how ezEML templates generally function within ezEML.</p>
+<p>As mentioned above, after designing and creating ezEML templates, it is a good idea to document their intended use for your organization's data authors.</p>
+<h3 id="emlassemblyline">EMLassemblyline</h3>
+<h2 id="collaboration">Collaboration</h2>
+<h3 id="ezeml_1">ezEML</h3>
+<p>ezEML allows users to collaborate on EML creation through the <a href="https://ezeml.edirepository.org/static/user_guide/importing.pdf?version=2022.04.25" rel="noopener noreferrer" target="_blank">import and export</a> of an ezEML Data Package. Further, users can directly <a href="https://ezeml.edirepository.org/static/user_guide/send_to_colleague.pdf?version=2022.04.25" rel="noopener noreferrer" target="_blank">send ezEML data packages a colleague</a>. These methods of transferring ezEML Data Packages between users serve an Information Manager well when they are:
+ * Looking for Data Author input on a new EML document they are creating
+ * Recieving ezEML Data Packages from Data Authors in order to review or publish to EDI</p>
+<p>Methods for transferring ezEML Data Packages are highlighted in <a href="https://youtu.be/ouacOxpL0V4" rel="noopener noreferrer" target="_blank">this video</a></p>
+<h3 id="emlassemblyline_1">EMLassemblyline</h3>
+<h2 id="importing-a-data-package-to-update">Importing a data package to update</h2>
+<h3 id="ezeml_2">ezEML</h3>
+<p>ezEML Data Packages can be created from EML metadata regardless of whether or not it was originally created with ezEML. These options for importing ezEML from EML should be of interest to any Information Managers who want to edit existing EML using ezEML, or that want to manage their corpus of data packages from ezEML.</p>
+<p>Import EML File - ezEML Data Packages can be <a href="https://ezeml.edirepository.org/static/user_guide/importing_xml.pdf?version=2022.04.25" rel="noopener noreferrer" target="_blank">imported from an EML/XML file</a>. This is the best option if you have an EML document that has not yet been published to EDI that you would like to edit or manage with ezEML. </p>
+<p>Fetch a Package from EDI - Data packages that are <a href="https://ezeml.edirepository.org/static/user_guide/fetch.pdf?version=2022.04.25" rel="noopener noreferrer" target="_blank">published on EDI can be fetched by ezEML</a>. This is useful if you would like update an existing data package, create a new data package similar in structure to one that exists, or for managing your data packages within ezEML. Only the most recent revision of an EDI data package can be imported this way. Older revisions should be downloaded and imported manually (see above).</p>
+<h3 id="emlassemblyline_2">EMLassemblyline</h3>
+<h2 id="automation">Automation</h2>
+<h3 id="ezeml_3">ezEML</h3>
+<h3 id="emlassemblyline_3">EMLassemblyline</h3>
+<p>Recurring data publication was traditionally a manual edit and upload process that can now be automated with programmatic approaches (e.g. EAL) and use of data repository APIs (e.g. EDIutils). These approaches not only reduce effort, but improve metadata accuracy and enable automated workflows. Automated publication and upload is suitable for:
+ * Ongoing data collection Data package is updated periodically with new data
+ * Ongoing derived data product Data package is derived from sources with ongoing collection</p>
+<p>Each use case is demonstrated <a href="https://ediorg.github.io/EMLassemblyline/articles/auto_pub.html" rel="noopener noreferrer" target="_blank">here</a></p>
+<h2 id="saving-work-between-sessions">Saving work between sessions</h2>
+<h2 id="converting-between-ezeml-and-emlassemblyline">Converting between ezEML and EMLassemblyline</h2>
+<p>Can change between the two applications at anytime with an EML metadata file being the exchange format. For example, edit in ezEML and output an eml document and convert to EAL files for use in an automation context.</p>
+</main>
+</div>
+</div>
+</div>
