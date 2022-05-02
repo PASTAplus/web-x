@@ -100,3 +100,5 @@ handled by the Python `vision_mission` function, which returns the
 The above Chameleon HTML template is inserted into the `content` slot defined in
 the `layout.html` template.
 
+## Static content:
+Static web page content is managed in the [content-x](https://github.com/PASTAplus/content-x) GitHub repository. Add/edit content there.
