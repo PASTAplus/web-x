@@ -40,3 +40,9 @@ def policies(request: Request):
 def partners(request: Request):
     vm = ViewModelBase(request, "About Partners and Affiliations")
     return vm.to_dict()
+
+@router.get('/about/edi-products')
+@template("about/edi-products.html")
+def partners(request: Request):
+    vm = ViewModelBase(request, "EDI Products")
+    return vm.to_dict()
