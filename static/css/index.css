@@ -246,6 +246,20 @@
     transform: scale(1.05);
 }
 
+.pop-out-sm {
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.pop-out-sm div p {
+    margin-bottom: 0em;
+}
+
+.pop-out-sm:hover {
+    box-shadow: 5px 6px 6px 2px #e9ecef;
+    transform: scale(1.02);
+}
+
 .hover-underline-animation {
   display: inline-block;
   position: relative;
