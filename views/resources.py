@@ -285,3 +285,9 @@ def authors(request: Request):
 def authors(request: Request):
     vm = ViewModelBase(request, "Why Publish Data")
     return vm.to_dict()
+
+@router.get('/resources/adding-physical-metadata')
+@template("resources/adding-physical-metadata.html")
+def authors(request: Request):
+    vm = ViewModelBase(request, "Adding Physical Metadata")
+    return vm.to_dict()

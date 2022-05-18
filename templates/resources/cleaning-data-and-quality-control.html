@@ -6,6 +6,7 @@
 <li><a class="link-dark rounded text-muted" href="#cleaning-data">Cleaning data</a><ul class="fw-normal">
 <li><a class="link-dark rounded text-muted" href="#file-and-variable-naming">File and variable naming</a></li>
 <li><a class="link-dark rounded text-muted" href="#data-table-structure">Data table structure</a></li>
+<li><a class="link-dark rounded text-muted" href="#data-table-aggregation">Data table aggregation</a></li>
 <li><a class="link-dark rounded text-muted" href="#one-value-per-cell">One value per cell</a></li>
 <li><a class="link-dark rounded text-muted" href="#variable-types">Variable types</a><ul class="fw-normal">
 <li><a class="link-dark rounded text-muted" href="#dates-and-times">Dates and times</a></li>
@@ -47,6 +48,12 @@
 <p>Below is an example of "wide" and "long" formatted tables. The wide table contains precipitation data measured at four watersheds through time. The long table has each variable occupying a single column and each observation as a single row.</p>
 <p><img src="/static/images/human-readable-vs-archive-ready.png" width="75%"/> </p>
 <p>New measurement variables can be added as columns or within a single column as key-value pairs, where one column represents the measurement variable and its attributes are listed in adjacent columns (e.g. unit, precision).</p>
+<h3 id="data-table-aggregation">Data table aggregation</h3>
+<p>Data can be published as a set of tables or in aggregate as a single table. For instance, time series data could be split into files by year or by variable. </p>
+<p>Consider who will likely be using the data in the future and what format will be simplest for them to access, understand, and work with. If the data are split, try to maintain a consistent format so the tables can either be joined by key columns or "stacked" together:</p>
+<p><img src="/static/images/table-structure-join.png" width="75%"/> </p>
+<p><img src="/static/images/table-structure-stack.png" width="75%"/> </p>
+<p>In general, a single aggregated table simplifies understanding and use rather than data split into several smaller increments. However, table splitting should be considered to simplify access and download when the data become large (e.g. in the tens of gigabytes).</p>
 <h3 id="one-value-per-cell">One value per cell</h3>
 <p>Within a column each cell should contain only one piece of information in a consistent format to enable accurate variable typing (e.g. datetime, numeric), reshaping, subsetting, and other transformations (e.g. joins). The most frequent problems are comments entered into an otherwise numeric column (e.g. to denote a missing value). In that case it is recommended to have the value column and add a comment column where the text comments may be entered.</p>
 <p>Another recommendation is to avoid overloading a cell with composite information. Below is an example illustrating the issue of more than one piece of information per cell. In the first table, the <strong>Location_ID</strong> column is a composite of multiple variables. Selecting values from a variable requires parsing. The second table follows the best practice of one piece of information per cell, where the data are easily accessed.</p>

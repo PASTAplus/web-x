@@ -1,0 +1,50 @@
+<div metal:use-macro="load: ../shared/layout.html">
+<div metal:fill-slot="content" tal:omit-tag="True">
+<main class="main-tutorial">
+<h1>Adding a resource's physical information</h1>
+<p>Physical information such as file size, MD5 checksum, and number of rows in a table, are important pieces of metadata. This information is not only useful to future users who are assessing fitness of a data package for reuse, but also can be used to verify the integrity of files after uploads and downloads. When a resource is uploaded to ezEML or processed by EMLassemblyline, this information is automatically calculated. However, neither application can obtain this information from a file that is hosted externally. The responsibility is instead placed on the data provider to determine and manually enter this information.</p>
+<h2>Calculating physical information</h2>
+<p>Physical information can usually be obtained for a file in a variety of ways. These methods may differ depending on the operating system of the computer.</p>
+<h3>File size</h3>
+<p>On both Windows and Mac computers, file size can be found by right-clicking on the resource and selecting "Properties" or "Get Info". Make sure to record the file size displayed in bytes.</p>
+<p><img src="/static/images/filesize-mac.png" width="15%"/></p>
+<h3>MD5 Checksum</h3>
+<p>To calculate the MD5 checksum of a file, you will want to use the Command Line (or Terminal) app on your Windows or Mac. From the command line, change your directory to where the file is located using the <code>cd</code> command. If you are on Windows, run the command <code>certutil -hashfile &lt;file&gt; MD5</code> where <code>&lt;file&gt;</code> is the filename:</p>
+<!-- <img src="/static/images/md5-win.png" width="15%"> -->
+<p>From a Mac, once you have changed your directory with <code>cd</code>, run the command <code>md5 &lt;file&gt;</code> (alternatively, type <code>md5</code> then drag and drop the file to Terminal): </p>
+<p><img src="/static/images/md5-mac.png" width="15%"/></p>
+<p>This command can be run from an R environment (Windows or Mac) with <code>md5sum(&lt;file&gt;)</code>, where <code>&lt;file&gt;</code> is the full path to the entity.</p>
+<h3>Number of rows</h3>
+<p>Calculating number of rows from a CSV file can be a little more tricky, especially if the file is too large to open in Excel or similar spreadsheet software.</p>
+<p>If downloading the table from a database, obtain this information from the database using <code>SQL COUNT()</code></p>
+<p>From a Mac command line, the prompt <code>wc -l &lt;file&gt;</code> will count the number of line breaks in the file. This is perfectly useful information as long as you are certain that there are no line breaks within individual lines (such as in comment columns).</p>
+<p><img src="/static/images/numrows-mac.png" width="15%"/></p>
+<p>This command can be run from an R environment (Windows or Mac) with <code>system("wc -l &lt;file&gt;", intern = TRUE)</code></p>
+<p><img src="/static/images/numrows-r.png" width="15%"/></p>
+<h2>Adding physical information to EML files</h2>
+<p>Physical information for a file can be inserted into an EML document to facilitate upload to the EDI repository.</p>
+<h3>ezEML</h3>
+<p>To insert physical information for a table via <a href="https://ezeml.edirepository.org/eml/" rel="noopener noreferrer" target="_blank">ezEML</a>:</p>
+<ol>
+<li>Navigate to the <strong>Data Tables</strong> tab and click the <strong>Edit</strong> button next to the data table.</li>
+</ol>
+<p><img class="screen-shot" src="/static/images/link-ezeml1.png" width="95%"/></p>
+<ol>
+<li>Enter the physical information for the table into the <strong>Online Distribution URL</strong> textbox. Remember to click <strong>Save and Continue</strong> before moving on.</li>
+</ol>
+<p><img class="screen-shot" src="/static/images/phys-ezeml.png" width="80%"/></p>
+<blockquote>
+<p>This method can be replicated in the <strong>Other Entities</strong> tab as well. </p>
+</blockquote>
+<h3>EMLassemblyline</h3>
+<p>Physical information for a data table or other entity can be added using the <code>template_physical()</code> function (Coming Soon)</p>
+<h3>Manually editing XML</h3>
+<p>If you've created a valid EML document using an ezEML creation tool, these attributes will already be created. To alter physical information for data tables or other entities manually:</p>
+<ol>
+<li>Open the XML file in a text editor.</li>
+<li>Within the <code>&lt;dataTable&gt;</code> (or <code>&lt;otherEntity&gt;</code>, <code>&lt;spatialRaster&gt;</code>, or <code>&lt;spatialVector&gt;</code>) element, the <code>&lt;physical&gt;</code> element will contain a <code>&lt;size&gt;</code> and an <code>&lt;authentication&gt;</code> element, which should contain the attributes <code>unit = "bytes"</code> and <code>"method=MD5"</code>, respectively. Change the values of the <code>&lt;size&gt;</code> and <code>&lt;authentication&gt;</code> element, if necessary.</li>
+<li>For the <code>&lt;dataTable&gt;</code> element, the <code>&lt;numberOfRecords&gt;</code> can be changed to reflect the number of rows in a table.</li>
+</ol>
+</main>
+</div>
+</div>
