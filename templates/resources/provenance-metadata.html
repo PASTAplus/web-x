@@ -39,15 +39,17 @@
 <h3 id="edi-data-portal">EDI Data Portal</h3>
 <p>To create provenance metadata from the <a href="https://portal.edirepository.org/nis/home.jsp" rel="noopener noreferrer" target="_blank">EDI Data Portal</a> for the original dataset already residing in the EDI Repository:</p>
 <ol>
-<li>Navigate to the <strong>Provenance</strong> section at the bottom of a data package <a href="/resources/data-package-pages">landing page</a>. This section displays provenance information and includes a link to generate provenance metadata for the data package.</li>
-</ol>
+<li>
+<p>Navigate to the <strong>Provenance</strong> section at the bottom of a data package <a href="/resources/data-package-pages">landing page</a>. This section displays provenance information and includes a link to generate provenance metadata for the data package.</p>
 <p><img class="screen-shot" src="/static/images/provenance-portal2.png" width="95%"/></p>
-<ol>
-<li>This links to the <strong>Provenance Generator</strong>. The <strong>Provenance Metadata XML</strong> tab contains text for the &lt;methodStep&gt; element. Copy the entire &lt;methodStep&gt; element.</li>
-</ol>
+</li>
+<li>
+<p>This links to the <strong>Provenance Generator</strong>. The <strong>Provenance Metadata XML</strong> tab contains text for the &lt;methodStep&gt; element. Copy the entire &lt;methodStep&gt; element.</p>
 <p><img class="screen-shot" src="/static/images/provenance-generator.png" width="95%"/></p>
-<ol>
-<li>Open the EML for the derived data package in an XML editor and navigate to the &lt;methods&gt; element. </li>
+</li>
+<li>
+<p>Open the EML for the derived data package in an XML editor and navigate to the &lt;methods&gt; element. </p>
+</li>
 <li>Paste the copied provenance &lt;methodStep&gt; element at the end of the list of &lt;methodSteps&gt;. Repeat for all data sources.</li>
 </ol>
 <p>See <a href="/resources/creating-metadata-for-publication#editing-eml">Editing EML</a> for more on XML editors.</p>
