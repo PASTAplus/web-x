@@ -180,11 +180,13 @@ def template_basic(inner_html: str) -> str:
     open = """
 <div metal:use-macro="load: ../shared/layout.html">
 <div metal:fill-slot="content" tal:omit-tag="True">
-<main class="main-tutorial">
+<div class="container">
+<main class="basic-inner">
 """
 
     close = """
 </main>
+</div>
 </div>
 </div>
 """
@@ -199,8 +201,14 @@ def basic_html(md: str) -> BeautifulSoup:
 
 
 def template_featured_data(inner_html: str) -> str:
-    open = '<main class="main-tutorial">\n'
-    close = "\n</main>"
+    open = """
+    <div class="container">
+    <main class="basic-inner">
+    """
+    close = """
+    </main>
+    </div>
+    """
     return open + inner_html + close
 
 
@@ -224,6 +232,28 @@ def news_html(md: str) -> BeautifulSoup:
     return soup
 
 
+def catalog_html(md: str) -> BeautifulSoup:
+    inner_html = markdown.markdown(md, extensions=['tables', 'fenced_code'])
+    html = template_catalog(inner_html)
+    soup = BeautifulSoup(html, "lxml")
+    return soup
+
+
+def template_catalog(inner_html: str) -> str:
+    open = """
+    <div metal:use-macro="load: ../shared/layout.html">
+    <div metal:fill-slot="content" tal:omit-tag="True">
+    <main class="basic-inner-catalog">
+    """
+
+    close = """
+    </main>
+    </div>
+    </div>
+    """
+    return open + inner_html + close
+
+
 def md2html(md_file: str, verbose: int) -> str:
     try:
         if verbose > 0:
@@ -237,6 +267,8 @@ def md2html(md_file: str, verbose: int) -> str:
             html = featured_data_html(md)
         elif "# News" in md:
             html = featured_data_html(md)
+        elif "# EDI Products" in md:
+            html = catalog_html(md)
         else:
             html = basic_html(md)
         html = external_refs(html)

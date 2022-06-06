@@ -1,6 +1,7 @@
 <div metal:use-macro="load: ../shared/layout.html">
 <div metal:fill-slot="content" tal:omit-tag="True">
-<main class="main-tutorial">
+<div class="container">
+<main class="basic-inner">
 <h1><a name="top"></a>Markdown Test Page</h1>
 <p>This page is written in markdown. <a href="https://github.com/fullpipe/markdown-test-page/blob/master/test-page" rel="noopener noreferrer" target="_blank">A rendering of this page in GitHub is here</a>.</p>
 <ul>
@@ -171,5 +172,6 @@ func main() {
 <p>A link to <a href="../test/about_edi#team">about_edi "Team" section</a></p>
 <p><img alt="an image" src="../images/presentation_icons_raw.png"/></p>
 </main>
+</div>
 </div>
 </div>

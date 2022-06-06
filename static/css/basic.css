@@ -1,43 +1,17 @@
-/* style sheet for basic pages */
+/* style sheet for basic pages that don't have a table of contents */
 
 .basic-inner {
-    max-width: 60%;
+    width: 85%;
+    text-align: left;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 2em;
-    color: black;
-/*    font-size: 1.0em; */
-    padding: 3em 0;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    padding: 1.5em;
 }
 
-/*.basic-inner h1 {
-    font-size: 3rem;
-    font-weight: bolder;
-    margin-top: 1em;
-    margin-bottom: 1em;
-}*/
-
-.basic-tile {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-}
-
-.basic-tile > div {
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 0;
-  width: 0;
-/*  margin: 2.5em;
-  padding: 0em;*/
-}
-
-.basic-tile > ul {
-  padding-top: 2em;
-  padding-bottom: 1em;
-  text-align: left;
+.basic-inner-catalog {
+    max-width: 70%;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
 }
