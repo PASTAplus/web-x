@@ -1,6 +1,7 @@
 <div metal:use-macro="load: ../shared/layout.html">
     <div metal:fill-slot="content" tal:omit-tag="True">
-        <div class="basic-inner" style="max-width: 80%; text-align: left; padding-top: 0.1em; padding-bottom: 0.1em">
+        <div class="container">
+            <div class="basic-inner" style="max-width: 80%; text-align: left; padding-top: 0.1em; padding-bottom: 0.1em">
             <h1>Website Search</h1>
             <h4>Searching for Data? <a href="/data/find-data">Find data here.</a></h4>
             <h4>Search term(s)<sup>*</sup>: <b>${ terms }</b></h4>
@@ -19,6 +20,7 @@
             <div style="position: relative; bottom: 0;">
                 * Common terms and punctuation do not return results.
             </div>
+        </div>
         </div>
     </div>
     <div metal:fill-slot="additional_css" tal:omit-tag="True">
