@@ -201,3 +201,8 @@ blockquote {
     height: 15em;
     margin-bottom: 1em;
 }
+
+/*This is a patch for an unresolvable bug that adds extra margin to <form> blocks on all pages except index.html*/
+.fix-form-margin {
+    margin-block-end: 0em
+}
