@@ -1,0 +1,94 @@
+<div class="container">
+<main class="basic-inner">
+<h1>News</h1>
+<h2>A Proposed Enhancement to Data Package Provenance</h2>
+<p>June 28, 2022</p>
+<p>Kyle Zollo-Venecek</p>
+<h3>Description</h3>
+<p>Create more descriptive and machine-actionable provenance linkages between data packages by leveraging the <a href="https://eml.ecoinformatics.org/semantic-annotation-primer.html" rel="noopener noreferrer" target="_blank">EML schema's support for semantic annotations</a> in conjunction with the currently used methods for documenting provenance.</p>
+<p><a href="https://edirepository.org/resources/provenance-metadata" rel="noopener noreferrer" target="_blank">Provenance metadata</a> is used to track the origin or history of data. In EML, representing the provenance for derived datasets (i.e. datasets compiled from other, pre-established datasets) involves creating a list of the source datasets.</p>
+<div class="figure_featured" style="width: 75%;">
+<figure>
+<img alt="old provenance model" src="/static/images/news/current-provenance.png"/>
+<figcaption class="figure-caption">Model of current provenance methods: a data package can broadly link back to other data packages from which it is derived</figcaption>
+</figure>
+</div>
+<p>The individual source datasets are represented within the EML document of the derived dataset as a series of <code>&lt;dataSource&gt;</code> elements embedded within <code>&lt;methodStep&gt;</code> elements, that are all within the <code>&lt;methods&gt;</code> element. A <code>&lt;distribution&gt;</code> element is used to create a direct link to the source dataset. Source dataset creator and contacts can also be included in their respective elements:</p>
+<pre><code>&lt;methods&gt;
+  {...}
+  &lt;methodStep&gt;
+    &lt;description&gt;
+      &lt;para&gt;This method step describes provenance-based metadata as specified in the LTER EML Best Practices.&lt;/para&gt;
+      &lt;para&gt;This provenance metadata does not contain entity specific information.&lt;/para&gt;
+    &lt;/description&gt;
+    &lt;dataSource&gt;
+      &lt;title&gt;LAGOS-NE-LIMNO v1.087.1: A module for LAGOS-NE, a multi-scaled geospatial and temporal database of lake ecological context and water quality for thousands of U.S. Lakes: 1925-2013&lt;/title&gt;
+      &lt;creator&gt;
+        &lt;individualName&gt;
+          &lt;givenName&gt;Patricia A&lt;/givenName&gt;
+          &lt;surName&gt;Soranno&lt;/surName&gt;
+        &lt;/individualName&gt;
+        &lt;organizationName&gt;Michigan State University&lt;/organizationName&gt;
+        &lt;electronicMailAddress&gt;soranno@msu.edu&lt;/electronicMailAddress&gt;
+        &lt;userId directory="http://orcid.org"&gt;0000-0003-1668-9271&lt;/userId&gt;
+      &lt;/creator&gt;
+      &lt;distribution&gt;
+        &lt;online&gt;
+          &lt;onlineDescription&gt;This online link references an EML document that describes data used in the creation of this derivative data package.&lt;/onlineDescription&gt;
+          &lt;url function="information"&gt;https://pasta.lternet.edu/package/metadata/eml/edi/101/2&lt;/url&gt;
+        &lt;/online&gt;
+      &lt;/distribution&gt;
+      &lt;contact&gt;
+        &lt;individualName&gt;
+          &lt;givenName&gt;Information&lt;/givenName&gt;
+          &lt;surName&gt;Manager&lt;/surName&gt;
+        &lt;/individualName&gt;
+        &lt;electronicMailAddress&gt;LAGOS.lakes.contact@gmail.com&lt;/electronicMailAddress&gt;
+      &lt;/contact&gt;
+    &lt;/dataSource&gt;
+  &lt;/methodStep&gt;
+&lt;/methods&gt;
+</code></pre>
+<p>While this generally answers the question of <em>what</em> a derived dataset is compiled from, it lacks precision and provides no information regarding <em>how</em> source datasets are used to create a derived dataset. While quite a bit of detail could go into an explanation of precisely how source datasets are used to create a derived dataset, we propose minor supplements to the standing methods for recording provenance that allow links between individual data entities to be drawn. By linking specific data entities between datasets, the origin of derived datasets can be made more explicit (Table A is derived from Table C and D) and replicated data can be accurately documented (Table B is the same as Table F).</p>
+<div class="figure_featured" style="width: 75%;">
+<figure>
+<img alt="new provenance model" src="/static/images/news/proposed-provenance.png"/>
+<figcaption class="figure-caption">Model of proposed provenance methods: preserves the broad linkages back to other data packages, but also allows for more specific entity-entity relationships</figcaption>
+</figure>
+</div>
+<p>Within the current EML 2.2.0 schema, these links can be represented by taking advantage of <code>&lt;annotation&gt;</code> elements to form Semantic Triples. Annotations in EML (and in general) are used to represent relations between a Subject and an Object using a well-defined Predicate (property). The Subject-Predicate-Object entity is known as a <a href="https://en.wikipedia.org/wiki/Semantic_triple" rel="noopener noreferrer" target="_blank">Semantic Triple</a>. Every <code>&lt;annotation&gt;</code> element must contain a <code>&lt;propertyURI&gt;</code> and <code>&lt;valueURI&gt;</code> element, representing a Predicate (property) and an Object, respectively. The Subject of the triple is determined by the placement of the <code>&lt;annotation&gt;</code> element. There are three places within the EML document where an <code>&lt;annotation&gt;</code> element can be while still referring to the same object: (1) as a child of the Subject, (2) in the <code>&lt;annotations&gt;</code> element, (3) in the <code>&lt;additionalMetadata&gt;</code> element.</p>
+<pre><code>&lt;!--(1)--&gt;
+&lt;dataTable id="table1"&gt;
+  {...}
+  &lt;annotation&gt;
+    &lt;propertyURI label="isBasedOn"&gt;https://schema.org/isBasedOn&lt;/propertyURI&gt;
+    &lt;valueURI label="Soil chemistry and nutrients table 1991"&gt;https://pasta.lternet.edu/package/data/eml/knb-lter-jrn/210398002/2/867ef68b3f482dad26ffc929515720ce&lt;/valueURI&gt;
+  &lt;/annotation&gt;
+  {...}
+&lt;/dataTable&gt;
+
+&lt;!--(2)--&gt;
+&lt;annotations&gt;
+  &lt;annotation references="table1"&gt;
+    &lt;propertyURI label="isBasedOn"&gt;https://schema.org/isBasedOn&lt;/propertyURI&gt;
+    &lt;valueURI label="Soil chemistry and nutrients table 1991"&gt;https://pasta.lternet.edu/package/data/eml/knb-lter-jrn/210398002/2/867ef68b3f482dad26ffc929515720ce&lt;/valueURI&gt;
+  &lt;/annotation&gt;
+&lt;/annotations&gt;
+
+&lt;!--(3)--&gt;
+&lt;additionalMetadata&gt;
+  {...}
+  &lt;describes&gt;table1&lt;/describes&gt;
+    &lt;metadata&gt;
+  &lt;annotation&gt;
+    &lt;propertyURI label="isBasedOn"&gt;https://schema.org/isBasedOn&lt;/propertyURI&gt;
+    &lt;valueURI label="Soil chemistry and nutrients table 1991"&gt;https://pasta.lternet.edu/package/data/eml/knb-lter-jrn/210398002/2/867ef68b3f482dad26ffc929515720ce&lt;/valueURI&gt;
+  &lt;/annotation&gt;
+  {...}
+&lt;/additionalMetadata&gt;
+</code></pre>
+<p>The <code>&lt;annotation&gt;</code> element references the Subject (data entity) differently depending on where it is located in the document. If the <code>&lt;annotation&gt;</code> element is the direct child of the <code>&lt;dataTable&gt;</code>, than the reference is implicit. If the element is within the <code>&lt;annotations&gt;</code> or <code>&lt;additionalMetadata&gt;</code> element, the relationship must be made explicit by referencing the Subject's <code>id</code> in the <code>references</code> attribute or as the content of the <code>&lt;describes&gt;</code> element, respectively. </p>
+<h4>Feedback</h4>
+<p>We envision these enhancements to the provenance linking methods to allow for better records of a data package's history. While we currently do not have any tools to support the implementation of this new method of provenance, we welcome all to test it out by manually editing EML metadata. Your feedback, general or specific, would be very appreciated. Please reach out to us at info@edirepository.org.</p>
+</main>
+</div>
