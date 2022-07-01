@@ -34,3 +34,9 @@ def featured_grid(request: Request):
 def featured(request: Request, name: str):
     vm = FeaturedViewModel(request, f"Featured Data - {name} ", name=name)
     return vm.to_dict()
+
+@router.get('/featured/test-20220701.00')
+@template("featured/test-20220701.00.html")
+def policies(request: Request):
+    vm = ViewModelBase(request, "Featured data July 2022")
+    return vm.to_dict()
