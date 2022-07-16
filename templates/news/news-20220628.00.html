@@ -7,12 +7,8 @@
 <h3>Description</h3>
 <p>Create more descriptive and machine-actionable provenance linkages between data packages by leveraging the <a href="https://eml.ecoinformatics.org/semantic-annotation-primer.html" rel="noopener noreferrer" target="_blank">EML schema's support for semantic annotations</a> in conjunction with the currently used methods for documenting provenance.</p>
 <p><a href="https://edirepository.org/resources/provenance-metadata" rel="noopener noreferrer" target="_blank">Provenance metadata</a> is used to track the origin or history of data. In EML, representing the provenance for derived datasets (i.e. datasets compiled from other, pre-established datasets) involves creating a list of the source datasets.</p>
-<div class="figure_featured" style="width: 75%;">
-<figure>
-<img alt="old provenance model" src="/static/images/news/current-provenance.png"/>
+<p><img alt="data package pointing to two data packages in brackets" src="/static/images/news/current-provenance.png"/></p>
 <figcaption class="figure-caption">Model of current provenance methods: a data package can broadly link back to other data packages from which it is derived</figcaption>
-</figure>
-</div>
 <p>The individual source datasets are represented within the EML document of the derived dataset as a series of <code>&lt;dataSource&gt;</code> elements embedded within <code>&lt;methodStep&gt;</code> elements, that are all within the <code>&lt;methods&gt;</code> element. A <code>&lt;distribution&gt;</code> element is used to create a direct link to the source dataset. Source dataset creator and contacts can also be included in their respective elements:</p>
 <pre><code>&lt;methods&gt;
   {...}
@@ -50,12 +46,8 @@
 &lt;/methods&gt;
 </code></pre>
 <p>While this generally answers the question of <em>what</em> a derived dataset is compiled from, it lacks precision and provides no information regarding <em>how</em> source datasets are used to create a derived dataset. While quite a bit of detail could go into an explanation of precisely how source datasets are used to create a derived dataset, we propose minor supplements to the standing methods for recording provenance that allow links between individual data entities to be drawn. By linking specific data entities between datasets, the origin of derived datasets can be made more explicit (Table A is derived from Table C and D) and replicated data can be accurately documented (Table B is the same as Table F).</p>
-<div class="figure_featured" style="width: 75%;">
-<figure>
-<img alt="new provenance model" src="/static/images/news/proposed-provenance.png"/>
+<p><img alt="advanced provenance model" src="/static/images/news/proposed-provenance.png"/></p>
 <figcaption class="figure-caption">Model of proposed provenance methods: preserves the broad linkages back to other data packages, but also allows for more specific entity-entity relationships</figcaption>
-</figure>
-</div>
 <p>Within the current EML 2.2.0 schema, these links can be represented by taking advantage of <code>&lt;annotation&gt;</code> elements to form Semantic Triples. Annotations in EML (and in general) are used to represent relations between a Subject and an Object using a well-defined Predicate (property). The Subject-Predicate-Object entity is known as a <a href="https://en.wikipedia.org/wiki/Semantic_triple" rel="noopener noreferrer" target="_blank">Semantic Triple</a>. Every <code>&lt;annotation&gt;</code> element must contain a <code>&lt;propertyURI&gt;</code> and <code>&lt;valueURI&gt;</code> element, representing a Predicate (property) and an Object, respectively. The Subject of the triple is determined by the placement of the <code>&lt;annotation&gt;</code> element. There are three places within the EML document where an <code>&lt;annotation&gt;</code> element can be while still referring to the same object: (1) as a child of the Subject, (2) in the <code>&lt;annotations&gt;</code> element, (3) in the <code>&lt;additionalMetadata&gt;</code> element.</p>
 <pre><code>&lt;!--(1)--&gt;
 &lt;dataTable id="table1"&gt;
