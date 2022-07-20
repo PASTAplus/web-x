@@ -33,6 +33,12 @@ def fellowships(request: Request):
     vm = ViewModelBase(request, "EDI Data Management Fellowship Program")
     return vm.to_dict()
 
+@router.get('/support/fellowships/faq-fellowships')
+@template("support/fellowships/faq-fellowships.html")
+def fellowships(request: Request):
+    vm = ViewModelBase(request, "Fellowship Program - Frequently Asked Questions")
+    return vm.to_dict()
+
 @router.get('/support/frequently-asked-questions')
 @template("support/frequently-asked-questions.html")
 def faq(request: Request):
