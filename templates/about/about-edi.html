@@ -167,20 +167,6 @@
 <img alt="Colin Smith" src="/static/images/colin.jpg"/>
 </div>
 </div>
-<div class="person_row">
-<div class="person_col">
-<b>Kyle Zollo-Venecek</b> is a part of EDI's data curation team
-        and works with data providers to clean, document, and submit their data to
-        the EDI repository. Kyle works through the University of Wisconsin-Madison
-        and can be reached at
-        <a href="mailto:kylezollo@gmail.com">
-            kylezollo@gmail.com
-        </a>.
-    </div>
-<div class="person_col">
-<img alt="Kyle Zollo-Venecek" src="/static/images/kyle.png"/>
-</div>
-</div>
 <h2 id="repository-infrastructure">Repository infrastructure</h2>
 <p>Development of the Provenance Aware Synthesis Tracking Architecture (PASTA) software began in 2009 by LTER information managers and software developers with the goal to serve as the LTER Network Information System data repository. A full production system was delivered to the LTER Network in January 2013 and quickly acquired a majority of LTER's data products (&gt; 5,900 as of January 2017). PASTA's design was patterned on a Service Oriented Architecture to provide scalable data-repository functionality through a ReST-based application programmable interface (API), with primary operations to create, read, update, and delete (often termed CRUD) data packages to and from the repository. In addition, the PASTA development team delivered a browser-based web application for LTER called the Data Portal that gives users a human accessible interface to interact with PASTA. This was followed by an LTER Member Node (MN) in the DataONE federation, which exposes LTER data packages through DataONE's search and catalog service.</p>
 <p>By necessity, the original iteration of PASTA was LTER-centric. With the advent of EDI, aspects of the PASTA software that were idiomatic to LTER practices were generalized for broader use (or removed completely) into a revised software stack called <a href="https://github.com/PASTAplus/PASTA" rel="noopener noreferrer" target="_blank">PASTA+</a>, which provides the underlying services for the EDI data repository. In simple terms, the EDI data repository is a "re-branding" of the LTER Network Information System data repository, including the full archive of LTER data packages, and uses the revised PASTA+ software stack. Because PASTA+ is backwards compatible with the previous PASTA API, the LTER Data Portal seamlessly interacts with the PASTA+ API. To promote broader inclusivity, EDI software developers released a generalized version of the LTER Data Portal in late 2016, which also interacts directly with the PASTA+ API. The EDI Data Portal can be used in lieu of the LTER Data Portal to access both LTER and non-LTER data packages. In March 2017, EDI released a new DataONE member node that exposes non-LTER data packages to the DataONE federation. Collectively, the infrastructure of EDI includes the EDI data repository, which uses the PASTA+ software stack, the EDI Data Portal, the EDI DataONE Member Node, and the LTER DataONE Member Node, in addition to a suite of <a href="https://github.com/EDIorg" rel="noopener noreferrer" target="_blank">software tools</a> for information and data management. </p>
