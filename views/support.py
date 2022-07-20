@@ -27,13 +27,11 @@ def support(request: Request):
     vm = ViewModelBase(request, "Contact Us")
     return vm.to_dict()
 
-
 @router.get('/support/dm-fellowships')
 @template("support/dm-fellowships.html")
-def support(request: Request):
+def fellowships(request: Request):
     vm = ViewModelBase(request, "EDI Data Management Fellowship Program")
     return vm.to_dict()
-
 
 @router.get('/support/frequently-asked-questions')
 @template("support/frequently-asked-questions.html")
