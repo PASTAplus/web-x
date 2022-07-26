@@ -39,6 +39,12 @@ def fellowships(request: Request):
     vm = ViewModelBase(request, "Fellowship Program - Frequently Asked Questions")
     return vm.to_dict()
 
+@router.get('/support/fellowships/fellowship-2021')
+@template("support/fellowships/fellowship-2021.html")
+def fellowships(request: Request):
+    vm = ViewModelBase(request, "2021 Fellowship Program")
+    return vm.to_dict()
+
 @router.get('/support/frequently-asked-questions')
 @template("support/frequently-asked-questions.html")
 def faq(request: Request):
