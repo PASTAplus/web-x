@@ -116,6 +116,6 @@ Bugle generates the search content, and then creates a Python pickle of the
 index for use by web-x, placing both the content json file and pickled index 
 in the cache directory within the web-x home. To improve crawling by search 
 engines, bugle will also generate an optional "sitemap.org" XML file. This 
-file is also written to the cache directory, but must made accessible to 
+file is also written to the cache directory, but must be made accessible to 
 each search engine independently. For this reason, a soft-linked copy is 
 made in web-x's static directory.
