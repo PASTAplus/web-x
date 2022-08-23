@@ -25,12 +25,12 @@ router = fastapi.APIRouter()
 @router.get('/webinars/webinars-grid')
 @template("webinars/webinars-grid.html")
 def webinars_grid(request: Request):
-    vm = WebinarsGridViewModel(request, "Webinars")
+    vm = WebinarsGridViewModel(request, "Webinar")
     return vm.to_dict()
 
 
 @router.get('/webinars/{name}')
 @template("webinars/webinars.html")
 def webinars(request: Request, name: str):
-    vm = WebinarsViewModel(request, f"Webinars - {name} ", name=name)
+    vm = WebinarsViewModel(request, f"Webinar - {name} ", name=name)
     return vm.to_dict()
