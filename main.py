@@ -30,6 +30,7 @@ from views import user
 from views import search
 from views import featured
 from views import news
+from views import webinars
 
 
 cwd = os.path.dirname(os.path.realpath(__file__))
@@ -62,6 +63,7 @@ def configure_routes():
     app.include_router(search.router)
     app.include_router(featured.router)
     app.include_router(news.router)
+    app.include_router(webinars.router)
 
 
 if __name__ == "__main__":
