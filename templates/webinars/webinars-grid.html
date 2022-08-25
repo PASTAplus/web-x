@@ -1,42 +1,50 @@
 <div metal:use-macro="load: ../shared/layout.html">
     <div metal:fill-slot="content" tal:omit-tag="True">
-        
+
         <main>
-            
+
             <section class="py-2 text-center container">
                 <div class="row py-lg-5">
                     <div class="col-lg-6 col-md-8 mx-auto">
                         <h1 class="fw-light">Webinars</h1>
-                        <p class="lead text-muted">We host our webinars on the 3rd Tuesday of each month at 2pm Eastern Time (11am Pacific). We present unique as well as re-occurring topics on data publishing best practices, tools and new developments and you have the opportunity to join us with your questions on everything EDI during our regular “Town Halls”.
+                        <p class="lead text-muted">
+                            We host our webinars on the 3rd Tuesday of each month at 2pm Eastern Time (11am Pacific
+                            Time). We present unique as well as re-occurring topics on data publishing best practices,
+                            tools, and new developments, and you have the opportunity to join us with your questions on
+                            everything EDI during our regular “Town Halls.” Many of the webinars are recorded and
+                            available on our
+                            <a href="https://www.youtube.com/channel/UCNZoWPaMG6lkEiH8xRNnrrA" target="_blank" rel="noopener noreferrer">YouTube
+                            channel</a>.
+                        </p>
 
-			Many of the webinars are recorded and available on our <a href="https://www.youtube.com/channel/UCNZoWPaMG6lkEiH8xRNnrrA" target="_blank" rel="noopener noreferrer">YouTube channel</a>.</p>
-
-			<p class="lead text-muted">Contact us at info@edirepository.org with your request for a webinar topic.</p>
+                        <p class="lead text-muted">
+                            Request a webinar topic at <a href="mailto:info@edirepository.org">info@edirepository.org</a>.
+                        </p>
                     </div>
                 </div>
             </section>
-            
+
             <div class="album py-5 bg-light">
                 <div class="container">
                     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                        
+
                         <grid_objects tal:repeat="grid_object grid_objects">
-                        <div class="col">
-                            <div class="card drop-shadow-sm">
-                                <div class="card-body">
-                                    <p class="fw-bold text-dark">${grid_object.title}</p>
-                                    <p class="text-muted">${grid_object.date}</p>
-                                    <p class="text-normal">${grid_object.description}</p>
-                                    <a href="/webinars/${grid_object.name}" class="stretched-link"></a>
+                            <div class="col">
+                                <div class="card drop-shadow-sm">
+                                    <div class="card-body">
+                                        <p class="fw-bold text-dark">${grid_object.title}</p>
+                                        <p class="text-muted">${grid_object.date}</p>
+                                        <p class="text-normal">${grid_object.description}</p>
+                                        <a href="/webinars/${grid_object.name}" class="stretched-link"></a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         </grid_objects>
                     </div>
                 </div>
             </div>
-        
+
         </main>
-    
+
     </div>
 </div>
