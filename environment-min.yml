@@ -17,15 +17,15 @@ dependencies:
   - daiquiri
   - markdown
   - pytest
--  - pip
--  - pip:
--    - beautifulsoup4==4.10.0
--    - fastapi-chameleon==0.1.12
--    - lxml==4.7.1
--    - requests==2.27.1
--    - snowballstemmer==2.2.0
--    - soupsieve==2.3.1
--    - urllib3==1.26.8
--    - git+https://github.com/PASTAplus/bugle
+  - beautifulsoup4
+  - lxml
+  - urllib3
+  - requests
+  - soupsieve
+  - snowballstemmer
+  - pip
+  - pip:
+    - fastapi-chameleon==0.1.12
+    - git+https://github.com/PASTAplus/bugle
 
 prefix: /home/servilla/anaconda3/envs/web-x
