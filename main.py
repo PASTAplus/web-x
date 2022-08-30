@@ -40,7 +40,7 @@ daiquiri.setup(level=logging.INFO,
 logger = daiquiri.getLogger(__name__)
 
 
-app = fastapi.FastAPI()
+app = fastapi.FastAPI(docs_url=None, redoc_url=None)
 
 
 def configure(dev_mode: bool):
