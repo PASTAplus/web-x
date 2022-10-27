@@ -68,6 +68,6 @@ def configure_routes():
 
 if __name__ == "__main__":
     configure(dev_mode=True)
-    uvicorn.run(app, host='127.0.0.1', port=8000, debug=True)
+    uvicorn.run(app, host='127.0.0.1', port=8000)
 else:
     configure(dev_mode=False)
