@@ -3,24 +3,7 @@
 <div class="container">
 <aside class="sidebar-aside"><div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted sticky-top" style="padding-top: 60; padding-right: 15; padding-left: 0;">
 <a class="d-block h6 my-2 pb-2 text-muted" href="#"><span class="fs-5 fw-semibold">Data Exploration</span></a><ul class="btn-toggle-nav">
-<li><a class="link-dark rounded text-muted" href="#data-explorer-dex">Data eXplorer (DeX)</a><ul class="fw-normal">
-<li><a class="link-dark rounded text-muted" href="#profile">Profile</a><ul class="fw-normal">
-<li><a class="link-dark rounded text-muted" href="#overview">Overview</a></li>
-<li><a class="link-dark rounded text-muted" href="#sample">Sample</a></li>
-<li><a class="link-dark rounded text-muted" href="#variables">Variables</a></li>
-</ul>
-</li>
-<li><a class="link-dark rounded text-muted" href="#subset">Subset</a><ul class="fw-normal">
-<li><a class="link-dark rounded text-muted" href="#query">Query</a></li>
-<li><a class="link-dark rounded text-muted" href="#time-period">Time period</a></li>
-<li><a class="link-dark rounded text-muted" href="#row-index">Row index</a></li>
-<li><a class="link-dark rounded text-muted" href="#category">Category</a></li>
-</ul>
-</li>
-<li><a class="link-dark rounded text-muted" href="#plot">Plot</a></li>
-<li><a class="link-dark rounded text-muted" href="#eml">EML</a></li>
-</ul>
-</li>
+<li><a class="link-dark rounded text-muted" href="#data-explorer-dex">Data eXplorer (DeX)</a></li>
 <li><a class="link-dark rounded text-muted" href="#data-download-scripts">Data download scripts</a></li>
 <li><a class="link-dark rounded text-muted" href="#datapie">datapie</a></li>
 </ul>
@@ -30,47 +13,17 @@
 <p>While data package metadata, such as the <a href="/resources/data-package-pages#data-entities">Data Entities</a> section in the full metadata page, provide concise explanations of data attributes, summary and visualization tools can provide a quick and easy interactive view into the actual data values. EDI offers three options for data exploration: Data eXplorer, Data Download Scripts, and datapie.</p>
 
 <h2 id="data-explorer-dex">Data eXplorer (DeX)</h2>
-<p>The EDI <a href="http://dex.edirepository.org" rel="noopener noreferrer" target="_blank">Data Explorer (DeX)</a> is a web browser application offering summary information, subsetting, and plotting features for data packages containing tabular data files. DeX is a great tool for making a preliminary assessment about fitness for use. Click the <strong>Data Explorer</strong> link next to a data object from the <strong>Resources</strong> section of a data package landing page (currently only available in the <a href="/resources/repository-environments#staging">staging environment</a> of the Data Portal).</p>
+<p>The EDI <a href="http://dex.edirepository.org" rel="noopener noreferrer" target="_blank">Data Explorer (DeX)</a> is a web browser application offering summary information, subsetting, and plotting features for data packages containing tabular data files. DeX is a great tool for making a preliminary assessment about fitness for use. Click the <strong>Data Explorer</strong> link next to a data object from the <strong>Resources</strong> section of a data package landing page.</p>
 <p><img class="screen-shot" src="/static/images/dex-in-portal.png" width="95%"/> </p>
 <p>Alternatively, open a table from a data package in DeX by providing the Data Entity URL (currently limited to tabular data). </p>
 <blockquote>
 <p>In order to provide a standard of efficiency while working with limited computing power, DeX currently has a size limit of 50 million cells. Tables with more than 50 million cells will be truncated by row. For example, a table with 10 columns and 5,000,010 rows will only import the first 5,000,000 rows, leaving off the last 10 rows. The DeX profile, as well as any subsets or plots, will be generated from the truncated table and will not necessarily be representative of the original table.</p>
 </blockquote>
-<h3 id="profile">Profile</h3>
-<p>The <strong>Profile</strong> tab provides data table overview information, a sample of the first and last rows in the table, and summary information for every variable in the table.</p>
-<h4 id="overview">Overview</h4>
-<p>A breakdown of dataset statistics (size, missing value and duplicate row counts, etc.) and variable types (number of datetime, numerical, unique, and other variable types). This section also includes notes for individual variables and information about the profile report.</p>
-<h4 id="sample">Sample</h4>
-<p>This section displays the first and last ten rows of the data table, a row index, and column names.</p>
-<h4 id="variables">Variables</h4>
-<p>For every variable in the table, this section displays a miniature summary page complete with counts of missing and duplicate rows, minimum and maximum values, and a frequency plot for the variable.</p>
-<h3 id="subset">Subset</h3>
-<p>The Subset tab allows users to filter and download data by a query, time period, row index, category, or by simply selecting the columns of interest with checkboxes.</p>
-<h4 id="query">Query</h4>
-<p>Users can type a query to filter data. The query syntax is based on the Python Pandas' query method.</p>
-<p>Rows can be filtered by values in character columns using the <code>==</code> and <code>!=</code> operators:</p>
-<p><img class="screen-shot" src="/static/images/numexpr1.png" width="100%"/> </p>
-<p>Rows can also be filtered by values in numeric columns using the <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>, <code>!=</code> and <code>==</code> operators. Use backticks to select columns that have spaces or special characters in their name:</p>
-<p><img class="screen-shot" src="/static/images/numexpr2.png" width="100%"/> </p>
-<p>Rows can be filtered using comparisons between different columns. Multiple logical queries can be combined with the <code>&amp;</code> and <code>|</code> symbols to create advanced logical queries:</p>
-<p><img class="screen-shot" src="/static/images/numexpr6.png" width="100%"/> </p>
-<p>Individual rows can be selected by their index using square brackets:</p>
-<p><img class="screen-shot" src="/static/images/numexpr3.png" width="100%"/> </p>
-<p>Rows where the values from two columns are equal (or not equal) may also be filtered by comparing the two columns: <code>col_1 == col_2</code> or <code>col_1 != col_2</code></p>
-<p><img class="screen-shot" src="/static/images/numexpr7.png" width="100%"/> </p>
-<p>Rows where the values from one column are present (or not present) anywhere in another column may be filtered by using the "in" (or "not in") operator with the two columns: <code>col_1 in col_2</code> or <code>col_1 not in col_2</code></p>
-<p><img class="screen-shot" src="/static/images/numexpr8.png" width="100%"/> </p>
-<p>For details, refer to the Pandas' <a href="https://pandas.pydata.org/docs/user_guide/indexing.html#the-query-method" rel="noopener noreferrer" target="_blank">general guide to querying data</a> and the <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.query.html" rel="noopener noreferrer" target="_blank">pandas.DataFrame.query</a> API documentation specifically.</p>
-<h4 id="time-period">Time period</h4>
-<p>Users can filter by time period by selecting a <strong>Date</strong> column and entering a start and end date.</p>
-<h4 id="row-index">Row index</h4>
-<p>Users can filter by entering the start and end row index.</p>
-<h4 id="category">Category</h4>
-<p>For tables with categorical data columns declared in the EML, users can filter by specific categories within a given column.</p>
-<h3 id="plot">Plot</h3>
-<p>The <strong>Plot</strong> tab allows users to create scatter plots for the table by selecting an independent and one or more dependent variables.</p>
-<h3 id="eml">EML</h3>
-<p>This tab takes you back to the data package landing page.</p>
+<div class="p-2">
+<div class="w-50 ratio ratio-16x9">
+<iframe allowfullscreen="" src="https://youtube.com/embed/4ZZaLQ72GPc" title="YouTube video"></iframe>
+</div>
+</div>
 <h2 id="data-download-scripts">Data download scripts</h2>
 <p><a href="/resources/accessing-data#data-import-scripts">Data download scripts</a>, available in the <strong>Code Generation</strong> section of the data package landing page, read data directly from the EDI Repository into common programming language workspaces. This service provides full control over data manipulation and statistical exploration.</p>
 <h2 id="datapie">datapie</h2>
