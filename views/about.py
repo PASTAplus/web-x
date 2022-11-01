@@ -41,8 +41,16 @@ def partners(request: Request):
     vm = ViewModelBase(request, "About Partners and Affiliations")
     return vm.to_dict()
 
+
 @router.get('/about/edi-products')
 @template("about/edi-products.html")
 def partners(request: Request):
     vm = ViewModelBase(request, "EDI Products")
+    return vm.to_dict()
+
+
+@router.get('/about/edi-advisory-board')
+@template("about/edi-advisory-board.html")
+def advisors(request: Request):
+    vm = ViewModelBase(request, "EDI Advisory Board")
     return vm.to_dict()
