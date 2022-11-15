@@ -3,26 +3,32 @@
 <div class="container">
 <aside class="sidebar-aside"><div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted sticky-top" style="padding-top: 60; padding-right: 15; padding-left: 0;">
 <a class="d-block h6 my-2 pb-2 text-muted" href="#"><span class="fs-5 fw-semibold">Deprecating a Data Package</span></a><ul class="btn-toggle-nav">
-<li><a class="link-dark rounded text-muted" href="#notify-users">Notify users</a></li>
-<li><a class="link-dark rounded text-muted" href="#remove-the-data-package">Remove the data package</a></li>
+<li><a class="link-dark rounded text-muted" href="#step-1-notify-users-about-the-deprecation">Step 1 - Notify users about the deprecation</a></li>
+<li><a class="link-dark rounded text-muted" href="#step-2-soft-delete-the-data-package">Step 2 - "Soft delete" the data package</a></li>
 </ul>
 </div></aside><main class="main-tutorial">
 <h1 id="deprecating-a-data-package">Deprecating a Data Package</h1>
-<p>Deprecation enables data authors to discourage the continued use of a single data package, or series, in favor of a better alternative. It's typically applied when data issues cannot be resolved through a <a href="/resources/updating-a-data-package">data package update</a>, or when maintenance of a data package has moved to a new <a href="/resources/the-data-package#versioning-data-packages">data package series</a>. Deprecation involves posting a prominent notification of the change and removal of the data package from the EDI search index. This "soft" delete hides the data package from new potential users but keeps it accessible to existing users with a direct link (e.g. DOI). In essence, this discourages use while preserving the persistence and immutability required of Open Data and Reproducible Research.</p>
+<p>Deprecation enables data authors to discourage the continued use of a data package, in favor of a better alternative. It's typically applied when data issues cannot be resolved through a <a href="/resources/updating-a-data-package">data package update</a>, or when maintenance of a data package has moved to a new <a href="/resources/the-data-package#versioning-data-packages">data package series</a>. </p>
+<p>Deprecation involves posting a prominent notification of the change and removal of the data package from the EDI search index. This "soft delete" hides the data package from new potential users but keeps it accessible to existing users that already have a direct link (e.g. DOI). In essence, this discourages use while preserving the persistence and immutability required by Open Data and Reproducible Research.</p>
 <blockquote>
-<p>Note, only under extreme circumstances do we completely remove a data package from existence. Such situations are handled on a case-by-case basis.</p>
+<p>Note, only under extreme circumstances do we completely remove a data package from existence. Such situations are handled carefully on a case-by-case basis.</p>
 </blockquote>
 
-<h2 id="notify-users">Notify users</h2>
-<p>Notice of the deprecation should be posted prominently on the data package landing page so users can unambiguously see the change. We recommend adding "DEPRECATED" in both the title and abstract of the data package metadata. Our support of Markdown provides some liberty with text sizing and formatting (e.g., bold), and you can drop in a link to the preferred data package in the abstract. Example: </p>
+<h2 id="step-1-notify-users-about-the-deprecation">Step 1 - Notify users about the deprecation</h2>
+<p>Notify users about the deprecation by adding "DEPRECATED" in both the title and abstract of the data package metadata. Also, in the first paragraph of the abstract, describe the reasons for the change and any links to superseding data packages. Our <a href="/news/news-20210430.00">support of Markdown</a> in title and abstract text provides some liberty with sizing and formatting (e.g., bold).</p>
+<blockquote>
+<p>Tip: Use the <a href="https://portal.edirepository.org/nis/metadataPreviewer.jsp" rel="noopener noreferrer" target="_blank">Metadata Previewer</a> to see how the changes will render in the EDI Portal before publishing.</p>
+</blockquote>
+<p>An example data package deprecation notice:</p>
 <p><img alt="Deprecation notice" class="screen-shot" src="/static/images/deprecation-notice.png" width="85%"/></p>
-<h2 id="remove-the-data-package">Remove the data package</h2>
-<p>To remove the data package, a "soft" delete is performed so that it no longer shows up in search results but is still accessible to anyone with a direct link or the DOI. The "soft" deleted data package landing page displays a message that shows it has been deleted by the provider. </p>
-<p>Any data package owner can perform the deletion using curl or another HTTP-based application that can send a "DELETE" request. The delete method is described in the <a href="https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Fpasta.lternet.edu%2Fpackage%2Fdocs%2Fapi%23DELETE%2520%3A%2520%2Feml%2F%257Bscope%257D%2F%257Bidentifier%257D&amp;data=05%7C01%7Cjfutrelle%40whoi.edu%7C4786c822c02c43dedc0d08dabce50e7e%7Cd44c5cc6d18c46cc8abd4fdf5b6e5944%7C0%7C0%7C638029989235147987%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=ewGg%2BUuazIME6VLxGHE2hjVBXr51p8uVdXxRmSZeEE8%3D&amp;reserved=0" rel="noopener noreferrer" target="_blank">API documentation</a>. Note that the entire series will be "soft" deleted, so use only the data package scope and identifier in the DELETE request. For example:</p>
+<p>Once the metadata edits are complete, the changes will have to be uploaded via <a href="/resources/updating-a-data-package">data package update</a>.</p>
+<h2 id="step-2-soft-delete-the-data-package">Step 2 - "Soft delete" the data package</h2>
+<p>Execute a "soft delete" of the data package. Any data package owner can perform this operation using <a href="https://en.wikipedia.org/wiki/CURL" rel="noopener noreferrer" target="_blank">curl</a> or another HTTP-based application that can send a "DELETE" request. The delete method is described in the <a href="https://nam02.safelinks.protection.outlook.com/?url=https%3A%2F%2Fpasta.lternet.edu%2Fpackage%2Fdocs%2Fapi%23DELETE%2520%3A%2520%2Feml%2F%257Bscope%257D%2F%257Bidentifier%257D&amp;data=05%7C01%7Cjfutrelle%40whoi.edu%7C4786c822c02c43dedc0d08dabce50e7e%7Cd44c5cc6d18c46cc8abd4fdf5b6e5944%7C0%7C0%7C638029989235147987%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=ewGg%2BUuazIME6VLxGHE2hjVBXr51p8uVdXxRmSZeEE8%3D&amp;reserved=0" rel="noopener noreferrer" target="_blank">API documentation</a>. Note that the entire series will be "soft deleted", so use only the data package scope and identifier in the DELETE request. For example the command</p>
 <pre><code>curl --user 'uid=NES,o=EDI,dc=edrepository,dc=org:&lt;PASSWORD&gt;' -X DELETE 'https://pasta.lternet.edu/package/eml/knb-lter-nes/7'
 </code></pre>
+<p>will "soft delete" all data package revisions in the <strong>knb-lter-nes.7</strong> series.</p>
 <blockquote>
-<p>Please contact us if you need help deleting a data package.</p>
+<p>Please <a href="/support/contact-us">contact us</a> if you need help deleting a data package.</p>
 </blockquote>
 </main>
 </div>
