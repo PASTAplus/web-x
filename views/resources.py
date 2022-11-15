@@ -273,6 +273,13 @@ def authors(request: Request):
     return vm.to_dict()
 
 
+@router.get('/resources/deprecating-a-data-package')
+@template("resources/deprecating-a-data-package.html")
+def authors(request: Request):
+    vm = ViewModelBase(request, "Deprecating a Data Package")
+    return vm.to_dict()
+
+
 @router.get('/resources/uploading-with-static-data-links')
 @template("resources/uploading-with-static-data-links.html")
 def authors(request: Request):
