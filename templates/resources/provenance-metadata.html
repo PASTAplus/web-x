@@ -22,13 +22,16 @@
 <h3 id="ezeml">ezEML</h3>
 <p>To create provenance metadata using <a href="https://ezeml.edirepository.org/eml/" rel="noopener noreferrer" target="_blank">ezEML</a>:</p>
 <ol>
-<li>From the <strong>Methods</strong> tab, click the <strong>Add Method Step</strong> button. </li>
-<li>In the <strong>Data Sources</strong> textbox, enter as much information about the source dataset(s) as possible. At minimum, provide the DOI or a URL linking to the data source. The name and email for the data creator and contact are valuable information that should be provided, if available.</li>
+<li>From the <strong>Methods</strong> tab, click the <strong>Add Method Step</strong> button, and either: </li>
+<li><em>For datasets not published in the EDI Data Repository</em> - In the <strong>Data Sources</strong> textbox, enter a data source title and click <strong>Add Data Source</strong>. Fill out as much information about the source dataset as possible.</li>
+<li><em>For datasets in the EDI Data Repository</em> - In the <strong>Data Sources</strong> textbox click <strong>Fetch Data Source Info from EDI</strong>. Navigate to the dataset of interest and click on it. ezEML will automatically gather the metadata for the specified dataset.</li>
 <li>Click <strong>Save and Continue</strong></li>
 </ol>
-<blockquote>
-<p>Provenance metadata submitted via ezEML is converted by data curators to the EML formatted provenance &lt;methodStep&gt; before publishing in the EDI Data Repository. Data curators processing an ezEML submission should see the EDI Data Portal section below for an example of the EML provenance format.</p>
-</blockquote>
+<div class="p-2">
+<div class="w-50 ratio ratio-16x9">
+<iframe allowfullscreen="" src="https://youtube.com/embed/LkCA_qgDwhc" title="YouTube video"></iframe>
+</div>
+</div>
 <h3 id="emlassemblyline">EMLassemblyline</h3>
 <p>To create provenance metadata using <a href="https://ediorg.github.io/EMLassemblyline/" rel="noopener noreferrer" target="_blank">EMLassemblyline</a>:</p>
 <ol>
