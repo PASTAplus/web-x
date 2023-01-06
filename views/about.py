@@ -49,6 +49,13 @@ def edi_products(request: Request):
     return vm.to_dict()
 
 
+@router.get('/resources/edi-data-citations')
+@template("resources/edi-data-citations.html")
+def edi_data_citations(request: Request):
+    vm = ViewModelBase(request, "EDI Data Citations")
+    return vm.to_dict()
+
+
 @router.get('/about/edi-public-calendar')
 @template("about/edi-public-calendar.html")
 def edi_public_calendar(request: Request):
