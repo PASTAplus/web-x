@@ -5,7 +5,15 @@
 <p>February 17, 2023</p>
 <p>Mark Servilla</p>
 <h3>Description</h3>
-<p>EDI is excited to release a beta version of <strong>EMLvp</strong> (EML validator and parser). EMLvp is a Python 3 library and command line application that validates and parses Ecological Metadata Language XML documents for compliance with the EML metadata standard, including XML schema validation and ensuring that references resolve to existing ids. EMLvp can be installed with "pip" directly from <a href="https://pypi.org/project/emlvp/" rel="noopener noreferrer" target="_blank">PyPi.org</a> (<code>pip install emlvp</code>) or by referring to the GitHub repository (<code>pip install git+https://github.com/PASTAplus/EMLvp</code>). Once installed, EMLvp can be imported into another Python project or you can use the command line application to validate one or more EML documents. See <code>emlvp --help</code> for options. This release requires Python 3.10, but we do expect EMLvp to be backward compatible with earlier versions of Python in the near future. More details may be found on the EMLvp <a href="https://github.com/PASTAplus/EMLvp" rel="noopener noreferrer" target="_blank">GitHub</a> repository or at <a href="https://emlvp.readthedocs.io/en/latest/" rel="noopener noreferrer" target="_blank">Read-the-Docs</a>. EDI welcomes any feedback on EMLvp.</p>
+<p>EDI is excited to release a beta version of <strong>EMLvp</strong> (EML validator and parser). EMLvp is a Python 3 library and command line application that validates and parses Ecological Metadata Language XML documents for compliance with the EML metadata standard, including XML schema validation and ensuring that references resolve to existing ids. EMLvp can be installed with "pip" directly from <a href="https://pypi.org/project/emlvp/" rel="noopener noreferrer" target="_blank">PyPi.org</a> (<code>pip install emlvp</code>) or by referring to the GitHub repository (<code>pip install git+https://github.com/PASTAplus/EMLvp</code>). Once installed, EMLvp can be imported into another Python project or you can use the command line application to validate one or more EML documents. For example:</p>
+<div style="margin: auto; width: 51%; padding: 0.25em 0.25em 0.0em 0.25em; background-color: #eff1f3;">
+<pre>
+&gt; emlvp edi.1252.1.xml
+  edi.1252.1.xml
+  Missing custom unit id(s): ['total abundance', 'logarithmic']
+</pre>
+</div>
+<p>See <code>emlvp --help</code> for options. This release requires Python 3.10, but we do expect EMLvp to be backward compatible with earlier versions of Python in the near future. More details may be found on the EMLvp <a href="https://github.com/PASTAplus/EMLvp" rel="noopener noreferrer" target="_blank">GitHub</a> repository or at <a href="https://emlvp.readthedocs.io/en/latest/" rel="noopener noreferrer" target="_blank">Read-the-Docs</a>. EDI welcomes any feedback on EMLvp.</p>
 <!-- News -->
 </main>
 </div>
