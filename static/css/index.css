@@ -129,6 +129,11 @@
     text-align: left;
 }
 
+.featured-image-overlay {
+    background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35));
+    background-size: cover;
+}
+
 .featured-tile {
     display: flex;
     flex-direction: row;
