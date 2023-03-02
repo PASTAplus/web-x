@@ -37,7 +37,7 @@ def fellowships(request: Request):
 
 @router.get('/support/dm-fellowships-deprecated')
 @template("support/dm-fellowships-deprecated.html")
-def fellowships_deprecated(request: Request):
+def fellowships(request: Request):
     vm = ViewModelBase(
         request,
         "EDI Data Management Fellowship Program (DEPRECATED)"
