@@ -206,3 +206,48 @@ blockquote {
 .fix-form-margin {
     margin-block-end: 0em
 }
+
+/*This collection of CSS classes governing image gallery display and behavior*/
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.gallery a {
+  flex: 1 0 30%; /* adjust the percentage value to your liking */
+  margin: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.gallery a:hover img {
+  transform: scale(1.00); /*This controls image zoom on hover and can add a little "liveliness" to the image preview.*/
+}
+
+.gallery a:before {
+  content: "";
+  display: block;
+  padding-top: 100%; /* this creates a square aspect ratio */
+}
+
+.gallery a img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  max-width: none;
+  max-height: none;
+}
