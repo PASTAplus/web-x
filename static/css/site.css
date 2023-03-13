@@ -217,7 +217,7 @@ blockquote {
 }
 
 .gallery a {
-  flex: 1 0 30%; /* adjust the percentage value to your liking */
+  flex: 1 0 0px; /* adjust the percentage value to your liking */
   margin: 10px;
   overflow: hidden;
   position: relative;
