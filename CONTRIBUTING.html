@@ -51,6 +51,9 @@
 <ol>
 <li>Figures with captions - Example:</li>
 </ol>
+<blockquote>
+<p>Note: This type will be deprecated in favor of option 3 below, which allows the reader to click on the image to get a full sized resolution, which can help with image viewing when they are small.</p>
+</blockquote>
 <p>```
  <br/>
 </p><div class="figure_featured" style="width: 25%;">
@@ -69,6 +72,42 @@
   &lt;/figure&gt;
 &lt;/div&gt;</code></p>
 </blockquote>
+<ol>
+<li>Figures with captions that enlarge on mouse click - Example:
+   ```
+ <br/>
+<div class="figure_featured" style="width: 75%;">
+<figure>
+<a href="/static/images/featured_data/aquatic-microcosm.png">
+<img alt="aquatic microcosm" src="/static/images/featured_data/aquatic-microcosm.png"/>
+</a>
+<figcaption class="figure-caption">Fig. 1: Principal components of a Standardized Aquatic Microcosm ...</figcaption>
+</figure>
+</div></li>
+</ol>
+<p>```</p>
+<ol>
+<li>Gallery of images for when a group of images belong together - Example:
+   ```
+ <br/>
+<div>
+<div class="gallery">
+<a href="/static/images/featured_data/aquatic-microcosm.png">
+<img alt="This is the image alternate title" src="/static/images/featured_data/aquatic-microcosm.png"/>
+</a>
+<a href="/static/images/featured_data/aquatic-microcosm.png">
+<img alt="Image 2" id="pickme" src="/static/images/featured_data/aquatic-microcosm.png"/>
+</a>
+<a href="/static/images/featured_data/aquatic-microcosm.png">
+<img alt="Image 3" src="/static/images/featured_data/aquatic-microcosm.png"/>
+</a>
+</div>
+<div>
+<p class="figure-caption" style="color: #6c757d">Scenes from the garden plots at the MSP experimental community garden: 1.) Site plots; 2.) Lysimeter sampling; 3.) Measuring harvest wet mass.</p>
+</div>
+</div></li>
+</ol>
+<p>```</p>
 <ol>
 <li>All other image types - Example:</li>
 </ol>
@@ -146,39 +185,60 @@ ADD CONTENT HERE
 </code></pre>
 <h2>Create a Featured Data article</h2>
 <p>To create a new featured data article:
-1. Copy the template below and paste into a new file in the <code>/featured</code> directory.
-2. The file name should follow <code>featured-YYYYMMDD.XX</code>, where <code>YYYYMMDD</code> is the date the article was created, <code>XX</code> is the news article created on that date (use <code>00</code> if only one article was published on that day).
-3. Update the TITLE, DATE, AUTHOR, and CONTENT placeholders.
-4. Images should be added to the <code>/static/images/featured_data</code> directory and referenced from there.
-5. Commit changes and push to the content-x GitHub.
-6. Notify the website team that new content has been added and they will integrate your work into the website.</p>
+1. Create a markdown file for the new featured data article in the <code>/featured</code> directory. Name it following the pattern <code>featured-ID</code> where <code>ID</code> uniquely identifies the article.
+2. Copy the template below and paste into the new file.
+3. Update the <code>TITLE</code>, <code>DATE</code>, <code>AUTHOR</code>, <code>CITATION</code>, and <code>CONTENT</code> placeholders. Note, the final date of publication will be added later. Do not add a date here or else the article will be listed in the featured data article index.
+4. Compress article images using a service like <a href="https://tinypng.com/" rel="noopener noreferrer" target="_blank">tinypng.com</a>. Add images to the <code>/static/images/featured_data</code> directory and reference from within display type HTML blocks (<code>gallery</code> and/or <code>figure_featured</code>; see below). Replicate these HTML blocks as needed.
+5. Commit changes to the development branch and push to the content-x GitHub. Notify the website team that new content has been added, they will integrate your work into the development side of the web-x server (i.e. web-d) and will send you a link to the article proof. Note, the article will only be referencable from the link since it is unattached to other website pages. This keeps the WIP hidden from public view. 
+6. Send the article author a proof for review and comment. Apply any requested changes and repeat step 5 above.
+7. When ready to publish, update the file name to follow the pattern <code>featured-YYYYMMDD.XX</code>, where <code>YYYYMMDD</code> is the date the article was created, <code>XX</code> is the news article created on that date (use <code>00</code> if only one article was published on that day). Repeat step 5 above.
+8. Notify article authors of the publication.</p>
 <pre><code># Featured Data
 
-## ADD TITLE HERE
+## TITLE
 
-ADD DATE HERE (e.g. March 1, 2021)
+DATE (e.g. March 1, 2021)
 
-ADD ARTICLE AUTHOR HERE
+AUTHOR
 
 ### Citation
 
-ADD CITATION HERE
+CITATION
 
 ### Description
 
-ADD CONTENT HERE
+CONTENT
 
 &lt;!-- Images used in articles follow the HTML format below. Adjust the "width" parameter to resize. 
 Identify the primary image to use with the featured data display on web-x home page and on the featured 
-data grid page by adding an id="pickme" parameter to the HTML, if not specified, the first image of the 
-page will be used.--&gt;
+data grid page by adding an id="pickme" parameter to the HTML, if not specified, the first image of the page will be used. Note, there are two ways to display images.--&gt;
 
-&lt;div class="figure_featured" style="width: 25%;"&gt;
-    &lt;figure&gt;
-       &lt;img id="pickme" src="/static/images/featured_data/MYIMAGE.png" alt="ADD DESCRIPTION OF IMAGE"/&gt;
-       &lt;figcaption class="figure-caption"&gt;ADD CAPTION HERE&lt;/figcaption&gt;
-    &lt;/figure&gt;
+&lt;div class="figure_featured" style="width: 75%;"&gt;
+   &lt;figure&gt;
+     &lt;a href="/static/images/featured_data/FILE.EXT"&gt;
+       &lt;img src="/static/images/featured_data/FILE.EXT" alt="ADD DESCRIPTION OF IMAGE"/&gt;
+     &lt;/a&gt;
+     &lt;figcaption class="figure-caption"&gt;ADD CAPTION HERE&lt;/figcaption&gt;
+   &lt;/figure&gt;
 &lt;/div&gt;
+
+&lt;div&gt;
+  &lt;div class="gallery"&gt;
+    &lt;a href="/static/images/featured_data/IMAGE.EXT"&gt;
+      &lt;img src="/static/images/featured_data/IMAGE.EXT" alt="ADD DESCRIPTION OF IMAGE"&gt;
+    &lt;/a&gt;
+    &lt;a href="/static/images/featured_data/IMAGE.EXT"&gt;
+      &lt;img src="/static/images/featured_data/IMAGE.EXT" alt="ADD DESCRIPTION OF IMAGE"&gt;
+    &lt;/a&gt;
+    &lt;a href="/static/images/featured_data/IMAGE.EXT"&gt;
+      &lt;img src="/static/images/featured_data/IMAGE.EXT" alt="ADD DESCRIPTION OF IMAGE"&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;p class="figure-caption" style="color: #6c757d"&gt;ADD CAPTION HERE FOR ALL IMAGES REFERENCED ABOVE&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
 
 #### Data sources for the database include
 
