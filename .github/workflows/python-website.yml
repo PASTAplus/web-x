@@ -33,3 +33,12 @@ jobs:
         conda install pytest
         cd tests
         pytest
+    - name: Check website status
+      run: |
+        python main.py&
+        if curl -sSf https://example.com > /dev/null; then
+          echo "Website is up and running"
+        else
+          echo "Website is down"
+          exit 1
+        fi
