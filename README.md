@@ -1,6 +1,8 @@
 # web-x
 The EDI Website Project X
 
+![web-x](https://github.com/PASTAplus/web-x/actions/workflows/python-website.yml/badge.svg)
+
 ## Installation notes:
 
 Use of the [Anaconda](https://www.anaconda.com/) environment supports
