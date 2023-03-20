@@ -41,8 +41,7 @@ jobs:
         pytest
     - name: Check website status
       run: |
-        set CWD = cwd
-        echo $CWD
+        echo $PWD
         cp config.py.template config.py
         python main.py&
         sleep 5
