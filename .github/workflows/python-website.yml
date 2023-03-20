@@ -37,7 +37,8 @@ jobs:
       run: |
         cp config.py.template config.py
         python main.py&
-        if curl -sSf http://localhost:8000 > /dev/null; then
+        sleep 5
+        if curl -sSf http://127.0.0.1:8000 > /dev/null; then
           echo "Website is up and running"
         else
           echo "Website is down"
