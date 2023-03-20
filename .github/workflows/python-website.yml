@@ -35,8 +35,9 @@ jobs:
         pytest
     - name: Check website status
       run: |
+        cp config.py.template config.py
         python main.py&
-        if curl -sSf https://example.com > /dev/null; then
+        if curl -sSf http://localhost:8000 > /dev/null; then
           echo "Website is up and running"
         else
           echo "Website is down"
