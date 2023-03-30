@@ -17,6 +17,7 @@ from fastapi_chameleon import template
 from starlette.requests import Request
 
 from viewmodels.shared.viewmodel import ViewModelBase
+from viewmodels.data.tombstone_viewmodel import TombstoneViewModel
 
 router = fastapi.APIRouter()
 
@@ -32,4 +33,12 @@ def publish(request: Request):
 @template("data/find-data.html")
 def find(request: Request):
     vm = ViewModelBase(request, "Find Data")
+    return vm.to_dict()
+
+
+@router.get('/data/tombstone')
+@template("data/tombstone.html")
+def find(request: Request):
+    vm = TombstoneViewModel(request, "Tombstone")
+    vm.load()
     return vm.to_dict()

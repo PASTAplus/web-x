@@ -1,0 +1,11 @@
+<div metal:use-macro="load: ../shared/layout.html">
+<div metal:fill-slot="content" tal:omit-tag="True">
+<div class="container">
+<main class="basic-inner">
+    <h1>Data Package <em>${pid}</em> is no longer available</h1>
+<p>The data package <b>${pid}</b> referenced by DOI <b>${doi}</b> has been permanently removed from the EDI Data Repository
+    at the request of the data package owner(s). No further information is available.</p>
+</main>
+</div>
+</div>
+</div>
