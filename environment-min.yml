@@ -3,29 +3,25 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - python=3.9
-  - fastapi
-  - uvicorn
-  - httpx
-  - aiofiles
-  - chameleon
-  - uvloop
-  - gunicorn
-  - httptools
-  - python-multipart
   - aiohttp
-  - daiquiri
-  - markdown
-  - pytest
-  - beautifulsoup4
-  - lxml
   - urllib3
+  - gunicorn
+  - markdown
+  - pip
+  - python-multipart
+  - aiofiles
+  - beautifulsoup4
+  - snowballstemmer
+  - lxml
+  - python=3.9
+  - httpx
+  - fastapi
+  - uvloop
+  - uvicorn
   - requests
   - soupsieve
-  - snowballstemmer
-  - pip
-  - pip:
-    - fastapi-chameleon==0.1.12
-    - git+https://github.com/PASTAplus/bugle
-
+  - chameleon
+  - pytest
+  - httptools
+  - daiquiri
 prefix: /home/servilla/anaconda3/envs/web-x
