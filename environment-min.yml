@@ -24,4 +24,9 @@ dependencies:
   - pytest
   - httptools
   - daiquiri
+  - pip
+  - pip:
+    - fastapi-chameleon==0.1.12
+    - git+https://github.com/PASTAplus/bugle
+
 prefix: /home/servilla/anaconda3/envs/web-x
