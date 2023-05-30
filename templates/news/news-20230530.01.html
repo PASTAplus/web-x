@@ -1,0 +1,14 @@
+<div class="container">
+<main class="basic-inner">
+<h1>News</h1>
+<h2>EDI Repository Upgrade now complete</h2>
+<p>May 30, 2023</p>
+<p>Mark Servilla</p>
+<h3>Description</h3>
+<p>The EDI technical team completed a major upgrade over the past few weeks by upgrading all repository and secondary servers from Ubuntu 18.04 to Ubuntu 22.04. This upgrade affected all repository tiers, including development, staging, and production. Only a few minor issues resulted from the upgrade that were remedied within a few days of completion. One significant change, however, is that all server times are now set to Coordinated Universal Time or UTC, which provides better consistency and reliability since they are not affected by daylight saving time or other time zone changes. This is an important change since audit logs and other time-stamped content will now reflect UTC, whereas previously, servers used the Mountain Time zone.</p>
+<p>Another major change at the same time occurred with the repository’s Gatekeeper service. The Gatekeeper is a reverse proxy to all other repository services and manages inbound authentication requests using HTTP Basic Authorization headers or security tokens. On the Gatekeeper, all Java code had been replaced with Python code, including the underlying web framework, now using Python’s FastAPI web application framework. Performance comparisons between the Python implementation and Java showed no degradation in service times. This new implementation also connects directly to EDI’s authentication service instead of using a separate LDAP authentication workflow, simplifying future authentication protocol changes.</p>
+<p>Still to come is the upgrade to the DataONE Generic Member Node (GMN) servers, which will include the Ubuntu 22.04 
+operating system, along with a refresh of the GMN member node framework. Stay tuned for information about this upgrade in the coming weeks.</p>
+<!-- News -->
+</main>
+</div>
