@@ -13,7 +13,7 @@ dependencies:
   - beautifulsoup4
   - snowballstemmer
   - lxml
-  - python=3.9
+  - python=3.11
   - httpx
   - fastapi
   - uvloop
