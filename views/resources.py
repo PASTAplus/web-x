@@ -298,3 +298,9 @@ def why_publish_data(request: Request):
 def adding_physical_metadata(request: Request):
     vm = ViewModelBase(request, "Adding Physical Metadata")
     return vm.to_dict()
+
+@router.get('/resources/access-control')
+@template("resources/access-control.html")
+def access_control(request: Request):
+    vm = ViewModelBase(request, "Access Control")
+    return vm.to_dict()

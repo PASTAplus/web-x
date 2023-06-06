@@ -1,0 +1,64 @@
+<div metal:use-macro="load: ../shared/layout.html">
+<div metal:fill-slot="content" tal:omit-tag="True">
+<div class="container">
+<aside class="sidebar-aside"><div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted sticky-top" style="padding-top: 60; padding-right: 15; padding-left: 0;">
+<a class="d-block h6 my-2 pb-2 text-muted" href="#"><span class="fs-5 fw-semibold">Changing Permissions on a Data Package</span></a><ul class="btn-toggle-nav">
+<li><a class="link-dark rounded text-muted" href="#checking-permissions">Checking permissions</a></li>
+<li><a class="link-dark rounded text-muted" href="#changing-permissions">Changing permissions</a><ul class="fw-normal">
+<li><a class="link-dark rounded text-muted" href="#ezeml">ezEML</a></li>
+<li><a class="link-dark rounded text-muted" href="#emlassemblyline">EMLassemblyline</a></li>
+</ul>
+</li>
+<li><a class="link-dark rounded text-muted" href="#publishing-updates">Publishing updates</a></li>
+</ul>
+</div></aside><main class="main-tutorial">
+<h1 id="changing-permissions-on-a-data-package">Changing Permissions on a Data Package</h1>
+<p>The permissions governing who can make changes to a data package are set in access control rules of the EML metadata file of the most recent data package version. To change the permissions, the current EML file must be edited as a revision to the data package and uploaded by one of the users in current list of access control rules.</p>
+<blockquote>
+<p>Only EDI user accounts are allowed to upload directly to the repository. Google, GitHub, and ORCID accounts are not EDI user accounts. If you are not an EDI user, you will need to work with someone who is to upload the updated EML file.</p>
+<p><a href="https://edirepository.org/support/contact-us" rel="noopener noreferrer" target="_blank">Contact us</a> for assistance.</p>
+</blockquote>
+
+<h2 id="checking-permissions">Checking permissions</h2>
+<p>To check permissions on a current date a package:</p>
+<ol>
+<li>Go to the <a href="/resources/data-package-pages">full metadata page</a> of the data package.</li>
+<li>Click the <strong>View EML as XML</strong> button at the lower left-hand corner of the page.</li>
+<li>Search for the <code>&lt;access&gt;</code> element in the EML XML. </li>
+<li>
+<p>Each <code>&lt;allow&gt;</code> element nested within <code>&lt;access&gt;</code> represents a user ID and the associated permissions. In the example below, the users <code>EDI</code> and <code>sbashevkin</code> have permissions set to <code>all</code> (i.e. read and write) and the user <code>public</code> (i.e. the general public) has only read permission.</p>
+<p><img class="screen-shot" src="/static/images/eml-list-of-allow-3-users.png" width="70%"/></p>
+</li>
+</ol>
+<h2 id="changing-permissions">Changing permissions</h2>
+<p>To change permissions, the EML metadata will need to be modified using one of the following approaches:</p>
+<h3 id="ezeml">ezEML</h3>
+<ol>
+<li>Login to your ezEML account.</li>
+<li><a href="https://ezeml.edirepository.org/static/user_guide/fetch.pdf" rel="noopener noreferrer" target="_blank">Fetch the data package from the EDI data repository</a>.</li>
+<li>Go to the Data Package ID page, and increment the data package <a href="/resources/the-data-package#data-package-identifier">version number</a> by 1.</li>
+<li>Download the EML file.</li>
+<li>Open the EML file in a text editor.</li>
+<li>Search for the <code>&lt;access&gt;</code> element.</li>
+<li>
+<p>Each <code>&lt;allow&gt;</code> element nested within <code>&lt;access&gt;</code> represents a user ID and the associated permissions. In the example below, the users <code>EDI</code> and <code>sbashevkin</code> have permissions set to <code>all</code> (i.e. read and write) and the user <code>public</code> (i.e. the general public) has only read permission.</p>
+<p><img class="screen-shot" src="/static/images/eml-list-of-allow-3-users.png" width="70%"/></p>
+</li>
+<li>
+<p>To add a new user <code>dbosworth</code> with <code>all</code> permissions, simply copy and paste an existing <code>&lt;allow&gt;</code> element and modify the <code>uid</code> to <code>dbosworth</code> and the permission to <code>all</code>. The revised <code>&lt;access&gt;</code> element should look like the following:</p>
+<p><img class="screen-shot" src="/static/images/eml-list-of-allow-4-users.png" width="70%"/></p>
+</li>
+<li>
+<p>To remove a user, delete the <code>&lt;allow&gt;</code> element for that user.</p>
+</li>
+<li>Save the file.</li>
+<li>Proceed to the publishing section below.</li>
+</ol>
+<h3 id="emlassemblyline">EMLassemblyline</h3>
+<p>Add multiple users to the access control rules via the <code>user.id</code> parameter of the <code>make_eml()</code> function. For more information, see the associated <a href="https://ediorg.github.io/EMLassemblyline/reference/make_eml.html" rel="noopener noreferrer" target="_blank">documentation</a>.</p>
+<h2 id="publishing-updates">Publishing updates</h2>
+<p>In order for the changes to take effect, the revised EML metadata will need to be uploaded to the EDI Data Portal. For more information see the section on <a href="/resources/updating-a-data-package#publishing-edited-data-and-metadata">publishing edited data and metadata</a>.</p>
+</main>
+</div>
+</div>
+</div>
