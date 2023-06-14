@@ -2,8 +2,11 @@
 <div metal:fill-slot="content" tal:omit-tag="True">
 <div class="container">
 <aside class="sidebar-aside"><div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted sticky-top" style="padding-top: 60; padding-right: 15; padding-left: 0;">
-<a class="d-block h6 my-2 pb-2 text-muted" href="#"><span class="fs-5 fw-semibold">Changing Permissions on a Data Package</span></a><ul class="btn-toggle-nav">
-<li><a class="link-dark rounded text-muted" href="#checking-permissions">Checking permissions</a></li>
+<a class="d-block h6 my-2 pb-2 text-muted" href="#"><span class="fs-5 fw-semibold">Permissions on a Data Package</span></a><ul class="btn-toggle-nav">
+<li><a class="link-dark rounded text-muted" href="#checking-permissions">Checking permissions</a><ul class="fw-normal">
+<li><a class="link-dark rounded text-muted" href="#how-to-determine-if-a-user-is-an-edi-user">How to determine if a user is an EDI user?</a></li>
+</ul>
+</li>
 <li><a class="link-dark rounded text-muted" href="#changing-permissions">Changing permissions</a><ul class="fw-normal">
 <li><a class="link-dark rounded text-muted" href="#ezeml">ezEML</a></li>
 <li><a class="link-dark rounded text-muted" href="#emlassemblyline">EMLassemblyline</a></li>
@@ -12,45 +15,102 @@
 <li><a class="link-dark rounded text-muted" href="#publishing-updates">Publishing updates</a></li>
 </ul>
 </div></aside><main class="main-tutorial">
-<h1 id="changing-permissions-on-a-data-package">Changing Permissions on a Data Package</h1>
-<p>The permissions governing who can make changes to a data package are set in access control rules of the EML metadata file of the most recent data package version. To change the permissions, the current EML file must be edited as a revision to the data package and uploaded by one of the users in current list of access control rules.</p>
+<h1 id="permissions-on-a-data-package">Permissions on a Data Package</h1>
+<p>The permissions governing who can make changes to a data package are set in the access control rules of the EML metadata file of the most recent version of a data package. To change the permissions on a data package (add/remove users), the access control rules of the current EML metadata file must be edited and uploaded in a data package revision by one of the users in current list of access control rules.</p>
 <blockquote>
-<p>Only EDI user accounts are allowed to upload directly to the repository. Google, GitHub, and ORCID accounts are not EDI user accounts. If you are not an EDI user, you will need to work with someone who is to upload the updated EML file.</p>
+<p>Only EDI user accounts are allowed to upload directly to the repository. Google, GitHub, and ORCID accounts are not EDI user accounts. If you are not an EDI user, you will need to work with someone who is in order to upload the revised EML file.</p>
 <p><a href="https://edirepository.org/support/contact-us" rel="noopener noreferrer" target="_blank">Contact us</a> for assistance.</p>
 </blockquote>
 
 <h2 id="checking-permissions">Checking permissions</h2>
-<p>To check permissions on a current date a package:</p>
+<p>To check the current permissions on a data package:</p>
 <ol>
 <li>Go to the <a href="/resources/data-package-pages">full metadata page</a> of the data package.</li>
 <li>Click the <strong>View EML as XML</strong> button at the lower left-hand corner of the page.</li>
 <li>Search for the <code>&lt;access&gt;</code> element in the EML XML. </li>
-<li>
-<p>Each <code>&lt;allow&gt;</code> element nested within <code>&lt;access&gt;</code> represents a user ID and the associated permissions. In the example below, the users <code>EDI</code> and <code>sbashevkin</code> have permissions set to <code>all</code> (i.e. read and write) and the user <code>public</code> (i.e. the general public) has only read permission.</p>
-<p><img class="screen-shot" src="/static/images/eml-list-of-allow-3-users.png" width="70%"/></p>
-</li>
+<li>Each <code>&lt;allow&gt;</code> element nested within <code>&lt;access&gt;</code> represents a user ID and the associated permissions. In the example below, the users <code>EDI</code> and <code>USER_1</code> have permissions set to <code>all</code> (i.e. read and write) and the user <code>public</code> (i.e. the general public) has only read permission.</li>
 </ol>
+<pre><code>  &lt;access authSystem="https://pasta.edirepository.org/authentication" order="allowFirst" scope="document" system="https://pasta.edirepository.org"&gt;
+    &lt;allow&gt;
+      &lt;principal&gt;uid=EDI,o=EDI,dc=edirepository,dc=org&lt;/principal&gt;
+      &lt;permission&gt;all&lt;/permission&gt;
+    &lt;/allow&gt;
+    &lt;allow&gt;
+      &lt;principal&gt;uid=USER_1,o=EDI,dc=edirepository,dc=org&lt;/principal&gt;
+      &lt;permission&gt;all&lt;/permission&gt;
+    &lt;/allow&gt;
+    &lt;allow&gt;
+      &lt;principal&gt;public&lt;/principal&gt;
+      &lt;permission&gt;read&lt;/permission&gt;
+    &lt;/allow&gt;
+  &lt;/access&gt;
+</code></pre>
+<h3 id="how-to-determine-if-a-user-is-an-edi-user">How to determine if a user is an EDI user?</h3>
+<p>EDI users, who can upload directly to the data repository can be identified by the structure of the value in the <code>&lt;principal&gt;</code> element. For EDI users, these values are structured as:</p>
+<p><code>uid=[USER_NAME],o=EDI,dc=edirepository,dc=org</code></p>
+<p>where <code>USER_NAME</code> is the EDI user ID. Anything else is not an EDI user. For example the following allow elements represent two non-EDI users:</p>
+<pre><code>&lt;allow&gt;
+   &lt;principal&gt;https://orcid.org/XXXX-XXXX-XXXX-XXXX&lt;/principal&gt;
+   &lt;permission&gt;all&lt;/permission&gt;
+&lt;/allow&gt;
+
+&lt;allow&gt;
+   &lt;principal&gt;person@domain.edu&lt;/principal&gt;
+   &lt;permission&gt;all&lt;/permission&gt;
+&lt;/allow&gt;
+</code></pre>
+<p>where the first principle is an <a href="https://orcid.org/" rel="noopener noreferrer" target="_blank">ORCID</a> and a second is an email address. These types of principle values are added to an EML document by the ezEML metadata editor based on what credentials the user logged in with. <em>Note, even though the users in the example above have permissions set to <code>all</code>, they are not EDI users and cannot upload directly to the data repository.</em></p>
 <h2 id="changing-permissions">Changing permissions</h2>
 <p>To change permissions, the EML metadata will need to be modified using one of the following approaches:</p>
 <h3 id="ezeml">ezEML</h3>
 <ol>
 <li>Login to your ezEML account.</li>
 <li><a href="https://ezeml.edirepository.org/static/user_guide/fetch.pdf" rel="noopener noreferrer" target="_blank">Fetch the data package from the EDI data repository</a>.</li>
-<li>Go to the Data Package ID page, and increment the data package <a href="/resources/the-data-package#data-package-identifier">version number</a> by 1.</li>
+<li>Go to the <strong>Data Package ID</strong> page, and increment the data package <a href="/resources/the-data-package#data-package-identifier">version number</a> by 1.</li>
 <li>Download the EML file.</li>
 <li>Open the EML file in a text editor.</li>
 <li>Search for the <code>&lt;access&gt;</code> element.</li>
-<li>
-<p>Each <code>&lt;allow&gt;</code> element nested within <code>&lt;access&gt;</code> represents a user ID and the associated permissions. In the example below, the users <code>EDI</code> and <code>sbashevkin</code> have permissions set to <code>all</code> (i.e. read and write) and the user <code>public</code> (i.e. the general public) has only read permission.</p>
-<p><img class="screen-shot" src="/static/images/eml-list-of-allow-3-users.png" width="70%"/></p>
-</li>
-<li>
-<p>To add a new user <code>dbosworth</code> with <code>all</code> permissions, simply copy and paste an existing <code>&lt;allow&gt;</code> element and modify the <code>uid</code> to <code>dbosworth</code> and the permission to <code>all</code>. The revised <code>&lt;access&gt;</code> element should look like the following:</p>
-<p><img class="screen-shot" src="/static/images/eml-list-of-allow-4-users.png" width="70%"/></p>
-</li>
-<li>
-<p>To remove a user, delete the <code>&lt;allow&gt;</code> element for that user.</p>
-</li>
+<li>Each <code>&lt;allow&gt;</code> element nested within <code>&lt;access&gt;</code> represents a user ID and the associated permissions. In the example below, the users <code>EDI</code> and <code>USER_1</code> have permissions set to <code>all</code> (i.e. read and write) and the user <code>public</code> (i.e. the general public) has only read permission.</li>
+</ol>
+<pre><code>  &lt;access authSystem="https://pasta.edirepository.org/authentication" order="allowFirst" scope="document" system="https://pasta.edirepository.org"&gt;
+    &lt;allow&gt;
+      &lt;principal&gt;uid=EDI,o=EDI,dc=edirepository,dc=org&lt;/principal&gt;
+      &lt;permission&gt;all&lt;/permission&gt;
+    &lt;/allow&gt;
+    &lt;allow&gt;
+      &lt;principal&gt;uid=USER_1,o=EDI,dc=edirepository,dc=org&lt;/principal&gt;
+      &lt;permission&gt;all&lt;/permission&gt;
+    &lt;/allow&gt;
+    &lt;allow&gt;
+      &lt;principal&gt;public&lt;/principal&gt;
+      &lt;permission&gt;read&lt;/permission&gt;
+    &lt;/allow&gt;
+  &lt;/access&gt;
+</code></pre>
+<ol>
+<li>To add a new user <code>USER_2</code> with <code>all</code> permissions, simply copy and paste an existing <code>&lt;allow&gt;</code> element and modify the <code>uid</code> to <code>USER_2</code> and the permission to <code>all</code>. The revised <code>&lt;access&gt;</code> element should look like the following:</li>
+</ol>
+<pre><code>  &lt;access authSystem="https://pasta.edirepository.org/authentication" order="allowFirst" scope="document" system="https://pasta.edirepository.org"&gt;
+    &lt;allow&gt;
+      &lt;principal&gt;uid=EDI,o=EDI,dc=edirepository,dc=org&lt;/principal&gt;
+      &lt;permission&gt;all&lt;/permission&gt;
+    &lt;/allow&gt;
+    &lt;allow&gt;
+      &lt;principal&gt;uid=USER_1,o=EDI,dc=edirepository,dc=org&lt;/principal&gt;
+      &lt;permission&gt;all&lt;/permission&gt;
+    &lt;/allow&gt;
+    &lt;allow&gt;
+      &lt;principal&gt;uid=USER_2,o=EDI,dc=edirepository,dc=org&lt;/principal&gt;
+      &lt;permission&gt;all&lt;/permission&gt;
+    &lt;/allow&gt;
+    &lt;allow&gt;
+      &lt;principal&gt;public&lt;/principal&gt;
+      &lt;permission&gt;read&lt;/permission&gt;
+    &lt;/allow&gt;
+  &lt;/access&gt;
+</code></pre>
+<ol>
+<li>To remove a user, delete the <code>&lt;allow&gt;</code> element for that user.</li>
 <li>Save the file.</li>
 <li>Proceed to the publishing section below.</li>
 </ol>
