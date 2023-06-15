@@ -30,35 +30,12 @@
 <li>Search for the <code>&lt;access&gt;</code> element in the EML XML. </li>
 <li>Each <code>&lt;allow&gt;</code> element nested within <code>&lt;access&gt;</code> represents a user ID and the associated permissions. In the example below, the users <code>EDI</code> and <code>USER_1</code> have permissions set to <code>all</code> (i.e. read and write) and the user <code>public</code> (i.e. the general public) has only read permission.</li>
 </ol>
-<pre><code>  &lt;access authSystem="https://pasta.edirepository.org/authentication" order="allowFirst" scope="document" system="https://pasta.edirepository.org"&gt;
-    &lt;allow&gt;
-      &lt;principal&gt;uid=EDI,o=EDI,dc=edirepository,dc=org&lt;/principal&gt;
-      &lt;permission&gt;all&lt;/permission&gt;
-    &lt;/allow&gt;
-    &lt;allow&gt;
-      &lt;principal&gt;uid=USER_1,o=EDI,dc=edirepository,dc=org&lt;/principal&gt;
-      &lt;permission&gt;all&lt;/permission&gt;
-    &lt;/allow&gt;
-    &lt;allow&gt;
-      &lt;principal&gt;public&lt;/principal&gt;
-      &lt;permission&gt;read&lt;/permission&gt;
-    &lt;/allow&gt;
-  &lt;/access&gt;
-</code></pre>
+<p><img class="screen-shot" src="/static/images/eml-allow-list-3-users.png" width="65%"/></p>
 <h3 id="how-to-determine-if-a-user-is-an-edi-user">How to determine if a user is an EDI user?</h3>
 <p>EDI users, who can upload directly to the data repository can be identified by the structure of the value in the <code>&lt;principal&gt;</code> element. For EDI users, these values are structured as:</p>
 <p><code>uid=[USER_NAME],o=EDI,dc=edirepository,dc=org</code></p>
 <p>where <code>USER_NAME</code> is the EDI user ID. Anything else is not an EDI user. For example the following allow elements represent two non-EDI users:</p>
-<pre><code>&lt;allow&gt;
-   &lt;principal&gt;https://orcid.org/XXXX-XXXX-XXXX-XXXX&lt;/principal&gt;
-   &lt;permission&gt;all&lt;/permission&gt;
-&lt;/allow&gt;
-
-&lt;allow&gt;
-   &lt;principal&gt;person@domain.edu&lt;/principal&gt;
-   &lt;permission&gt;all&lt;/permission&gt;
-&lt;/allow&gt;
-</code></pre>
+<p><img class="screen-shot" src="/static/images/eml-allow-list-2-non-edi-users.png" width="65%"/></p>
 <p>where the first principle is an <a href="https://orcid.org/" rel="noopener noreferrer" target="_blank">ORCID</a> and a second is an email address. These types of principle values are added to an EML document by the ezEML metadata editor based on what credentials the user logged in with. <em>Note, even though the users in the example above have permissions set to <code>all</code>, they are not EDI users and cannot upload directly to the data repository.</em></p>
 <h2 id="changing-permissions">Changing permissions</h2>
 <p>To change permissions, the EML metadata will need to be modified using one of the following approaches:</p>
@@ -72,43 +49,11 @@
 <li>Search for the <code>&lt;access&gt;</code> element.</li>
 <li>Each <code>&lt;allow&gt;</code> element nested within <code>&lt;access&gt;</code> represents a user ID and the associated permissions. In the example below, the users <code>EDI</code> and <code>USER_1</code> have permissions set to <code>all</code> (i.e. read and write) and the user <code>public</code> (i.e. the general public) has only read permission.</li>
 </ol>
-<pre><code>  &lt;access authSystem="https://pasta.edirepository.org/authentication" order="allowFirst" scope="document" system="https://pasta.edirepository.org"&gt;
-    &lt;allow&gt;
-      &lt;principal&gt;uid=EDI,o=EDI,dc=edirepository,dc=org&lt;/principal&gt;
-      &lt;permission&gt;all&lt;/permission&gt;
-    &lt;/allow&gt;
-    &lt;allow&gt;
-      &lt;principal&gt;uid=USER_1,o=EDI,dc=edirepository,dc=org&lt;/principal&gt;
-      &lt;permission&gt;all&lt;/permission&gt;
-    &lt;/allow&gt;
-    &lt;allow&gt;
-      &lt;principal&gt;public&lt;/principal&gt;
-      &lt;permission&gt;read&lt;/permission&gt;
-    &lt;/allow&gt;
-  &lt;/access&gt;
-</code></pre>
+<p><img class="screen-shot" src="/static/images/eml-allow-list-3-users.png" width="65%"/></p>
 <ol>
 <li>To add a new user <code>USER_2</code> with <code>all</code> permissions, simply copy and paste an existing <code>&lt;allow&gt;</code> element and modify the <code>uid</code> to <code>USER_2</code> and the permission to <code>all</code>. The revised <code>&lt;access&gt;</code> element should look like the following:</li>
 </ol>
-<pre><code>  &lt;access authSystem="https://pasta.edirepository.org/authentication" order="allowFirst" scope="document" system="https://pasta.edirepository.org"&gt;
-    &lt;allow&gt;
-      &lt;principal&gt;uid=EDI,o=EDI,dc=edirepository,dc=org&lt;/principal&gt;
-      &lt;permission&gt;all&lt;/permission&gt;
-    &lt;/allow&gt;
-    &lt;allow&gt;
-      &lt;principal&gt;uid=USER_1,o=EDI,dc=edirepository,dc=org&lt;/principal&gt;
-      &lt;permission&gt;all&lt;/permission&gt;
-    &lt;/allow&gt;
-    &lt;allow&gt;
-      &lt;principal&gt;uid=USER_2,o=EDI,dc=edirepository,dc=org&lt;/principal&gt;
-      &lt;permission&gt;all&lt;/permission&gt;
-    &lt;/allow&gt;
-    &lt;allow&gt;
-      &lt;principal&gt;public&lt;/principal&gt;
-      &lt;permission&gt;read&lt;/permission&gt;
-    &lt;/allow&gt;
-  &lt;/access&gt;
-</code></pre>
+<p><img class="screen-shot" src="/static/images/eml-allow-list-4-users.png" width="65%"/></p>
 <ol>
 <li>To remove a user, delete the <code>&lt;allow&gt;</code> element for that user.</li>
 <li>Save the file.</li>
