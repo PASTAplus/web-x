@@ -161,6 +161,10 @@ footer {
     min-height: 1.5em;
 }
 
+.certification_row {
+    display: flex;
+}
+
 .person_row {
     display: flex;
     padding-bottom: 2.5em;
