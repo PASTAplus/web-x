@@ -1,0 +1,102 @@
+<div class="container">
+<main class="basic-inner">
+<h1>Featured Data</h1>
+<h2>The Lake Trophic State - US (LTS-US) Dataset</h2>
+<p>November XX, 2023</p>
+<p>Michael Meyer</p>
+<h3>Citation</h3>
+<p>Meyer, M.F., S.N. Topp, T.V. King, R. Ladwig, R.M. Pilla, H.A. Dugan, J.R. Eggleston, S.E. Hampton, D.M. Leech, I.A.
+Oleksy, J.C. Ross, M.R. Ross, R.I. Woolway, X. Yang, M.R. Brousil, K.C. Fickas, J.C. Padowski, A.I. Pollard, J. Ren, and
+J.A. Zwart. 2023. National-scale, remotely sensed lake trophic state (LTS-US) 1984-2020 ver 1. Environmental Data
+Initiative. <a href="https://doi.org/10.6073/pasta/212a3172ac36e8dc6e1862f9c2522fa4" rel="noopener noreferrer" target="_blank">https://doi.org/10.6073/pasta/212a3172ac36e8dc6e1862f9c2522fa4</a>.</p>
+<h3>Description</h3>
+<p>This data package is an excellent example of using merging remote sensing,
+<em>in situ</em>, national-scale sampling campaigns, and discipline-specific
+expertise to expand the spatial and temporal scope of freshwater science.</p>
+<p>The LTS-US dataset brings together over 35 years of Landsat surface
+reflectance data with the U.S. Environmental Protection Agency's National
+Lake Assessment's data to both construct and apply models that discriminate
+between blue (i.e., oligotrophic), green (i.e., eutrophic/mixotrophic), and
+brown (i.e., dystrophic) lakes. By classifying lakes based on Nutrient-Color
+Paradigm (NCP) groupings, the LTS-US Dataset presents a powerful tool for
+assessing both autochthonous and allochthonous components of aquatic ecosystems,
+which can lend further information into an ecosystem's physical, chemical,
+and biological processes.</p>
+<div class="figure_featured" style="width: 75%;">
+<figure>
+<a href="/static/images/featured_data/ncp_figure.png">
+<img alt="Distribution of Sulfate-S concentrations." src="/static/images/featured_data/ncp_figure.png"/>
+</a>
+<figcaption class="figure-caption">
+            Figure 1: Nutrient-Color Paradigm (NCP) scheme for classifying oligotrophic,
+            eutrophic, dystrophic, and mixotrophic lakes. Schematic is adapted from
+            Williamson et al. (1999) and Webster et al. (2008), and characteristic lake descriptions
+            broadly stem from results presented in Leech et al. (2018) and Oleksy et al. (2020) Within
+            each NCP-quadrant, there are a suite of physical, chemical, and biological
+            characteristics that distinguish each type of lake: colored Dissolved Organic Matter
+            (cDOM), primary production, cyanobacterial abundance, and higher order production.
+            Lower cDOM concentrations (blue water drops) are characteristic in oligotrophic
+            and eutrophic lakes. When cDOM is low, light can transmit through the water column
+            more deeply, allowing for primary producers to undergo photosynthesis and
+            zooplankton to consume primary producers (oligotrophic). When nutrients, such as
+            phosphorus, are at higher concentrations and cDOM is low (eutrophic), primary
+            production, cyanobacterial abundance, and higher order production can all increase,
+            resulting in increased biomass. When cDOM concentrations are high (brown water drop)
+            and nutrient concentrations are low (dystrophic), the increased light attenuation
+            can result in decreased primary production, which can reciprocally cause decreased
+            higher order production. Lastly, when nutrient and cDOM concentrations are both
+            high (mixotrophic), primary production, cyanobacterial abundance, and higher
+            order production can exceed values observed when solely cDOM or nutrient
+            concentrations alone are higher. Phytoplankton and filled-in zooplankton
+            cartoons were downloaded from the University of Maryland Center for
+            Environmental Science Integration and Application Network
+            (https://ian.umces.edu/media-library/). Phytoplankton were designed by
+            Tracey Saxby of the Integration and Application Network, Dieter Tracey of the
+            Water and Rivers Commission, Kim Kraeer and Lucy Van Essen-Fishman of the
+            Integration and Application Network. Transparent crustacean zooplankton
+            and rotifer cartoons were drawn by Stephanie E. Hampton.
+        </figcaption>
+</figure>
+</div>
+<p>Beyond the LTS-US's contribution to freshwater science, the LTS-US employs
+a range of data science and open science tools to support scalability and
+reproducibility as software evolves and new data become available.
+1. The LTS-US dataset is constructed using the targets` Workflow
+Management Software, a tool that enables future users to automatically re-run
+the data processing pipeline.
+2. The LTS-US dataset is produced in a ensemble-inspired framework, where each
+time the pipeline is run, predictions of a given lakes's trophic state are
+generated using 3 modeling techniques: a gradient boosted regression, logistic
+regression, and miltilayer perceptron model.
+3. The LTS-US compute environment is containerized within a Docker Image that is
+available from the Environmental Data Initiative. Depending on future users'
+experience working with Docker, the container is available as an already
+rendered image or in an uncompiled format.</p>
+<p>Together, the LTS-US dataset is the largest, reproducible,
+and machine-readable compilation of lake trophic state, by containing annual
+predictions for over 55,000 lakes from 1984 through 2020.</p>
+<p>We welcome any future questions on using and reproducing the LTS-US dataset.
+Questions can be directed to Michael Meyer (mfmeyer@usgs.gov).</p>
+<h3>References</h3>
+<ul>
+<li>
+<p>Leech, D. M., A. I. Pollard, S. G. Labou, and S. E. Hampton. 2018. Fewer blue lakes and more murky lakes across the
+continental U.S.: Implications for planktonic food webs. Limnology and Oceanography 63: 2661–2680. doi:10.1002/lno.10967</p>
+</li>
+<li>
+<p>Meyer, M. F., S. N. Topp, T. V. King, and others. 2023. National-scale, remotely sensed lake trophic state (LTS-US)
+1984-2020. Environmental Data Initiative. doi:10.6073/pasta/212a3172ac36e8dc6e1862f9c2522fa4</p>
+</li>
+<li>
+<p>Webster, K. E., P. A. Soranno, K. S. Cheruvelil, and others. 2008. An empirical evaluation of the nutrient-color
+paradigm for lakes. Limnology and Oceanography 53: 1137–1148. doi:10.4319/lo.2008.53.3.1137</p>
+</li>
+<li>
+<p>Williamson, C. E., D. P. Morris, M. L. Pace, and O. G. Olson. 1999. Dissolved organic carbon and nutrients as 
+regulators of lake ecosystems: Resurrection of a more integrated paradigm. Limnology and Oceanography 44: 795–803.
+doi:10.4319/lo.1999.44.3_part_2.0795</p>
+</li>
+</ul>
+<h3><a href="/featured/featured-grid">All featured data contributions</a></h3>
+</main>
+</div>
