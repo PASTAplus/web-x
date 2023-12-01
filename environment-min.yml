@@ -24,7 +24,6 @@ dependencies:
   - pytest
   - httptools
   - daiquiri
-  - flake8
   - pip
   - pip:
     - fastapi-chameleon==0.1.12
