@@ -304,3 +304,9 @@ def adding_physical_metadata(request: Request):
 def access_control(request: Request):
     vm = ViewModelBase(request, "Access Control")
     return vm.to_dict()
+
+@router.get('/resources/defining-data-replication')
+@template("resources/defining-data-replication.html")
+def defining_data_replication(request: Request):
+    vm = ViewModelBase(request, "Defining Data Package Replication")
+    return vm.to_dict()

@@ -1,0 +1,39 @@
+<div metal:use-macro="load: ../shared/layout.html">
+<div metal:fill-slot="content" tal:omit-tag="True">
+<div class="container">
+<aside class="sidebar-aside"><div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted sticky-top" style="padding-top: 60; padding-right: 15; padding-left: 0;">
+<a class="d-block h6 my-2 pb-2 text-muted" href="#"><span class="fs-5 fw-semibold">Defining Data Package Replication</span></a><ul class="btn-toggle-nav">
+<li><a class="link-dark rounded text-muted" href="#datasettype">DatasetType</a></li>
+<li><a class="link-dark rounded text-muted" href="#entitygroup">EntityGroup</a></li>
+<li><a class="link-dark rounded text-muted" href="#mutable-series-consideration">Mutable Series Consideration</a></li>
+</ul>
+</div></aside><main class="main-tutorial">
+<h1 id="defining-data-package-replication">Defining Data Package Replication</h1>
+<p>Ensuring data consumers are aware of replicated data across repositories is crucial for reducing data user confusion, data misuse and errors, and inefficiencies for data harvesters.</p>
+<p>The <a href="https://eml.ecoinformatics.org/eml-ecological-metadata-language" rel="noopener noreferrer" target="_blank">Ecological Metadata Language</a> (EML v2.2.0) offers a semantic annotation feature suitable for defining data replication, applicable to both entire data packages and specific data entities within a package. This functionality in combination with the <a href="https://schema.org/sameAs" rel="noopener noreferrer" target="_blank">schema:sameAs</a> property enables a solution for indicating replicated data resources that align with <a href="https://github.com/ESIPFed/science-on-schema.org/blob/master/guides/Dataset" rel="noopener noreferrer" target="_blank">Science-On-Schema.Org</a> conventions, promoting dataset discovery and interoperability.</p>
+<p>EML provides two locations to express <code>schema:sameAs</code> relationships through annotations, within a <a href="https://eml.ecoinformatics.org/schema/eml-dataset_xsd#DatasetType" rel="noopener noreferrer" target="_blank">DatasetType</a>, and an <a href="https://eml.ecoinformatics.org/schema/eml-entity_xsd.html#EntityGroup" rel="noopener noreferrer" target="_blank">EntityGroup</a>.</p>
+
+<h3 id="datasettype">DatasetType</h3>
+<p>This location indicates relationships between data packages. Semantic RDF structures the data package as the subject, related to another package as the object. The annotation element is inserted at the XPath: <code>/eml/dataset/annotation</code>. For example:</p>
+<pre><code class="language-xml">&lt;annotation&gt;
+      &lt;propertyURI label="sameAs"&gt;https://schema.org/sameAs&lt;/propertyURI&gt;
+      &lt;valueURI label="Data used to …"&gt;https://doi.org/10.5066/F7VX0DMQ&lt;/valueURI&gt;
+&lt;/annotation&gt;
+</code></pre>
+<p>Where the <code>valueURI</code> label is the dataset title and the value is the dataset Digital Object Identifier (DOI). This annotation reads: "This dataset is the same as the dataset identified by <a href="https://doi.org/10.5066/F7VX0DMQ" rel="noopener noreferrer" target="_blank">https://doi.org/10.5066/F7VX0DMQ</a>".</p>
+<h3 id="entitygroup">EntityGroup</h3>
+<p>This location is used to indicate relationships between data entities (e.g. dataTable or otherEntity). RDF expresses the data entity as the subject, related to another entity as the object. The annotation element is inserted within the EntityGroup. For example:</p>
+<pre><code class="language-xml">&lt;annotation&gt;
+      &lt;propertyURI label="sameAs"&gt;https://schema.org/sameAs&lt;/propertyURI&gt;
+      &lt;valueURI label="black_sand_phe …"&gt;https://pasta.lternet.edu/package/data/eml/…&lt;/valueURI&gt;
+&lt;/annotation&gt;
+</code></pre>
+<p>Where the <code>valueURI</code> label is the data entity name. This annotation reads: "This data entity is the same as the entity defined by <a href="https://pasta.lternet.edu/package/data/eml/knb-lter-nwt/237/1/39dbac0784a042fcda990797377e27ee" rel="noopener noreferrer" target="_blank">https://pasta.lternet.edu/package/data/eml/knb-lter-nwt/237/1/39dbac0784a042fcda990797377e27ee</a>, which is a download link to a data entity in the EDI repository.</p>
+<p><em>One issue to be aware of here is that persistent identifiers (e.g. DOI) are typically not minted for data entities. Therefore, the resolvability of the object, depends on the stability of the link used in the annotation.</em></p>
+<h3 id="mutable-series-consideration">Mutable Series Consideration</h3>
+<p>A potential challenge arises when the valueURI is a data package DOI, and pointing to the latest version within a mutable data package series. This can lead to conflicting interpretations of the relationship between data packages. For instance, if <code>schema:sameAs</code> expresses a relationship between two data packages, but a significantly different version of the object (data package in the other repository) is published, the relationship becomes inaccurate. Notably, <a href="https://www.dataone.org/" rel="noopener noreferrer" target="_blank">DataONE</a> employs this practice for harvested data packages presented to users.</p>
+<p>A solution to this issue is to never use a URI in an annotation that points to a mutable object, even if it means ignoring a DOI in favor of another style of PID. This way, the object being referenced would always be traceable through the PID (not the DOI) even if the DOI is transferred to reference the latest version of the object.</p>
+</main>
+</div>
+</div>
+</div>
