@@ -21,6 +21,7 @@ import fastapi_chameleon
 import uvicorn
 from starlette.staticfiles import StaticFiles
 
+from config import Config
 from views import about
 from views import resources
 from views import support
@@ -33,10 +34,8 @@ from views import news
 from views import webinars
 
 
-cwd = os.path.dirname(os.path.realpath(__file__))
-logfile = cwd + "/web-x.log"
 daiquiri.setup(level=logging.INFO,
-               outputs=(daiquiri.output.File(logfile), "stdout",))
+               outputs=(daiquiri.output.File(Config.LOGFILE), "stdout",))
 logger = daiquiri.getLogger(__name__)
 
 
