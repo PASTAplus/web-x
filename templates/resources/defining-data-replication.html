@@ -15,19 +15,11 @@
 
 <h3 id="datasettype">DatasetType</h3>
 <p>This location indicates relationships between data packages. Semantic RDF structures the data package as the subject, related to another package as the object. The annotation element is inserted at the XPath: <code>/eml/dataset/annotation</code>. For example:</p>
-<pre><code class="language-xml">&lt;annotation&gt;
-      &lt;propertyURI label="sameAs"&gt;https://schema.org/sameAs&lt;/propertyURI&gt;
-      &lt;valueURI label="Data used to …"&gt;https://doi.org/10.5066/F7VX0DMQ&lt;/valueURI&gt;
-&lt;/annotation&gt;
-</code></pre>
+<p><img class="screen-shot" src="/static/images/replicating-dataset-type.png" width="65%"/></p>
 <p>Where the <code>valueURI</code> label is the dataset title and the value is the dataset Digital Object Identifier (DOI). This annotation reads: "This dataset is the same as the dataset identified by <a href="https://doi.org/10.5066/F7VX0DMQ" rel="noopener noreferrer" target="_blank">https://doi.org/10.5066/F7VX0DMQ</a>".</p>
 <h3 id="entitygroup">EntityGroup</h3>
 <p>This location is used to indicate relationships between data entities (e.g. dataTable or otherEntity). RDF expresses the data entity as the subject, related to another entity as the object. The annotation element is inserted within the EntityGroup. For example:</p>
-<pre><code class="language-xml">&lt;annotation&gt;
-      &lt;propertyURI label="sameAs"&gt;https://schema.org/sameAs&lt;/propertyURI&gt;
-      &lt;valueURI label="black_sand_phe …"&gt;https://pasta.lternet.edu/package/data/eml/…&lt;/valueURI&gt;
-&lt;/annotation&gt;
-</code></pre>
+<p><img class="screen-shot" src="/static/images/replicating-entitygroup-type.png" width="75%"/></p>
 <p>Where the <code>valueURI</code> label is the data entity name. This annotation reads: "This data entity is the same as the entity defined by <a href="https://pasta.lternet.edu/package/data/eml/knb-lter-nwt/237/1/39dbac0784a042fcda990797377e27ee" rel="noopener noreferrer" target="_blank">https://pasta.lternet.edu/package/data/eml/knb-lter-nwt/237/1/39dbac0784a042fcda990797377e27ee</a>, which is a download link to a data entity in the EDI repository.</p>
 <p><em>One issue to be aware of here is that persistent identifiers (e.g. DOI) are typically not minted for data entities. Therefore, the resolvability of the object, depends on the stability of the link used in the annotation.</em></p>
 <h3 id="mutable-series-consideration">Mutable Series Consideration</h3>
