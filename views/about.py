@@ -63,8 +63,8 @@ def edi_public_calendar(request: Request):
     return vm.to_dict()
 
 
-@router.get('/about/partners-and-affiliations')
-@template("about/partners-and-affiliations.html")
-def partners_and_affiliations(request: Request):
-    vm = ViewModelBase(request, "About Partners and Affiliations")
+@router.get('/about/edi-affiliations')
+@template("about/edi-affiliations.html")
+def edi_affiliations(request: Request):
+    vm = ViewModelBase(request, "About EDI Affiliations")
     return vm.to_dict()
