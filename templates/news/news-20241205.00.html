@@ -1,0 +1,33 @@
+<div class="container">
+<main class="basic-inner">
+<h1>News</h1>
+<h2>Request for Comment: Expanding the List of Supported Date and Time Formats for Congruence Checks</h2>
+<p>December 5, 2024</p>
+<p>Colin Smith</p>
+<h3>Introduction</h3>
+<p>The EML Congruence Checker (ECC) and the ezEML Check Data Tables provide critical validation services to verify the accuracy and consistency of data packages before publication in the EDI Data Repository. Currently, these services evaluate date and time data based on a predefined list of supported formats. If a data package format is unrecognized, it does not undergo validation but is flagged with a warning. </p>
+<p>This proposal suggests expanding this list to include additional common, unambiguous date and time formats, as summarized below. We aim to ensure greater flexibility, accuracy, and compatibility for date and time data, enhancing overall data quality in the repository.</p>
+<h3>Issue Statement</h3>
+<p>At present, our quality-checking services limit validation to a subset of the internationally recognized ISO 8601 standard for date and time formats. This subset was initially curated in 2017 by EDI's ECC working group to balance precision with wide usability.</p>
+<p>The ECC and ezEML evaluation services operate as follows:</p>
+<ol>
+<li><strong>Data Packages with Recognized Format</strong>: If a data package’s metadata specifies a recognized date and time format, ECC checks values for consistency, flagging any discrepancies between declared and actual formats as errors.</li>
+<li><strong>Data Packages with Unrecognized Format</strong>: If the format is unrecognized, the checker bypasses validation for that column and issues a warning only. This practice presents a few challenges:<ol>
+<li><strong>Inaccurate or Incomplete Data</strong>: Unvalidated packages may contain non-standard, imprecise date and time values that degrade data quality.</li>
+<li><strong>Limited Support for Popular Formats</strong>: Communities that rely on commonly used but unsupported formats face obstacles in submitting their data.</li>
+<li><strong>Unnecessary Reformatting</strong>: Data curators may spend additional time reformatting already unambiguous dates to ISO 8601.</li>
+</ol>
+</li>
+</ol>
+<h3>Proposed Solution</h3>
+<p>To address these limitations, we propose the following enhancements to ECC and ezEML congruence checks:</p>
+<ol>
+<li><strong>Expanding Supported Formats</strong>: We will extend the supported format list to include widely used, unambiguous date and time formats, broadening the range of submissions compatible with the ECC. This should significantly reduce reformatting efforts and improve data quality.</li>
+<li><strong>Maintaining Warnings for Unsupported Formats</strong>: Data packages that utilize formats outside this expanded list will continue to trigger warnings, allowing users to be aware of potential issues without blocking submission.</li>
+<li><strong>Encouraging ISO 8601 Adoption</strong>: To promote best practices, we will add educational materials to relevant EDI resources (e.g., Data Package Best Practices) that highlight ISO 8601’s benefits for data interoperability.</li>
+</ol>
+<h3>Community Feedback Requested</h3>
+<p>Your feedback is vital to refining this proposal and aligning our services with community practices. Please share your thoughts, suggestions, and any other input. Thank you for helping us improve the EDI Data Repository's services for everyone.</p>
+<!-- News -->
+</main>
+</div>
