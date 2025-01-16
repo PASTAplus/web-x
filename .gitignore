@@ -134,3 +134,6 @@ ignore
 cache
 config.py
 docmap.json
+log.txt
+
+.DS_Store
