@@ -1,0 +1,25 @@
+<div class="container">
+<main class="basic-inner">
+<h1>Featured Data</h1>
+<h2>LakeBeD-US: Ecology Edition - a benchmark dataset of lake water quality time series and vertical profiles</h2>
+<p>January 9, 2025</p>
+<p>Bennett McAfee, Susanne Grossman Clarke</p>
+<h3>Citation</h3>
+<p>McAfee, B.J., M.E. Lofton, A. Breef-Pilz, K.J. Goodman, R.T. Hensley, K.K. Hoffman, D.W. Howard, A.S. Lewis, D.M. McKnight, I.A. Oleksy, H.L. Wander, C.C. Carey, A. Karpatne, and P.C. Hanson. 2024. LakeBeD-US: Ecology Edition - a benchmark dataset of lake water quality time series and vertical profiles ver 1. Environmental Data Initiative.<a href="https://doi.org/10.6073/pasta/c56a204a65483790f6277de4896d7140" rel="noopener noreferrer" target="_blank"> https://doi.org/10.6073/pasta/c56a204a65483790f6277de4896d7140</a>.</p>
+<h3>Description</h3>
+<p>One of EDI's key focus areas is developing analysis-ready data to accelerate data integration for synthesis science in ecological and environmental research. To address the variability in original data, our standardization process harmonizes data into common formats, units, quality standards, and file types. Current projects, ecocomDP and hymetDP, involve collaborations with <a href="https://lternet.edu/" rel="noopener noreferrer" target="_blank">LTER</a> sites, <a href="https://www.neonscience.org/" rel="noopener noreferrer" target="_blank">NEON</a>, <a href="https://www.cuahsi.org/" rel="noopener noreferrer" target="_blank">CUAHSI</a>, and <a href="https://www.gbif.org/" rel="noopener noreferrer" target="_blank">GBIF</a>.</p>
+<p>The featured data package, LakeBeD-US, represents a new data harmonization effort by McAfee et al. (2024), that is focused on water quality data. The dataset enables ecologists to study the spatial and temporal dynamics of lakes with diverse water quality, ecosystem, and landscape characteristics. </p>
+<p>Additionally, LakeBeD-US serves as a benchmark dataset that advances knowledge-guided machine learning for water quality prediction and fosters collaboration between ecologists and computer scientists. This is achieved by a 'Computer Science Edition' of LakeBeD-US, specifically created for analyses in computer science. This second edition of LakeBeD-US is published in the Hugging Face repository (Pradhan et al., 2024).</p>
+<p>LakeBeD-US contains over 500 million unique time series and vertical profile observations of lake water quality, collected by multiple long-term monitoring organizations across 21 lakes in the United States. These organizations include the <a href="https://lter.limnology.wisc.edu/" rel="noopener noreferrer" target="_blank">North Temperate Lakes Long-Term Ecological Research program (NTL-LTER)</a>, the <a href="https://www.neonscience.org/" rel="noopener noreferrer" target="_blank">National Ecological Observatory Network (NEON)</a>, the <a href="https://nwt.lternet.edu/" rel="noopener noreferrer" target="_blank">Niwot Ridge Long-Term Ecological Research program (NWT-LTER)</a>, and the Carey Lab at Virginia Tech, in collaboration with the Western Virginia Water Authority, as part of the <a href="https://www.ltreb-reservoirs.org/" rel="noopener noreferrer" target="_blank">Virginia Reservoirs Long-Term Research in Environmental Biology (LTREB)</a> site. All original data from the NTL-LTER, NWT-LTER, and Virginia Reservoirs LTREB are available and documented in EDI. The LakeBeD-US data were assembled by downloading source data to R, processing it with Tidyverse, and exporting it to Apache Parquet files. The code ensures that the most up-to-date versions of the source data are used.</p>
+<p>The LakeBeD-US data are stored in Parquet files and structured in tidy format, allowing for efficient querying by lake, variable, or quality flag using dplyr commands in R. The included R script provides a tutorial on utilizing Parquet files in R.</p>
+<p>Updates to include more data, lakes, and water quality variables are possible, and collaboration on new revisions of LakeBeD-US is encouraged. While adding new data sources requires writing a new R script to download and harmonize the data, the use of the Parquet format allows for additions without rewriting the entire dataset. This means that stewards of long-term water quality data can create their own add-ons to LakeBeD-US that work seamlessly by adding new Parquet files to the dataset.</p>
+<div class="figure_featured" style="width: 75%;">
+<figure>
+<img alt="mcafee-lakes" src="/static/images/featured_data/mcafee-lakes.png"/>
+</figure>
+</div>
+<h3>References</h3>
+<p>Pradhan, A, B.J. McAfee, A. Neog, S. Fatemi, M.E. Lofton, C.C. Carey, A. Karpatne, and P.C. Hanson. 2024. LakeBeD-US: Computer Science Edition - a benchmark dataset for lake water quality time series and vertical profiles. Hugging Face. <a href="http://doi.org/10.57967/hf/3771" rel="noopener noreferrer" target="_blank">http://doi.org/10.57967/hf/3771</a></p>
+<h3><a href="/featured/featured-grid">All featured data contributions</a></h3>
+</main>
+</div>
