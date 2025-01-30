@@ -217,6 +217,13 @@ def resources_for_information_managers(request: Request):
     return vm.to_dict()
 
 
+@router.get('/resources/resources-for-developers')
+@template("resources/resources-for-developers.html")
+def resources_for_developers_managers(request: Request):
+    vm = ViewModelBase(request, "Resources for Developers Managers")
+    return vm.to_dict()
+
+
 @router.get('/resources/rest-api')
 @template("resources/rest-api.html")
 def rest_api(request: Request):

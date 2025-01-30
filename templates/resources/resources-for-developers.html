@@ -1,0 +1,31 @@
+<div metal:use-macro="load: ../shared/layout.html">
+<div metal:fill-slot="content" tal:omit-tag="True">
+<div class="container">
+<aside class="sidebar-aside"><div class="bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted sticky-top" style="padding-top: 60; padding-right: 15; padding-left: 0;">
+<a class="d-block h6 my-2 pb-2 text-muted" href="#"><span class="fs-5 fw-semibold">Resources for Developers</span></a><ul class="btn-toggle-nav">
+<li><a class="link-dark rounded text-muted" href="#rest-api">REST API</a></li>
+<li><a class="link-dark rounded text-muted" href="#emlvp">EMLvp</a></li>
+<li><a class="link-dark rounded text-muted" href="#emlassemblyline">EMLassemblyline</a></li>
+</ul>
+</div></aside><main class="main-tutorial">
+<h1 id="resources-for-developers">Resources for Developers</h1>
+<p>The <strong>EDI data repository</strong> provides a range of services for developers who create applications and workflows that interact programmatically with our systems. Some common use cases:  </p>
+<ul>
+<li><strong>Programmatic Data Access</strong> – Read and parse data into a preferred work environment to process and present to stake-holders.</li>
+<li><strong>Automated Workflows</strong> – Build scripts or applications that upload or download data from the repository based on schedules or event notifications.  </li>
+<li><strong>Visual Data Exploration</strong> – Provide an interactive interface for exploring data packages in the EDI repository.  </li>
+</ul>
+<p>These are just a few examples—our services enable countless programmatic interactions with the EDI data repository.  </p>
+
+<h2 id="rest-api">REST API</h2>
+<p>The <a href="https://pastaplus-core.readthedocs.io/en/latest/doc_tree/about.html" rel="noopener noreferrer" target="_blank">REST API</a> allows developers to interact with the EDI repository programmatically. The API documentation provides details on available services, endpoints, and request formats.  </p>
+<p>For R users, the <a href="https://docs.ropensci.org/EDIutils/" rel="noopener noreferrer" target="_blank">EDIutils</a> R package offers an interface to the REST API, simplifying interactions with the repository.</p>
+<p>For more information, see the <a href="/resources/rest-api">REST API page</a>.</p>
+<h2 id="emlvp">EMLvp</h2>
+<p><a href="https://github.com/PASTAplus/EMLvp" rel="noopener noreferrer" target="_blank">EMLvp</a> is a Python 3 library designed to <strong>validate and parse EML XML documents</strong>, ensuring compliance with the EML metadata standard. It performs XML schema validation and checks that references resolve to existing IDs.  </p>
+<h2 id="emlassemblyline">EMLassemblyline</h2>
+<p>The <a href="https://ediorg.github.io/EMLassemblyline/" rel="noopener noreferrer" target="_blank">EMLassemblyline</a> R package provides tools for programmatically creating and packaging Ecological Metadata Language (EML) metadata. This is particularly useful for automating the creation of metadata-rich data packages for upload to the EDI repository.</p>
+</main>
+</div>
+</div>
+</div>
