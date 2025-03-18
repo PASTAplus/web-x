@@ -231,10 +231,10 @@ def rest_api(request: Request):
     return vm.to_dict()
 
 
-@router.get('/resources/services')
-@template("resources/services.html")
+@router.get('/resources/data-services')
+@template("resources/data-services.html")
 def services(request: Request):
-    vm = ViewModelBase(request, "Services")
+    vm = ViewModelBase(request, "Data Services")
     return vm.to_dict()
 
 

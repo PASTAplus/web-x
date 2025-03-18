@@ -35,6 +35,12 @@ def find(request: Request):
     vm = ViewModelBase(request, "Find Data")
     return vm.to_dict()
 
+@router.get('/data/data-services')
+@template("data/data-services.html")
+def find(request: Request):
+    vm = ViewModelBase(request, "Data Services")
+    return vm.to_dict()
+
 
 @router.get('/data/tombstone')
 @template("data/tombstone.html")
