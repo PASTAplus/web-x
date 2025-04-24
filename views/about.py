@@ -68,3 +68,9 @@ def edi_public_calendar(request: Request):
 def edi_affiliations(request: Request):
     vm = ViewModelBase(request, "About EDI Affiliations")
     return vm.to_dict()
+
+@router.get('/about/data-sustainability')
+@template("about/data-sustainability.html")
+def data_sustainability(request: Request):
+    vm = ViewModelBase(request, "Data Sustainability")
+    return vm.to_dict()
