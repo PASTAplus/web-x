@@ -19,8 +19,9 @@ fastapi-chameleon = ">=0.1.17,<0.2"
 bugle = {git = "https://github.com/PASTAplus/bugle", branch = "main"}
 
 [tool.pixi.tasks]
-bugle = "python -m bugle.crawl.crawl https://edirepository.org/ ./cache main p --allow='^/(?!.*\\.(?:png|jpg|jpeg|tif|pdf)$).*$' --follow --sitemap"
-bugle-test = "python -m bugle.crawl.crawl http://localhost:8000/ ./cache main p --allow='^/(?!.*\\.(?:png|jpg|jpeg|tif|pdf)$).*$' --follow --sitemap"
+bugle-localhost = "python -m bugle.crawl.crawl http://localhost:8000/ ./cache main p --allow='^/(?!.*\\.(?:png|jpg|jpeg|tif|pdf)$).*$' --follow --sitemap"
+bugle-web-d = "python -m bugle.crawl.crawl https://web-d.edirepsitory.org/ ./cache main p --allow='^/(?!.*\\.(?:png|jpg|jpeg|tif|pdf)$).*$' --follow --sitemap"
+bugle-web-x = "python -m bugle.crawl.crawl https://edirepository.org/ ./cache main p --allow='^/(?!.*\\.(?:png|jpg|jpeg|tif|pdf)$).*$' --follow --sitemap"
 build-context = "python ./utilities/build.py ../content-x . -v"
 build-context-dry = "python ./utilities/build.py ../content-x . -v --dryrun"
 web-x = "python main.py"
