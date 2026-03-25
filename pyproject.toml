@@ -1,0 +1,49 @@
+[project]
+authors = [
+    {name = "Mark Servilla", email = "mark.servilla@gmail.com"},
+    {name = "Colin Smith", email = "colin.smith@wisc.edu"},
+    {name = "Susanne Grossman-Clarke", email = "grossmanclar@wisc.edu"},
+]
+dependencies = []
+name = "web-x"
+requires-python = ">= 3.11"
+version = "1.0.0"
+
+
+[tool.pixi.workspace]
+channels = ["conda-forge"]
+platforms = ["linux-64",  "linux-aarch64", "osx-64"]
+
+[tool.pixi.pypi-dependencies]
+fastapi-chameleon = ">=0.1.17,<0.2"
+bugle = {git = "https://github.com/PASTAplus/bugle", branch = "main"}
+
+[tool.pixi.tasks]
+bugle-localhost = "python -m bugle.crawl.crawl http://localhost:8000/ ./cache main p --allow='^/(?!.*\\.(?:png|jpg|jpeg|tif|pdf)$).*$' --follow --sitemap"
+bugle-web-d = "python -m bugle.crawl.crawl https://web-d.edirepository.org/ ./cache main p --allow='^/(?!.*\\.(?:png|jpg|jpeg|tif|pdf)$).*$' --follow --sitemap"
+bugle-web-x = "python -m bugle.crawl.crawl https://edirepository.org/ ./cache main p --allow='^/(?!.*\\.(?:png|jpg|jpeg|tif|pdf)$).*$' --follow --sitemap"
+build-context = "python ./utilities/build.py ../content-x . -v"
+build-context-dry = "python ./utilities/build.py ../content-x . -v --dryrun"
+web-x = "python main.py"
+
+[tool.pixi.dependencies]
+python = ">=3.14.3,<3.15"
+aiohttp = ">=3.13.3,<4"
+urllib3 = ">=2.6.3,<3"
+gunicorn = ">=25.1.0,<26"
+markdown = ">=3.10.2,<4"
+python-multipart = ">=0.0.22,<0.0.23"
+aiofiles = ">=25.1.0,<26"
+beautifulsoup4 = ">=4.14.3,<5"
+snowballstemmer = ">=3.0.1,<4"
+lxml = ">=6.0.2,<7"
+httpx = ">=0.28.1,<0.29"
+fastapi = ">=0.135.2,<0.136"
+uvloop = ">=0.22.1,<0.23"
+uvicorn = ">=0.42.0,<0.43"
+requests = ">=2.32.5,<3"
+soupsieve = ">=2.8.3,<3"
+chameleon = ">=4.6.0,<5"
+pytest = ">=9.0.2,<10"
+httptools = ">=0.7.1,<0.8"
+daiquiri = ">=3.0.0,<4"
