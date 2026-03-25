@@ -63,8 +63,8 @@ def make_postcard_object(file: str, clip_len: Optional[int] = None, img_picker: 
         if h3.get_text() == "Citation":
             p = h3.findNext("p").get_text()
             if p is not None:
-                if re.match('^\D*[0-9]{4}\\.', p) is not None:
-                    data_author = re.match('^\D*[0-9]{4}\\.', p).group()
+                if re.match(r"^\D*[0-9]{4}\.", p) is not None:
+                    data_author = re.match(r"^\D*[0-9]{4}\.", p).group()
     image = soup.find("img", id=img_picker)
     if image is None:
         image = soup.find("img")
