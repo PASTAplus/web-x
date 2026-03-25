@@ -137,3 +137,6 @@ docmap.json
 log.txt
 
 .DS_Store
+# pixi environments
+.pixi/*
+!.pixi/config.toml
