@@ -158,7 +158,7 @@ def sidebar_html(md: str) -> BeautifulSoup:
             a['class'] = 'link-dark rounded text-muted'
     # toc["class"] = "flex-shrink-0 py-5 px-1 bg-white sticky-top"
     toc["class"] = "bd-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted sticky-top"
-    toc["style"] = "padding-top: 60; padding-right: 15; padding-left: 0;"
+    toc["style"] = "padding-top: 60px; padding-right: 15px; padding-left: 0;"
     aside = soup.new_tag("aside")
     aside["class"] = "sidebar-aside"
     aside.insert(0, toc)
@@ -332,7 +332,7 @@ def main(source: str, target: str, ignore: tuple, markdown: tuple, file: str, ex
                     at_least_one_match = True
                     keepers.append(md_file)
             if not at_least_one_match:
-                logger.warn(f"No matches found for '{markdown_file}' in '{source}'.")
+                logger.warning(f"No matches found for '{markdown_file}' in '{source}'.")
         md_files = keepers
 
     for md_file in md_files:
