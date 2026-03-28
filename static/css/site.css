@@ -17,9 +17,9 @@ body {
     padding: 0;
 }
 
-/* #content-wrap {
-    padding-bottom: 0em;
-} */
+.edit_highlight {
+    background-color: #f9efbf;
+}
 
 .main_content {
     position: relative;
