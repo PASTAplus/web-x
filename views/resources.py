@@ -317,3 +317,9 @@ def access_control(request: Request):
 def defining_data_replication(request: Request):
     vm = ViewModelBase(request, "Defining Data Package Replication")
     return vm.to_dict()
+
+@router.get('/resources/self-publishing')
+@template("resources/self-publishing.html")
+def defining_data_replication(request: Request):
+    vm = ViewModelBase(request, "Self-Publishing")
+    return vm.to_dict()
