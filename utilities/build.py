@@ -282,7 +282,7 @@ def md2html(md_file: str, verbose: int) -> str:
 
 CONTEXT_SETTINGS = dict(help_option_names=["-h", "--help"])
 help_ignore = "Ignore markdown file (may repeat for multiple files)."
-help_markdown = "Full path to markdown file (may repeat for multiple files; cannot be used with --file)."
+help_markdown = "Build only markdown file (may repeat for multiple files; cannot be used with --file)."
 help_file = "File containing markdown files to be processes one per line (cannot be used with --markdown)."
 help_extensions = (
     "Extension of image files to copy (may repeat for multiple extensions; default is "
