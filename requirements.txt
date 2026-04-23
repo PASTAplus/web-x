@@ -79,7 +79,7 @@ pytest==9.0.3
 python==3.14.4
 python-dotenv==1.2.2
 python-json-logger==2.0.7
-python-multipart==0.0.22
+python-multipart==0.0.26
 python_abi==3.14
 pyyaml==6.0.3
 readline==8.3
